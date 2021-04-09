@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "referencedDocument.uri",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.uri",
+  "name": "referencedDocument.uri",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "DiagnosticReport"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.uri"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU REFERENCE DATE/TIME - CY @TIU ENTRY POINTER - CY 63.47-1"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This field is a pointer to the TIU DOCUMENT (#8925) file.  It stores the pointer for a cytopathology SF515 that has been electronically signed and stored in TIU."
+}

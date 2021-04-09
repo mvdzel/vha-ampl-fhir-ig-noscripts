@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medicationrequest-permittedFillDate",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-permittedFillDate",
+  "name": "medicationrequest-permittedFillDate",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationRequest"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-permittedFillDate"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PENDING OUTPATIENT ORDERS @POSSIBLE FILL DATE 52.41-26"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This field will be used to display the effective date of a discharge med or pass med."
+}

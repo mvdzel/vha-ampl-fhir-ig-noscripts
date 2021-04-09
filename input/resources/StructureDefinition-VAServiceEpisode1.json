@@ -1,0 +1,111 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": "2-.32101",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.display",
+        "fixedString": "Vietnam Service",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.status",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.code",
+        "label": "Vietnam Service Indicated?",
+        "short": "Conflict Location information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Vietnam Service Indicated?  2-.32101"
+          }
+        ],
+        "definition": "For this veteran applicant enter 'Y' if s/he actually served in the Republic of Vietnam, 'N' if not, or 'U' if unknown.  Once the service record has been verified only users who hold the designated security key may enter/edit this field."
+      },
+      {
+        "path": "Observation.effectivePeriod"
+      },
+      {
+        "path": "Observation.effectivePeriod.start",
+        "label": "Vietnam From Date",
+        "short": "Conflict Location information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Vietnam From Date  2-.32104"
+          }
+        ],
+        "definition": "For this veteran applicant who served in the Republic of Vietnam (DID YOU SERVE IN VIETNAM prompt must be answered YES) enter the date on which service in vietnam commenced [between February 28, 1961 and May 7, 1975]. Once the service record is verified only users who hold the designated security key may enter/edit this field.  As long as Vietnam service is indicated this date may not be deleted."
+      },
+      {
+        "path": "Observation.effectivePeriod.end",
+        "label": "Vietnam To Date",
+        "short": "Conflict Location information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Vietnam To Date  2-.32105"
+          }
+        ],
+        "definition": "For this veteran applicant who served in the Republic of Vietnam (DID YOU SERVE IN VIETNAM prompt must be answered YES) enter the date on which service in Vietnam ended [between February 28, 1961 and May 7, 1975]. Once the service record is verified only user who hold the designated security key may enter/edit this field.  As long as Vietnam service is indicated this date may not be deleted."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAServiceEpisode1",
+  "id": "VAServiceEpisode1",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode1",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

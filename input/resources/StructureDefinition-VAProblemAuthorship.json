@@ -1,0 +1,86 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.agent.role.coding.code",
+        "fixedCode": "SDLOC",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.agent.role.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v3-RoleClass",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.agent.whoReference.identifier",
+        "label": "STATION NUMBER",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "undefined @STATION NUMBER 9999999.06-.01:4-99"
+          }
+        ],
+        "definition": "This is the facility at which this problem was originally observed and documented."
+      },
+      {
+        "path": "Provenance.activity.code",
+        "fixedCode": "CREATE",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.activity.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "DATE ENTERED",
+        "short": "Date Entered",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "undefined @DATE ENTERED 9000011-.08"
+          }
+        ],
+        "definition": "This is the date this problem was entered into this file."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAProblemAuthorship",
+  "id": "VAProblemAuthorship",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblemAuthorship",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

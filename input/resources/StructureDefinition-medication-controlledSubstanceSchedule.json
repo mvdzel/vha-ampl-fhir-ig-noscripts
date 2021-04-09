@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medication-controlledSubstanceSchedule",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-controlledSubstanceSchedule",
+  "name": "medication-controlledSubstanceSchedule",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Medication"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-controlledSubstanceSchedule"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "VA PRODUCT FILE @CS FEDERAL SCHEDULE 50.68-19"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This is the Federal Schedule for controlled substances."
+}

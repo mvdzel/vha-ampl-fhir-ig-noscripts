@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medicationrequest-lastLocationOfPatient",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastLocationOfPatient",
+  "name": "medicationrequest-lastLocationOfPatient",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationRequest"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastLocationOfPatient"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PHARMACY PATIENT FILE @LAST WARD 55.06-68"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This is the last ward the patient was located when the order expired or was discontinued.  This is automatically updated by the Unit Dose package when the package finds that the patient is first admitted or when the patient is found to have been transferred.  This allows any returns that are entered to be credited to the correct ward."
+}

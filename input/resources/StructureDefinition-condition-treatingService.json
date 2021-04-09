@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "condition-treatingService",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService",
+  "name": "condition-treatingService",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Condition"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "undefined @SERVICE    9000011-1.06"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting."
+}

@@ -1,0 +1,137 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": "2-.5291",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.display",
+        "fixedString": "Did this patient serve in combat?",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.status",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.code",
+        "label": "Combat Service Indicated",
+        "short": "Combat Service Information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Combat Service Indicated  2-.5291"
+          }
+        ],
+        "definition": "For this veteran applicant enter 'Y' if s/he served in a combat zone, or 'N' if not.  Once the service record is verified only users who hold the designated security key may enter/edit this field."
+      },
+      {
+        "path": "Observation.effectivePeriod"
+      },
+      {
+        "path": "Observation.effectivePeriod.start",
+        "label": "Combat From Date",
+        "short": "Combat Service Information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Combat From Date  2-.5293"
+          }
+        ],
+        "definition": "For this veteran who served in a combat zone (IN COMBAT prompt must be answered YES) enter the date on which combat service commenced.  Once the service record is verified only those users who hold the designated security key may enter/edit this field.  This field cannot be deleted as long as combat service is indicated."
+      },
+      {
+        "path": "Observation.effectivePeriod.end",
+        "label": "Combat To Date",
+        "short": "Combat Service Information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Combat To Date  2-.5294"
+          }
+        ],
+        "definition": "For this veteran who served in a combat zone (IN COMBAT prompt must be answered YES) enter the date on which combat service ended. Once the service record is verified only those users who hold the designated security key may enter/edit this field.  This field cannot be deleted as long as combat service is indicated."
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/2-.5292",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "2-.5292",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept.coding.code",
+        "label": "Combat Service Location",
+        "short": "Combat Service Information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Combat Service Location  2-.5292"
+          }
+        ],
+        "definition": "For this veteran applicant who served in a combat zone (IN COMBAT prompt must be answered YES) enter the zone in which s/he served.  Once the service record is verified only those users who hold the designated security key may enter/edit this field. This field cannot be deleted as long as combat service is indicated."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VARiskEpisodeProfile6",
+  "id": "VARiskEpisodeProfile6",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile6",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

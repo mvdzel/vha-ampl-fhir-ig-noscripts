@@ -1,0 +1,124 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.activity.code",
+        "fixedCode": "CREATE",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.activity.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "DATE/TIME MODIFIED",
+        "short": "Date/Time modified",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PROBLEM LIST AUDIT FILE @DATE/TIME MODIFIED 125.8-2"
+          }
+        ],
+        "definition": "This is the date and time that this data was changed."
+      },
+      {
+        "path": "Provenance.extension",
+        "sliceName": "reference-targetElement/extension/elementUri",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.elementUri"
+          }
+        ],
+        "label": "FIELD NUMBER",
+        "short": "Data change          <Field Name> changed from",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PROBLEM LIST AUDIT FILE @FIELD NUMBER  125.8-1"
+          }
+        ],
+        "definition": "This is the number of the field for which a change is being recorded."
+      },
+      {
+        "path": "Provenance.extension",
+        "sliceName": "reference-targetElement/extension/change/extension/oldValue",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue"
+          }
+        ],
+        "label": "OLD VALUE",
+        "short": "<Old Value>   to",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PROBLEM LIST AUDIT FILE @OLD VALUE 125.8-4"
+          }
+        ],
+        "definition": "This is the original value as stored in the Problem file global (internal format)."
+      },
+      {
+        "path": "Provenance.extension",
+        "sliceName": "reference-targetElement/extension/change/extension/newValue",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.newValue"
+          }
+        ],
+        "label": "NEW VALUE",
+        "short": "<New Value>",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PROBLEM LIST AUDIT FILE @NEW VALUE 125.8-5"
+          }
+        ],
+        "definition": "This is the new value now stored in the Problem file global (internal format)."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "ProblemListChange",
+  "id": "ProblemListChange",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/ProblemListChange",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

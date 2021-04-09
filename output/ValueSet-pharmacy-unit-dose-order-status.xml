@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="pharmacy-unit-dose-order-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <code>http://va.gov/Terminology/VistaDefinedTerms/</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>H</td><td>HOLD</td></tr><tr><td>RE</td><td>REINSTATED</td></tr><tr><td>D</td><td>DISCONTINUED</td></tr><tr><td>A</td><td>ACTIVE</td></tr><tr><td>E</td><td>EXPIRED</td></tr><tr><td>DR</td><td>DISCONTINUED (RENEWAL)</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>R</td><td>RENEWED</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-unit-dose-order-status"/>
+  <version value="0.0.64"/>
+  <name value="pharmacy-unit-dose-order-status"/>
+  <status value="draft"/>
+  <date value="2021-03-12T16:05:11.288Z"/>
+  <publisher value="JPSys"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="https://jpsys.com"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="840"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://va.gov/Terminology/VistaDefinedTerms/"/>
+      <concept>
+        <code value="H"/>
+        <display value="HOLD"/>
+      </concept>
+      <concept>
+        <code value="RE"/>
+        <display value="REINSTATED"/>
+      </concept>
+      <concept>
+        <code value="D"/>
+        <display value="DISCONTINUED"/>
+      </concept>
+      <concept>
+        <code value="A"/>
+        <display value="ACTIVE"/>
+      </concept>
+      <concept>
+        <code value="E"/>
+        <display value="EXPIRED"/>
+      </concept>
+      <concept>
+        <code value="DR"/>
+        <display value="DISCONTINUED (RENEWAL)"/>
+      </concept>
+      <concept>
+        <code value="DE"/>
+        <display value="DISCONTINUED (EDIT)"/>
+      </concept>
+      <concept>
+        <code value="DE"/>
+        <display value="DISCONTINUED (EDIT)"/>
+      </concept>
+      <concept>
+        <code value="R"/>
+        <display value="RENEWED"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

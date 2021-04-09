@@ -1,0 +1,12 @@
+{
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig",
+  "name": "vha-ampl-ig",
+  "package-id": "vha-ampl-ig",
+  "ig-ver": "0.0.64",
+  "date": "Fri, 12 Mar, 2021 16:08:26 +0000",
+  "errs": 429,
+  "warnings": 195,
+  "hints": 4,
+  "version": "3.0.2",
+  "tool": "4.5.0 (3)"
+}

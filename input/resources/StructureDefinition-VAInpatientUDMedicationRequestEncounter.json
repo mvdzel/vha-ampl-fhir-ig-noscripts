@@ -1,0 +1,41 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Encounter.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAInpatientUDMedicationRequestEncounter",
+  "id": "VAInpatientUDMedicationRequestEncounter",
+  "type": "Encounter",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestEncounter",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

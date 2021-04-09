@@ -1,0 +1,95 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": "2-.32102",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.display",
+        "fixedString": "Agent Orange Expos. Indicated",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.status",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.code",
+        "label": "Agent Orange Expos. Indicated?",
+        "short": "Environment Factors information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Agent Orange Expos. Indicated?  2-.32102"
+          }
+        ],
+        "definition": "For this veteran applicant enter 'Y' if s/he was exposed to the chemical agent orange, 'N' if not, or 'U' if unknown.  Exposure cannot be claimed unless the Period of Service (field .323) is answered VIETNAM ERA, which entails those serving in the Korean DMZ between January 1, 1968 and December 31, 1969 or Vietnam.   Once the service record has been verified only users who hold the designated security key may enter/edit this field."
+      },
+      {
+        "path": "Observation.issued",
+        "label": "Agent Orange Registration Date",
+        "short": "Environment Factors information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Agent Orange Registration Date  2-.32107"
+          }
+        ],
+        "definition": "For this veteran applicant who was exposed to agent orange (EXPOSED TO AGENT ORANGE prompt must be answered YES) enter the date registered. Once the service record is verified only users who hold the designated security key may enter/edit this field.  As long as agent orange exposure is indicated this field may not be deleted."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VARiskEpisodeProfile1",
+  "id": "VARiskEpisodeProfile1",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile1",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

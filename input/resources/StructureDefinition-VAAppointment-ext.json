@@ -1,0 +1,60 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Appointment.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Appointment.extension",
+        "sliceName": "appointmentStatusDetail",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/appointmentStatusDetail"
+          }
+        ],
+        "label": "STATUS",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "APPOINTMENT @STATUS 2.98-3e"
+          }
+        ],
+        "definition": "This field contains the current status of the patient's appointment.  If the field is blank, it means the appointment has not been no-showed or cancelled and the patient was not an inpatient at the time of the appointment.  This field is set automatically by the scheduling module and must NOT be edited."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAAppointment-ext",
+  "id": "VAAppointment-ext",
+  "type": "Appointment",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment-ext",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

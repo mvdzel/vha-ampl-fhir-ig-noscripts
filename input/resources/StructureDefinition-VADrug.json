@@ -1,0 +1,230 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Medication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Medication.extension",
+        "sliceName": "medication-localFormularyStatus",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-localFormularyStatus"
+          }
+        ],
+        "label": "LOCAL NON-FORMULARY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "DRUG @LOCAL NON-FORMULARY 50-51"
+          }
+        ],
+        "definition": "This is used to designate the drug as non-formulary."
+      },
+      {
+        "path": "Medication.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/ndfrt",
+        "mustSupport": true
+      },
+      {
+        "path": "Medication.code.coding.code",
+        "label": "VA CLASSIFICATION",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "DRUG @NATIONAL DRUG CLASS 50-25"
+          },
+          {
+            "identity": "vista",
+            "map": "DRUG @DISPENSE DRUG IEN 50-.001"
+          },
+          {
+            "identity": "vista",
+            "map": "DRUG @VA CLASSIFICATION 50-2"
+          }
+        ],
+        "definition": "This is the VA classification for this drug."
+      },
+      {
+        "path": "Medication.extension",
+        "sliceName": "medication-packagesUsingDrug",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-packagesUsingDrug"
+          }
+        ],
+        "label": "PACKAGES' USE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "DRUG @PACKAGES' USE 50-63"
+          }
+        ],
+        "definition": "This field is free text, but contains the codes of the DHCP packages that consider this drug part of its formulary.  This field is set through the routine ^PSGIU, and NOT through VA FileMan.   NOTES: Uneditable through VA FileMan."
+      },
+      {
+        "path": "Medication.extension",
+        "sliceName": "medication-inactiveDate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-inactiveDate"
+          }
+        ],
+        "label": "INACTIVE DATE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "DRUG @INACTIVE DATE 50-100"
+          }
+        ],
+        "definition": "This is the date the drug is inactive."
+      },
+      {
+        "path": "Medication.extension",
+        "sliceName": "medication-deaSpecialHandling",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-deaSpecialHandling"
+          }
+        ],
+        "label": "DEA, SPECIAL HDLG",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "DRUG @DEA, SPECIAL HDLG 50-3"
+          }
+        ],
+        "definition": "This field is used to show the DEA Special Handling ."
+      },
+      {
+        "path": "Medication.extension",
+        "sliceName": "medication-cmopDispense",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-cmopDispense"
+          }
+        ],
+        "label": "CMOP DISPENSE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "DRUG @CMOP DISPENSE 50-213"
+          }
+        ],
+        "definition": "Indicates if this drug may be dispensed from the Consolidated Mail Outpatient Pharmacy System."
+      },
+      {
+        "path": "Medication.extension",
+        "sliceName": "medication-controlledSubstanceSchedule",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-controlledSubstanceSchedule"
+          }
+        ],
+        "label": "CS FEDERAL SCHEDULE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "VA PRODUCT FILE @CS FEDERAL SCHEDULE 50.68-19"
+          }
+        ],
+        "definition": "This is the Federal Schedule for controlled substances."
+      },
+      {
+        "path": "Medication.code.coding.display",
+        "label": "VA PRINT NAME",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "VA PRODUCT FILE @VA PRINT NAME 50.68-5"
+          }
+        ],
+        "definition": "This is the VA Print Name."
+      },
+      {
+        "path": "Medication.extension",
+        "sliceName": "medication-nationalFormularyStatus",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-nationalFormularyStatus"
+          }
+        ],
+        "label": "FORMULARY STATUS",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PHARMACY ORDERABLE ITEM @FORMULARY STATUS 50.7-5"
+          }
+        ],
+        "definition": "This field will designate the formulary status of the orderable item. The non-formulary status will be displayed to the provider next to the selectable list of orderable item(s) during CPRS order entry (List Manager and GUI). This field is not editable. It is controlled by the software. An Orderable Item will only be marked as non-formulary if there are no active Dispense Drugs matched to the item that are formulary drugs."
+      },
+      {
+        "path": "Medication.extension",
+        "sliceName": "medication-supplyType",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-supplyType"
+          }
+        ],
+        "label": "SUPPLY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PHARMACY ORDERABLE ITEM @SUPPLY 50.7-.09"
+          }
+        ],
+        "definition": "This field is used to indicate whether or not the Orderable Item is a supply, 1 indicating a supply."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VADrug",
+  "id": "VADrug",
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VADrug",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

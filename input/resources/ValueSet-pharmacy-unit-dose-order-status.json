@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pharmacy-unit-dose-order-status",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-unit-dose-order-status",
+  "name": "pharmacy-unit-dose-order-status",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://va.gov/Terminology/VistaDefinedTerms/",
+        "concept": [
+          {
+            "code": "H",
+            "display": "HOLD"
+          },
+          {
+            "code": "RE",
+            "display": "REINSTATED"
+          },
+          {
+            "code": "D",
+            "display": "DISCONTINUED"
+          },
+          {
+            "code": "A",
+            "display": "ACTIVE"
+          },
+          {
+            "code": "E",
+            "display": "EXPIRED"
+          },
+          {
+            "code": "DR",
+            "display": "DISCONTINUED (RENEWAL)"
+          },
+          {
+            "code": "DE",
+            "display": "DISCONTINUED (EDIT)"
+          },
+          {
+            "code": "DE",
+            "display": "DISCONTINUED (EDIT)"
+          },
+          {
+            "code": "R",
+            "display": "RENEWED"
+          }
+        ]
+      }
+    ]
+  }
+}

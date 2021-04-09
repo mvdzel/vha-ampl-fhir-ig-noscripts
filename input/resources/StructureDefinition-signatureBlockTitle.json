@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "signatureBlockTitle",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockTitle",
+  "name": "signatureBlockTitle",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Provenance"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockTitle"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NEW PERSON @SIGNATURE BLOCK TITLE 120.8-21:200-20.3"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "The verifier of the allergy/adverse reaction."
+}

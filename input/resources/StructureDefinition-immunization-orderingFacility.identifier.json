@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "immunization-orderingFacility.identifier",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-orderingFacility.identifier",
+  "name": "immunization-orderingFacility.identifier",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Immunization"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-orderingFacility.identifier"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "INSTITUTION @STATION NUMBER 9000010.11-1215:4-99"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This Indian Health Service field indicated the hospital location ordering this immunization."
+}

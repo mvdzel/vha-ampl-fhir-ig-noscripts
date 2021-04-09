@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medicationrequest-medicationScheduleType",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationScheduleType",
+  "name": "medicationrequest-medicationScheduleType",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationRequest"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationScheduleType"
+      },
+      {
+        "path": "Extension.valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @SCHEDULE TYPE 53.1-7"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This describes the type of schedule for the dispensing of the medication(s) that make up the order.   PRE-OP orders are usually considered to be ON-CALL orders, and orders dispensed as MUTLI-DOSE CONTAINERS are usually considered to be FILL ON REQUEST orders."
+}

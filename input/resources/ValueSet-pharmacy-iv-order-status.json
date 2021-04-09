@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pharmacy-iv-order-status",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-iv-order-status",
+  "name": "pharmacy-iv-order-status",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://va.gov/Terminology/VistaDefinedTerms/",
+        "concept": [
+          {
+            "code": "A",
+            "display": "ACTIVE"
+          },
+          {
+            "code": "O",
+            "display": "on call"
+          },
+          {
+            "code": "E",
+            "display": "EXPIRED"
+          },
+          {
+            "code": "P",
+            "display": "purge"
+          },
+          {
+            "code": "R",
+            "display": "RENEWED"
+          },
+          {
+            "code": "D",
+            "display": "DISCONTINUED"
+          },
+          {
+            "code": "H",
+            "display": "HOLD"
+          }
+        ]
+      }
+    ]
+  }
+}

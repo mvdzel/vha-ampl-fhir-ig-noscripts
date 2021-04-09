@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pharmacy-dispenseProduct",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dispenseProduct",
+  "name": "pharmacy-dispenseProduct",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationRequest"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dispenseProduct"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PENDING OUTPATIENT ORDERS @DRUG 52.41-11"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This is the pointer to the Drug file entry that is associated with the Pharmacy Orderable Item. Not all orders will have a Drug when received from CPRS, but upon finishing the order, a Drug must be entered."
+}

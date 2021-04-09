@@ -1,0 +1,116 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "CareTeam.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "CareTeam.name",
+        "label": "NAME",
+        "short": "Primary Care Team info",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TEAM FILE @NAME 404.51-.01"
+          }
+        ]
+      },
+      {
+        "path": "CareTeam.participant.extension",
+        "sliceName": "participant-primaryCareRole",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/participant-primaryCareRole"
+          }
+        ],
+        "label": "PC ROLE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PATIENT TEAM POSITION ASSIGNMENTS @PC ROLE 404.43-.05"
+          }
+        ],
+        "definition": "This is used to indicate if patient - team position assigment is a  special one (e.g. primary care practitioner or primary care attending)."
+      },
+      {
+        "path": "CareTeam.participant.member",
+        "label": "PRACTITIONER",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "POSITION ASSIGNMENT HISTORY @PRACTITIONER 404.52-.03"
+          }
+        ],
+        "definition": "This is a staff member who is entered in the USR CLASS MEMBERSHIP file (8930.3)."
+      },
+      {
+        "path": "CareTeam.participant.extension",
+        "sliceName": "participant-roleStatus",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/participant-roleStatus"
+          }
+        ],
+        "label": "STATUS",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "POSITION ASSIGNMENT HISTORY @STATUS 404.52-.04"
+          }
+        ],
+        "definition": "This indicates whether the practitioner's position assignment is active or inactive."
+      },
+      {
+        "path": "CareTeam.participant.role.coding.code",
+        "label": "POSITION",
+        "short": "List team's position",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TEAM POSITION  @POSITION 404.57-.01"
+          }
+        ],
+        "definition": "This is the Name of the Team Position."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAPrimaryCareTeam",
+  "id": "VAPrimaryCareTeam",
+  "type": "CareTeam",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CareTeam",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPrimaryCareTeam",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

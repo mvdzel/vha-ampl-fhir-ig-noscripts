@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "referencedDocument.display",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.display",
+  "name": "referencedDocument.display",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "DiagnosticReport"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.display"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU REFERENCE DATE/TIME - CY @TIU REFERENCE DATE/TIME - CY 63.47-.01"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This is the date and time that the cytopathology SF515 was stored in TIU.  It will match the REFERENCE DATE (#1301) field of the corresponding document in the TIU DOCUMENT (#8925) file."
+}

@@ -1,0 +1,136 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "DATE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @LAST RENEW 53.1114-.01"
+          },
+          {
+            "identity": "vista",
+            "map": "ACTIVITY LOG @DATE 53.1119-.01"
+          }
+        ],
+        "definition": "This is the date and time the activity took place."
+      },
+      {
+        "path": "Provenance.agent.whoReference",
+        "label": "USER",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @RENEWED BY 53.1114-1"
+          },
+          {
+            "identity": "vista",
+            "map": "ACTIVITY LOG @USER 53.1119-1"
+          }
+        ],
+        "definition": "This is the user taking the action on the order."
+      },
+      {
+        "path": "Provenance.extension",
+        "sliceName": "reference-targetElement/extension/change/extension/oldValue",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue"
+          }
+        ],
+        "label": "OLD DATA",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @PREVIOUS PROVIDER 53.1114-2"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @PREVIOUS STOP/TIME 53.1114-3"
+          },
+          {
+            "identity": "vista",
+            "map": "ACTIVITY LOG @OLD DATA 53.1119-4"
+          }
+        ],
+        "definition": "This is the previous data that was in the field that was changed."
+      },
+      {
+        "path": "Provenance.activity.system",
+        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1119-2",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.activity.code",
+        "label": "ACTION",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "ACTIVITY LOG @ACTION 53.1119-2"
+          }
+        ],
+        "definition": "This is the activity that has taken place on the order."
+      },
+      {
+        "path": "Provenance.extension",
+        "sliceName": "reference-targetElement/extension/elementUri",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.elementUri"
+          }
+        ],
+        "label": "FIELD",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "ACTIVITY LOG @FIELD 53.1119-3"
+          }
+        ],
+        "definition": "This is the field that was changed due to the activity."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAUnfinishedInpatientMedicationRequestActivity",
+  "id": "VAUnfinishedInpatientMedicationRequestActivity",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequestActivity",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

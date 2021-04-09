@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medicationdispense-labelCopies",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-labelCopies",
+  "name": "medicationdispense-labelCopies",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationDispense"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-labelCopies"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @COPIES 52-10.6"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "The number of copies made of the label for the prescription."
+}

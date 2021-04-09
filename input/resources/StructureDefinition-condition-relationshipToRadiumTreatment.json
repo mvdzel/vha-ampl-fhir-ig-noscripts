@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "condition-relationshipToRadiumTreatment",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment",
+  "name": "condition-relationshipToRadiumTreatment",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Condition"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment"
+      },
+      {
+        "path": "Extension.valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PROBLEM  @HEAD AND.OR NECK CANCER 9000011-1.15"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here."
+}

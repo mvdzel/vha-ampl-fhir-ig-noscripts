@@ -1,0 +1,111 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": "2-.32201",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.display",
+        "fixedString": "Persian Gulf Service",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.status",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.code",
+        "label": "Persian Gulf Service Indicated?",
+        "short": "Conflict Location information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Persian Gulf Service Indicated? 2-.32201"
+          }
+        ],
+        "definition": "If this patient served in the Persian Gulf during the war (anytime after August 2, 1990), enter yes here.  If the patient did not serve in the Persian Gulf during this timeframe, enter no.  Enter unknown if this information could not be obtained from the patient."
+      },
+      {
+        "path": "Observation.effectivePeriod"
+      },
+      {
+        "path": "Observation.effectivePeriod.start",
+        "label": "Persian Gulf From Date",
+        "short": "Conflict Location information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Persian Gulf From Date 2-.322011"
+          }
+        ],
+        "definition": "If this patient served in the Persian Gulf during the war (PERSIAN GULF SERVICE? is answered YES), respond with the date the patient began serving there.  The date must be on or after August 2, 1990."
+      },
+      {
+        "path": "Observation.effectivePeriod.end",
+        "label": "Persian Gulf To Date",
+        "short": "Conflict Location information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Persian Gulf To Date 2-.322012"
+          }
+        ],
+        "definition": "If this patient served in the Persian Gulf during the war, enter the date the patient's service in that region ended. The date must be after the date selected as PERSIAN GULF FROM DATE which must be on or after August 2,\r\n1990."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAServiceEpisode5",
+  "id": "VAServiceEpisode5",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode5",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

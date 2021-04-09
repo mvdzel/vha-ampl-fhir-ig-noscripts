@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "immunization-contraindicated",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-contraindicated",
+  "name": "immunization-contraindicated",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Immunization"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-contraindicated"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @CONTRAINDICATED 9000010.11-.07"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This field allows the immunization to be recorded as contraindicated. Reminders will include a check to see if the previous immunization was  contraindicated before creating reminders."
+}

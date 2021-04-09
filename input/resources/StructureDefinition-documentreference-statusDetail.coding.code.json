@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "documentreference-statusDetail.coding.code",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documentreference-statusDetail.coding.code",
+  "name": "documentreference-statusDetail.coding.code",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "DocumentReference"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documentreference-statusDetail.coding.code"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU DOCUMENT @STATUS 8925-.05b"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This field is intended to accommodate the status of a given report."
+}

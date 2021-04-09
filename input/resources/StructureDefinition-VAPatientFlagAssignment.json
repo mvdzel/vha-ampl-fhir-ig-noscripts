@@ -1,0 +1,85 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "DATE/TIME",
+        "short": "Initial Assigned Date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF ASSIGNMENT HISTORY FILE @DATE/TIME 26.14-.02"
+          }
+        ],
+        "definition": "This field will contain the Date and [optional] Time of either the initial ASSIGNMENT of the PATIENT RECORD FLAG or the REVIEW Date/Time of the  PATIENT RECORD FLAG."
+      },
+      {
+        "path": "Provenance.agent.role.text",
+        "fixedString": "approve",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.agent.whoReference",
+        "label": "APPROVED BY",
+        "short": "Approved by",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF ASSIGNMENT HISTORY FILE @APPROVED BY 26.14-.05"
+          }
+        ],
+        "definition": "This field contains the name of the person who approved the assignment of the patient record flag to the patient."
+      },
+      {
+        "path": "Provenance.activity.code",
+        "label": "ACTION",
+        "short": "Action",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF ASSIGNMENT HISTORY FILE @ACTION 26.14-.03"
+          }
+        ],
+        "definition": "This field contains the event that occurred to create this PRF ASSIGNMENT HISTORY record.  Sample events are NEW ASSIGNMENT, CONTINUE, INACTIVATE,  REACTIVATE and ENTERED IN ERROR."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAPatientFlagAssignment",
+  "id": "VAPatientFlagAssignment",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientFlagAssignment",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

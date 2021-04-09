@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="AppointmentStatus"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>AppointmentStatus (http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus)</h2><p>Mapping from (not specified) to (not specified)</p><p>DRAFT. Published on Mar 12, 2021 4:05:11 PM by JPSys (). </p><br/><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>N</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal">is equal to</a></td><td>noshow</td><td>NO-SHOW</td></tr><tr><td>C</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY CLINC</td></tr><tr><td>NA</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider">maps to wider concept</a></td><td>noshow</td><td>NO-SHOW &amp; AUTO RE-BOOK</td></tr><tr><td>CA</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY CLINIC &amp; AUTO RE-BOOK</td></tr><tr><td>PC</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY PATIENT</td></tr><tr><td>PCA</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY PATIENT &amp; AUTO-REBOOK</td></tr></table></div>
+  </text>
+  <url value="http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus"/>
+  <version value="0.0.64"/>
+  <name value="AppointmentStatus"/>
+  <status value="draft"/>
+  <date value="2021-03-12T16:05:11.288Z"/>
+  <publisher value="JPSys"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="https://jpsys.com"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="840"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="http://va.gov/Terminology/VistaDefinedTerms/2.98-3"/>
+    <target value="http://hl7.org/fhir/appointmentstatus"/>
+    <element>
+      <code value="N"/>
+      <target>
+        <code value="noshow"/>
+        <equivalence value="equal"/>
+        <comment value="NO-SHOW"/>
+      </target>
+    </element>
+    <element>
+      <code value="C"/>
+      <target>
+        <code value="cancelled"/>
+        <equivalence value="wider"/>
+        <comment value="CANCELLED BY CLINC"/>
+      </target>
+    </element>
+    <element>
+      <code value="NA"/>
+      <target>
+        <code value="noshow"/>
+        <equivalence value="wider"/>
+        <comment value="NO-SHOW &amp; AUTO RE-BOOK"/>
+      </target>
+    </element>
+    <element>
+      <code value="CA"/>
+      <target>
+        <code value="cancelled"/>
+        <equivalence value="wider"/>
+        <comment value="CANCELLED BY CLINIC &amp; AUTO RE-BOOK"/>
+      </target>
+    </element>
+    <element>
+      <code value="PC"/>
+      <target>
+        <code value="cancelled"/>
+        <equivalence value="wider"/>
+        <comment value="CANCELLED BY PATIENT"/>
+      </target>
+    </element>
+    <element>
+      <code value="PCA"/>
+      <target>
+        <code value="cancelled"/>
+        <equivalence value="wider"/>
+        <comment value="CANCELLED BY PATIENT &amp; AUTO-REBOOK"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

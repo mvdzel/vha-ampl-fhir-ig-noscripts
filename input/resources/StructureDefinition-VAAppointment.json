@@ -1,0 +1,71 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Appointment.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Appointment.start",
+        "label": "APPOINTMENT DATE/TIME",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "APPOINTMENT @APPOINTMENT DATE/TIME 2.98-.001"
+          }
+        ],
+        "definition": "This displays date/time function as defined in file manager.  The date/time of the appointment. |"
+      },
+      {
+        "path": "Appointment.participant.status",
+        "fixedCode": "accepted",
+        "mustSupport": true
+      },
+      {
+        "path": "Appointment.status",
+        "label": "STATUS",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "APPOINTMENT @STATUS 2.98-3"
+          }
+        ],
+        "definition": "This field contains the current status of the patient's appointment.  If the field is blank, it means the appointment has not been no-showed or cancelled and the patient was not an inpatient at the time of the appointment.  This field is set automatically by the scheduling module and must NOT be edited."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAAppointment",
+  "id": "VAAppointment",
+  "type": "Appointment",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource",
+  "description": "An Appointment profiled to support VA requirements."
+}

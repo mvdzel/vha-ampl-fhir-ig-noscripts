@@ -1,0 +1,54 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "CareTeam.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "CareTeam.name",
+        "label": "*CURREN PC TEAM",
+        "short": "Primary Care Team",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient File @*CURREN PC TEAM 2-404.02"
+          }
+        ],
+        "definition": "This field contains the patients's Primary Care Team."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VACareTeam",
+  "id": "VACareTeam",
+  "type": "CareTeam",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CareTeam",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACareTeam",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

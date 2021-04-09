@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="ClinicalDangerLevel"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>ClinicalDangerLevel (http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/ClinicalDangerLevel)</h2><p>Mapping from (not specified) to (not specified)</p><p>DRAFT. Published on Mar 12, 2021 4:05:11 PM by JPSys (). </p><br/><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>1</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal">is equal to</a></td><td>high</td><td>HIGH</td></tr><tr><td>2</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal">is equal to</a></td><td>moderate</td><td>MODERATE</td></tr><tr><td>3</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal">is equal to</a></td><td>low</td><td>LOW</td></tr></table></div>
+  </text>
+  <url value="http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/ClinicalDangerLevel"/>
+  <version value="0.0.64"/>
+  <name value="ClinicalDangerLevel"/>
+  <status value="draft"/>
+  <date value="2021-03-12T16:05:11.288Z"/>
+  <publisher value="JPSys"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="https://jpsys.com"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="840"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="http://va.gov/Terminology/VistaDefinedTerms/100.05-6"/>
+    <target value="http://hl7.org/fhir/detectedissue-severity"/>
+    <element>
+      <code value="1"/>
+      <target>
+        <code value="high"/>
+        <equivalence value="equal"/>
+        <comment value="HIGH"/>
+      </target>
+    </element>
+    <element>
+      <code value="2"/>
+      <target>
+        <code value="moderate"/>
+        <equivalence value="equal"/>
+        <comment value="MODERATE"/>
+      </target>
+    </element>
+    <element>
+      <code value="3"/>
+      <target>
+        <code value="low"/>
+        <equivalence value="equal"/>
+        <comment value="LOW"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

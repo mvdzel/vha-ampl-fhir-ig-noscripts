@@ -1,0 +1,132 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/120.5-.03",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "label": "VITAL TYPE",
+        "short": "Vital Type",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "GMRV VITAL MEASUREMENT  @VITAL TYPE 120.5-.03"
+          },
+          {
+            "identity": "vista",
+            "map": "GMRV VITAL MEASUREMENT  @VITAL TYPE 120.5-.03b"
+          }
+        ],
+        "definition": "Lookup the LOINC"
+      },
+      {
+        "path": "Observation.valueQuantity"
+      },
+      {
+        "path": "Observation.valueQuantity.value",
+        "label": "RATE",
+        "short": "Vital Value",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "GMRV VITAL MEASUREMENT  @RATE 120.5-1.2"
+          }
+        ],
+        "definition": "This field contains the numeric value associated with this vital measurement."
+      },
+      {
+        "path": "Observation.valueQuantity.unit",
+        "label": "VITAL TYPE",
+        "short": "Vital Unit",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "GMRV VITAL MEASUREMENT  @VITAL TYPE 120.5-.03u"
+          }
+        ],
+        "definition": "Use the LOINC code to determine the appropriate units"
+      },
+      {
+        "path": "Observation.effectiveDateTime",
+        "label": "DATE/TIME TAKEN",
+        "short": "Date/Time Taken",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "GMRV VITAL MEASUREMENT  @DATE/TIME TAKEN 120.5-.01"
+          }
+        ],
+        "definition": "This field contains the date/time this vital/measurement was taken by the care provider."
+      },
+      {
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "120.5-1.4",
+        "mustSupport": true,
+        "label": "QUALIFIER",
+        "short": "Qualifier",
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "GMRV VITAL MEASUREMENT  @QUALIFIER    120.505-.01"
+          }
+        ],
+        "definition": "This field contains the name of the qualifier associated with this measurement."
+      },
+      {
+        "path": "Observation.component.valueString",
+        "label": "SUPPLEMENTAL O2",
+        "short": "Supplemental Oxygen Information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "undefined @SUPPLEMENTAL O2 120.5-1.4"
+          }
+        ],
+        "definition": "This field stores the information of the supplemental oxygen as follows:   .5-20 l/min (liters/minute)   and/or   21-100 % of oxygen concentration For example: 4.5 l/min 40%              4.5 l/min              40 %"
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAVitals",
+  "id": "VAVitals",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAVitals",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

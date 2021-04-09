@@ -1,0 +1,111 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": "2-.3227",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.display",
+        "fixedString": "Panama Service",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.status",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.code",
+        "label": "Panama Service Indicated?",
+        "short": "Conflict Location information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Panama Service Indicated? 2-.3227"
+          }
+        ],
+        "definition": "Respond yes if this patient served in Panama between the dates of December 20, 1989 and January 31, 1990.  Enter no if the patient did not serve in Panama during this timeframe.  Otherwise, enter unknown if this information could not be obtained from the patient."
+      },
+      {
+        "path": "Observation.effectivePeriod"
+      },
+      {
+        "path": "Observation.effectivePeriod.start",
+        "label": "Panama From Date",
+        "short": "Conflict Location information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Panama From Date 2-.3228"
+          }
+        ],
+        "definition": "If this patient served in Panama (PANAMA SERVICE INDICATED? is answered YES), enter the date this patient's service in Panama began.  The date must be between December 20, 1989 and January 31, 1990."
+      },
+      {
+        "path": "Observation.effectivePeriod.end",
+        "label": "Panama To Date",
+        "short": "Conflict Location information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Panama To Date 2-.3229"
+          }
+        ],
+        "definition": "If this patient served during the conflict in Panama (PANAMA SERVICE INDICATED? is YES), enter the date the patient's service there ended. The date must be between December 20, 1989 and January 31, 1990."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAServiceEpisode4",
+  "id": "VAServiceEpisode4",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode4",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

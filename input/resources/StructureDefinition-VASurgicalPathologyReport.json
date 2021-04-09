@@ -1,0 +1,121 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "DiagnosticReport.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "DiagnosticReport.performer.actor.display",
+        "label": "PATHOLOGIST",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "SURGICAL PATHOLOGY @PATHOLOGIST 63.08-.02"
+          }
+        ],
+        "definition": "This is the pathologist performing the procedure."
+      },
+      {
+        "path": "DiagnosticReport.issued",
+        "label": "DATE REPORT COMPLETED",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "SURGICAL PATHOLOGY @DATE REPORT COMPLETED 63.08-.03"
+          }
+        ],
+        "definition": "This is the date the report is completed."
+      },
+      {
+        "path": "DiagnosticReport.extension",
+        "sliceName": "referencedDocument/display",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.display"
+          }
+        ],
+        "label": "TIU REFERENCE DATE/TIME - SP",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "undefined @TIU REFERENCE DATE/TIME - SP 63.19-.01"
+          }
+        ],
+        "definition": "This is the date and time that the surgical pathology SF515 was stored in TIU. It will match the REFERENCE DATE (#1301) field of the corresponding document in the TIU DOCUMENT (#8925) file."
+      },
+      {
+        "path": "DiagnosticReport.extension",
+        "sliceName": "referencedDocument/uri",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.uri"
+          }
+        ],
+        "label": "TIU ENTRY POINTER SP",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "undefined @TIU ENTRY POINTER SP 63.19-1"
+          }
+        ],
+        "definition": "This field is a pointer to the TIU DOCUMENT (#8925) file.  It stores the pointer for a surgical pathology SF515 that has been electronically signed and stored in TIU."
+      },
+      {
+        "path": "DiagnosticReport.basedOn.extension",
+        "sliceName": "request-extendedPriority",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/request-extendedPriority"
+          }
+        ],
+        "label": "ORDER URGENCY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "ORDERED TEST @ORDER URGENCY 63.53-2b"
+          }
+        ]
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VASurgicalPathologyReport",
+  "id": "VASurgicalPathologyReport",
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASurgicalPathologyReport",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

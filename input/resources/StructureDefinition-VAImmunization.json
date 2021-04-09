@@ -1,0 +1,399 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Immunization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Immunization.vaccineCode.text",
+        "label": "IMMUNIZATION",
+        "short": "Immunization",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @IMMUNIZATION 9000010.11-.01"
+          }
+        ],
+        "definition": "This is the type of immunization that was given to the patient at the encounter."
+      },
+      {
+        "path": "Immunization.patient.display",
+        "label": "PATIENT",
+        "short": "Patient",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @PATIENT 9000010.11-.02"
+          }
+        ],
+        "definition": "This is the patient who was given the immunization."
+      },
+      {
+        "path": "Immunization.encounter.display",
+        "label": "VISIT",
+        "short": "Visit Date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @VISIT 9000010.11-.03"
+          }
+        ],
+        "definition": "This is the encounter defined in the Visit file that represents when and where the immunization was given."
+      },
+      {
+        "path": "Immunization.date",
+        "label": "EVENT DATE/TIME",
+        "short": "Event Date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @EVENT DATE/TIME 9000010.11-1201"
+          }
+        ],
+        "definition": "This is the date and time the immunization was given.  This date and time may be different from the visit date and time.  For example, for clinic appointment visits, the visit date and time is the date and time of the appointment, not the time the provider performed the clinical event.   The date may be an imprecise date.   Date and time may be within 30 days before of after the visit date, with the restriction the date cannot be a future date."
+      },
+      {
+        "path": "Immunization.vaccinationProtocol.extension",
+        "sliceName": "doseNumberString",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/doseNumberString"
+          }
+        ],
+        "label": "SERIES",
+        "short": "Series",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @SERIES 9000010.11-.04"
+          }
+        ],
+        "definition": "This field allows the provider to specify which series of immunization type was given to the patient."
+      },
+      {
+        "path": "Immunization.extension",
+        "sliceName": "immunization-contraindicated",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-contraindicated"
+          }
+        ],
+        "label": "CONTRAINDICATED",
+        "short": "Contrindicated",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @CONTRAINDICATED 9000010.11-.07"
+          }
+        ],
+        "definition": "This field allows the immunization to be recorded as contraindicated. Reminders will include a check to see if the previous immunization was  contraindicated before creating reminders."
+      },
+      {
+        "path": "Immunization.practitioner.role.coding.code",
+        "fixedCode": "AP",
+        "mustSupport": true
+      },
+      {
+        "path": "Immunization.practitioner.actor",
+        "label": "IMMUNIZATION DOCUMENTER",
+        "short": "Administered by",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @ENCOUNTER PROVIDER  9000010.11-1204"
+          },
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @ORDERING PROVIDER 9000010.11-1202"
+          },
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @IMMUNIZATION DOCUMENTER 9000010.11-1206"
+          }
+        ],
+        "definition": "This is the person/provider who documented this immunization by entering the data into the system by whatever means."
+      },
+      {
+        "path": "Immunization.lotNumber",
+        "label": "LOT NUMBER",
+        "short": "LOT #",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @LOT NUMBER 9000010.11-1207"
+          }
+        ],
+        "definition": "This is the lot number of the immunization entered for this event. If historical event, enter lot number (if known) in Comments."
+      },
+      {
+        "path": "Immunization.manufacturer",
+        "label": "MANUFACTURER",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "IMMUNIZATION LOT FILE @MANUFACTURER 9999999.41-.02"
+          }
+        ]
+      },
+      {
+        "path": "Immunization.expirationDate",
+        "label": "EXPIRATION DATE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "IMMUNIZATION LOT FILE @EXPIRATION DATE 9999999.41-.09"
+          }
+        ],
+        "definition": "This is the date that the immunization represented by this lot number is due to expire, as determined by the manufacturer."
+      },
+      {
+        "path": "Immunization.vaccineCode.coding.system",
+        "fixedUri": "http://hl7.org/fhir/sid/ndc",
+        "mustSupport": true
+      },
+      {
+        "path": "Immunization.vaccineCode.coding.code",
+        "label": "NDC CODE (VA)",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "IMMUNIZATION LOT FILE @NDC CODE (VA)  9999999.41-.18"
+          }
+        ],
+        "definition": "This is the National Drug Code (NDC) for this lot."
+      },
+      {
+        "path": "Immunization.extension",
+        "sliceName": "immunization-maxNumberinSeries",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-maxNumberinSeries"
+          }
+        ],
+        "label": "MAX # IN SERIES",
+        "short": "Max # in Series",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "IMMUNIZATION FILE @MAX # IN SERIES 9999999.14-.05"
+          }
+        ],
+        "definition": "(Optional) This is the maximum number of vaccinations that can be given for this immunization.   Enter the number between 0 and 8 that represents the maximum allowable vaccinations that can be given for this immunization."
+      },
+      {
+        "path": "Immunization.vaccineCode.coding.display",
+        "label": "CDC FULL VACCINE NAME",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "IMMUNIZATION FILE @CDC FULL VACCINE NAME 9999999.14-2"
+          }
+        ],
+        "definition": "This is the CDC Full Vaccine Name for this immunization."
+      },
+      {
+        "path": "Immunization.extension",
+        "sliceName": "immunization/education/documentType",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization.education.documentType"
+          }
+        ],
+        "label": "VACCINE INFORMATION STATEMENT",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "IMMUNIZATION FILE @VACCINE INFORMATION STATEMENT 9999999.144-.01"
+          }
+        ],
+        "definition": "This is the name of the Vaccine Information Statement associated with this immunization."
+      },
+      {
+        "path": "Immunization.extension",
+        "sliceName": "immunization/education/publicationDate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization.education.publicationDate"
+          }
+        ],
+        "label": "EDITION DATE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "VACCINE INFORMATION STATEMENT FILE @EDITION DATE 920-.02"
+          }
+        ],
+        "definition": "This is the edition date of this Vaccine Information Statement distributed by the CDC."
+      },
+      {
+        "path": "Immunization.extension",
+        "sliceName": "immunization/education/publication/language",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization.education.publication.language"
+          }
+        ],
+        "label": "LANGUAGE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "VACCINE INFORMATION STATEMENT FILE @LANGUAGE 920-.04"
+          }
+        ],
+        "definition": "This is the language translation of this Vaccine Information Statement (VIS)."
+      },
+      {
+        "path": "Immunization.route.coding.code",
+        "label": "ROUTE OF ADMINISTRATION",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @ROUTE OF ADMINISTRATION 9000010.11-1302"
+          }
+        ],
+        "definition": "This is the method this vaccine was administered. Select from the list provided."
+      },
+      {
+        "path": "Immunization.site.coding.code",
+        "label": "SITE OF ADMINISTRATION",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @SITE OF ADMINISTRATION 9000010.11-1303"
+          }
+        ],
+        "definition": "This is the area of the patient's body through which the vaccine was administered."
+      },
+      {
+        "path": "Immunization.doseQuantity.value",
+        "label": "DOSE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @DOSE 9000010.11-1312"
+          }
+        ],
+        "definition": "This is the amount of vaccine product administered for this immunization. The units are expressed in the DOSE UNITS field (#1313)."
+      },
+      {
+        "path": "Immunization.doseQuantity.unit",
+        "label": "DOSE UNITS",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @DOSE UNITS 9000010.11-1313"
+          }
+        ],
+        "definition": "This is the units that reflect the actual quantity of the vaccine product administered."
+      },
+      {
+        "path": "Immunization.extension",
+        "sliceName": "immunization-orderingFacility/name",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-orderingFacility.name"
+          }
+        ],
+        "label": "NAME",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "INSTITUTION @NAME 9000010.11-1215:4-.01"
+          }
+        ],
+        "definition": "This Indian Health Service field indicated the hospital location ordering this immunization."
+      },
+      {
+        "path": "Immunization.extension",
+        "sliceName": "immunization-orderingFacility/identifier",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-orderingFacility.identifier"
+          }
+        ],
+        "label": "STATION NUMBER",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "INSTITUTION @STATION NUMBER 9000010.11-1215:4-99"
+          }
+        ],
+        "definition": "This Indian Health Service field indicated the hospital location ordering this immunization."
+      },
+      {
+        "path": "Immunization.note",
+        "label": "COMMENTS",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "V IMMUNIZATION FILE @COMMENTS 9000010.11-81101"
+          }
+        ],
+        "definition": "This is a comment related to the patient's immunization.  The provider may enter this manually via the PCE User Interface."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAImmunization",
+  "id": "VAImmunization",
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAImmunization",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

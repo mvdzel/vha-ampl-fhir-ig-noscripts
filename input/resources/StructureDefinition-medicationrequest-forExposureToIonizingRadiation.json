@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medicationrequest-forExposureToIonizingRadiation",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation",
+  "name": "medicationrequest-forExposureToIonizingRadiation",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationRequest"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation"
+      },
+      {
+        "path": "Extension.valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @IONIZING RADIATION EXPOSURE 52-119"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to ionizing radiation during military service, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy."
+}

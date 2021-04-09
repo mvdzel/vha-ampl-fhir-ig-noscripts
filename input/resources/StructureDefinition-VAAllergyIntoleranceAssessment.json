@@ -1,0 +1,82 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.activity.code",
+        "fixedCode": "assess",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "ASSESSMENT DATE/TIME",
+        "short": "Date/Time",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "ADVERSE REACTION ASSESSMENT  @ASSESSMENT DATE/TIME 120.86-3"
+          }
+        ],
+        "definition": "This field contains the date/time of the last reaction assessment for this patient."
+      },
+      {
+        "path": "Provenance.agent.role.text",
+        "fixedString": "informant",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.agent.whoReference",
+        "label": "ACESSING USER",
+        "short": "Who entered assessment",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "ADVERSE REACTION ASSESSMENT  @NAME 120.86-.01"
+          },
+          {
+            "identity": "vista",
+            "map": "ADVERSE REACTION ASSESSMENT  @ACESSING USER 120.86-2"
+          }
+        ],
+        "definition": "This field contains the name of the user who made the last reaction assessment for this patient."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAAllergyIntoleranceAssessment",
+  "id": "VAAllergyIntoleranceAssessment",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceAssessment",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource",
+  "description": "Provenance of the confirmation of a reaction."
+}

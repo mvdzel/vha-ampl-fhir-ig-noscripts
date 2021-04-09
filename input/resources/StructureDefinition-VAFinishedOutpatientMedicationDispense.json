@@ -1,0 +1,398 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "MedicationDispense.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-authorization",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-authorization"
+          }
+        ],
+        "label": "PATIENT STATUS",
+        "short": "Rx Patient Status",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @PATIENT STATUS 52-3"
+          }
+        ],
+        "definition": "This field is used to show the status of the patient at the time the  medication was filled."
+      },
+      {
+        "path": "MedicationDispense.medicationCodeableConcept"
+      },
+      {
+        "path": "MedicationDispense.medicationCodeableConcept.coding.code",
+        "label": "DRUG",
+        "short": "Drug",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @DRUG 52-6"
+          }
+        ],
+        "definition": "The actual medication."
+      },
+      {
+        "path": "MedicationDispense.medicationCodeableConcept.text",
+        "label": "TRADE NAME",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @TRADE NAME 52-6.5"
+          }
+        ],
+        "definition": "Free Text that, if it exists, will replace the DRUG name on the RX label."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-labelCopies",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-labelCopies"
+          }
+        ],
+        "label": "COPIES",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @COPIES 52-10.6"
+          }
+        ],
+        "definition": "The number of copies made of the label for the prescription."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-dispenseChannel",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispenseChannel"
+          }
+        ],
+        "label": "MAIL/WINDOW",
+        "short": "Refill mail/Window",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @MAIL/WINDOW 52-11"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @MAIL/WINDOW 52.1-2"
+          }
+        ],
+        "definition": "This field contains 'M' if the refill is to be mailed to the patient and 'W' if the refill is to be picked up at the pharmacy window."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-fillDate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate"
+          }
+        ],
+        "label": "FILL DATE",
+        "short": "Original Fill Date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @FILL DATE 52-22"
+          }
+        ],
+        "definition": "The date the prescription was filled."
+      },
+      {
+        "path": "MedicationDispense.performer.actor",
+        "label": "REMOTE PHARMACIST",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @PHARMACIST NAME 52-23"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @DIVISION 52-20"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @VERIFYING PHARMACIST 52-104"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @FINISHING PERSON  52-38"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @FILLING PERSON 52-38.1"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @PHARMACIST NAME 52.1-4"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @REMOTE PHARMACIST 52.1-92"
+          }
+        ],
+        "definition": "This is the name of the Pharmacist that remotely completed a refill for a prescription.",
+        "short": "finishing person"
+      },
+      {
+        "path": "MedicationDispense.whenPrepared",
+        "label": "RELEASED DATE/TIME",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @RELEASED DATE.TIME 52-31"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @RELEASED DATE/TIME 52.1-17"
+          }
+        ],
+        "definition": "This field is used to show the date/time the medication was released for inventory purposes and copay billing if applicable."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-patientCounseled",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-patientCounseled"
+          }
+        ],
+        "label": "WAS THE PATIENT COUNSELED",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @WAS THE PATIENT COUNSELED 52-41"
+          }
+        ],
+        "definition": "This field indicates whether or not the patient received counseling about the prescription."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-patientCounselingUnderstood",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-patientCounselingUnderstood"
+          }
+        ],
+        "label": "WAS COUNSELING UNDERSTOOD",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @WAS COUNSELING UNDERSTOOD 52-42"
+          }
+        ],
+        "definition": "This field indicates whether or not the patient understood the counseling on the prescription, if the patient was counseled."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-medicationReturnedToStock",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-medicationReturnedToStock"
+          }
+        ],
+        "label": "RETURNED TO STOCK",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @RETURNED TO STOCK 52-32.1"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @RETURNED TO STOCK 52.1-14"
+          }
+        ],
+        "definition": "This field is used to indicate when and if the medication was returned to inventory due to the prescription not being picked up or mailed to the patient."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-pickupInstructions",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-pickupInstructions"
+          }
+        ],
+        "label": "METHOD OF PICKUP",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @METHOD OF PICKUP 52-35"
+          }
+        ],
+        "definition": "Enter any special instructions that should appear on mailing address portion of the label, specifing where, or when the RX(s) should be  picked up."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-copayTransactionType",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-copayTransactionType"
+          }
+        ],
+        "label": "COPAY TRANSACTION TYPE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @COPAY TRANSACTION TYPE 52-105"
+          }
+        ],
+        "definition": "This field contains the internal entry number of the pointer to the IB Action Type file (#350.1)."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-dispensedAsWritten",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispensedAsWritten"
+          }
+        ],
+        "label": "DAW CODE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @DAW CODE 52-81"
+          }
+        ],
+        "definition": "Dispensed As Written code. This information is used for electronic claim transmission to third party payers (insurance companies)."
+      },
+      {
+        "path": "MedicationDispense.performer.extension",
+        "sliceName": "whenPerformed",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/whenPerformed"
+          }
+        ],
+        "label": "DISPENSE DATE",
+        "short": "refill date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @REFILL DATE 52.1-.01"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @DISPENSE DATE  52.1-10.1"
+          }
+        ],
+        "definition": "This field is used to show date/time the medication was placed into packaging."
+      },
+      {
+        "path": "MedicationDispense.quantity",
+        "label": "QTY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @QTY 52.1-1"
+          }
+        ],
+        "definition": "TECHNICAL DESCR:  This field allows numeric entries only, both for CMOP prescriptions and non-CMOP prescriptions. It requires a number between .01 and 99999999, with a maximum of 2 fractional decimal places.\r\nNOTE: QTY values that were on file prior to patch PSO*7*29 (released 2/17/00) may contain alpha characters."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-fillRequestDate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillRequestDate"
+          }
+        ],
+        "label": "LOGIN DATE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @LOGIN DATE 52.1-7"
+          }
+        ],
+        "definition": "This is the date the refill request was entered."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "richAnnotation/comment/text",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
+          }
+        ],
+        "label": "REMARKS",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @REMARKS 52.1-3"
+          }
+        ],
+        "definition": "This field contains comments as deemed necessary by the pharmacy staff."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAFinishedOutpatientMedicationDispense",
+  "id": "VAFinishedOutpatientMedicationDispense",
+  "type": "MedicationDispense",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationDispense",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource",
+  "description": "Dispensation of VA finished outpatient medication order"
+}

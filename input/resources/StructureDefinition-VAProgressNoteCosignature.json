@@ -1,0 +1,114 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.activity.code",
+        "fixedCode": "cosign",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.activity.system",
+        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/8925-1507",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "COSIGNATURE DATE/TIME",
+        "short": "Cosigner",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU DOCUMENT @COSIGNATURE DATE/TIME 8925-1507"
+          }
+        ],
+        "definition": "This is the date/time at which cosignature was obtained."
+      },
+      {
+        "path": "Provenance.agent.whoReference",
+        "label": "COSIGNED BY",
+        "short": "Cosigner",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU DOCUMENT @COSIGNED BY 8925-1508"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent.whoReference.extension",
+        "sliceName": "signatureBlockName",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockName"
+          }
+        ],
+        "label": "COSIGNATURE BLOCK NAME",
+        "short": "Cosigner",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU DOCUMENT @COSIGNATURE BLOCK NAME 8925-1509"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent.whoReference.extension",
+        "sliceName": "signatureBlockTitle",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockTitle"
+          }
+        ],
+        "label": "COSIGNATURE BLOCK TITLE",
+        "short": "Cosigner",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU DOCUMENT @COSIGNATURE BLOCK TITLE 8925-1510"
+          }
+        ]
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAProgressNoteCosignature",
+  "id": "VAProgressNoteCosignature",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteCosignature",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

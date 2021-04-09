@@ -1,0 +1,178 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "MedicationDispense.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-fillDate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate"
+          }
+        ],
+        "label": "PARTIAL DATE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @PARTIAL DATE 52.2-.01"
+          }
+        ],
+        "definition": "This is the date the partial was made."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-dispenseChannel",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispenseChannel"
+          }
+        ],
+        "label": "MAIL/WINDOW",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @MAIL/WINDOW 52.2-.02"
+          }
+        ],
+        "definition": "This field tells whether the medication was picked up  or mailed to the patient."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "richAnnotation/comment/text",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
+          }
+        ],
+        "label": "REMARKS",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @REMARKS 52.2-.03"
+          }
+        ],
+        "definition": "These are any additional comments."
+      },
+      {
+        "path": "MedicationDispense.quantity",
+        "label": "QTY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @QTY 52.2-.04"
+          }
+        ],
+        "definition": "This field is used to show the amount of medication that was dispensed."
+      },
+      {
+        "path": "MedicationDispense.daysSupply.unit",
+        "fixedString": "d",
+        "mustSupport": true
+      },
+      {
+        "path": "MedicationDispense.daysSupply.value",
+        "label": "DAYS SUPPLY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @DAYS SUPPLY  52.2-.041"
+          }
+        ],
+        "definition": "This field is used to indicate the days of supply for partial RX fill."
+      },
+      {
+        "path": "MedicationDispense.performer.actor",
+        "label": "REMOTE PHARMACIST",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @PHARMACIST NAME 52.2-.05"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @DIVISION 52.2-.09"
+          },
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @REMOTE PHARMACIST 52.2-92"
+          }
+        ],
+        "definition": "This holds the name of the pharmacist that initiated the remote partail fill request."
+      },
+      {
+        "path": "MedicationDispense.extension",
+        "sliceName": "medicationdispense-fillRequestDate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillRequestDate"
+          }
+        ],
+        "label": "LOGIN DATE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @LOGIN DATE 52.2-.08"
+          }
+        ],
+        "definition": "This is the date that the prescription was entered."
+      },
+      {
+        "path": "MedicationDispense.whenPrepared",
+        "label": "RELEASED DATE/TIME",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @RELEASED DATE/TIME 52.2-8"
+          }
+        ],
+        "definition": "This field is used to show the date the medication was released."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAFinishedOutpatientMedicationPartial",
+  "id": "VAFinishedOutpatientMedicationPartial",
+  "type": "MedicationDispense",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationPartial",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

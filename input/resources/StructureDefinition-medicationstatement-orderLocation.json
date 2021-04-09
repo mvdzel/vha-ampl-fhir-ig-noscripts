@@ -1,0 +1,47 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medicationstatement-orderLocation",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-orderLocation",
+  "name": "medicationstatement-orderLocation",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationStatement"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-orderLocation"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PHARMACY PATIENT FILE @CLINIC 55.05-13"
+          }
+        ]
+      }
+    ]
+  }
+}

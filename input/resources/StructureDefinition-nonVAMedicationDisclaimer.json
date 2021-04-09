@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "nonVAMedicationDisclaimer",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/nonVAMedicationDisclaimer",
+  "name": "nonVAMedicationDisclaimer",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationStatement"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/nonVAMedicationDisclaimer"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PHARMACY PATIENT FILE @DISCLAIMER 55.05-10"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This is the multiple for the Non-VA Med Disclaimer (Statement/Explanation)"
+}

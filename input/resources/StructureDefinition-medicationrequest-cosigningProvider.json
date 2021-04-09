@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medicationrequest-cosigningProvider",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-cosigningProvider",
+  "name": "medicationrequest-cosigningProvider",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationRequest"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-cosigningProvider"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRESCRIPTION @COSIGNING PHYSICIAN 52-109"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This field identifies the cosigning physician for prescriptions written by a provider for whom a counter signature is required, for example a nurse practitioner."
+}

@@ -1,0 +1,75 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.agent.role.coding.code",
+        "fixedCode": "verifyingNurse",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.agent.whoReference",
+        "label": "VERIFYING NURSE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @VERIFYING NURSE 55.01-16"
+          }
+        ],
+        "definition": "This is the nurse who acknowledged (through OE/RR) the order, or the lates action taken on the order."
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "DATE VERIFIED BY PHARMACIST",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @DATE VERIFIED BY NURSE 55.01-17"
+          },
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @DATE VERIFIED BY PHARMACIST 55.01-141"
+          }
+        ],
+        "definition": "This is the date/time the order was verified by the pharmacist.",
+        "short": "date verified"
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAInpatientIVMedicationRequestVerification",
+  "id": "VAInpatientIVMedicationRequestVerification",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequestVerification",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

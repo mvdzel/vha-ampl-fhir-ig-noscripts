@@ -1,0 +1,131 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": "2-.32103",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.display",
+        "fixedString": "Radiation Exposure Indicated",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.status",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.code",
+        "label": "Radiation Exposure Indicated?",
+        "short": "Environment Factors information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Radiation Exposure Indicated?   2-.32103"
+          }
+        ],
+        "definition": "Enter 'Y' if the veteran was exposed to ionizing radiation 1) at a nuclear device testing site (e.g. the Pacific Islands, NM or NV) or 2) as a POW or while serving in Hiroshima and/or Nagasaki, Japan from August 6, 1945 through July 1, 1946, or 3) served at Department of Energy plants at Paducah, KY, Portsmouth, OH or the K25 area at Oak Ridge, TN for at least 250 days before February 1, 1992 or 4) served at Longshot, Milrow, or Cannikin underground nuclear tests at Amchitka Island, AK prior to January 1, 1974.     Veterans exposed by method #3 or #4 are not eligible for  copay exemption or enrollment in priority 6 based on their IR exposure.   Enter 'N' if not exposed or 'U' if unknown.   Once the record has been verified only HEC users  may enter/edit this field."
+      },
+      {
+        "path": "Observation.issued",
+        "label": "Radiation Registration Date",
+        "short": "Environment Factors information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Radiation Registration Date  2-.32111"
+          }
+        ],
+        "definition": "For this veteran applicant who was exposed to ionizing radiation (WERE YOU EXPOSED TO RADIATION prompt must be answered YES) enter the date registered.  Once the service record is verified only users who hold the designated security key may enter/edit this field.  This field cannot be deleted as long as ionizing radiation exposure is indicated."
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/2-.3212",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "2-.3212",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.code.coding.display",
+        "fixedString": "Radiation Exposure Method",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept.coding.code",
+        "label": "Radiation Exposure Method",
+        "short": "Environment Factors information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Radiation Exposure Method  2-.3212"
+          }
+        ],
+        "definition": "This field represents the method by which the exposure to ionizing radiation occurred."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VARiskEpisodeProfile2",
+  "id": "VARiskEpisodeProfile2",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile2",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

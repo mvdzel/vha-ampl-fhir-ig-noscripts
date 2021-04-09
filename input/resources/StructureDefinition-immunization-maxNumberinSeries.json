@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "immunization-maxNumberinSeries",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-maxNumberinSeries",
+  "name": "immunization-maxNumberinSeries",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Immunization"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-maxNumberinSeries"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "IMMUNIZATION FILE @MAX # IN SERIES 9999999.14-.05"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "(Optional) This is the maximum number of vaccinations that can be given for this immunization.   Enter the number between 0 and 8 that represents the maximum allowable vaccinations that can be given for this immunization."
+}

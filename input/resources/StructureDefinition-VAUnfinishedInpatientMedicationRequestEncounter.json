@@ -1,0 +1,81 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "MedicationRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationdispense-ivLabelsPerDay",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-ivLabelsPerDay"
+          }
+        ],
+        "label": "LABELS PER DAY",
+        "short": "labels per day",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @LABELS PER DAY 53.1-131"
+          }
+        ],
+        "definition": "The number of IV labels needed each day. If populated, this value will  override the system-calculated number of labels."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.extension",
+        "sliceName": "dosageInstruction-ivBottleNumber",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/dosageInstruction-ivBottleNumber"
+          }
+        ],
+        "label": "BOTTLE",
+        "short": "bottle",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @BOTTLE 53.157-2"
+          }
+        ],
+        "definition": "This is the bottle number (or numbers, separated by commas) in which  this additive will be included for this IV order. If this field is blank,  it means that the additive will be included in all bottles."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAUnfinishedInpatientMedicationRequestEncounter",
+  "id": "VAUnfinishedInpatientMedicationRequestEncounter",
+  "type": "MedicationRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequestEncounter",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

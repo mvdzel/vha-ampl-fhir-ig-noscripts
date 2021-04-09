@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "immunization.education.publicationDate",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization.education.publicationDate",
+  "name": "immunization.education.publicationDate",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Immunization"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization.education.publicationDate"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "VACCINE INFORMATION STATEMENT FILE @EDITION DATE 920-.02"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This is the edition date of this Vaccine Information Statement distributed by the CDC."
+}

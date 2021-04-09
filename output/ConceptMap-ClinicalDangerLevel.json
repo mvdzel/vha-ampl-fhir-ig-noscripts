@@ -1,0 +1,72 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "ClinicalDangerLevel",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ClinicalDangerLevel (http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/ClinicalDangerLevel)</h2><p>Mapping from (not specified) to (not specified)</p><p>DRAFT. Published on Mar 12, 2021 4:05:11 PM by JPSys (). </p><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>1</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>high</td><td>HIGH</td></tr><tr><td>2</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>moderate</td><td>MODERATE</td></tr><tr><td>3</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>low</td><td>LOW</td></tr></table></div>"
+  },
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/ClinicalDangerLevel",
+  "version": "0.0.64",
+  "name": "ClinicalDangerLevel",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "publisher": "JPSys",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "https://jpsys.com"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "840"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "source": "http://va.gov/Terminology/VistaDefinedTerms/100.05-6",
+      "target": "http://hl7.org/fhir/detectedissue-severity",
+      "element": [
+        {
+          "code": "1",
+          "target": [
+            {
+              "code": "high",
+              "equivalence": "equal",
+              "comment": "HIGH"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "target": [
+            {
+              "code": "moderate",
+              "equivalence": "equal",
+              "comment": "MODERATE"
+            }
+          ]
+        },
+        {
+          "code": "3",
+          "target": [
+            {
+              "code": "low",
+              "equivalence": "equal",
+              "comment": "LOW"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "patient-lastDischargeDate",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastDischargeDate",
+  "name": "patient-lastDischargeDate",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Patient"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastDischargeDate"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "patient Movement  @lastest  transaction date/time for transaction type=3 405-.01b"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "Enter in this field the date/time of the movement (admission, transfer, discharge, treating specialty transfer, lodger check-in, or lodger check- out).  Time must be included."
+}

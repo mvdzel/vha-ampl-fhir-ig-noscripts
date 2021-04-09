@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "signatureMode.coding.code",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureMode.coding.code",
+  "name": "signatureMode.coding.code",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Provenance"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureMode.coding.code"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU DOCUMENT @SIGNATURE MODE  8925-1505"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This is the mode by which the signature was obtained (i.e., either electronic or chart)."
+}

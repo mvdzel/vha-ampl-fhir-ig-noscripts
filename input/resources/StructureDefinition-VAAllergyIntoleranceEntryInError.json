@@ -1,0 +1,73 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.activity.code",
+        "fixedCode": "nullified",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "DATE/TIME ENTERED IN ERROR",
+        "short": "Date Entered in Error",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PATIENT ALLERGIES @DATE/TIME ENTERED IN ERROR 120.8-23"
+          }
+        ],
+        "definition": "The date/time the allergy/adverse reaction was entered in error."
+      },
+      {
+        "path": "Provenance.agent.whoReference",
+        "label": "USER ENTERING IN ERROR",
+        "short": "Person who entered in error",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PATIENT ALLERGIES @USER ENTERING IN ERROR 120.8-24"
+          }
+        ],
+        "definition": "The person who entered this allergy/adverse reaction in error."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAAllergyIntoleranceEntryInError",
+  "id": "VAAllergyIntoleranceEntryInError",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceEntryInError",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource",
+  "description": "Provenance of the determination that the record is in error."
+}

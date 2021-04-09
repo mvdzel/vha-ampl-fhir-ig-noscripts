@@ -1,0 +1,190 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Flag.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Flag.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/26.13-.02",
+        "mustSupport": true
+      },
+      {
+        "path": "Flag.code.coding.code",
+        "label": "name",
+        "short": "Flag Category",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF ASSIGNMENT FILE @FLAG NAME 26.13-.02"
+          },
+          {
+            "identity": "vista",
+            "map": "PRF NATIONAL FLAG @name 26.15-.01"
+          },
+          {
+            "identity": "vista",
+            "map": "PRF LOCAL FLAG @name 26.11-.01"
+          }
+        ],
+        "definition": "This field contains the Patient Record Flag Name that is assigned to a  patient."
+      },
+      {
+        "path": "Flag.extension",
+        "sliceName": "flag-rationale",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-rationale"
+          }
+        ],
+        "label": "ASSIGNMENT NARRATIVE",
+        "short": "Assignment Narrative",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF ASSIGNMENT FILE @ASSIGNMENT NARRATIVE 26.13-1"
+          }
+        ],
+        "definition": "This word processing field contains the patient record flag assignment narrative text. The assignment narrative text is a description of the incident or reason that generated the need for this patient record flag assignment.  The description is followed by recommended actions that should be performed by a person working with this specific patient."
+      },
+      {
+        "path": "Flag.category.coding.code",
+        "label": "TYPE",
+        "short": "Flag Type - National",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF LOCAL FLAG FILE @TYPE 26.11-.03"
+          },
+          {
+            "identity": "vista",
+            "map": "PRF NATIONAL FLAG FILE @TYPE 26.15-.03"
+          }
+        ],
+        "definition": "This field contains the usage classification of the Patient Record Flag."
+      },
+      {
+        "path": "Flag.status",
+        "label": "STATUS",
+        "short": "Assignment Status",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF ASSIGNMENT FILE @STATUS 26.13-.03"
+          }
+        ],
+        "definition": "This field indicates if the patient record flag assignment is Active or Inactive for this patient."
+      },
+      {
+        "path": "Flag.extension",
+        "sliceName": "flag-nextReviewDate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-nextReviewDate"
+          }
+        ],
+        "label": "REVIEW DATE",
+        "short": "Next Review Date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF ASSIGNMENT FILE @REVIEW DATE 26.13-.06"
+          }
+        ],
+        "definition": "This field will contain the date that the flag assignment is due for  review to determine continuing appropriateness."
+      },
+      {
+        "path": "Flag.extension",
+        "sliceName": "flag-owner",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-owner"
+          }
+        ],
+        "label": "OWNER SITE",
+        "short": "Owner Site",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF ASSIGNMENT FILE @OWNER SITE 26.13-.04"
+          }
+        ],
+        "definition": "This field contains the current site that owns this patient flag assignment. Patient assignments may only be edited by the owner site. The owner site normally corresponds to the site providing primary care to the patient."
+      },
+      {
+        "path": "Flag.author",
+        "label": "ORIGINATING SITE",
+        "short": "Originating Site",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF ASSIGNMENT FILE @ORIGINATING SITE 26.13-.05"
+          }
+        ],
+        "definition": "This field contains the site that initially assigned the patient  record flag to this patient.  The site that assigns the flag is not  required to be the owner of the assignment."
+      },
+      {
+        "path": "Flag.extension",
+        "sliceName": "flagSourceDocument",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flagSourceDocument"
+          }
+        ],
+        "label": "TIU PN TITLE",
+        "short": "TIU Title - Local (Progress Note Title)",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF LOCAL FLAG FILE @TIU PN TITLE 26.11-.07"
+          }
+        ],
+        "definition": "This field contains the Category II Progress Note Title that is associated with this Patient Record Flag."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAPatientRecordFlag",
+  "id": "VAPatientRecordFlag",
+  "type": "Flag",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Flag",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientRecordFlag",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "valueReference",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueReference",
+  "name": "valueReference",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "MedicationRequest"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueReference"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @ENTRY BY 55.01-135"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This field contains the pointer value for the person entered the IV order."
+}

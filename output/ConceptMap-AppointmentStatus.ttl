@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "AppointmentStatus"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AppointmentStatus (http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus)</h2><p>Mapping from (not specified) to (not specified)</p><p>DRAFT. Published on Mar 12, 2021 4:05:11 PM by JPSys (). </p><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>N</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>noshow</td><td>NO-SHOW</td></tr><tr><td>C</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY CLINC</td></tr><tr><td>NA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>noshow</td><td>NO-SHOW &amp; AUTO RE-BOOK</td></tr><tr><td>CA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY CLINIC &amp; AUTO RE-BOOK</td></tr><tr><td>PC</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY PATIENT</td></tr><tr><td>PCA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY PATIENT &amp; AUTO-REBOOK</td></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus"];
+  fhir:ConceptMap.version [ fhir:value "0.0.64"];
+  fhir:ConceptMap.name [ fhir:value "AppointmentStatus"];
+  fhir:ConceptMap.status [ fhir:value "draft"];
+  fhir:ConceptMap.date [ fhir:value "2021-03-12T16:05:11.288Z"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "JPSys"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "https://jpsys.com" ]
+     ]
+  ];
+  fhir:ConceptMap.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "840" ]
+     ]
+  ];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.source [ fhir:value "http://va.gov/Terminology/VistaDefinedTerms/2.98-3" ];
+     fhir:ConceptMap.group.target [ fhir:value "http://hl7.org/fhir/appointmentstatus" ];
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "N" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "noshow" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equal" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "NO-SHOW" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "C" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "cancelled" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "CANCELLED BY CLINC" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "NA" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "noshow" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "NO-SHOW & AUTO RE-BOOK" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "CA" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "cancelled" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "CANCELLED BY CLINIC & AUTO RE-BOOK" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "PC" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "cancelled" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "CANCELLED BY PATIENT" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "PCA" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "cancelled" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "CANCELLED BY PATIENT & AUTO-REBOOK" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

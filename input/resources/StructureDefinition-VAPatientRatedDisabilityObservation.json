@@ -1,0 +1,90 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/2.04-.01",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "2.04-.01",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": "2-.3721",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept.coding.code",
+        "label": "SERVICE CONNECTED",
+        "short": "Disabilities",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient File @RATED DISABILITIES 2.04-.01"
+          },
+          {
+            "identity": "vista",
+            "map": "Patient File @DISABILITY % 2.04-2"
+          },
+          {
+            "identity": "vista",
+            "map": "Patient File @SERVICE CONNECTED 2.04-3"
+          }
+        ],
+        "definition": "Enter whether or not this rated disability was rated as service connected. Only users who hold the designated security key may enter/edit this field."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAPatientRatedDisabilityObservation",
+  "id": "VAPatientRatedDisabilityObservation",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientRatedDisabilityObservation",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

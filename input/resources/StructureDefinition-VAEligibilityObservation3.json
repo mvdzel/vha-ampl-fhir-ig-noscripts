@@ -1,0 +1,82 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/354-.04",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": "354-.04",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.display",
+        "fixedString": "COPAY INCOME EXEMPTION STATUS",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements/",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.status",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.code",
+        "label": "Copay Income Exemption Status",
+        "short": "Eligibility",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Billing Patient @Copay Income Exemption Status  354-.04"
+          }
+        ],
+        "definition": "DO NOT EDIT THIS FIELD.  It is maintained by the Copay Exemption Software.   This is the patients current Medication Copay Income Exemption Status.  It is updated whenever an entry in the Billing Exemptions file is made.   If a patient's income is less than the pension level, effective 10/29/92 the patient is exempt from paying the Medication Copayment.  If a patient is receiving a VA Pension, or is receiving Aid and Attendence or House Bound benefits, or his income for the previous year is less than the pension level, he is exempt."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAEligibilityObservation3",
+  "id": "VAEligibilityObservation3",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation3",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

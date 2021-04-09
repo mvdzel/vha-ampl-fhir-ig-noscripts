@@ -1,0 +1,95 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": "2-.322013",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.display",
+        "fixedString": "Southwest Asia Conditions",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.status",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.valueCodeableConcept.coding.code",
+        "label": "Southwest Asia Conditions?",
+        "short": "Environment Factors information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Southwest Asia Conditions?  2-.322013"
+          }
+        ],
+        "definition": "Enter \"Y\" if veteran claims need for care of conditions related to service in SW Asia. Enter \"N\" if veteran did not serve in SW Asia or does not claim need for care of conditions related to service in SW Asia. Enter \"U\" when veteran served in SW Asia, but is unsure of whether conditions may be related to that service. SW Asia Theater of operations is defined as: Iraq, Kuwait, Saudi Arabia, the neutral zone between Iraq and Saudi Arabia, Bahrain, Qatar, the United Arab Emirates, Oman, the Gulf of Aden, the Gulf of Oman, the Persian Gulf, the Arabian Sea, the Red Sea, and the airspace above these locations."
+      },
+      {
+        "path": "Observation.issued",
+        "label": "SW Asia Cond Registration Date",
+        "short": "Environment Factors information",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @SW Asia Cond Registration Date  2-.322014"
+          }
+        ],
+        "definition": "This is the date on which the patient registered for being exposed to Conditions related to service in SW Asia. This date must be after 8/1/1990."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VARiskEpisodeProfile3",
+  "id": "VARiskEpisodeProfile3",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile3",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "detectedissue-orderCheckRecipient",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/detectedissue-orderCheckRecipient",
+  "name": "detectedissue-orderCheckRecipient",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "DetectedIssue"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/detectedissue-orderCheckRecipient"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "ORDER CHECK INSTANCES @USER 100.05-3"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This is the user that saw the order checks."
+}

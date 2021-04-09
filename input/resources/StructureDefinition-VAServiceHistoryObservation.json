@@ -1,0 +1,128 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept.coding.system",
+        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/2.3216-.03",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.code",
+        "fixedCode": 2.3216,
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://va.gov/terminology/vistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "2.3216-.03",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.code.coding.display",
+        "fixedString": "Service Branch",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://va.gov/terminology/vistaDefinedElements",
+        "mustSupport": true
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept"
+      },
+      {
+        "path": "Observation.component.valueCodeableConcept.coding.code",
+        "label": "Service Discharge Type",
+        "short": "Military Service Episode",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Service Branch  2.3216-.03"
+          },
+          {
+            "identity": "vista",
+            "map": "Patient @Service Component 2.3216-.04"
+          },
+          {
+            "identity": "vista",
+            "map": "Patient @Service Discharge Type 2.3216-.06"
+          }
+        ],
+        "definition": "For this veteran applicant, select from the available list the discharge type which s/he received for this episode of military service.                                   If the military service episode has been sent from the Health Eligibility Center (HEC), the data will be locked and cannot be edited or deleted."
+      },
+      {
+        "path": "Observation.component.valueString",
+        "label": "Service Number",
+        "short": "Military Service Episode",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Service Number 2.3216-.05"
+          }
+        ],
+        "definition": "Enter the service number for this episode of military service."
+      },
+      {
+        "path": "Observation.effectivePeriod"
+      },
+      {
+        "path": "Observation.effectivePeriod.start",
+        "label": "Service Separation Date",
+        "short": "Military Service Episode",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @Service Entry Date 2.3216-.01"
+          },
+          {
+            "identity": "vista",
+            "map": "Patient @Service Separation Date 2.3216-.02"
+          }
+        ],
+        "definition": "For this veteran applicant, enter the date s/he ended this episode of military service. If the military service component is ACTIVATED NATIONAL GUARD or ACTIVATED RESERVE, the period entered should be the period of activation, so this date is their last day of active duty for this episode.                                     If the military service episode has been sent from the Health Eligibility Center (HEC), the data will be locked and cannot be edited or deleted."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAServiceHistoryObservation",
+  "id": "VAServiceHistoryObservation",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceHistoryObservation",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

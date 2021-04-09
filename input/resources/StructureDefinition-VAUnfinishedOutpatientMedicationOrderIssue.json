@@ -1,0 +1,82 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "DetectedIssue.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "DetectedIssue.status",
+        "fixedCode": "unknown",
+        "mustSupport": true
+      },
+      {
+        "path": "DetectedIssue.detail",
+        "label": "ORDER CHECK NARRATIVE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PENDING OUTPATIENT ORDERS @ORDER CHECK NARRATIVE 52.4118-.01"
+          }
+        ],
+        "definition": "This is the text which describes the order check."
+      },
+      {
+        "path": "DetectedIssue.mitigation.author",
+        "label": "OVERRIDING PROVIDER",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PENDING OUTPATIENT ORDERS @OVERRIDING PROVIDER 52.4118-1"
+          }
+        ],
+        "definition": "This is the Provider that has seen the order check in the CPRS package."
+      },
+      {
+        "path": "DetectedIssue.mitigation.action.coding.code",
+        "label": "OVERRIDING REASON",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PENDING OUTPATIENT ORDERS @OVERRIDING REASON 52.4118-.01"
+          }
+        ],
+        "definition": "This is the reason given by the Provider to override the order check."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAUnfinishedOutpatientMedicationOrderIssue",
+  "id": "VAUnfinishedOutpatientMedicationOrderIssue",
+  "type": "DetectedIssue",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DetectedIssue",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrderIssue",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

@@ -1,0 +1,82 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "LAST RENEW",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "LAST RENEW @LAST RENEW 55.6114-.01"
+          }
+        ],
+        "definition": "This is the date/time the order was renewed."
+      },
+      {
+        "path": "Provenance.agent.whoReference",
+        "label": "RENEWED BY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "LAST RENEW @RENEWED BY 55.6114-1"
+          }
+        ],
+        "definition": "This is the person who renewed the order."
+      },
+      {
+        "path": "Provenance.entity.role",
+        "fixedCode": "revision",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.entity.whatIdentifier.value",
+        "label": "PREVIOUS ORDERS FILE ENTRY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "LAST RENEW @PREVIOUS ORDERS FILE ENTRY 55.6114-4"
+          }
+        ],
+        "definition": "When an order is being renewed, this is the pointer value of the corresponding entry in the ORDERS file (100), prior to the renewal."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAInpatientUDMedicationRequestRenewal",
+  "id": "VAInpatientUDMedicationRequestRenewal",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestRenewal",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

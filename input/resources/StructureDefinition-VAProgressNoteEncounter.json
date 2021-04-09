@@ -1,0 +1,86 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Encounter.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Encounter.participant.type.coding.code",
+        "fixedCode": "ATND",
+        "mustSupport": true
+      },
+      {
+        "path": "Encounter.participant.type.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "mustSupport": true
+      },
+      {
+        "path": "Encounter.participant.individual",
+        "label": "ATTENDING PHYSICIAN",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU DOCUMENT @ATTENDING PHYSICIAN 8925-1209"
+          }
+        ]
+      },
+      {
+        "path": "Encounter.class.code",
+        "label": "VISIT TYPE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU DOCUMENT @VISIT TYPE 8925-.13a"
+          }
+        ],
+        "definition": "This field is used to identify the type of visit information related to the current document.  The value is determined during processing and is entered by the program.  It is used in the generation of a cross-reference to identify available documents for specified visits."
+      },
+      {
+        "path": "Encounter.location.location",
+        "label": "VISIT LOCATION",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "TIU DOCUMENT @VISIT LOCATION 8925-1211a"
+          }
+        ],
+        "definition": "This is the location at which the visit/admission occurred.  As distinct  from the HOSPITAL LOCATION field, which represents the location at the time  the document was written, this is the location for the visit/admission with  which the note is associated."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAProgressNoteEncounter",
+  "id": "VAProgressNoteEncounter",
+  "type": "Encounter",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteEncounter",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

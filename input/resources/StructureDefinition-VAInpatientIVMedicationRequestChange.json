@@ -1,0 +1,118 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Provenance.meta.tag",
+        "label": "ACTIVITY LOG",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @ACTIVITY LOG 55.04-.01"
+          }
+        ],
+        "definition": "Log in IV activity."
+      },
+      {
+        "path": "Provenance.activity.system",
+        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/55.04-.02",
+        "mustSupport": true
+      },
+      {
+        "path": "Provenance.activity.code",
+        "label": "TYPE OF ACTIVITY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @TYPE OF ACTIVITY 55.04-.02"
+          }
+        ],
+        "definition": "Captures type of activity. Enter one of following set of codes: H for hold, D for Discontinue, U for Unhold, E for Edit, R for Renew,  I for Reinstate, AI for auto reinstate, O for On Call, C for Off call,  V for Verify, F for Complete, PNRD for Pending/Non-Verified Renewal Discontinued, G for Flagged, or UG for Unflagged."
+      },
+      {
+        "path": "Provenance.agent.whoReference.display",
+        "label": "ENTRY CODE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @ENTRY CODE 55.04-.03"
+          }
+        ],
+        "definition": "This is the free text name from the user file of the person who performed the activity on this order."
+      },
+      {
+        "path": "Provenance.reason.code",
+        "label": "REASON FOR ACTIVITY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @REASON FOR ACTIVITY 55.04-.04"
+          }
+        ],
+        "definition": "Reason for activity. This may be a message field."
+      },
+      {
+        "path": "Provenance.recorded",
+        "label": "ACTIVITY DATE",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @ACTIVITY DATE 55.04-.05"
+          }
+        ],
+        "definition": "This is the date in which this action was taken."
+      },
+      {
+        "path": "Provenance.agent.whoReference",
+        "label": "USER",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Pharmacy Patient @USER 55.04-.06"
+          }
+        ],
+        "definition": "This is the user who effected the activity."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAInpatientIVMedicationRequestChange",
+  "id": "VAInpatientIVMedicationRequestChange",
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequestChange",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

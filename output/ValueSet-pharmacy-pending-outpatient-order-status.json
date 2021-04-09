@@ -1,0 +1,71 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pharmacy-pending-outpatient-order-status",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://va.gov/Terminology/VistaDefinedTerms/</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>DC</td><td>DISCONTINUED</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>HD</td><td>HOLD</td></tr><tr><td>NW</td><td>NEW ORDER</td></tr><tr><td>RF</td><td>REFILL REQUEST</td></tr><tr><td>RNW</td><td>RENEW</td></tr></table></li></ul></div>"
+  },
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-outpatient-order-status",
+  "version": "0.0.64",
+  "name": "pharmacy-pending-outpatient-order-status",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "publisher": "JPSys",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "https://jpsys.com"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "840"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://va.gov/Terminology/VistaDefinedTerms/",
+        "concept": [
+          {
+            "code": "DC",
+            "display": "DISCONTINUED"
+          },
+          {
+            "code": "DE",
+            "display": "DISCONTINUED (EDIT)"
+          },
+          {
+            "code": "DE",
+            "display": "DISCONTINUED (EDIT)"
+          },
+          {
+            "code": "HD",
+            "display": "HOLD"
+          },
+          {
+            "code": "NW",
+            "display": "NEW ORDER"
+          },
+          {
+            "code": "RF",
+            "display": "REFILL REQUEST"
+          },
+          {
+            "code": "RNW",
+            "display": "RENEW"
+          }
+        ]
+      }
+    ]
+  }
+}

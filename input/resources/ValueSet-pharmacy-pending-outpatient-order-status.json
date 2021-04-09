@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pharmacy-pending-outpatient-order-status",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-outpatient-order-status",
+  "name": "pharmacy-pending-outpatient-order-status",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://va.gov/Terminology/VistaDefinedTerms/",
+        "concept": [
+          {
+            "code": "DC",
+            "display": "DISCONTINUED"
+          },
+          {
+            "code": "DE",
+            "display": "DISCONTINUED (EDIT)"
+          },
+          {
+            "code": "DE",
+            "display": "DISCONTINUED (EDIT)"
+          },
+          {
+            "code": "HD",
+            "display": "HOLD"
+          },
+          {
+            "code": "NW",
+            "display": "NEW ORDER"
+          },
+          {
+            "code": "RF",
+            "display": "REFILL REQUEST"
+          },
+          {
+            "code": "RNW",
+            "display": "RENEW"
+          }
+        ]
+      }
+    ]
+  }
+}

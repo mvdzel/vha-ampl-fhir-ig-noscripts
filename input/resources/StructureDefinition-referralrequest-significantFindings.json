@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "referralrequest-significantFindings",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-significantFindings",
+  "name": "referralrequest-significantFindings",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "ReferralRequest"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-significantFindings"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "REQUEST/CONSULTATION @SIGNIFICANT FINDING 123-15"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "If significant findings are noted in the consult results, then this field may be marked \"Yes\", and appropriate comments may be entered in the \"Comment\" field. \"Unknown\" is the default. \"No\" may also be specified to indicate the results do not include significant findings."
+}

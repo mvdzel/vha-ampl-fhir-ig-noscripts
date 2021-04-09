@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "patient-remarks",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-remarks",
+  "name": "patient-remarks",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Patient"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-remarks"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "Patient @remarks 2-.091"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "If so desired, you may enter a short remark about this applicant between 3-60 characters.  The remark entered should be significant and tact should be exercised since this field is viewable to virtually all other users who have the ability to 'call up' a patient for any purpose."
+}

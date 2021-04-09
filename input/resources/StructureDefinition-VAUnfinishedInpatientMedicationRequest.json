@@ -1,0 +1,658 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "MedicationRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "MedicationRequest.identifier.system",
+        "fixedUri": "va.gov/identifiers/orders/53.1",
+        "mustSupport": true
+      },
+      {
+        "path": "MedicationRequest.identifier.value",
+        "label": "ORDERS FILE",
+        "short": "Orders File Entry",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @ORDER NUMBER 53.1-.01"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @ORDERS FILE 53.1-49"
+          }
+        ],
+        "definition": "This is the pointer value of the corresponding entry in the Orders file (100) when the order is entered through the OE/RR process."
+      },
+      {
+        "path": "MedicationRequest.requester.agent",
+        "label": "PROVIDER",
+        "short": "Provider",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @PROVIDER 53.1-1"
+          }
+        ],
+        "definition": "This field should contain the prescribing physician's name."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.route.coding.system",
+        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1-3",
+        "mustSupport": true
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.route.coding.code",
+        "label": "MED ROUTE",
+        "short": "Route",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @MED ROUTE 53.1-3"
+          }
+        ],
+        "definition": "This is the route of administration for this medication.  (If a corresponding abbreviation is found for this route in the MEDICATION ROUTES file, this package will print that abbreviation on it's reports.)"
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationrequest-medicationrequestType",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationrequestType"
+          }
+        ],
+        "label": "TYPE",
+        "short": "Type",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @TYPE 53.1-4"
+          }
+        ],
+        "definition": "This identifies the type of medication ordered."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "pharmacy-patientSelfMedication/extension/selfAdminister",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.selfAdminister"
+          }
+        ],
+        "label": "SELF MED",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @SELF MED 53.1-5"
+          }
+        ],
+        "definition": "This should contain a `1' (or `YES') if this medication is to be administered by the patient to himself."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "pharmacy-patientSelfMedication/extension/hospitalSupply",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.hospitalSupply"
+          }
+        ],
+        "label": "HOSPITAL SUPPLIED SELF MED",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @HOSPITAL SUPPLIED SELF MED 53.1-6"
+          }
+        ],
+        "definition": "This should contain a `1' (or `YES') if this medication is to be a `SELF MED' and this site's pharmacy is to supply the medication.  This is only asked if the user enters `YES' (or `1') to the SELF MED prompt. If the SELF MED field is ever edited to show `NO' (or `0'), this is automatically deleted."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationrequest-medicationScheduleType",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationScheduleType"
+          }
+        ],
+        "label": "IV TYPE CATEGORY",
+        "short": "iv tpe category",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @SCHEDULE TYPE 53.1-7"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @IV TYPE CATEGORY 53.1-128"
+          }
+        ],
+        "definition": "This field contains the category of the order's IV TYPE.    The IV TYPE CATEGORY will be \"C\" (Continuous) for orders with an IV TYPE of Admixture, Hyperal, Non-Intermittent Syringe, or Chemotherapy with a  CHEMOTHERAPY TYPE of Admixture, Hyperal, or Non-Intermittent Syringe.   The IV TYPE CATEGORY will be \"I\" (Intermittent) for orders with an IV  TYPE of Piggyback, Intermittent Syringe, or Chemotherapy with a  CHEMOTHERAPY TYPE of Piggyback or Intermittent Syringe."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationrequest-pharmacyOrderStatus",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"
+          }
+        ],
+        "label": "STATUS",
+        "short": "Status",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @STATUS 53.1-28b"
+          }
+        ],
+        "definition": "This is the status of the order."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "unverifiedMedicationOrderFinishPrompt",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/unverifiedMedicationOrderFinishPrompt"
+          }
+        ],
+        "label": "UD/IV PROMPT",
+        "short": "UD/IV Prompt",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @UD/IV PROMPT 53.1-118"
+          }
+        ],
+        "definition": "This field will be used during the finishing process to determine if the user should be prompted whether they wish to finish the order as an IV or Unit Dose order."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationrequest-orderDraftDate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderDraftDate"
+          }
+        ],
+        "label": "ORDER DATE",
+        "short": "Order date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @ORDER DATE 53.1-27"
+          }
+        ],
+        "definition": "This is the date the medication was ordered."
+      },
+      {
+        "path": "MedicationRequest.subject",
+        "label": "PATIENT NAME",
+        "short": "Patient name",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @PATIENT NAME 53.1-.5"
+          }
+        ],
+        "definition": "This is the patient for which the medication has been ordered."
+      },
+      {
+        "path": "MedicationRequest.authoredOn",
+        "label": "LOG-IN DATE",
+        "short": "Logged Date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @LOG-IN DATE 53.1-27.1"
+          }
+        ],
+        "definition": "This is the date (to the second) the ordered was entered."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationrequest-orderCreationMode",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderCreationMode"
+          }
+        ],
+        "label": "REASON ORDER CREATED",
+        "short": "Reason Order Created",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @REASON ORDER CREATED 53.1-103"
+          }
+        ],
+        "definition": "This is used to show the method used to create this order."
+      },
+      {
+        "path": "MedicationRequest.medicationCodeableConcept.coding.code",
+        "label": "ORDERABLE ITEM",
+        "short": "Orderable Item",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @ORDERABLE ITEM 53.1-108"
+          }
+        ],
+        "definition": "This identifies the Orderable Item associated with the order. If the order contains multiple dispense drugs, or a single dispense drug requiring multiple units/dose, the Orderable Item and Dosage Ordered fields will be  displayed."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "pharmacy-dosageOrdered",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered"
+          }
+        ],
+        "label": "DOSAGE ORDERED",
+        "short": "dosage ordered",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @DOSAGE ORDERED 53.1-109"
+          }
+        ],
+        "definition": "This is the amount of the medication the patient is to receive as one dose  for this order. This should be an amount with a unit of measure, such as '500mg' or '50CC'. THIS SHOULD NOT BE THE NUMBER OF TABLETS, ETC."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationrequest-orderPlacementChannel",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderPlacementChannel"
+          }
+        ],
+        "label": "NATURE OF ORDER",
+        "short": "nature of order",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @NATURE OF ORDER  53.1-110"
+          }
+        ],
+        "definition": "This is the method the provider used to communicate the order to the user  to enter (or take any other action on) the order."
+      },
+      {
+        "path": "MedicationRequest.priority",
+        "label": "PRIORITY",
+        "short": "priority",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @PRIORITY 53.1-.24"
+          }
+        ],
+        "definition": "This field contains the priority of the order that was received from OERR."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.doseQuantity.value",
+        "label": "UNITS PER DOSE",
+        "short": "Units Per dose",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @DOSE   53.1-120"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @UNITS PER DOSE 53.11-.02"
+          }
+        ],
+        "definition": "This is the number of UNITS (tablets, capsules, etc.) to be dispensed as a DOSE for this order.  The literals '1/2' and '1/4' may be entered.  If there is no entry, it is assumed to be ONE (1).                          ** PLEASE NOTE **   If a doctor prescribes 30 ml's of a medication that is usually dispensed and administered as 60 ml's, the correct UNITS PER DOSE would be 1/2 (or .5), NOT 30 ml's.  (30 ml's would be entered into the DOSAGE ORDERED field.)   If the UNITS PER DOSE ordered is a variable amount (1-2 tab.), it is suggested that the maximum amount be entered into this field and the amount ordered noted either in the DOSAGE ORDERED or SPECIAL INSTRUCTIONS fields."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.doseQuantity.unit",
+        "label": "UNIT",
+        "short": "Unit",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @UNIT  53.1-121"
+          }
+        ],
+        "definition": "This is the field which contains the unit for the numeric dosage.  The combination of these two fields gives you the dosage ordered for this order.  For a dosage of 325MG, MG would be stored here."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.maxDosePerPeriod",
+        "label": "REQUESTED IV LIMITATION",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @REQUESTED IV LIMITATION 53.1-127"
+          }
+        ],
+        "definition": "This is the length of time to administer, or the total volume to  administer, for IV fluid orders. The value may be in ML or CC for milliliters, L for liters, D for days, or H for hours."
+      },
+      {
+        "path": "MedicationRequest.basedOn",
+        "label": "ORDERS FILE PARENT ORDER",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @ORDERS FILE PARENT ORDER 53.1-125"
+          }
+        ],
+        "definition": "This is the parent of a CPRS order that may have a parent/child relationship in CPRS"
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "richAnnotation/comment/text",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
+          }
+        ],
+        "label": "OTHER PRINT INFO (LONG)",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @SPECIAL INSTRUCTIONS  53.1-8"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @OTHER PRINT INFO 53.1-64"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @COMMENTS 53.1-40"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @PROVIDER COMMENTS 53.1-66"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @SPECIAL INSTRUCTIONS (LONG) 53.1-135"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @OTHER PRINT INFO (LONG) 53.1-136"
+          }
+        ],
+        "definition": "For use by Pharmacy to print additional information on IV labels and reports. This is very similar to the REMARKS (#.1) field in the IV (#100) multiple of the PHARMACY PATIENT (#55) file, except OTHER PRINT INFO is shown\r\non the label and the IV REPORTS."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.durationUnit",
+        "fixedCode": "d",
+        "mustSupport": true
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+        "label": "DURATION",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @DURATION 53.1-116"
+          }
+        ],
+        "definition": "This is the length of time in days the provider requests that this order last."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.text",
+        "label": "INSTRUCTIONS",
+        "short": "Instruction",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @INSTRUCTIONS 53.1-111"
+          }
+        ],
+        "definition": "<blank>"
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.timing.code.text",
+        "label": "FREQUENCY",
+        "short": "frequency",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @SCHEDULE  53.1-26"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @FREQUENCY 53.1-41"
+          }
+        ],
+        "definition": "This is either a code or the number of minutes between the administration times for the order."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod"
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start",
+        "label": "START DATE/TIME",
+        "short": "start date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @START DATE/TIME 53.1-10"
+          }
+        ],
+        "definition": "This is the date and time the order is to begin.  This package initially  assigns the START DATE/TIME to the closest administration time or next  admin. time or NOW depends on the value of the DEFAULT START DATE  CALCULATION field in the INPATIENT WARD PARAMETERS file.  START DATE/TIME may not be entered prior to 7 days from the order's  LOGIN DATE."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
+        "label": "STOP DATE/TIME",
+        "short": "stop date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @STOP DATE/TIME 53.1-25"
+          }
+        ],
+        "definition": "This is the date and time the order will automatically expire.  This package initially assigns a default STOP DATE/TIME, depending on the SITE PARAMETERS."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.extension",
+        "sliceName": "timeOfDay",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/timeOfDay"
+          }
+        ],
+        "label": "ADMIN TIMES",
+        "short": "admin times",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @ADMIN TIMES 53.1-39"
+          }
+        ],
+        "definition": "This is the set of administration times for this order."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.periodUnit",
+        "fixedCode": "min",
+        "mustSupport": true
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.frequency",
+        "fixedInteger": 1,
+        "mustSupport": true
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationrequest-requestedStartDate",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-requestedStartDate"
+          }
+        ],
+        "label": "REQUESTED START DATE/TIME",
+        "short": "requested start date",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @REQUESTED START DATE/TIME 53.1-115"
+          }
+        ],
+        "definition": "This is the Date/Time the provider is requesting that this order start."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationrequest-ivType",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType"
+          }
+        ],
+        "label": "IV TYPE",
+        "short": "iv type",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @IV TYPE    53.1-53"
+          }
+        ],
+        "definition": "Type of IV - \"A\" for Admixture, \"C\" for Chemotherapy, \"H\" for Hyperal, \"P\" for Piggyback, and \"S\" for Syringe."
+      },
+      {
+        "path": "MedicationRequest.dosageInstruction.rateRatio",
+        "label": "INFUSION RATE",
+        "short": "infusion rate",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @INFUSION RATE 53.1-59"
+          }
+        ],
+        "definition": "The rate at which the IV is to be administered.  This value, together with the total volume of the hyperal or the admixture type, is used to determine the time covered by one bag; hence the system can predict the bags needed during a specified time of coverage.  This field is free text for IVPB's.  For LVP's you must enter a number representing the infusion rate.  You may also specify the # of bags per day needed, which will become the default number of LABELS PER DAY.     Example.  125 = 125 ml/hr (IV system will calculate bags needed per day)           125@2 = 125 ml/hr with 2 labels per day       TITRATE@1 = TITRATE with 1 label per day.  The format of this field is either a number only or  [FREE TEXT@NUMBER OF LABELS PER DAY].   Note: If an administration time(s) is defined, the number of labels will reflect the administration time(s) for the IVPB type orders. For example:  One administration time of 12:00 is specified.  The infusion rate is entered as 125@3.  Only 1 label will print."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationdispense-ivPrepRoom",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-ivPrepRoom"
+          }
+        ],
+        "label": "IV ROOM",
+        "short": "iv room",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @IV ROOM 53.1-62"
+          }
+        ],
+        "definition": "IV room where IV bag was prepared for administration."
+      },
+      {
+        "path": "MedicationRequest.status",
+        "label": "STATUS",
+        "short": "Status",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @STATUS 53.1-28"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-inpatient-order-status"
+          }
+        },
+        "definition": "This is the status of the order."
+      },
+      {
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationrequest-extendedPriority",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-extendedPriority"
+          }
+        ],
+        "label": "PRIORITY",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @PRIORITY 53.1-.24b"
+          }
+        ],
+        "definition": "This field contains the priority of the order that was received from OERR."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VAUnfinishedInpatientMedicationRequest",
+  "id": "VAUnfinishedInpatientMedicationRequest",
+  "type": "MedicationRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequest",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}

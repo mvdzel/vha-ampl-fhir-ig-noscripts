@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="pharmacy-pending-outpatient-order-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <code>http://va.gov/Terminology/VistaDefinedTerms/</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>DC</td><td>DISCONTINUED</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>HD</td><td>HOLD</td></tr><tr><td>NW</td><td>NEW ORDER</td></tr><tr><td>RF</td><td>REFILL REQUEST</td></tr><tr><td>RNW</td><td>RENEW</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-outpatient-order-status"/>
+  <version value="0.0.64"/>
+  <name value="pharmacy-pending-outpatient-order-status"/>
+  <status value="draft"/>
+  <date value="2021-03-12T16:05:11.288Z"/>
+  <publisher value="JPSys"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="https://jpsys.com"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="840"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://va.gov/Terminology/VistaDefinedTerms/"/>
+      <concept>
+        <code value="DC"/>
+        <display value="DISCONTINUED"/>
+      </concept>
+      <concept>
+        <code value="DE"/>
+        <display value="DISCONTINUED (EDIT)"/>
+      </concept>
+      <concept>
+        <code value="DE"/>
+        <display value="DISCONTINUED (EDIT)"/>
+      </concept>
+      <concept>
+        <code value="HD"/>
+        <display value="HOLD"/>
+      </concept>
+      <concept>
+        <code value="NW"/>
+        <display value="NEW ORDER"/>
+      </concept>
+      <concept>
+        <code value="RF"/>
+        <display value="REFILL REQUEST"/>
+      </concept>
+      <concept>
+        <code value="RNW"/>
+        <display value="RENEW"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

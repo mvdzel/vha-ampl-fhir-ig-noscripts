@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "flagSourceDocument",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flagSourceDocument",
+  "name": "flagSourceDocument",
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "abstract": false,
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "kind": "resource",
+  "contextType": "resource",
+  "context": [
+    "Flag"
+  ],
+  "differential": {
+    "element": [
+      {
+        "path": "Extension.url",
+        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flagSourceDocument"
+      },
+      {
+        "path": "Extension.valueString",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "PRF LOCAL FLAG FILE @TIU PN TITLE 26.11-.07"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "This field contains the Category II Progress Note Title that is associated with this Patient Record Flag."
+}

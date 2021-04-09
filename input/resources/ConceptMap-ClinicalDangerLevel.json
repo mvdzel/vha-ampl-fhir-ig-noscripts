@@ -1,0 +1,46 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "ClinicalDangerLevel",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/ClinicalDangerLevel",
+  "name": "ClinicalDangerLevel",
+  "status": "draft",
+  "date": "2021-03-12T16:05:11.288Z",
+  "group": [
+    {
+      "source": "http://va.gov/Terminology/VistaDefinedTerms/100.05-6",
+      "target": "http://hl7.org/fhir/detectedissue-severity",
+      "element": [
+        {
+          "code": "1",
+          "target": [
+            {
+              "code": "high",
+              "equivalence": "equal",
+              "comment": "HIGH"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "target": [
+            {
+              "code": "moderate",
+              "equivalence": "equal",
+              "comment": "MODERATE"
+            }
+          ]
+        },
+        {
+          "code": "3",
+          "target": [
+            {
+              "code": "low",
+              "equivalence": "equal",
+              "comment": "LOW"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

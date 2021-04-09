@@ -1,0 +1,137 @@
+{
+  "fhirVersion": "3.0.2",
+  "status": "draft",
+  "resourceType": "StructureDefinition",
+  "differential": {
+    "element": [
+      {
+        "path": "Coverage.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "Coverage.grouping.plan",
+        "label": "HBP Code",
+        "short": "Health Plans and Insurance",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "CURRENT HEALTH BENEFIT PLAN  @HBP Code  2.2511 -.01"
+          }
+        ],
+        "definition": "This field contains the Health Benefit Plan that is assigned to a patient."
+      },
+      {
+        "path": "Coverage.payor",
+        "label": "Insurance Type",
+        "short": "Health Plans and Insurance",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "INSURANCE TYPE @Insurance Type  2.312-.01"
+          }
+        ],
+        "definition": "Choose from the available listing the name(s) of the insurance company(ies) under which this applicant is covered."
+      },
+      {
+        "path": "Coverage.subscriberId",
+        "label": "Subscriber ID",
+        "short": "Health Plans and Insurance",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "INSURANCE TYPE @Subscriber ID  2.312-1"
+          }
+        ],
+        "definition": "Enter the Subscriber's Primary ID number.  This number is assigned by the payer and can be found on the subscriber's insurance card.   This field is scheduled for deletion in May 2015."
+      },
+      {
+        "path": "Coverage.grouping.group",
+        "label": "Group Number",
+        "short": "Health Plans and Insurance",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "INSURANCE TYPE @Group Number  2.312-2"
+          }
+        ],
+        "definition": "Enter any other appropriate number which identifies this policy, i.e., group number/code, under which this applicant is covered.  Answer must be between 1 and 17 characters.   This field is moved to the HEALTH INSURANCE POLICY file (355.3) beginning with IB v2.0.  It will be deleted with the first release 18 months after the release of IB V2."
+      },
+      {
+        "path": "Coverage.relationship.coding.system",
+        "fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/2.312-6",
+        "mustSupport": true
+      },
+      {
+        "path": "Coverage.relationship.coding.code",
+        "label": "Whose Insurance",
+        "short": "Health Plans and Insurance",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "INSURANCE TYPE @Whose Insurance  2.312-6"
+          }
+        ],
+        "definition": "Enter 'v' if this insurance policy is held by the veteran (applicant), 's' if the veteran is married and the spouse holds the policy, or 'o' if someone other than the veteran or his/her spouse hold the policy, i.e., employer."
+      },
+      {
+        "path": "Coverage.period.start",
+        "label": "Effective Date of Policy",
+        "short": "Health Plans and Insurance",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "INSURANCE TYPE @Effective Date of Policy  2.312-8"
+          }
+        ],
+        "definition": "Enter the date that this insurance policy initially went into effect (the date the patient acquired this policy)."
+      },
+      {
+        "path": "Coverage.period.end",
+        "label": "Insurance Expiration",
+        "short": "Health Plans and Insurance",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "INSURANCE TYPE @Insurance Expiration  2.312-3"
+          }
+        ],
+        "definition": "If this insurance policy under which this applicant is covered expires on a specified date enter that date, otherwise, leave this field blank."
+      }
+    ]
+  },
+  "abstract": false,
+  "name": "VACoverage",
+  "id": "VACoverage",
+  "type": "Coverage",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Coverage",
+  "derivation": "constraint",
+  "mapping": [
+    {
+      "identity": "vista",
+      "name": "VistA",
+      "uri": "http://va.gov/vista/"
+    }
+  ],
+  "date": "2021-03-12T16:05:11.288Z",
+  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACoverage",
+  "meta": {
+    "lastUpdated": "2021-03-12T16:05:11.288Z"
+  },
+  "kind": "resource"
+}
