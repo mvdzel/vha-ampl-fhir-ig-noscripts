@@ -1,102 +1,106 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "MedicationAdministration.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "MedicationAdministration.effectiveDateTime",
-        "label": "ACTION DATE/TIME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "BCMA MEDICATION LOG @ACTION DATE/TIME 53.79-.06"
-          }
-        ],
-        "definition": "Fileman Date/Time containing the actual time the med was administered."
-      },
-      {
-        "path": "MedicationAdministration.status",
-        "label": "ACTION STATUS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "BCMA MEDICATION LOG @ACTION STATUS 53.79-.09"
-          }
-        ],
-        "definition": "Status of administration (H:Held,R:Refused,G:Given,N:NOT GIVEN)"
-      },
-      {
-        "path": "MedicationAdministration.extension",
-        "sliceName": "medicationadministration-scheduledTime",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationadministration-scheduledTime"
-          }
-        ],
-        "label": "SCHEDULED ADMINISTRATION TIME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "BCMA MEDICATION LOG @SCHEDULED ADMINISTRATION TIME 53.79-.13"
-          }
-        ],
-        "definition": "If a continuous order this field will contain the actual administration date and time the medication was ordered for."
-      },
-      {
-        "path": "MedicationAdministration.extension",
-        "sliceName": "medicationadministration-statusDetail",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationadministration-statusDetail"
-          }
-        ],
-        "label": "ACTION STATUS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "BCMA MEDICATION LOG @ACTION STATUS 53.79-.09b"
-          }
-        ]
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAMedicationAdministration",
-  "id": "VAMedicationAdministration",
-  "type": "MedicationAdministration",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedicationAdministration",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAMedicationAdministration",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedicationAdministration",
+	"name": "VAMedicationAdministration",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "MedicationAdministration",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "MedicationAdministration.extension:medicationadministration-statusDetail",
+				"path": "MedicationAdministration.extension",
+				"sliceName": "medicationadministration-statusDetail",
+				"label": "ACTION STATUS",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationadministration-statusDetail"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "BCMA MEDICATION LOG @ACTION STATUS 53.79-.09b"
+					}
+				]
+			},
+			{
+				"id": "MedicationAdministration.extension:medicationadministration-scheduledTime",
+				"path": "MedicationAdministration.extension",
+				"sliceName": "medicationadministration-scheduledTime",
+				"label": "SCHEDULED ADMINISTRATION TIME",
+				"definition": "If a continuous order this field will contain the actual administration date and time the medication was ordered for.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationadministration-scheduledTime"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "BCMA MEDICATION LOG @SCHEDULED ADMINISTRATION TIME 53.79-.13"
+					}
+				]
+			},
+			{
+				"path": "MedicationAdministration.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "MedicationAdministration.status",
+				"path": "MedicationAdministration.status",
+				"label": "ACTION STATUS",
+				"definition": "Status of administration (H:Held,R:Refused,G:Given,N:NOT GIVEN)",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "BCMA MEDICATION LOG @ACTION STATUS 53.79-.09"
+					}
+				]
+			},
+			{
+				"id": "MedicationAdministration.effectiveDateTime",
+				"path": "MedicationAdministration.effectiveDateTime",
+				"label": "ACTION DATE/TIME",
+				"definition": "Fileman Date/Time containing the actual time the med was administered.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "BCMA MEDICATION LOG @ACTION DATE/TIME 53.79-.06"
+					}
+				]
+			}
+		]
+	}
 }

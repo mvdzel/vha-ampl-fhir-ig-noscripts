@@ -1,58 +1,64 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "MedicationDispense.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end",
-        "label": "EXPIRATION DATE",
-        "short": "Expiration Date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @EXPIRATION DATE   52-26"
-          }
-        ],
-        "definition": "The date the medication expires.  This is required to be put on the labels of medication sent to a nursing home."
-      },
-      {
-        "path": "MedicationDispense.medicationReference"
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAMedication",
-  "id": "VAMedication",
-  "type": "MedicationDispense",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedication",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource",
-  "description": "Medication with support for VA requirements"
+	"resourceType": "StructureDefinition",
+	"id": "VAMedication",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedication",
+	"name": "VAMedication",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "Medication with support for VA requirements",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "MedicationDispense",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "MedicationDispense.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "MedicationDispense.medicationReference",
+				"type": [
+					{
+						"code": "Reference"
+					}
+				]
+			},
+			{
+				"id": "MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end",
+				"path": "MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end",
+				"label": "EXPIRATION DATE",
+				"short": "Expiration Date",
+				"definition": "The date the medication expires.  This is required to be put on the labels of medication sent to a nursing home.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @EXPIRATION DATE   52-26"
+					}
+				]
+			}
+		]
+	}
 }

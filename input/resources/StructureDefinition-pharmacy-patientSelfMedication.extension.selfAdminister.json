@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "pharmacy-patientSelfMedication.extension.selfAdminister",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.selfAdminister",
-  "name": "pharmacy-patientSelfMedication.extension.selfAdminister",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.selfAdminister"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NON-VERIFIED ORDERS @SELF MED 53.1-5"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This should contain a `1' (or `YES') if this medication is to be administered by the patient to himself."
+	"resourceType": "StructureDefinition",
+	"id": "pharmacy-patientSelfMedication.extension.selfAdminister",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.selfAdminister",
+	"name": "pharmacy-patientSelfMedication.extension.selfAdminister",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This should contain a `1' (or `YES') if this medication is to be administered by the patient to himself.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.selfAdminister"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @SELF MED 53.1-5"
+					}
+				]
+			}
+		]
+	}
 }

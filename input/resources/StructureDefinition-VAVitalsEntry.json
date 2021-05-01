@@ -1,95 +1,99 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.activity.code",
-        "fixedCode": "entered",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "DATE/TIME VITALS ENTERED",
-        "short": "Date/Time  Entered",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "GMRV VITAL MEASUREMENT  @DATE/TIME VITALS ENTERED 120.5-.04"
-          }
-        ],
-        "definition": "This field contains the date/time that this record was entered."
-      },
-      {
-        "path": "Provenance.agent.whoReference",
-        "label": "ENTERED BY",
-        "short": "who entered the vital measurement.",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "GMRV VITAL MEASUREMENT  @ENTERED BY 120.5-.06"
-          }
-        ],
-        "definition": "This field contains the name of the person who edited the file entry.   Pointer to the NEW PERSON (#200) file."
-      },
-      {
-        "path": "Provenance.location.display",
-        "label": "NAME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "INSTITUTION @NAME 120.5-.05:4-.01"
-          }
-        ],
-        "definition": "This field contains the location where this measurement was taken. Pointer to the HOSPITAL LOCATION (#44) file."
-      },
-      {
-        "path": "Provenance.location.identifier",
-        "label": "STATION NUMBER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "INSTITUTION @STATION NUMBER 120.5-.06:4-99"
-          }
-        ]
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAVitalsEntry",
-  "id": "VAVitalsEntry",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAVitalsEntry",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAVitalsEntry",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAVitalsEntry",
+	"name": "VAVitalsEntry",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "DATE/TIME VITALS ENTERED",
+				"short": "Date/Time  Entered",
+				"definition": "This field contains the date/time that this record was entered.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "GMRV VITAL MEASUREMENT  @DATE/TIME VITALS ENTERED 120.5-.04"
+					}
+				]
+			},
+			{
+				"id": "Provenance.location.identifier",
+				"path": "Provenance.location.identifier",
+				"label": "STATION NUMBER",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "INSTITUTION @STATION NUMBER 120.5-.06:4-99"
+					}
+				]
+			},
+			{
+				"id": "Provenance.location.display",
+				"path": "Provenance.location.display",
+				"label": "NAME",
+				"definition": "This field contains the location where this measurement was taken. Pointer to the HOSPITAL LOCATION (#44) file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "INSTITUTION @NAME 120.5-.05:4-.01"
+					}
+				]
+			},
+			{
+				"path": "Provenance.activity.code",
+				"fixedCode": "entered",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "ENTERED BY",
+				"short": "who entered the vital measurement.",
+				"definition": "This field contains the name of the person who edited the file entry.   Pointer to the NEW PERSON (#200) file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "GMRV VITAL MEASUREMENT  @ENTERED BY 120.5-.06"
+					}
+				]
+			}
+		]
+	}
 }

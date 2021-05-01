@@ -1,434 +1,456 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "AllergyIntolerance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "AllergyIntolerance.patient.display",
-        "label": "PATIENT",
-        "short": "Patient",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @PATIENT 120.8-.01"
-          },
-          {
-            "identity": "vista",
-            "map": "ADVERSE REACTION REPORTING @PATIENT 120.85-.02"
-          }
-        ],
-        "definition": "This field is the patient to whom this observed reaction occurred. This field is a pointer to the Patient file."
-      },
-      {
-        "path": "AllergyIntolerance.verificationStatus",
-        "label": "ENTERED IN ERROR",
-        "short": "Was it entered in error",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @VERIFIED 120.8-19"
-          },
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @ENTERED IN ERROR 120.8-22"
-          }
-        ],
-        "definition": "Indicates if this allergy was entered in error."
-      },
-      {
-        "path": "AllergyIntolerance.code.text",
-        "label": "REACTANT",
-        "short": "Causative Agent",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @REACTANT 120.8-.02"
-          }
-        ],
-        "definition": "This is the agent to which the patient had this reaction.  This is the  name of the reactant and will be the result of a look up on either the GMR Allergies (120.82), National Drug (50.6), Drug Ingredients (50.416),  Local Drug (50) or VA Drug Class (50.605) files."
-      },
-      {
-        "path": "AllergyIntolerance.code.coding.code",
-        "label": "DRUG CLASSES (MULTIPLE)",
-        "short": "Drug Class",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @GMR ALLERGY 120.8-1"
-          },
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @DRUG CLASSES (MULTIPLE) 120.803-3"
-          }
-        ],
-        "definition": "List of VA drug classes to which patient had reaction for this allergy/adverse reaction."
-      },
-      {
-        "path": "AllergyIntolerance.reaction.onset",
-        "label": "DATE/TIME OF EVENT (OBSERVATION)",
-        "short": "Date/Time of Observation",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ADVERSE REACTION REPORTING @DATE/TIME OF EVENT (OBSERVATION) 120.85-.01"
-          }
-        ],
-        "definition": "The date/time that this observed reaction occurred."
-      },
-      {
-        "path": "AllergyIntolerance.reaction.severity",
-        "label": "SEVERITY",
-        "short": "Nature of Reaction",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ADVERSE REACTION REPORTING @SEVERITY 120.85-14.5"
-          }
-        ],
-        "definition": "This field indicates the severity of this reaction."
-      },
-      {
-        "path": "AllergyIntolerance.reaction.manifestation.coding.system",
-        "fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/120.83",
-        "mustSupport": true
-      },
-      {
-        "path": "AllergyIntolerance.reaction.manifestation.coding.code",
-        "label": "REACTION",
-        "short": "Signs/Symptoms",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @REACTION  120.81-.01"
-          }
-        ],
-        "definition": "One of the reactions for this allergy/adverse reaction."
-      },
-      {
-        "path": "AllergyIntolerance.reaction.manifestation.text",
-        "label": "OTHER REACTION",
-        "short": "Signs/Symptoms",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @OTHER REACTION 120.81-1"
-          }
-        ],
-        "definition": "If this reaction cannot be found in the Sign/Symptoms (120.83) file, then the free text of what the user typed in will be here, and the GMR Reaction of OTHER will be the value of the Name field.   Once the SIGNS/SYMPTOMS file is standardized then this field will no longer be needed as all entries will appear in file 120.83 and free text entries will no longer be allowed."
-      },
-      {
-        "path": "AllergyIntolerance.reaction.extension",
-        "sliceName": "allergyintolerance-reactionDateEntered",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionDateEntered"
-          }
-        ],
-        "label": "DATE ENTERED",
-        "short": "Date signs/symptom entered",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @DATE ENTERED 120.81-3"
-          }
-        ],
-        "definition": "This is where the user would enter the date that the reaction (Sign/Symptom) occurred or was entered into the computer."
-      },
-      {
-        "path": "AllergyIntolerance.code.coding.system",
-        "fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/50.605-.01",
-        "mustSupport": true,
-        "label": "GMR ALLERGY",
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @GMR ALLERGY 120.8-1"
-          }
-        ],
-        "definition": "This field is a variable pointer to help relate this allergy to some record in one of the files to which this field points.  The files that are pointed to are the GMR Allergies (120.82) file, National Drug (50.6) file, Drug (50) file, Drug Ingredients (50.416) file and VA Drug Class (50.605) file."
-      },
-      {
-        "path": "AllergyIntolerance.reaction.extension",
-        "sliceName": "allergyintolerance-reactionObservationMode",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionObservationMode"
-          }
-        ],
-        "label": "OBSERVED/HISTORICAL",
-        "short": "Observed/Historical",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @OBSERVED/HISTORICAL 120.8-6"
-          }
-        ],
-        "definition": "Indicates whether this allergy/adverse reaction has been observed by some personnel, or if it is historical data gathered about the patient."
-      },
-      {
-        "path": "AllergyIntolerance.extension",
-        "sliceName": "richAnnotation/annotation/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.text"
-          }
-        ],
-        "label": "COMMENTS",
-        "short": "Comment TEXT",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @COMMENTS  120.8262-2"
-          }
-        ],
-        "definition": "This field contains comments that were entered."
-      },
-      {
-        "path": "AllergyIntolerance.asserter",
-        "label": "ORIGINATOR",
-        "short": "Originator",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @ORIGINATOR 120.8-5"
-          }
-        ],
-        "definition": "Person who entered this allergy/adverse reaction into the system."
-      },
-      {
-        "path": "AllergyIntolerance.assertedDate",
-        "label": "ORIGINATION DATE/TIME",
-        "short": "Origination Date/Time",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @ORIGINATION DATE/TIME 120.8-4"
-          }
-        ],
-        "definition": "Date/time this allergy/adverse reaction was entered into the system."
-      },
-      {
-        "path": "AllergyIntolerance.type",
-        "label": "MECHANISM",
-        "short": "MECHANISM",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @MECHANISM 120.8-17"
-          }
-        ],
-        "definition": "This field indicates the mechanism of the reaction."
-      },
-      {
-        "path": "AllergyIntolerance.extension",
-        "sliceName": "allergyIntolerance-substanceIngredient",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyIntolerance-substanceIngredient"
-          }
-        ],
-        "label": "DRUG INGREDIENTS (MULTIPLE)",
-        "short": "DRUG INGREDIENTS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @DRUG INGREDIENTS (MULTIPLE) 120.802-2"
-          }
-        ],
-        "definition": "List of drug ingredients to which patient had reaction for this allergy/adverse reaction."
-      },
-      {
-        "path": "AllergyIntolerance.extension",
-        "sliceName": "allergyintolerance-vaSubstanceCategory",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-vaSubstanceCategory"
-          }
-        ],
-        "label": "ALLERGY TYPE",
-        "short": "ALLERGY TYPE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @ALLERGY TYPE 120.8-3.1"
-          }
-        ],
-        "definition": "This field contains the type(s) for this causative agent.  The user can enter the type(s) separated by commas, or the following codes:  D=Drug, F=Food, O=Other.  If codes are used, do not use commas to separate multiple codes.  Examples of valid entries are:  DRUG or DRUG, FOOD or D or DF or OTHER."
-      },
-      {
-        "path": "AllergyIntolerance.extension",
-        "sliceName": "allergyintolerance-reactionAssessed",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionAssessed"
-          }
-        ],
-        "label": "REACTION ASSESSMENT",
-        "short": "Assessment",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ADVERSE REACTION ASSESSMENT  @REACTION ASSESSMENT 120.86-1"
-          }
-        ],
-        "definition": "This field indicates if the patient has a reaction on file or not."
-      },
-      {
-        "path": "AllergyIntolerance.extension",
-        "sliceName": "richAnnotation/annotation/date",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.date"
-          }
-        ],
-        "label": "DATE/TIME COMMENT ENTERED",
-        "short": "Comments Date/time",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @DATE/TIME COMMENT ENTERED 120.826-.01"
-          }
-        ],
-        "definition": "This field is the date/time this comment was entered.  This field is automatically filled by the system when a user enters a comment."
-      },
-      {
-        "path": "AllergyIntolerance.extension",
-        "sliceName": "richAnnotation/annotation/author",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author"
-          }
-        ],
-        "label": "USER ENTERING",
-        "short": "User who made comment",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @USER ENTERING 120.826-1"
-          }
-        ],
-        "definition": "This field tracks the user who entered this comment.  The field is automatically stuffed when that user enters a comment."
-      },
-      {
-        "path": "AllergyIntolerance.extension",
-        "sliceName": "richAnnotation/annotation/author/extension/practitioner-title",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author.extension.practitioner-title"
-          }
-        ],
-        "label": "TITLE",
-        "short": "Title of user commenting",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NEW PERSON @TITLE 120.826-1:200-8"
-          }
-        ],
-        "definition": "This field tracks the user who entered this comment. The field is automatically stuffed when that user enters a comment."
-      },
-      {
-        "path": "AllergyIntolerance.extension",
-        "sliceName": "richAnnotation/type",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.type"
-          }
-        ],
-        "label": "COMMENT TYPE",
-        "short": "Comment type",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @COMMENT TYPE 120.826-1.5"
-          }
-        ],
-        "definition": "This field indicates the type of comments. If this field is answered \"V\", then these comments are verifier entered.  If this field is answered \"O\", then these are observer comments.  If this field is answered \"E\", then these are entered in error comments."
-      },
-      {
-        "path": "AllergyIntolerance.recorder.extension",
-        "sliceName": "practitioner-title",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/practitioner-title"
-          }
-        ],
-        "label": "SIGNATURE BLOCK TITLE",
-        "short": "Block Title of Originator",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NEW PERSON @SIGNATURE BLOCK TITLE 120.8-5:200-20.3"
-          }
-        ]
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAAllergyIntolerance",
-  "id": "VAAllergyIntolerance",
-  "type": "AllergyIntolerance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntolerance",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource",
-  "description": "An AllergyIntolerance resource with extensions supporting VA processes."
+	"resourceType": "StructureDefinition",
+	"id": "VAAllergyIntolerance",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntolerance",
+	"name": "VAAllergyIntolerance",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "An AllergyIntolerance resource with extensions supporting VA processes.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "AllergyIntolerance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "AllergyIntolerance.extension:richAnnotation.type",
+				"path": "AllergyIntolerance.extension",
+				"sliceName": "richAnnotation-type",
+				"label": "COMMENT TYPE",
+				"short": "Comment type",
+				"definition": "This field indicates the type of comments. If this field is answered \"V\", then these comments are verifier entered.  If this field is answered \"O\", then these are observer comments.  If this field is answered \"E\", then these are entered in error comments.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.type"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @COMMENT TYPE 120.826-1.5"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.extension:richAnnotation.annotation.author.extension.practitioner-title",
+				"path": "AllergyIntolerance.extension",
+				"sliceName": "richAnnotation-annotation-author-extension-practitioner-title",
+				"label": "TITLE",
+				"short": "Title of user commenting",
+				"definition": "This field tracks the user who entered this comment. The field is automatically stuffed when that user enters a comment.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author.extension.practitioner-title"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NEW PERSON @TITLE 120.826-1:200-8"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.extension:richAnnotation.annotation.author",
+				"path": "AllergyIntolerance.extension",
+				"sliceName": "richAnnotation-annotation-author",
+				"label": "USER ENTERING",
+				"short": "User who made comment",
+				"definition": "This field tracks the user who entered this comment.  The field is automatically stuffed when that user enters a comment.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @USER ENTERING 120.826-1"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.extension:richAnnotation.annotation.date",
+				"path": "AllergyIntolerance.extension",
+				"sliceName": "richAnnotation-annotation-date",
+				"label": "DATE/TIME COMMENT ENTERED",
+				"short": "Comments Date/time",
+				"definition": "This field is the date/time this comment was entered.  This field is automatically filled by the system when a user enters a comment.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.date"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @DATE/TIME COMMENT ENTERED 120.826-.01"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.extension:allergyintolerance-reactionAssessed",
+				"path": "AllergyIntolerance.extension",
+				"sliceName": "allergyintolerance-reactionAssessed",
+				"label": "REACTION ASSESSMENT",
+				"short": "Assessment",
+				"definition": "This field indicates if the patient has a reaction on file or not.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionAssessed"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ADVERSE REACTION ASSESSMENT  @REACTION ASSESSMENT 120.86-1"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.extension:allergyintolerance-vaSubstanceCategory",
+				"path": "AllergyIntolerance.extension",
+				"sliceName": "allergyintolerance-vaSubstanceCategory",
+				"label": "ALLERGY TYPE",
+				"short": "ALLERGY TYPE",
+				"definition": "This field contains the type(s) for this causative agent.  The user can enter the type(s) separated by commas, or the following codes:  D=Drug, F=Food, O=Other.  If codes are used, do not use commas to separate multiple codes.  Examples of valid entries are:  DRUG or DRUG, FOOD or D or DF or OTHER.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-vaSubstanceCategory"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @ALLERGY TYPE 120.8-3.1"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.extension:allergyIntolerance-substanceIngredient",
+				"path": "AllergyIntolerance.extension",
+				"sliceName": "allergyIntolerance-substanceIngredient",
+				"label": "DRUG INGREDIENTS (MULTIPLE)",
+				"short": "DRUG INGREDIENTS",
+				"definition": "List of drug ingredients to which patient had reaction for this allergy/adverse reaction.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyIntolerance-substanceIngredient"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @DRUG INGREDIENTS (MULTIPLE) 120.802-2"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.extension:richAnnotation.annotation.text",
+				"path": "AllergyIntolerance.extension",
+				"sliceName": "richAnnotation-annotation-text",
+				"label": "COMMENTS",
+				"short": "Comment TEXT",
+				"definition": "This field contains comments that were entered.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @COMMENTS  120.8262-2"
+					}
+				]
+			},
+			{
+				"path": "AllergyIntolerance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "AllergyIntolerance.verificationStatus",
+				"path": "AllergyIntolerance.verificationStatus",
+				"label": "ENTERED IN ERROR",
+				"short": "Was it entered in error",
+				"definition": "Indicates if this allergy was entered in error.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @VERIFIED 120.8-19"
+					},
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @ENTERED IN ERROR 120.8-22"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.type",
+				"path": "AllergyIntolerance.type",
+				"label": "MECHANISM",
+				"short": "MECHANISM",
+				"definition": "This field indicates the mechanism of the reaction.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @MECHANISM 120.8-17"
+					}
+				]
+			},
+			{
+				"path": "AllergyIntolerance.code.coding.system",
+				"label": "GMR ALLERGY",
+				"definition": "This field is a variable pointer to help relate this allergy to some record in one of the files to which this field points.  The files that are pointed to are the GMR Allergies (120.82) file, National Drug (50.6) file, Drug (50) file, Drug Ingredients (50.416) file and VA Drug Class (50.605) file.",
+				"fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/50.605-.01",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @GMR ALLERGY 120.8-1"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.code.coding.code",
+				"path": "AllergyIntolerance.code.coding.code",
+				"label": "DRUG CLASSES (MULTIPLE)",
+				"short": "Drug Class",
+				"definition": "List of VA drug classes to which patient had reaction for this allergy/adverse reaction.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @GMR ALLERGY 120.8-1"
+					},
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @DRUG CLASSES (MULTIPLE) 120.803-3"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.code.text",
+				"path": "AllergyIntolerance.code.text",
+				"label": "REACTANT",
+				"short": "Causative Agent",
+				"definition": "This is the agent to which the patient had this reaction.  This is the  name of the reactant and will be the result of a look up on either the GMR Allergies (120.82), National Drug (50.6), Drug Ingredients (50.416),  Local Drug (50) or VA Drug Class (50.605) files.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @REACTANT 120.8-.02"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.patient.display",
+				"path": "AllergyIntolerance.patient.display",
+				"label": "PATIENT",
+				"short": "Patient",
+				"definition": "This field is the patient to whom this observed reaction occurred. This field is a pointer to the Patient file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @PATIENT 120.8-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "ADVERSE REACTION REPORTING @PATIENT 120.85-.02"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.assertedDate",
+				"path": "AllergyIntolerance.assertedDate",
+				"label": "ORIGINATION DATE/TIME",
+				"short": "Origination Date/Time",
+				"definition": "Date/time this allergy/adverse reaction was entered into the system.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @ORIGINATION DATE/TIME 120.8-4"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.recorder.extension:practitioner-title",
+				"path": "AllergyIntolerance.recorder.extension",
+				"sliceName": "practitioner-title",
+				"label": "SIGNATURE BLOCK TITLE",
+				"short": "Block Title of Originator",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/practitioner-title"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NEW PERSON @SIGNATURE BLOCK TITLE 120.8-5:200-20.3"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.asserter",
+				"path": "AllergyIntolerance.asserter",
+				"label": "ORIGINATOR",
+				"short": "Originator",
+				"definition": "Person who entered this allergy/adverse reaction into the system.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @ORIGINATOR 120.8-5"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.reaction.extension:allergyintolerance-reactionObservationMode",
+				"path": "AllergyIntolerance.reaction.extension",
+				"sliceName": "allergyintolerance-reactionObservationMode",
+				"label": "OBSERVED/HISTORICAL",
+				"short": "Observed/Historical",
+				"definition": "Indicates whether this allergy/adverse reaction has been observed by some personnel, or if it is historical data gathered about the patient.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionObservationMode"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @OBSERVED/HISTORICAL 120.8-6"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.reaction.extension:allergyintolerance-reactionDateEntered",
+				"path": "AllergyIntolerance.reaction.extension",
+				"sliceName": "allergyintolerance-reactionDateEntered",
+				"label": "DATE ENTERED",
+				"short": "Date signs/symptom entered",
+				"definition": "This is where the user would enter the date that the reaction (Sign/Symptom) occurred or was entered into the computer.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionDateEntered"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @DATE ENTERED 120.81-3"
+					}
+				]
+			},
+			{
+				"path": "AllergyIntolerance.reaction.manifestation.coding.system",
+				"fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/120.83",
+				"mustSupport": true
+			},
+			{
+				"id": "AllergyIntolerance.reaction.manifestation.coding.code",
+				"path": "AllergyIntolerance.reaction.manifestation.coding.code",
+				"label": "REACTION",
+				"short": "Signs/Symptoms",
+				"definition": "One of the reactions for this allergy/adverse reaction.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @REACTION  120.81-.01"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.reaction.manifestation.text",
+				"path": "AllergyIntolerance.reaction.manifestation.text",
+				"label": "OTHER REACTION",
+				"short": "Signs/Symptoms",
+				"definition": "If this reaction cannot be found in the Sign/Symptoms (120.83) file, then the free text of what the user typed in will be here, and the GMR Reaction of OTHER will be the value of the Name field.   Once the SIGNS/SYMPTOMS file is standardized then this field will no longer be needed as all entries will appear in file 120.83 and free text entries will no longer be allowed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @OTHER REACTION 120.81-1"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.reaction.onset",
+				"path": "AllergyIntolerance.reaction.onset",
+				"label": "DATE/TIME OF EVENT (OBSERVATION)",
+				"short": "Date/Time of Observation",
+				"definition": "The date/time that this observed reaction occurred.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ADVERSE REACTION REPORTING @DATE/TIME OF EVENT (OBSERVATION) 120.85-.01"
+					}
+				]
+			},
+			{
+				"id": "AllergyIntolerance.reaction.severity",
+				"path": "AllergyIntolerance.reaction.severity",
+				"label": "SEVERITY",
+				"short": "Nature of Reaction",
+				"definition": "This field indicates the severity of this reaction.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ADVERSE REACTION REPORTING @SEVERITY 120.85-14.5"
+					}
+				]
+			}
+		]
+	}
 }

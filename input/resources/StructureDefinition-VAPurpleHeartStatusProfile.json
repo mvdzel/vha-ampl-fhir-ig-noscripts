@@ -1,102 +1,109 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.system",
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.code",
-        "fixedCode": "2-.531",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.display",
-        "fixedString": "Current PH Indicator",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.status",
-        "fixedCode": "final",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.valueCodeableConcept"
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.code",
-        "label": "Current PH Indicator",
-        "short": "Purple Heart",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Current PH Indicator 2-.531"
-          }
-        ],
-        "definition": "This field can be entered by the local site if currently null.  Subsequent editing can be done only by the HEC.  A response of 'Yes' can be entered  only if the patient is a veteran,"
-      },
-      {
-        "path": "Observation.extension",
-        "sliceName": "event-statusReason",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/StructureDefinition/event-processState"
-          }
-        ],
-        "label": "Current Purple Heart Status",
-        "short": "Purple Heart",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Current Purple Heart Status  2-.532"
-          }
-        ],
-        "definition": "This field cannot be edited locally.  If Current Purple Heart Indicator is set to 'Yes' by the local site, a Current Purple Heart Status of 'Pending' will be stuffed into the field.  Other editing or updating is done by the HEC."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAPurpleHeartStatusProfile",
-  "id": "VAPurpleHeartStatusProfile",
-  "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPurpleHeartStatusProfile",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAPurpleHeartStatusProfile",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPurpleHeartStatusProfile",
+	"name": "VAPurpleHeartStatusProfile",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation.extension:event-statusReason",
+				"path": "Observation.extension",
+				"sliceName": "event-statusReason",
+				"label": "Current Purple Heart Status",
+				"short": "Purple Heart",
+				"definition": "This field cannot be edited locally.  If Current Purple Heart Indicator is set to 'Yes' by the local site, a Current Purple Heart Status of 'Pending' will be stuffed into the field.  Other editing or updating is done by the HEC.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/StructureDefinition/event-processState"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Current Purple Heart Status  2-.532"
+					}
+				]
+			},
+			{
+				"path": "Observation.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.531",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.display",
+				"fixedString": "Current PH Indicator",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "Current PH Indicator",
+				"short": "Purple Heart",
+				"definition": "This field can be entered by the local site if currently null.  Subsequent editing can be done only by the HEC.  A response of 'Yes' can be entered  only if the patient is a veteran,",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Current PH Indicator 2-.531"
+					}
+				]
+			}
+		]
+	}
 }

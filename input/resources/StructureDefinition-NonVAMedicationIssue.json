@@ -1,85 +1,88 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "DetectedIssue.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "DetectedIssue.detail",
-        "label": "ORDER CHECK NARRATIVE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @COMMENTS 55.0514-.01"
-          },
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ORDER CHECK NARRATIVE 55.051-.01"
-          }
-        ],
-        "definition": "This is the narrative of the order check(s) for the Non-VA Med order."
-      },
-      {
-        "path": "DetectedIssue.status",
-        "fixedCode": "unknown",
-        "mustSupport": true
-      },
-      {
-        "path": "DetectedIssue.mitigation.author",
-        "label": "OVERRIDING PROVIDER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @OVERRIDING PROVIDER 55.051-1"
-          }
-        ],
-        "definition": "This is the provider responsible for overriding the order check."
-      },
-      {
-        "path": "DetectedIssue.mitigation.action.coding.code",
-        "label": "OVERRIDING REASON",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @OVERRIDING REASON 55.0511-2"
-          }
-        ]
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "NonVAMedicationIssue",
-  "id": "NonVAMedicationIssue",
-  "type": "DetectedIssue",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DetectedIssue",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/NonVAMedicationIssue",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "NonVAMedicationIssue",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/NonVAMedicationIssue",
+	"name": "NonVAMedicationIssue",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "DetectedIssue",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/DetectedIssue",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "DetectedIssue.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "DetectedIssue.status",
+				"fixedCode": "unknown",
+				"mustSupport": true
+			},
+			{
+				"id": "DetectedIssue.detail",
+				"path": "DetectedIssue.detail",
+				"label": "ORDER CHECK NARRATIVE",
+				"definition": "This is the narrative of the order check(s) for the Non-VA Med order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @COMMENTS 55.0514-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ORDER CHECK NARRATIVE 55.051-.01"
+					}
+				]
+			},
+			{
+				"id": "DetectedIssue.mitigation.action.coding.code",
+				"path": "DetectedIssue.mitigation.action.coding.code",
+				"label": "OVERRIDING REASON",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @OVERRIDING REASON 55.0511-2"
+					}
+				]
+			},
+			{
+				"id": "DetectedIssue.mitigation.author",
+				"path": "DetectedIssue.mitigation.author",
+				"label": "OVERRIDING PROVIDER",
+				"definition": "This is the provider responsible for overriding the order check.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @OVERRIDING PROVIDER 55.051-1"
+					}
+				]
+			}
+		]
+	}
 }

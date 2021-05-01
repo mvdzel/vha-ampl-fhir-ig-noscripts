@@ -1,82 +1,88 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/2-.14",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.code",
-        "fixedCode": "2-.14",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.display",
-        "fixedString": "Current Means Test Status",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements/",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.status",
-        "fixedCode": "final",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.valueCodeableConcept"
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.code",
-        "label": "Current Means Test Status",
-        "short": "Eligibility",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Current Means Test Status  2-.14"
-          }
-        ],
-        "definition": "This field is computed by the system.  It contains the current means test status for a patient."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAEligibilityObservation2",
-  "id": "VAEligibilityObservation2",
-  "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation2",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAEligibilityObservation2",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation2",
+	"name": "VAEligibilityObservation2",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Observation.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements/",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.14",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.display",
+				"fixedString": "Current Means Test Status",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/2-.14",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "Current Means Test Status",
+				"short": "Eligibility",
+				"definition": "This field is computed by the system.  It contains the current means test status for a patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Current Means Test Status  2-.14"
+					}
+				]
+			}
+		]
+	}
 }

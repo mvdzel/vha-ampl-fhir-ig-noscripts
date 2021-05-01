@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "medicationdispense-copayTransactionType",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-copayTransactionType",
-  "name": "medicationdispense-copayTransactionType",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationDispense"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-copayTransactionType"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @COPAY TRANSACTION TYPE 52-105"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field contains the internal entry number of the pointer to the IB Action Type file (#350.1)."
+	"resourceType": "StructureDefinition",
+	"id": "medicationdispense-copayTransactionType",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-copayTransactionType",
+	"name": "medicationdispense-copayTransactionType",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field contains the internal entry number of the pointer to the IB Action Type file (#350.1).",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationDispense"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-copayTransactionType"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @COPAY TRANSACTION TYPE 52-105"
+					}
+				]
+			}
+		]
+	}
 }

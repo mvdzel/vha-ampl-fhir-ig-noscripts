@@ -1,74 +1,75 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Observation.code.coding.code",
-        "fixedCode": "2-.5295",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.display",
-        "fixedString": "Combat Veteran End Date",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements/",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.status",
-        "fixedCode": "final",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.valueDateTime",
-        "label": "Combat Veteran End Date",
-        "short": "Eligibility",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Combat Veteran End Date  2-.5295"
-          }
-        ],
-        "definition": "This field represents the last day for combat vet eligibility. This field  will only be populated by cross-reference when the veteran's combat vet  eligibility has been determined. This value will remain after the combat  vet eligibility period has expired."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAEligibilityObservation1",
-  "id": "VAEligibilityObservation1",
-  "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation1",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAEligibilityObservation1",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation1",
+	"name": "VAEligibilityObservation1",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Observation.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements/",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.5295",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.display",
+				"fixedString": "Combat Veteran End Date",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueDateTime",
+				"path": "Observation.valueDateTime",
+				"label": "Combat Veteran End Date",
+				"short": "Eligibility",
+				"definition": "This field represents the last day for combat vet eligibility. This field  will only be populated by cross-reference when the veteran's combat vet  eligibility has been determined. This value will remain after the combat  vet eligibility period has expired.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Combat Veteran End Date  2-.5295"
+					}
+				]
+			}
+		]
+	}
 }

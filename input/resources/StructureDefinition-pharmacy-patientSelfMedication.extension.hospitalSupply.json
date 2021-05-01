@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "pharmacy-patientSelfMedication.extension.hospitalSupply",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.hospitalSupply",
-  "name": "pharmacy-patientSelfMedication.extension.hospitalSupply",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.hospitalSupply"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NON-VERIFIED ORDERS @HOSPITAL SUPPLIED SELF MED 53.1-6"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This should contain a `1' (or `YES') if this medication is to be a `SELF MED' and this site's pharmacy is to supply the medication.  This is only asked if the user enters `YES' (or `1') to the SELF MED prompt. If the SELF MED field is ever edited to show `NO' (or `0'), this is automatically deleted."
+	"resourceType": "StructureDefinition",
+	"id": "pharmacy-patientSelfMedication.extension.hospitalSupply",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.hospitalSupply",
+	"name": "pharmacy-patientSelfMedication.extension.hospitalSupply",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This should contain a `1' (or `YES') if this medication is to be a `SELF MED' and this site's pharmacy is to supply the medication.  This is only asked if the user enters `YES' (or `1') to the SELF MED prompt. If the SELF MED field is ever edited to show `NO' (or `0'), this is automatically deleted.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.hospitalSupply"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @HOSPITAL SUPPLIED SELF MED 53.1-6"
+					}
+				]
+			}
+		]
+	}
 }

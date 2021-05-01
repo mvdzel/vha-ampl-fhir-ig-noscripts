@@ -1,54 +1,55 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "DocumentReference.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "DocumentReference.content.attachment.data",
-        "label": "TIU REPORT TEXT",
-        "short": "Report Text",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @TIU REPORT TEXT 8925-2"
-          }
-        ],
-        "definition": "This is a word processing field that contains the report text."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAReferralEncounterReport",
-  "id": "VAReferralEncounterReport",
-  "type": "DocumentReference",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralEncounterReport",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAReferralEncounterReport",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralEncounterReport",
+	"name": "VAReferralEncounterReport",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "DocumentReference",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "DocumentReference.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "DocumentReference.content.attachment.data",
+				"path": "DocumentReference.content.attachment.data",
+				"label": "TIU REPORT TEXT",
+				"short": "Report Text",
+				"definition": "This is a word processing field that contains the report text.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @TIU REPORT TEXT 8925-2"
+					}
+				]
+			}
+		]
+	}
 }

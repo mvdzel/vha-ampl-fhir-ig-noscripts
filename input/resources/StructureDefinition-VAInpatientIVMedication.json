@@ -1,71 +1,73 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Medication.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Medication.ingredient.itemCodeableConcept.text",
-        "label": "SOLUTION",
-        "short": "solution",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @ADDITIVE 55.02-.01"
-          },
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @SOLUTION 55.11-.01"
-          }
-        ],
-        "definition": "This is the solution entered as part of the specified IV order."
-      },
-      {
-        "path": "Medication.ingredient.amount",
-        "label": "VOLUME",
-        "short": "volume",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @VOLUME 55.11-1"
-          }
-        ],
-        "definition": "This field represents the volume of this solution in MLs.  Only a number can be entered into this field.  The total volume of an IV ORDER is all the solution's volumes added together."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAInpatientIVMedication",
-  "id": "VAInpatientIVMedication",
-  "type": "Medication",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedication",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAInpatientIVMedication",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedication",
+	"name": "VAInpatientIVMedication",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Medication",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Medication.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Medication.ingredient.itemCodeableConcept.text",
+				"path": "Medication.ingredient.itemCodeableConcept.text",
+				"label": "SOLUTION",
+				"short": "solution",
+				"definition": "This is the solution entered as part of the specified IV order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @ADDITIVE 55.02-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @SOLUTION 55.11-.01"
+					}
+				]
+			},
+			{
+				"id": "Medication.ingredient.amount",
+				"path": "Medication.ingredient.amount",
+				"label": "VOLUME",
+				"short": "volume",
+				"definition": "This field represents the volume of this solution in MLs.  Only a number can be entered into this field.  The total volume of an IV ORDER is all the solution's volumes added together.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @VOLUME 55.11-1"
+					}
+				]
+			}
+		]
+	}
 }

@@ -1,227 +1,244 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "MedicationStatement.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "MedicationStatement.subject",
-        "label": "PATIENT",
-        "short": "PATIENT",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @PATIENT 55-.01nvm"
-          }
-        ]
-      },
-      {
-        "path": "MedicationStatement.medicationCodeableConcept",
-        "label": "DISPENSE DRUG",
-        "short": "DISPENSE DRUG",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ORDERABLE ITEM 55.05-.01"
-          },
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DISPENSE DRUG 55.05-1"
-          }
-        ],
-        "definition": "This is the dispense drug that represents the Non-VA Med being taken by  the patient."
-      },
-      {
-        "path": "MedicationStatement.dosage.text",
-        "label": "DOSAGE",
-        "short": "DOSAGE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DOSAGE 55.05-2"
-          }
-        ],
-        "definition": "This is the dosage of the Non-VA Med being taken by the patient."
-      },
-      {
-        "path": "MedicationStatement.dosage.route.coding.code",
-        "label": "MEDICATION ROUTE",
-        "short": "MED ROUTE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @MEDICATION ROUTE 55.05-3"
-          }
-        ],
-        "definition": "This is the route of the Non-VA Medication being taken by the patient."
-      },
-      {
-        "path": "MedicationStatement.status",
-        "label": "STATUS",
-        "short": "STATUS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @STATUS 55.05-5"
-          }
-        ],
-        "definition": "This is the status of the Non-VA Med order."
-      },
-      {
-        "path": "MedicationStatement.effectivePeriod"
-      },
-      {
-        "path": "MedicationStatement.effectivePeriod.end",
-        "label": "DISCONTINUED DATE",
-        "short": "DISCONTINUED DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DISCONTINUED DATE 55.05-6"
-          }
-        ],
-        "definition": "This is the date the patient stopped taking the Non-VA Medication."
-      },
-      {
-        "path": "MedicationStatement.identifier.system",
-        "fixedUri": "va.gov/identifiers/orders/100",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationStatement.identifier.value",
-        "label": "ORDER NUMBER",
-        "short": "CPRS ORDER NUMBER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ORDER NUMBER 55.05-7"
-          }
-        ],
-        "definition": "This is the CPRS order number."
-      },
-      {
-        "path": "MedicationStatement.effectivePeriod.start",
-        "label": "START DATE",
-        "short": "START DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @START DATE 55.05-8"
-          }
-        ],
-        "definition": "This is the date the patient started taking the Non-VA Medication."
-      },
-      {
-        "path": "MedicationStatement.dateAsserted",
-        "label": "DOCUMENTED DATE",
-        "short": "DOCUMENTED DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DOCUMENTED DATE 55.05-11"
-          }
-        ],
-        "definition": "This is the date the Non-VA Med order was entered to the system."
-      },
-      {
-        "path": "MedicationStatement.extension",
-        "sliceName": "medicationstatement-recorder",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-recorder"
-          }
-        ],
-        "label": "DOCUMENTED BY",
-        "short": "DOCUMENTED BY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DOCUMENTED BY 55.05-12"
-          }
-        ],
-        "definition": "This is the person responsible for documenting the Non-VA Med order."
-      },
-      {
-        "path": "MedicationStatement.extension",
-        "sliceName": "medicationstatement-orderLocation",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-orderLocation"
-          }
-        ],
-        "label": "CLINIC",
-        "short": "CLINIC",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @CLINIC 55.05-13"
-          }
-        ]
-      },
-      {
-        "path": "MedicationStatement.extension",
-        "sliceName": "nonVAMedicationDisclaimer",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/nonVAMedicationDisclaimer"
-          }
-        ],
-        "label": "DISCLAIMER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DISCLAIMER 55.05-10"
-          }
-        ],
-        "definition": "This is the multiple for the Non-VA Med Disclaimer (Statement/Explanation)"
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "NonVAMedicationStatement",
-  "id": "NonVAMedicationStatement",
-  "type": "MedicationStatement",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/NonVAMedicationStatement",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "NonVAMedicationStatement",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/NonVAMedicationStatement",
+	"name": "NonVAMedicationStatement",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "MedicationStatement",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "MedicationStatement.extension:nonVAMedicationDisclaimer",
+				"path": "MedicationStatement.extension",
+				"sliceName": "nonVAMedicationDisclaimer",
+				"label": "DISCLAIMER",
+				"definition": "This is the multiple for the Non-VA Med Disclaimer (Statement/Explanation)",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/nonVAMedicationDisclaimer"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DISCLAIMER 55.05-10"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.extension:medicationstatement-orderLocation",
+				"path": "MedicationStatement.extension",
+				"sliceName": "medicationstatement-orderLocation",
+				"label": "CLINIC",
+				"short": "CLINIC",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-orderLocation"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @CLINIC 55.05-13"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.extension:medicationstatement-recorder",
+				"path": "MedicationStatement.extension",
+				"sliceName": "medicationstatement-recorder",
+				"label": "DOCUMENTED BY",
+				"short": "DOCUMENTED BY",
+				"definition": "This is the person responsible for documenting the Non-VA Med order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-recorder"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DOCUMENTED BY 55.05-12"
+					}
+				]
+			},
+			{
+				"path": "MedicationStatement.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "MedicationStatement.identifier.system",
+				"fixedUri": "va.gov/identifiers/orders/100",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationStatement.identifier.value",
+				"path": "MedicationStatement.identifier.value",
+				"label": "ORDER NUMBER",
+				"short": "CPRS ORDER NUMBER",
+				"definition": "This is the CPRS order number.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ORDER NUMBER 55.05-7"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.status",
+				"path": "MedicationStatement.status",
+				"label": "STATUS",
+				"short": "STATUS",
+				"definition": "This is the status of the Non-VA Med order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @STATUS 55.05-5"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.medicationCodeableConcept",
+				"path": "MedicationStatement.medicationCodeableConcept",
+				"label": "DISPENSE DRUG",
+				"short": "DISPENSE DRUG",
+				"definition": "This is the dispense drug that represents the Non-VA Med being taken by  the patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ORDERABLE ITEM 55.05-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DISPENSE DRUG 55.05-1"
+					}
+				]
+			},
+			{
+				"path": "MedicationStatement.effectivePeriod",
+				"type": [
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.effectivePeriod.start",
+				"path": "MedicationStatement.effectivePeriod.start",
+				"label": "START DATE",
+				"short": "START DATE",
+				"definition": "This is the date the patient started taking the Non-VA Medication.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @START DATE 55.05-8"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.effectivePeriod.end",
+				"path": "MedicationStatement.effectivePeriod.end",
+				"label": "DISCONTINUED DATE",
+				"short": "DISCONTINUED DATE",
+				"definition": "This is the date the patient stopped taking the Non-VA Medication.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DISCONTINUED DATE 55.05-6"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.dateAsserted",
+				"path": "MedicationStatement.dateAsserted",
+				"label": "DOCUMENTED DATE",
+				"short": "DOCUMENTED DATE",
+				"definition": "This is the date the Non-VA Med order was entered to the system.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DOCUMENTED DATE 55.05-11"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.subject",
+				"path": "MedicationStatement.subject",
+				"label": "PATIENT",
+				"short": "PATIENT",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @PATIENT 55-.01nvm"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.dosage.text",
+				"path": "MedicationStatement.dosage.text",
+				"label": "DOSAGE",
+				"short": "DOSAGE",
+				"definition": "This is the dosage of the Non-VA Med being taken by the patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DOSAGE 55.05-2"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.dosage.route.coding.code",
+				"path": "MedicationStatement.dosage.route.coding.code",
+				"label": "MEDICATION ROUTE",
+				"short": "MED ROUTE",
+				"definition": "This is the route of the Non-VA Medication being taken by the patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @MEDICATION ROUTE 55.05-3"
+					}
+				]
+			}
+		]
+	}
 }

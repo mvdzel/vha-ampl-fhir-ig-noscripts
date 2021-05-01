@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "unverifiedMedicationOrderFinishPrompt",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/unverifiedMedicationOrderFinishPrompt",
-  "name": "unverifiedMedicationOrderFinishPrompt",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/unverifiedMedicationOrderFinishPrompt"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NON-VERIFIED ORDERS @UD/IV PROMPT 53.1-118"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field will be used during the finishing process to determine if the user should be prompted whether they wish to finish the order as an IV or Unit Dose order."
+	"resourceType": "StructureDefinition",
+	"id": "unverifiedMedicationOrderFinishPrompt",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/unverifiedMedicationOrderFinishPrompt",
+	"name": "unverifiedMedicationOrderFinishPrompt",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field will be used during the finishing process to determine if the user should be prompted whether they wish to finish the order as an IV or Unit Dose order.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/unverifiedMedicationOrderFinishPrompt"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @UD/IV PROMPT 53.1-118"
+					}
+				]
+			}
+		]
+	}
 }

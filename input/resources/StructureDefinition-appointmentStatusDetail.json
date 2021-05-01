@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "appointmentStatusDetail",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/appointmentStatusDetail",
-  "name": "appointmentStatusDetail",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "Appointment"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/appointmentStatusDetail"
-      },
-      {
-        "path": "Extension.valueCode",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @STATUS 2.98-3e"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field contains the current status of the patient's appointment. If the field is blank, it means the appointment has not been no-showed or cancelled and the patient was not an inpatient at the time of the\r\nappointment. This field is set automatically by the scheduling module and must NOT be edited."
+	"resourceType": "StructureDefinition",
+	"id": "appointmentStatusDetail",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/appointmentStatusDetail",
+	"name": "appointmentStatusDetail",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field contains the current status of the patient's appointment. If the field is blank, it means the appointment has not been no-showed or cancelled and the patient was not an inpatient at the time of the\r\nappointment. This field is set automatically by the scheduling module and must NOT be edited.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Appointment"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/appointmentStatusDetail"
+			},
+			{
+				"id": "Extension.valueCode",
+				"path": "Extension.valueCode",
+				"type": [
+					{
+						"code": "code"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @STATUS 2.98-3e"
+					}
+				]
+			}
+		]
+	}
 }

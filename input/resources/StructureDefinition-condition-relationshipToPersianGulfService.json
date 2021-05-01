@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "condition-relationshipToPersianGulfService",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService",
-  "name": "condition-relationshipToPersianGulfService",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "Condition"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "If this problem is related to a patient's service in the Persian Gulf, it may be flagged here."
+	"resourceType": "StructureDefinition",
+	"id": "condition-relationshipToPersianGulfService",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService",
+	"name": "condition-relationshipToPersianGulfService",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "If this problem is related to a patient's service in the Persian Gulf, it may be flagged here.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Condition"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13"
+					}
+				]
+			}
+		]
+	}
 }

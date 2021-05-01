@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "immunization-contraindicated",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-contraindicated",
-  "name": "immunization-contraindicated",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "Immunization"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-contraindicated"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "V IMMUNIZATION FILE @CONTRAINDICATED 9000010.11-.07"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field allows the immunization to be recorded as contraindicated. Reminders will include a check to see if the previous immunization was  contraindicated before creating reminders."
+	"resourceType": "StructureDefinition",
+	"id": "immunization-contraindicated",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-contraindicated",
+	"name": "immunization-contraindicated",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field allows the immunization to be recorded as contraindicated. Reminders will include a check to see if the previous immunization was  contraindicated before creating reminders.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Immunization"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-contraindicated"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "V IMMUNIZATION FILE @CONTRAINDICATED 9000010.11-.07"
+					}
+				]
+			}
+		]
+	}
 }

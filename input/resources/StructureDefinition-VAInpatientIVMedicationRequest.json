@@ -1,704 +1,746 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "MedicationRequest.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-pharmacyOrderStatus",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"
-          }
-        ],
-        "label": "STATUS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @STATUS 55.01-100b"
-          }
-        ],
-        "definition": "Status of order. Enter one of following codes: A for active, H for hold, R for renewed, D for discontinued, E for expired, P for purge, O for on  call, N for nonverified."
-      },
-      {
-        "path": "MedicationRequest.subject",
-        "label": "PATIENT",
-        "short": "Patient",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @PATIENT 55-.01iv"
-          }
-        ],
-        "definition": "This is the name of a patient that has some type of pharmacy order."
-      },
-      {
-        "path": "MedicationRequest.identifier.system",
-        "fixedUri": "va.gov/identifiers/orders/55.01",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.identifier.value",
-        "label": "ORDERS FILE ENTRY",
-        "short": "order file entry",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @ORDER NUMBER 55.01-.01"
-          },
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @ORDERS FILE ENTRY  55.01-110"
-          }
-        ],
-        "definition": "This value matches this IV order to its entry in the Order file."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod"
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start",
-        "label": "START DATE/TIME",
-        "short": "start date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @START DATE/TIME 55.01-.02"
-          }
-        ],
-        "definition": "This is the date and time the order is to begin. This package initially assigns the START DATE/TIME to the closest administration time or next admin. time or NOW depends on the value of the DEFAULT START DATE CALCULATION field in the WARD PARAMETERS file. START DATE/TIME may not  be entered prior to 7 days from the order's LOGIN DATE."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
-        "label": "STOP DATE/TIME",
-        "short": "stop date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @STOP DATE/TIME 55.01-.03"
-          }
-        ],
-        "definition": "This is the date and time the order is to end."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-ivType",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType"
-          }
-        ],
-        "label": "CHEMOTHERAPY TYPE",
-        "short": "chemotherapy type",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @TYPE 55.01-.04"
-          },
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @CHEMOTHERAPY TYPE 55.01-106"
-          }
-        ],
-        "definition": "A chemotherapy IV order may be one of three types: admixture, piggyback, or syringe.  The type of chemotherapy IV must be identified as one of these types, so the system will know what kinds of questions to ask in order to properly complete this order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "valueCodeableConcept/coding/code",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueCodeableConcept.coding.code"
-          }
-        ],
-        "label": "INTERMITTENT SYRING",
-        "short": "intermittent syringe",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @INTERMITTENT SYRING 55.01-108"
-          }
-        ],
-        "definition": "A syringe IV order may be continuous or intermittent.  If a syringe type is continuous (not intermittent), the same order entry procedure will be followed as if a hyperal or admixture is being entered.  If a syringe order is to be intermittent, the same order entry method as the piggback type will be followed."
-      },
-      {
-        "path": "MedicationRequest.requester.agent",
-        "label": "PROVIDER",
-        "short": "provider",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @PROVIDER 55.01-.06"
-          }
-        ],
-        "definition": "Person who authorized the prescription."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.rateRatio",
-        "label": "INFUSION RATE",
-        "short": "infusion rate",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @INFUSION RATE 55.01-.08"
-          }
-        ],
-        "definition": "The rate at which the IV is to be administered.  This value, together with the total volume of the hyperal or the admixture type, is used to determine the time covered by one bag; hence the system can predict the bags needed during a specified time of coverage.  This field is free text for IVPB's.  For LVP's you must enter a number representing the infusion rate.  You may also specify the # of bags per day needed, which will become the default number of LABELS PER DAY.    Example: 125 = 125 ml/hr (IV system will calculate bags needed per day)         125@2 = 125 ml/hr with 2 labels per day     TITRATE@1 = TITRATE with 1 label per day  The format of this field is either a number only or  [FREE TEXT@NUMBER OF LABELS PER DAY].   Note:  If an administration time(s) is defined, the number of labels will reflect the administration time(s) for the IVPB type orders. For example:  One administration time of 12:00 is specified.  The infusion rate is entered as 125@3.  Only 1 label will print."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.code.text",
-        "label": "SCHEDULE",
-        "short": "schedule",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @SCHEDULE 55.01-.09"
-          }
-        ],
-        "definition": "You may enter a standard schedule here or non-standard schedule.  If a standard schedule is entered, the doses will be given at the administration time(s). If a non-standard schedule is entered, and no administration times are entered, the doses will be given at time intervals past the start date/time of the IV order.     TID = (09-17-21) doses will be given at admin. times.     Q5H = (300 minutes) doses will be given every 300 minutes. The format of this field is [SCHEDULEspaceFREETEXTspaceFREETEXT] and 1-70 characters."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.extension",
-        "sliceName": "timeOfDay",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/timeOfDay"
-          }
-        ],
-        "label": "ADMINISTRATION TIMES",
-        "short": "administration times",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @ADMINISTRATION TIMES 55.01-.12"
-          }
-        ],
-        "definition": "Enter the times that this order will be given separated by a '-'.  The administration times have to be entered in ascending order.  Each  administration time must be at least two characters long or four characters long.  Example: '03-07-11-15-19-23' or '0730-1130'.   Administration times are REQUIRED for STANDARD schedules but are NOT  REQUIRED for NON-STANDARD schedules."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.frequency",
-        "fixedInteger": 1,
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.periodUnit",
-        "fixedCode": "[TBD]",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.period",
-        "label": "SCHEDULE INTERVAL",
-        "short": "schedul interval",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @SCHEDULE INTERVAL 55.01-.17"
-          }
-        ],
-        "definition": "Interval between administrations of IV"
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationdispense-cumulativeDoses",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-cumulativeDoses"
-          }
-        ],
-        "label": "CUMULATIVE DOSES",
-        "short": "cumulative doses",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @CUMULATIVE DOSES 55.01-.24"
-          }
-        ],
-        "definition": "Cumulative doses of IV for patient."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "extension-MedicationRequest/statusReason",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason"
-          }
-        ],
-        "label": "DISPLAY STATUS",
-        "short": "display satus",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @DISPLAY STATUS 55.01-157"
-          }
-        ],
-        "definition": "This field captures how a \"Discontinued\" action occurred and this code is  displayed on the short patient profile if the Stop Date/Time is within the time specified in the Inpatient Ward Parameter file (#59.6) or the Pharmacy System file (#59.7). The \"HP\" is to display on the profile if the order was placed on hold by provider through CPRS."
-      },
-      {
-        "path": "MedicationRequest.medicationCodeableConcept.coding.code",
-        "label": "ORDERABLE ITEM",
-        "short": "orderable item",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @ORDERABLE ITEM 55.01-130"
-          }
-        ],
-        "definition": "This is the Orderable Item associated with the order. If the order is a unit dose order, all dispense drugs entered must be matched to the order's primary drug. If the order is an IV, at lest one of the additives or solutions entered must match the orderable item."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.route.coding.system",
-        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1-3",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.route.coding.code",
-        "label": "MED ROUTE",
-        "short": "med route",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @MED ROUTE 55.01-132"
-          }
-        ],
-        "definition": "This is the route of administration for this order. This is not required for IV Fluid orders."
-      },
-      {
-        "path": "MedicationRequest.priority",
-        "label": "PRIORITY",
-        "short": "priority",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @PRIORITY 55.01-134"
-          }
-        ],
-        "definition": "This field contains the priority of the order that was received from OERR."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-orderPlacementChannel",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderPlacementChannel"
-          }
-        ],
-        "label": "NATURE OF ORDER",
-        "short": "nature of order",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @NATURE OF ORDER 55.01-137"
-          }
-        ],
-        "definition": "This is the method the provider used to communicate the order to the user to enter (or take any other action on) the order."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.text",
-        "label": "INSTRUCTIONS",
-        "short": "instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @INSTRUCTIONS 55.01-133"
-          }
-        ],
-        "definition": "<blank>"
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationdispense-holdFlag",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-holdFlag"
-          }
-        ],
-        "label": "HOLD FLAG",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @HOLD FLAG 55.01-149"
-          }
-        ],
-        "definition": "This is a flag set to 1 whenever the order is placed on HOLD or 0 whenever the order is removed from hold."
-      },
-      {
-        "path": "MedicationRequest.basedOn",
-        "label": "ORDERS FILE PARENT ORDER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @ORDERS FILE PARENT ORDER 55.01-150"
-          }
-        ],
-        "definition": "This is the parent of an order that may have a parent/child relationship  in CPRS."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "extension/valueAnnotation/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.text"
-          }
-        ],
-        "label": "REMARKS",
-        "short": "remarks",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @REMARKS 55.01-.1"
-          }
-        ],
-        "definition": "This field is not shown on the IV labels, but is shown on some of the IV reports."
-      },
-      {
-        "path": "MedicationRequest.authoredOn",
-        "label": "LOGIN DATE/TIME",
-        "short": "login date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @LOGIN DATE/TIME 55.01-.21"
-          }
-        ],
-        "definition": "This is the date and time the order was entered."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationdispense-ivPrepRoom",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-ivPrepRoom"
-          }
-        ],
-        "label": "IV ROOM",
-        "short": "iv room",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @IV ROOM 55.01-.22"
-          }
-        ],
-        "definition": "IV room where IV was prepared for administration."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-orderCreationMode",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderCreationMode"
-          }
-        ],
-        "label": "REASON ORDER CREATED",
-        "short": "REASON ORDER CREATED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @REASON ORDER CREATED 55.01-122"
-          }
-        ],
-        "definition": "This is used to show the method used to create this order. what actions may be taken on the order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "valueReference",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueReference"
-          }
-        ],
-        "label": "ENTRY BY",
-        "short": "entry by",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @ENTRY BY 55.01-135"
-          }
-        ],
-        "definition": "This field contains the pointer value for the person entered the IV order."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.duration",
-        "label": "REQUESTED DURATION",
-        "short": "requested duration",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @REQUESTED DURATION 55.01-151"
-          }
-        ],
-        "definition": "The duration of an order as requested by the ordering clinician in CPRS. The duration is stored as one of the following upper case letters followed by an integer:     L - Months  W - Weeks  D - Days  H - Hours  M - Minutes  S - Seconds   Example: D6 = Six days."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.maxDosePerPeriod",
-        "label": "REQUESTED IV LIMITATION",
-        "short": "requested iv limitation",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @REQUESTED IV LIMITATION 55.01-152"
-          }
-        ],
-        "definition": "This is the length of time to administer, or the total volume  to administer, for IV fluid orders. The value may be in ML or CC for milliliters, L for liters, D for days, or H for hours."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "richAnnotation/comment/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
-          }
-        ],
-        "label": "SPECIAL INSTRUCTIONS (LONG)",
-        "short": "other print info",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @OTHER PRINT INFO 55.01-31"
-          },
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @PROVIDER COMMENTS 55.01-115"
-          },
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @OTHER PRINT INFO (LONG)  55.01-154"
-          },
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @SPECIAL INSTRUCTIONS (LONG)  55.01-103"
-          }
-        ],
-        "definition": "This field contains any special instructions or messages appropriate for this IV order. This field may only be edited when entering an order through the OE/RR package, and will only be displayed when viewing\r\nthe order until the order has been verified."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-pharmacistVerified",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacistVerified"
-          }
-        ],
-        "label": "PV FLAG",
-        "short": "pv flag",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @PV FLAG 55.01-142"
-          }
-        ],
-        "definition": "This is an internal flag set whenever a pharmacist verifies the order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-nurseVerified",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-nurseVerified"
-          }
-        ],
-        "label": "NV FLAG",
-        "short": "nv flag",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @NV FLAG 55.01-143"
-          }
-        ],
-        "definition": "This is an internal flag set whenever a nurse verifies the order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationdispense-ivLabelsPerDay",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-ivLabelsPerDay"
-          }
-        ],
-        "label": "LABELS PER DAY",
-        "short": "labels per day",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @LABELS PER DAY 55.01-155"
-          }
-        ],
-        "definition": "The number of IV labels needed each day. If populated, this value will  override the system-calculated number of labels."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-lastFillDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastFillDate"
-          }
-        ],
-        "label": "LAST FILL",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @LAST FILL 55.01-.15"
-          }
-        ],
-        "definition": "Last time the prescription was filled."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-lastFillQuantity",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastFillQuantity"
-          }
-        ],
-        "label": "LAST QTY FILLED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @LAST QTY FILLED 55.01-.16"
-          }
-        ],
-        "definition": "Quantity of last filled prescription."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.extension",
-        "sliceName": "dosageInstruction-ivBottleNumber",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/dosageInstruction-ivBottleNumber"
-          }
-        ],
-        "label": "BOTTLE",
-        "short": "bottle",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @BOTTLE 55.02-.03"
-          }
-        ],
-        "definition": "This is the bottle number (or numbers, separated by commas) in which  this additive will be included for this IV order. If this field is blank,  it means that the additive will be included in all bottles."
-      },
-      {
-        "path": "MedicationRequest.status",
-        "label": "STATUS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @STATUS 55.01-100"
-          }
-        ],
-        "binding": {
-          "strength": "preferred",
-          "valueSetReference": {
-            "reference": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-iv-order-status"
-          }
-        },
-        "definition": "Status of order. Enter one of following codes: A for active, H for hold, R for renewed, D for discontinued, E for expired, P for purge, O for on  call, N for nonverified."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-extendedPriority",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-extendedPriority"
-          }
-        ],
-        "label": "PRIORITY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @PRIORITY 55.01-134b"
-          }
-        ],
-        "definition": "This field contains the priority of the order that was received from OERR."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAInpatientIVMedicationRequest",
-  "id": "VAInpatientIVMedicationRequest",
-  "type": "MedicationRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequest",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAInpatientIVMedicationRequest",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequest",
+	"name": "VAInpatientIVMedicationRequest",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "MedicationRequest",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "MedicationRequest.extension:medicationrequest-extendedPriority",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-extendedPriority",
+				"label": "PRIORITY",
+				"definition": "This field contains the priority of the order that was received from OERR.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-extendedPriority"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @PRIORITY 55.01-134b"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-lastFillQuantity",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-lastFillQuantity",
+				"label": "LAST QTY FILLED",
+				"definition": "Quantity of last filled prescription.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastFillQuantity"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @LAST QTY FILLED 55.01-.16"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-lastFillDate",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-lastFillDate",
+				"label": "LAST FILL",
+				"definition": "Last time the prescription was filled.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastFillDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @LAST FILL 55.01-.15"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationdispense-ivLabelsPerDay",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationdispense-ivLabelsPerDay",
+				"label": "LABELS PER DAY",
+				"short": "labels per day",
+				"definition": "The number of IV labels needed each day. If populated, this value will  override the system-calculated number of labels.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-ivLabelsPerDay"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @LABELS PER DAY 55.01-155"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-nurseVerified",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-nurseVerified",
+				"label": "NV FLAG",
+				"short": "nv flag",
+				"definition": "This is an internal flag set whenever a nurse verifies the order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-nurseVerified"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @NV FLAG 55.01-143"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-pharmacistVerified",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-pharmacistVerified",
+				"label": "PV FLAG",
+				"short": "pv flag",
+				"definition": "This is an internal flag set whenever a pharmacist verifies the order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacistVerified"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @PV FLAG 55.01-142"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:richAnnotation.comment.text",
+				"path": "MedicationRequest.extension",
+				"sliceName": "richAnnotation-comment-text",
+				"label": "SPECIAL INSTRUCTIONS (LONG)",
+				"short": "other print info",
+				"definition": "This field contains any special instructions or messages appropriate for this IV order. This field may only be edited when entering an order through the OE/RR package, and will only be displayed when viewing\r\nthe order until the order has been verified.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @OTHER PRINT INFO 55.01-31"
+					},
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @PROVIDER COMMENTS 55.01-115"
+					},
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @OTHER PRINT INFO (LONG)  55.01-154"
+					},
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @SPECIAL INSTRUCTIONS (LONG)  55.01-103"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:valueReference",
+				"path": "MedicationRequest.extension",
+				"sliceName": "valueReference",
+				"label": "ENTRY BY",
+				"short": "entry by",
+				"definition": "This field contains the pointer value for the person entered the IV order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueReference"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @ENTRY BY 55.01-135"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-orderCreationMode",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-orderCreationMode",
+				"label": "REASON ORDER CREATED",
+				"short": "REASON ORDER CREATED",
+				"definition": "This is used to show the method used to create this order. what actions may be taken on the order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderCreationMode"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @REASON ORDER CREATED 55.01-122"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationdispense-ivPrepRoom",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationdispense-ivPrepRoom",
+				"label": "IV ROOM",
+				"short": "iv room",
+				"definition": "IV room where IV was prepared for administration.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-ivPrepRoom"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @IV ROOM 55.01-.22"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:extension.valueAnnotation.text",
+				"path": "MedicationRequest.extension",
+				"sliceName": "extension-valueAnnotation-text",
+				"label": "REMARKS",
+				"short": "remarks",
+				"definition": "This field is not shown on the IV labels, but is shown on some of the IV reports.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @REMARKS 55.01-.1"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationdispense-holdFlag",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationdispense-holdFlag",
+				"label": "HOLD FLAG",
+				"definition": "This is a flag set to 1 whenever the order is placed on HOLD or 0 whenever the order is removed from hold.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-holdFlag"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @HOLD FLAG 55.01-149"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-orderPlacementChannel",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-orderPlacementChannel",
+				"label": "NATURE OF ORDER",
+				"short": "nature of order",
+				"definition": "This is the method the provider used to communicate the order to the user to enter (or take any other action on) the order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderPlacementChannel"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @NATURE OF ORDER 55.01-137"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:extension-MedicationRequest.statusReason",
+				"path": "MedicationRequest.extension",
+				"sliceName": "extension-MedicationRequest-statusReason",
+				"label": "DISPLAY STATUS",
+				"short": "display satus",
+				"definition": "This field captures how a \"Discontinued\" action occurred and this code is  displayed on the short patient profile if the Stop Date/Time is within the time specified in the Inpatient Ward Parameter file (#59.6) or the Pharmacy System file (#59.7). The \"HP\" is to display on the profile if the order was placed on hold by provider through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @DISPLAY STATUS 55.01-157"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationdispense-cumulativeDoses",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationdispense-cumulativeDoses",
+				"label": "CUMULATIVE DOSES",
+				"short": "cumulative doses",
+				"definition": "Cumulative doses of IV for patient.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-cumulativeDoses"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @CUMULATIVE DOSES 55.01-.24"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:valueCodeableConcept.coding.code",
+				"path": "MedicationRequest.extension",
+				"sliceName": "valueCodeableConcept-coding-code",
+				"label": "INTERMITTENT SYRING",
+				"short": "intermittent syringe",
+				"definition": "A syringe IV order may be continuous or intermittent.  If a syringe type is continuous (not intermittent), the same order entry procedure will be followed as if a hyperal or admixture is being entered.  If a syringe order is to be intermittent, the same order entry method as the piggback type will be followed.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueCodeableConcept.coding.code"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @INTERMITTENT SYRING 55.01-108"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-ivType",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-ivType",
+				"label": "CHEMOTHERAPY TYPE",
+				"short": "chemotherapy type",
+				"definition": "A chemotherapy IV order may be one of three types: admixture, piggyback, or syringe.  The type of chemotherapy IV must be identified as one of these types, so the system will know what kinds of questions to ask in order to properly complete this order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @TYPE 55.01-.04"
+					},
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @CHEMOTHERAPY TYPE 55.01-106"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-pharmacyOrderStatus",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-pharmacyOrderStatus",
+				"label": "STATUS",
+				"definition": "Status of order. Enter one of following codes: A for active, H for hold, R for renewed, D for discontinued, E for expired, P for purge, O for on  call, N for nonverified.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @STATUS 55.01-100b"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "MedicationRequest.identifier.system",
+				"fixedUri": "va.gov/identifiers/orders/55.01",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.identifier.value",
+				"path": "MedicationRequest.identifier.value",
+				"label": "ORDERS FILE ENTRY",
+				"short": "order file entry",
+				"definition": "This value matches this IV order to its entry in the Order file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @ORDER NUMBER 55.01-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @ORDERS FILE ENTRY  55.01-110"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.basedOn",
+				"path": "MedicationRequest.basedOn",
+				"label": "ORDERS FILE PARENT ORDER",
+				"definition": "This is the parent of an order that may have a parent/child relationship  in CPRS.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @ORDERS FILE PARENT ORDER 55.01-150"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.status",
+				"path": "MedicationRequest.status",
+				"label": "STATUS",
+				"definition": "Status of order. Enter one of following codes: A for active, H for hold, R for renewed, D for discontinued, E for expired, P for purge, O for on  call, N for nonverified.",
+				"mustSupport": true,
+				"binding": {
+					"strength": "preferred",
+					"valueSetReference": {
+						"reference": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-iv-order-status"
+					}
+				},
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @STATUS 55.01-100"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.priority",
+				"path": "MedicationRequest.priority",
+				"label": "PRIORITY",
+				"short": "priority",
+				"definition": "This field contains the priority of the order that was received from OERR.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @PRIORITY 55.01-134"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.medicationCodeableConcept.coding.code",
+				"path": "MedicationRequest.medicationCodeableConcept.coding.code",
+				"label": "ORDERABLE ITEM",
+				"short": "orderable item",
+				"definition": "This is the Orderable Item associated with the order. If the order is a unit dose order, all dispense drugs entered must be matched to the order's primary drug. If the order is an IV, at lest one of the additives or solutions entered must match the orderable item.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @ORDERABLE ITEM 55.01-130"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.subject",
+				"path": "MedicationRequest.subject",
+				"label": "PATIENT",
+				"short": "Patient",
+				"definition": "This is the name of a patient that has some type of pharmacy order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @PATIENT 55-.01iv"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.authoredOn",
+				"path": "MedicationRequest.authoredOn",
+				"label": "LOGIN DATE/TIME",
+				"short": "login date",
+				"definition": "This is the date and time the order was entered.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @LOGIN DATE/TIME 55.01-.21"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.requester.agent",
+				"path": "MedicationRequest.requester.agent",
+				"label": "PROVIDER",
+				"short": "provider",
+				"definition": "Person who authorized the prescription.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @PROVIDER 55.01-.06"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.extension:dosageInstruction-ivBottleNumber",
+				"path": "MedicationRequest.dosageInstruction.extension",
+				"sliceName": "dosageInstruction-ivBottleNumber",
+				"label": "BOTTLE",
+				"short": "bottle",
+				"definition": "This is the bottle number (or numbers, separated by commas) in which  this additive will be included for this IV order. If this field is blank,  it means that the additive will be included in all bottles.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/dosageInstruction-ivBottleNumber"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @BOTTLE 55.02-.03"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.text",
+				"path": "MedicationRequest.dosageInstruction.text",
+				"label": "INSTRUCTIONS",
+				"short": "instructions",
+				"definition": "<blank>",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @INSTRUCTIONS 55.01-133"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.extension:timeOfDay",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.extension",
+				"sliceName": "timeOfDay",
+				"label": "ADMINISTRATION TIMES",
+				"short": "administration times",
+				"definition": "Enter the times that this order will be given separated by a '-'.  The administration times have to be entered in ascending order.  Each  administration time must be at least two characters long or four characters long.  Example: '03-07-11-15-19-23' or '0730-1130'.   Administration times are REQUIRED for STANDARD schedules but are NOT  REQUIRED for NON-STANDARD schedules.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/timeOfDay"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @ADMINISTRATION TIMES 55.01-.12"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod",
+				"type": [
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start",
+				"label": "START DATE/TIME",
+				"short": "start date",
+				"definition": "This is the date and time the order is to begin. This package initially assigns the START DATE/TIME to the closest administration time or next admin. time or NOW depends on the value of the DEFAULT START DATE CALCULATION field in the WARD PARAMETERS file. START DATE/TIME may not  be entered prior to 7 days from the order's LOGIN DATE.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @START DATE/TIME 55.01-.02"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
+				"label": "STOP DATE/TIME",
+				"short": "stop date",
+				"definition": "This is the date and time the order is to end.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @STOP DATE/TIME 55.01-.03"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+				"label": "REQUESTED DURATION",
+				"short": "requested duration",
+				"definition": "The duration of an order as requested by the ordering clinician in CPRS. The duration is stored as one of the following upper case letters followed by an integer:     L - Months  W - Weeks  D - Days  H - Hours  M - Minutes  S - Seconds   Example: D6 = Six days.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @REQUESTED DURATION 55.01-151"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.frequency",
+				"fixedInteger": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.period",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.period",
+				"label": "SCHEDULE INTERVAL",
+				"short": "schedul interval",
+				"definition": "Interval between administrations of IV",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @SCHEDULE INTERVAL 55.01-.17"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.periodUnit",
+				"fixedCode": "[TBD]",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.code.text",
+				"path": "MedicationRequest.dosageInstruction.timing.code.text",
+				"label": "SCHEDULE",
+				"short": "schedule",
+				"definition": "You may enter a standard schedule here or non-standard schedule.  If a standard schedule is entered, the doses will be given at the administration time(s). If a non-standard schedule is entered, and no administration times are entered, the doses will be given at time intervals past the start date/time of the IV order.     TID = (09-17-21) doses will be given at admin. times.     Q5H = (300 minutes) doses will be given every 300 minutes. The format of this field is [SCHEDULEspaceFREETEXTspaceFREETEXT] and 1-70 characters.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @SCHEDULE 55.01-.09"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.route.coding.system",
+				"fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1-3",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.route.coding.code",
+				"path": "MedicationRequest.dosageInstruction.route.coding.code",
+				"label": "MED ROUTE",
+				"short": "med route",
+				"definition": "This is the route of administration for this order. This is not required for IV Fluid orders.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @MED ROUTE 55.01-132"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.maxDosePerPeriod",
+				"path": "MedicationRequest.dosageInstruction.maxDosePerPeriod",
+				"label": "REQUESTED IV LIMITATION",
+				"short": "requested iv limitation",
+				"definition": "This is the length of time to administer, or the total volume  to administer, for IV fluid orders. The value may be in ML or CC for milliliters, L for liters, D for days, or H for hours.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @REQUESTED IV LIMITATION 55.01-152"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.rateRatio",
+				"path": "MedicationRequest.dosageInstruction.rateRatio",
+				"label": "INFUSION RATE",
+				"short": "infusion rate",
+				"definition": "The rate at which the IV is to be administered.  This value, together with the total volume of the hyperal or the admixture type, is used to determine the time covered by one bag; hence the system can predict the bags needed during a specified time of coverage.  This field is free text for IVPB's.  For LVP's you must enter a number representing the infusion rate.  You may also specify the # of bags per day needed, which will become the default number of LABELS PER DAY.    Example: 125 = 125 ml/hr (IV system will calculate bags needed per day)         125@2 = 125 ml/hr with 2 labels per day     TITRATE@1 = TITRATE with 1 label per day  The format of this field is either a number only or  [FREE TEXT@NUMBER OF LABELS PER DAY].   Note:  If an administration time(s) is defined, the number of labels will reflect the administration time(s) for the IVPB type orders. For example:  One administration time of 12:00 is specified.  The infusion rate is entered as 125@3.  Only 1 label will print.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @INFUSION RATE 55.01-.08"
+					}
+				]
+			}
+		]
+	}
 }

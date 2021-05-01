@@ -1,671 +1,708 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "MedicationRequest.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "MedicationRequest.identifier.system",
-        "fixedUri": "va.gov/identifiers/orders/52",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.identifier.value",
-        "label": "IEN",
-        "short": "Rx #",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @Rx 52-.01"
-          },
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @IEN 52-.001"
-          }
-        ],
-        "definition": "This is the prescription number."
-      },
-      {
-        "path": "MedicationRequest.subject",
-        "label": "PATIENT",
-        "short": "Patient",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @PATIENT 52-2"
-          }
-        ],
-        "definition": "The patient receiving treatment."
-      },
-      {
-        "path": "MedicationRequest.requester.agent",
-        "label": "PROVIDER",
-        "short": "Provider",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @PROVIDER 52-4"
-          }
-        ],
-        "definition": "Doctor who wrote the prescription."
-      },
-      {
-        "path": "MedicationRequest.dispenseRequest.quantity",
-        "label": "QTY",
-        "short": "Qty",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @QTY 52-7"
-          }
-        ],
-        "definition": "This field is used to show the amount of medication that was dispensed."
-      },
-      {
-        "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration.unit",
-        "fixedString": "d",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration.value",
-        "label": "DAYS SUPPLY",
-        "short": "Days Supply",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @DAYS SUPPLY  52-8"
-          }
-        ],
-        "definition": "Enter a whole number between 1 and 90.  The maximum upper limit is 90, but may be lower based on the maximum specified for this patient status. This parameter is defined in the RX PATIENT STATUS file."
-      },
-      {
-        "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-        "label": "# OF REFILLS",
-        "short": "# of Refills",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @# OF REFILLS 52-9"
-          }
-        ],
-        "definition": "The number of refills allowed per prescription."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "richAnnotation/comment/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
-          }
-        ],
-        "label": "PROVIDER COMMENTS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @REMARKS 52-12"
-          },
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @PROVIDER COMMENTS 52-39"
-          }
-        ],
-        "definition": "This field stores any provider comments that are passed to Pharmacy from CPRS."
-      },
-      {
-        "path": "MedicationRequest.recorder",
-        "label": "ENTERED BY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @ENTERED BY 52-16"
-          }
-        ],
-        "definition": "This field will show who requested the rx."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-orderIssueDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderIssueDate"
-          }
-        ],
-        "label": "ISSUE DATE",
-        "short": "Rx Issue Date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @ISSUE DATE 52-1"
-          }
-        ],
-        "definition": "Date when doctor wrote prescription."
-      },
-      {
-        "path": "MedicationRequest.authoredOn",
-        "label": "LOGIN DATE",
-        "short": "Login Date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @LOGIN DATE 52-21"
-          }
-        ],
-        "definition": "The date the prescription was entered."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-cosigningProvider",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-cosigningProvider"
-          }
-        ],
-        "label": "COSIGNING PHYSICIAN",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @COSIGNING PHYSICIAN 52-109"
-          }
-        ],
-        "definition": "This field identifies the cosigning physician for prescriptions written by a provider for whom a counter signature is required, for example a nurse practitioner."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-lastDispensedDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastDispensedDate"
-          }
-        ],
-        "label": "LAST DISPENSED DATE",
-        "short": "Last Dispensed date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @LAST DISPENSED DATE 52-101"
-          }
-        ],
-        "definition": "This field contains the last fill date."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forServiceConnectedCondition",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forServiceConnectedCondition"
-          }
-        ],
-        "label": "SERVICE CONNECTED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @SERVICE CONNECTED 52-116"
-          }
-        ],
-        "definition": "During Outpatient Pharmacy order entry, a pharmacist may be asked if the medication being prescribed is for a service connected condition. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "pharmacy-dosageOrdered",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered"
-          }
-        ],
-        "label": "DOSAGE ORDERED",
-        "short": "Medication Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @DOSAGE ORDERED 52.0113-.01"
-          }
-        ],
-        "definition": "This is a single dose of medication the patient will receive for this Rx order."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.doseQuantity.value",
-        "label": "DISPENSE UNITS PER DOSE",
-        "short": "Medication Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @DISPENSE UNITS PER DOSE 52.0113-1"
-          }
-        ],
-        "definition": "This is the number of Units (tablets, capsules, etc.) to be dispensed as a dose for this order."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.doseQuantity.unit",
-        "label": "UNITS",
-        "short": "Medication Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @UNITS 52.0113-2"
-          }
-        ],
-        "definition": "Unit of measure.  Pointer to the Drug Units file (50.607)."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.duration",
-        "label": "DURATION",
-        "short": "Medication Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @DURATION 52.0113-4"
-          }
-        ],
-        "definition": "This is the length of time that a medication order should be given. If you enter a numeric value, Days will be assumed. You may also enter a numeric value followed by a letter. The letters can be entered as 'M' for Minutes, 'H' for Hours, 'D' for Days, 'W' for Weeks, 'L' for Months.   THIS IS NOT DAYS SUPPLY!"
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.extension",
-        "sliceName": "conjunction",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/conjunction"
-          }
-        ],
-        "label": "CONJUNCTION",
-        "short": "Medication Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @CONJUNCTION 52.0113-5"
-          }
-        ],
-        "definition": "This code is used to help build a Possible Sig for a complex medication dose.  This code usually expands to an \"and\", a \"then\", or an \"except\"."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.route.coding.system",
-        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1-3",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.route.coding.code",
-        "label": "ROUTE",
-        "short": "Medication Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @ROUTE 52.0113-6"
-          }
-        ],
-        "definition": "This is how the medication is taken, applied, or used."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.code.text",
-        "label": "SCHEDULE",
-        "short": "Medication Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @SCHEDULE 52.0113-7"
-          }
-        ],
-        "definition": "This field is used to tell the patient how often the medication is to be used."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.extension",
-        "sliceName": "pharmacy-sigVerb",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-sigVerb"
-          }
-        ],
-        "label": "VERB",
-        "short": "Medication Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @VERB 52.0113-8"
-          }
-        ],
-        "definition": "This verb will be used to describe how the medication will be taken/used."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.extension",
-        "sliceName": "translation",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://hl7.org/fhir/StructureDefinition/translation"
-          }
-        ],
-        "label": "OTHER LANGUAGE DOSAGE",
-        "short": "Medication Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @OTHER LANGUAGE DOSAGE 52.0113-9"
-          }
-        ],
-        "definition": "This is a single dose of medication the patient will receive for this Rx order.  Data should be entered into the field when the patient has another language preference and there is a free-text of a local dosage entered."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "extension-MedicationRequest/statusReason",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason"
-          }
-        ],
-        "label": "DISCONTINUE TYPE",
-        "short": "Discontinue Type",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @DISCONTINUE TYPE 52-100.1"
-          }
-        ],
-        "definition": "This field is used to distinguish what type of external discontinue action occurred."
-      },
-      {
-        "path": "MedicationRequest.medicationCodeableConcept.coding.code",
-        "label": "PHARMACY ORDERABLE ITEM",
-        "short": "orderable item",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @PHARMACY ORDERABLE ITEM 52-39.2"
-          }
-        ],
-        "definition": "This is the Pharmacy Orderable Item associated with the drug. This data should not be entered by using File Manager.  If the Rx does not have a Pharmacy Orderable Item entered check the drug for the RX.  If the drug is missing an orderable item match the drug not the Rx.  Only matching the Rx will cause problems when renewing the Rx."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.text",
-        "label": "SIG1",
-        "short": "sig1",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @SIG1 52.04-.01"
-          }
-        ],
-        "definition": "This holds a Sig from OERR."
-      },
-      {
-        "path": "MedicationRequest.status",
-        "label": "STATUS",
-        "short": "STATUS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @STATUS 52-100"
-          }
-        ],
-        "definition": "This field represents the current status of the prescription."
-      },
-      {
-        "path": "MedicationRequest.priorPrescription",
-        "label": "TITRATION DOSE RX",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @TITRATION DOSE RX 52-45.1"
-          }
-        ],
-        "definition": "This is the Titration Dose Rx from which the corresponding  Maintenance Dose Rx originated."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-associatedMaintenancePrescription",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription"
-          }
-        ],
-        "label": "MAINTENANCE DOSE RX",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @MAINTENANCE DOSE RX 52-45.2"
-          }
-        ],
-        "definition": "This is the Maintenance Dose Rx that was created from the corresponding  Titration Dose Rx."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-associatedTitrationPrescription",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedTitrationPrescription"
-          }
-        ],
-        "label": "TITRATION RX FLAG",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @TITRATION RX FLAG 52-45.3"
-          }
-        ],
-        "definition": "This flag indicates whether the prescription is being dispensed as a  Titration Dose. It is intended to identify a Titration Dose Rx without  a corresponding Maintenance Dose Rx."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forMilitarySexualTrauma",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forMilitarySexualTrauma"
-          }
-        ],
-        "label": "MILITARY SEXUAL TRAUMA",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @MILITARY SEXUAL TRAUMA 52-117"
-          }
-        ],
-        "definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been treated for Military Sexual Trauma, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition related to Military Sexual Trauma. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forAgentOrangeExposure",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure"
-          }
-        ],
-        "label": "AGENT ORANGE EXPOSURE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @AGENT ORANGE EXPOSURE 52-118"
-          }
-        ],
-        "definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to Agent Orange during Vietnam service, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forExposureToIonizingRadiation",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation"
-          }
-        ],
-        "label": "IONIZING RADIATION EXPOSURE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @IONIZING RADIATION EXPOSURE 52-119"
-          }
-        ],
-        "definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to ionizing radiation during military service, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forSouthwestAsiaConditions",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forSouthwestAsiaConditions"
-          }
-        ],
-        "label": "SOUTHWEST ASIA CONDITIONS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @SOUTHWEST ASIA CONDITIONS 52-120"
-          }
-        ],
-        "definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to Southwest Asia Conditions (formerly referred to as Environmental Contaminants), the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forHeadOrNeckCancer",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer"
-          }
-        ],
-        "label": "HEAD AND/OR NECK CANCER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @HEAD AND/OR NECK CANCER 52-121"
-          }
-        ],
-        "definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been treated for Head and/or Neck Cancer due to nose or throat radium treatments while in the military, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat this condition. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forCombatService",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forCombatService"
-          }
-        ],
-        "label": "COMBAT VETERAN",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @COMBAT VETERAN 52-122"
-          }
-        ],
-        "definition": "During Outpatient Pharmacy order entry, a pharmacist may be asked if the  medication being prescribed is for a condition related to Combat Services  while in the military. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forShipboardHazard",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forShipboardHazard"
-          }
-        ],
-        "label": "PROJ 112/SHAD",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @PROJ 112/SHAD 52-122.01"
-          }
-        ],
-        "definition": "During Outpatient Pharmacy order entry, a pharmacist may be asked if the medication being prescribed is for a condition related to PROJ 112/SHAD while in the military. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-pharmacyOrderStatus",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"
-          }
-        ],
-        "label": "STATUS",
-        "short": "STATUS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @STATUS 52-100b"
-          }
-        ],
-        "definition": "This field represents the current status of the prescription."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAFinishedOutpatientMedicationRequest",
-  "id": "VAFinishedOutpatientMedicationRequest",
-  "type": "MedicationRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationRequest",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAFinishedOutpatientMedicationRequest",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationRequest",
+	"name": "VAFinishedOutpatientMedicationRequest",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "MedicationRequest",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "MedicationRequest.extension:medicationrequest-pharmacyOrderStatus",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-pharmacyOrderStatus",
+				"label": "STATUS",
+				"short": "STATUS",
+				"definition": "This field represents the current status of the prescription.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @STATUS 52-100b"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forShipboardHazard",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forShipboardHazard",
+				"label": "PROJ 112/SHAD",
+				"definition": "During Outpatient Pharmacy order entry, a pharmacist may be asked if the medication being prescribed is for a condition related to PROJ 112/SHAD while in the military. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forShipboardHazard"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @PROJ 112/SHAD 52-122.01"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forCombatService",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forCombatService",
+				"label": "COMBAT VETERAN",
+				"definition": "During Outpatient Pharmacy order entry, a pharmacist may be asked if the  medication being prescribed is for a condition related to Combat Services  while in the military. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forCombatService"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @COMBAT VETERAN 52-122"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forHeadOrNeckCancer",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forHeadOrNeckCancer",
+				"label": "HEAD AND/OR NECK CANCER",
+				"definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been treated for Head and/or Neck Cancer due to nose or throat radium treatments while in the military, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat this condition. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @HEAD AND/OR NECK CANCER 52-121"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forSouthwestAsiaConditions",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forSouthwestAsiaConditions",
+				"label": "SOUTHWEST ASIA CONDITIONS",
+				"definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to Southwest Asia Conditions (formerly referred to as Environmental Contaminants), the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forSouthwestAsiaConditions"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @SOUTHWEST ASIA CONDITIONS 52-120"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forExposureToIonizingRadiation",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forExposureToIonizingRadiation",
+				"label": "IONIZING RADIATION EXPOSURE",
+				"definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to ionizing radiation during military service, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @IONIZING RADIATION EXPOSURE 52-119"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forAgentOrangeExposure",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forAgentOrangeExposure",
+				"label": "AGENT ORANGE EXPOSURE",
+				"definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to Agent Orange during Vietnam service, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @AGENT ORANGE EXPOSURE 52-118"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forMilitarySexualTrauma",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forMilitarySexualTrauma",
+				"label": "MILITARY SEXUAL TRAUMA",
+				"definition": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been treated for Military Sexual Trauma, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition related to Military Sexual Trauma. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forMilitarySexualTrauma"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @MILITARY SEXUAL TRAUMA 52-117"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-associatedTitrationPrescription",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-associatedTitrationPrescription",
+				"label": "TITRATION RX FLAG",
+				"definition": "This flag indicates whether the prescription is being dispensed as a  Titration Dose. It is intended to identify a Titration Dose Rx without  a corresponding Maintenance Dose Rx.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedTitrationPrescription"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @TITRATION RX FLAG 52-45.3"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-associatedMaintenancePrescription",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-associatedMaintenancePrescription",
+				"label": "MAINTENANCE DOSE RX",
+				"definition": "This is the Maintenance Dose Rx that was created from the corresponding  Titration Dose Rx.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @MAINTENANCE DOSE RX 52-45.2"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:extension-MedicationRequest.statusReason",
+				"path": "MedicationRequest.extension",
+				"sliceName": "extension-MedicationRequest-statusReason",
+				"label": "DISCONTINUE TYPE",
+				"short": "Discontinue Type",
+				"definition": "This field is used to distinguish what type of external discontinue action occurred.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @DISCONTINUE TYPE 52-100.1"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:pharmacy-dosageOrdered",
+				"path": "MedicationRequest.extension",
+				"sliceName": "pharmacy-dosageOrdered",
+				"label": "DOSAGE ORDERED",
+				"short": "Medication Instructions",
+				"definition": "This is a single dose of medication the patient will receive for this Rx order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @DOSAGE ORDERED 52.0113-.01"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forServiceConnectedCondition",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forServiceConnectedCondition",
+				"label": "SERVICE CONNECTED",
+				"definition": "During Outpatient Pharmacy order entry, a pharmacist may be asked if the medication being prescribed is for a service connected condition. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forServiceConnectedCondition"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @SERVICE CONNECTED 52-116"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-lastDispensedDate",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-lastDispensedDate",
+				"label": "LAST DISPENSED DATE",
+				"short": "Last Dispensed date",
+				"definition": "This field contains the last fill date.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastDispensedDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @LAST DISPENSED DATE 52-101"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-cosigningProvider",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-cosigningProvider",
+				"label": "COSIGNING PHYSICIAN",
+				"definition": "This field identifies the cosigning physician for prescriptions written by a provider for whom a counter signature is required, for example a nurse practitioner.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-cosigningProvider"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @COSIGNING PHYSICIAN 52-109"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-orderIssueDate",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-orderIssueDate",
+				"label": "ISSUE DATE",
+				"short": "Rx Issue Date",
+				"definition": "Date when doctor wrote prescription.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderIssueDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @ISSUE DATE 52-1"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:richAnnotation.comment.text",
+				"path": "MedicationRequest.extension",
+				"sliceName": "richAnnotation-comment-text",
+				"label": "PROVIDER COMMENTS",
+				"definition": "This field stores any provider comments that are passed to Pharmacy from CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @REMARKS 52-12"
+					},
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @PROVIDER COMMENTS 52-39"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "MedicationRequest.identifier.system",
+				"fixedUri": "va.gov/identifiers/orders/52",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.identifier.value",
+				"path": "MedicationRequest.identifier.value",
+				"label": "IEN",
+				"short": "Rx #",
+				"definition": "This is the prescription number.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @Rx 52-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @IEN 52-.001"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.status",
+				"path": "MedicationRequest.status",
+				"label": "STATUS",
+				"short": "STATUS",
+				"definition": "This field represents the current status of the prescription.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @STATUS 52-100"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.medicationCodeableConcept.coding.code",
+				"path": "MedicationRequest.medicationCodeableConcept.coding.code",
+				"label": "PHARMACY ORDERABLE ITEM",
+				"short": "orderable item",
+				"definition": "This is the Pharmacy Orderable Item associated with the drug. This data should not be entered by using File Manager.  If the Rx does not have a Pharmacy Orderable Item entered check the drug for the RX.  If the drug is missing an orderable item match the drug not the Rx.  Only matching the Rx will cause problems when renewing the Rx.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @PHARMACY ORDERABLE ITEM 52-39.2"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.subject",
+				"path": "MedicationRequest.subject",
+				"label": "PATIENT",
+				"short": "Patient",
+				"definition": "The patient receiving treatment.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @PATIENT 52-2"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.authoredOn",
+				"path": "MedicationRequest.authoredOn",
+				"label": "LOGIN DATE",
+				"short": "Login Date",
+				"definition": "The date the prescription was entered.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @LOGIN DATE 52-21"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.requester.agent",
+				"path": "MedicationRequest.requester.agent",
+				"label": "PROVIDER",
+				"short": "Provider",
+				"definition": "Doctor who wrote the prescription.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @PROVIDER 52-4"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.recorder",
+				"path": "MedicationRequest.recorder",
+				"label": "ENTERED BY",
+				"definition": "This field will show who requested the rx.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @ENTERED BY 52-16"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.extension:translation",
+				"path": "MedicationRequest.dosageInstruction.extension",
+				"sliceName": "translation",
+				"label": "OTHER LANGUAGE DOSAGE",
+				"short": "Medication Instructions",
+				"definition": "This is a single dose of medication the patient will receive for this Rx order.  Data should be entered into the field when the patient has another language preference and there is a free-text of a local dosage entered.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://hl7.org/fhir/StructureDefinition/translation"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @OTHER LANGUAGE DOSAGE 52.0113-9"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.extension:pharmacy-sigVerb",
+				"path": "MedicationRequest.dosageInstruction.extension",
+				"sliceName": "pharmacy-sigVerb",
+				"label": "VERB",
+				"short": "Medication Instructions",
+				"definition": "This verb will be used to describe how the medication will be taken/used.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-sigVerb"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @VERB 52.0113-8"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.extension:conjunction",
+				"path": "MedicationRequest.dosageInstruction.extension",
+				"sliceName": "conjunction",
+				"label": "CONJUNCTION",
+				"short": "Medication Instructions",
+				"definition": "This code is used to help build a Possible Sig for a complex medication dose.  This code usually expands to an \"and\", a \"then\", or an \"except\".",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/conjunction"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @CONJUNCTION 52.0113-5"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.text",
+				"path": "MedicationRequest.dosageInstruction.text",
+				"label": "SIG1",
+				"short": "sig1",
+				"definition": "This holds a Sig from OERR.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @SIG1 52.04-.01"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+				"label": "DURATION",
+				"short": "Medication Instructions",
+				"definition": "This is the length of time that a medication order should be given. If you enter a numeric value, Days will be assumed. You may also enter a numeric value followed by a letter. The letters can be entered as 'M' for Minutes, 'H' for Hours, 'D' for Days, 'W' for Weeks, 'L' for Months.   THIS IS NOT DAYS SUPPLY!",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @DURATION 52.0113-4"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.code.text",
+				"path": "MedicationRequest.dosageInstruction.timing.code.text",
+				"label": "SCHEDULE",
+				"short": "Medication Instructions",
+				"definition": "This field is used to tell the patient how often the medication is to be used.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @SCHEDULE 52.0113-7"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.route.coding.system",
+				"fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1-3",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.route.coding.code",
+				"path": "MedicationRequest.dosageInstruction.route.coding.code",
+				"label": "ROUTE",
+				"short": "Medication Instructions",
+				"definition": "This is how the medication is taken, applied, or used.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @ROUTE 52.0113-6"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.doseQuantity.value",
+				"path": "MedicationRequest.dosageInstruction.doseQuantity.value",
+				"label": "DISPENSE UNITS PER DOSE",
+				"short": "Medication Instructions",
+				"definition": "This is the number of Units (tablets, capsules, etc.) to be dispensed as a dose for this order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @DISPENSE UNITS PER DOSE 52.0113-1"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.doseQuantity.unit",
+				"path": "MedicationRequest.dosageInstruction.doseQuantity.unit",
+				"label": "UNITS",
+				"short": "Medication Instructions",
+				"definition": "Unit of measure.  Pointer to the Drug Units file (50.607).",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @UNITS 52.0113-2"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+				"path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+				"label": "# OF REFILLS",
+				"short": "# of Refills",
+				"definition": "The number of refills allowed per prescription.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @# OF REFILLS 52-9"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dispenseRequest.quantity",
+				"path": "MedicationRequest.dispenseRequest.quantity",
+				"label": "QTY",
+				"short": "Qty",
+				"definition": "This field is used to show the amount of medication that was dispensed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @QTY 52-7"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dispenseRequest.expectedSupplyDuration.value",
+				"path": "MedicationRequest.dispenseRequest.expectedSupplyDuration.value",
+				"label": "DAYS SUPPLY",
+				"short": "Days Supply",
+				"definition": "Enter a whole number between 1 and 90.  The maximum upper limit is 90, but may be lower based on the maximum specified for this patient status. This parameter is defined in the RX PATIENT STATUS file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @DAYS SUPPLY  52-8"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dispenseRequest.expectedSupplyDuration.unit",
+				"fixedString": "d",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.priorPrescription",
+				"path": "MedicationRequest.priorPrescription",
+				"label": "TITRATION DOSE RX",
+				"definition": "This is the Titration Dose Rx from which the corresponding  Maintenance Dose Rx originated.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @TITRATION DOSE RX 52-45.1"
+					}
+				]
+			}
+		]
+	}
 }

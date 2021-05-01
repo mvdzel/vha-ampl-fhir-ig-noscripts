@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "referralrequest-locationType",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-locationType",
-  "name": "referralrequest-locationType",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "ReferralRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-locationType"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @PLACE OF CONSULTATION 123-6"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This is the place where the consultation will take place.  Choose from:     B - Bedside     C - Consultant's Choice     E - Emergency Room     O - On Call     EKG - EKG Lab"
+	"resourceType": "StructureDefinition",
+	"id": "referralrequest-locationType",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-locationType",
+	"name": "referralrequest-locationType",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This is the place where the consultation will take place.  Choose from:     B - Bedside     C - Consultant's Choice     E - Emergency Room     O - On Call     EKG - EKG Lab",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"ReferralRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-locationType"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @PLACE OF CONSULTATION 123-6"
+					}
+				]
+			}
+		]
+	}
 }

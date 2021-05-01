@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "medicationrequest-forHeadOrNeckCancer",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer",
-  "name": "medicationrequest-forHeadOrNeckCancer",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer"
-      },
-      {
-        "path": "Extension.valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @HEAD AND/OR NECK CANCER 52-121"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been treated for Head and/or Neck Cancer due to nose or throat radium treatments while in the military, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat this condition. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy."
+	"resourceType": "StructureDefinition",
+	"id": "medicationrequest-forHeadOrNeckCancer",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer",
+	"name": "medicationrequest-forHeadOrNeckCancer",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been treated for Head and/or Neck Cancer due to nose or throat radium treatments while in the military, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat this condition. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer"
+			},
+			{
+				"id": "Extension.valueCodeableConcept",
+				"path": "Extension.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @HEAD AND/OR NECK CANCER 52-121"
+					}
+				]
+			}
+		]
+	}
 }

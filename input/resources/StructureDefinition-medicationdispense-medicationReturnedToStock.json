@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "medicationdispense-medicationReturnedToStock",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-medicationReturnedToStock",
-  "name": "medicationdispense-medicationReturnedToStock",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationDispense"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-medicationReturnedToStock"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @RETURNED TO STOCK 52-32.1"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field is used to show when and if the medication was returned to stock because the patient did not pick up the meds or it was not mailed."
+	"resourceType": "StructureDefinition",
+	"id": "medicationdispense-medicationReturnedToStock",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-medicationReturnedToStock",
+	"name": "medicationdispense-medicationReturnedToStock",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field is used to show when and if the medication was returned to stock because the patient did not pick up the meds or it was not mailed.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationDispense"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-medicationReturnedToStock"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @RETURNED TO STOCK 52-32.1"
+					}
+				]
+			}
+		]
+	}
 }

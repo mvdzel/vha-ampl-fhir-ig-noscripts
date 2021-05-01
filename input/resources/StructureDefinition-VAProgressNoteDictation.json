@@ -1,58 +1,59 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.activity.code",
-        "fixedCode": "DI",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "DICTATION DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @DICTATION DATE 8925-1307"
-          }
-        ],
-        "definition": "This is the date (and time) on which the document was dictated by its  author.  In the event that a document originates by dictation, we recommend  that the REFERENCE DATE for the document be defaulted to dictation date, as  the author will be able to identify the document by the date on which s/he  dictated it."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAProgressNoteDictation",
-  "id": "VAProgressNoteDictation",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteDictation",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAProgressNoteDictation",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteDictation",
+	"name": "VAProgressNoteDictation",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "DICTATION DATE",
+				"definition": "This is the date (and time) on which the document was dictated by its  author.  In the event that a document originates by dictation, we recommend  that the REFERENCE DATE for the document be defaulted to dictation date, as  the author will be able to identify the document by the date on which s/he  dictated it.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @DICTATION DATE 8925-1307"
+					}
+				]
+			},
+			{
+				"path": "Provenance.activity.code",
+				"fixedCode": "DI",
+				"mustSupport": true
+			}
+		]
+	}
 }

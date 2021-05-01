@@ -1,646 +1,686 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "MedicationRequest.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "MedicationRequest.identifier.system",
-        "fixedUri": "va.gov/identifiers/orders/100",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.identifier.value",
-        "label": "OE/RR ORDER NUMBER",
-        "short": "PLACER NUMBER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @PLACER NUMBER 52.41-.01"
-          },
-          {
-            "identity": "vista",
-            "map": "ERX HOLDING QUEUE @OE/RR ORDER NUMBER 52.49-.12"
-          }
-        ],
-        "definition": "This is the OE/RR order number from the ORDERS file (#100) associated with this incoming eRx message."
-      },
-      {
-        "path": "MedicationRequest.status",
-        "label": "ORDER TYPE",
-        "short": "ORDER TYPE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @ORDER TYPE 52.41-2"
-          }
-        ],
-        "binding": {
-          "strength": "preferred",
-          "valueSetReference": {
-            "reference": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-outpatient-order-status"
-          }
-        },
-        "definition": "This field describes the status of the Pending order."
-      },
-      {
-        "path": "MedicationRequest.requester.agent",
-        "label": "PROVIDER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @PROVIDER 52.41-5"
-          }
-        ],
-        "definition": "This is the provider for the order, pointer to the New Person file."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-orderIssueDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderIssueDate"
-          }
-        ],
-        "label": "EFFECTIVE DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @EFFECTIVE DATE 52.41-6"
-          }
-        ],
-        "definition": "This is the date the order goes into effect."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-orderPlacementChannel",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderPlacementChannel"
-          }
-        ],
-        "label": "NATURE OF ORDER",
-        "short": "NATURE OF ORDER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @NATURE OF ORDER  52.41-7"
-          }
-        ],
-        "definition": "This is the Nature of the order, as it is entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.medicationCodeableConcept.coding.code",
-        "label": "PHARMACY ORDERABLE ITEM",
-        "short": "ORDERABLE ITEM",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @PHARMACY ORDERABLE ITEM 52.41-8"
-          }
-        ],
-        "definition": "This is the Pharmacy Orderable Item for the order, as entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "pharmacy-dispenseProduct",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dispenseProduct"
-          }
-        ],
-        "label": "DRUG",
-        "short": "DRUG",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @DRUG 52.41-11"
-          }
-        ],
-        "definition": "This is the pointer to the Drug file entry that is associated with the Pharmacy Orderable Item. Not all orders will have a Drug when received from CPRS, but upon finishing the order, a Drug must be entered."
-      },
-      {
-        "path": "MedicationRequest.dispenseRequest.quantity",
-        "label": "QTY",
-        "short": "QUANTITY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @QTY 52.41-12"
-          }
-        ],
-        "definition": "This shows the amount of the medication to be dispensed."
-      },
-      {
-        "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-        "label": "# OF REFILLS",
-        "short": "# OF REFILLS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @# OF REFILLS 52.41-13"
-          }
-        ],
-        "definition": "The number of refills allowed for this order."
-      },
-      {
-        "path": "MedicationRequest.authoredOn",
-        "label": "LOGIN DATE",
-        "short": "LOGIN DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @LOGIN DATE 52.41-15"
-          }
-        ],
-        "definition": "This is the date that the order was received from CPRS."
-      },
-      {
-        "path": "MedicationRequest.priority",
-        "label": "PRIORITY",
-        "short": "ORDER PRIORITY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @PRIORITY 52.41-25"
-          }
-        ],
-        "definition": "This field is used to indicate the urgency of the order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "pharmacy-dispenseChannel",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dispenseChannel"
-          }
-        ],
-        "label": "PICKUP ROUTING",
-        "short": "ROUTING",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @PICKUP ROUTING 52.41-19"
-          }
-        ],
-        "definition": "This is how the medication is to be given to the patient."
-      },
-      {
-        "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
-        "label": "DAYS SUPPLY",
-        "short": "DAYS SUPPLY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @DAYS SUPPLY 52.41-101"
-          }
-        ],
-        "definition": "Enter a whole number between 1 and 90. The maximum upper limit is 90, but may be lower based on the maximum specified for this patient status. This parameter is defined in the RX PATIENT STATUS File (#53)."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-permittedFillDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-permittedFillDate"
-          }
-        ],
-        "label": "POSSIBLE FILL DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @POSSIBLE FILL DATE 52.41-26"
-          }
-        ],
-        "definition": "This field will be used to display the effective date of a discharge med or pass med."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forServiceConnectedCondition",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forServiceConnectedCondition"
-          }
-        ],
-        "label": "SERVICE CONNECTED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @SERVICE CONNECTED 52.41-17"
-          }
-        ],
-        "definition": "This indicates whether the order is for a service connected or non-service connected condition."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forMilitarySexualTrauma",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forMilitarySexualTrauma"
-          }
-        ],
-        "label": "MILITARY SEXUAL TRAUMA",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @MILITARY SEXUAL TRAUMA 52.41-106"
-          }
-        ],
-        "definition": "During CPRS order entry, if a veteran has been identified as having been treated for Military Sexual Trauma, the clinician will be asked to identify whether or not the outpatient medication order being prescribed is being used to treat a condition related to Military Sexual Trauma. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forAgentOrangeExposure",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure"
-          }
-        ],
-        "label": "AGENT ORANGE EXPOSURE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @AGENT ORANGE EXPOSURE 52.41-107"
-          }
-        ],
-        "definition": "During CPRS order entry, if a veteran has been identified as having been exposed to Agent Orange during Vietnam service, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forExposureToIonizingRadiation",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation"
-          }
-        ],
-        "label": "IONIZING RADIATION EXPOSURE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @IONIZING RADIATION EXPOSURE 52.41-108"
-          }
-        ],
-        "definition": "During CPRS order entry, if a veteran has been identified as having been exposed to ionizing radiation during military service, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forSouthwestAsiaConditions",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forSouthwestAsiaConditions"
-          }
-        ],
-        "label": "SOUTHWEST ASIA CONDITIONS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @SOUTHWEST ASIA CONDITIONS 52.41-109"
-          }
-        ],
-        "definition": "During CPRS order entry, if a veteran has been identified as having been exposed to Southwest Asia Conditions during the Persian Gulf War, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forHeadOrNeckCancer",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer"
-          }
-        ],
-        "label": "HEAD AND/OR NECK CANCER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @HEAD AND/OR NECK CANCER 52.41-110"
-          }
-        ],
-        "definition": "During CPRS order entry, if a veteran has been identified as having been treated for Head and/or Neck Cancer due to nose or throat radium treatments while in the military, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat this condition. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forCombatService",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forCombatService"
-          }
-        ],
-        "label": "COMBAT VETERAN",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @COMBAT VETERAN 52.41-110.1"
-          }
-        ],
-        "definition": "During CPRS order entry, if a veteran has been identified as having been  treated for a condition related to Combat Services, the clinician will be  asked to identify whether or not the outpatient medication order being prescribed is being used to treat a condition related to Combat Services. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-forShipboardHazard",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forShipboardHazard"
-          }
-        ],
-        "label": "PROJ 112/SHAD",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @PROJ 112/SHAD 52.41-110.2"
-          }
-        ],
-        "definition": "During CPRS order entry, if a veteran has been identified as having been treated for a condition related to PROJ 112/SHAD, the clinician will be  asked to identify whether or not the outpatient medication order being  prescribed is being used to treat a condition related to PROJ 112/SHAD.  This field will store the response that was entered for this question.   This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-flaggedForClarification",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-flaggedForClarification"
-          }
-        ],
-        "label": "FLAG",
-        "short": "FLAG",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @FLAG 52.41-102"
-          }
-        ],
-        "definition": "This field shall designate whether or not a prescription has been flagged for follow up with a provider."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.text",
-        "label": "QUANTITY/FORM",
-        "short": "SIG INFO",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @QUANTITY/FORM 52.413-.01"
-          }
-        ],
-        "definition": "This fields usually contains the amount to be given as entered through CPRS. It can also possibly contain the Dose Form of the medication."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.duration",
-        "label": "DURATION",
-        "short": "SIG INFO",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @DURATION 52.413-2"
-          }
-        ],
-        "definition": "This is the duration that the medication is to be given for, as entered through CPRS."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod"
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start",
-        "label": "START DATE/TIME",
-        "short": "SIG INFO",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @START DATE/TIME 52.413-3"
-          }
-        ],
-        "definition": "This is the start date/time of the medication."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
-        "label": "END DATE/TIME",
-        "short": "SIG INFO",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @END DATE/TIME 52.413-4"
-          }
-        ],
-        "definition": "This is the end date/time of the medication."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.extension",
-        "sliceName": "conjunction",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/conjunction"
-          }
-        ],
-        "label": "CONJUNCTION",
-        "short": "SIG INFO",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @CONJUNCTION 52.413-6"
-          }
-        ],
-        "definition": "This is a code passed to Pharmacy from CPRS to help build a Possible Sig for a complex medication dose. This code usually expands to an \"and\",  a \"then\", or an \"except\"."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.route.coding.system",
-        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1-3",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.route.coding.code",
-        "label": "MED ROUTE",
-        "short": "SIG INFO",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @MED ROUTE 52.413-10"
-          }
-        ],
-        "definition": "This is the Med Route that the medication is to be administered by."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.doseQuantity.unit",
-        "label": "UNITS",
-        "short": "SIG INFO",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @UNITS 52.413-11"
-          }
-        ],
-        "definition": "This is the unit of measure associated with the Dosage ordered. It is a pointer to the DRUG UNITS File (#50.607)."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.extension",
-        "sliceName": "pharmacy-sigVerb",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-sigVerb"
-          }
-        ],
-        "label": "VERB",
-        "short": "SIG INFO",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @VERB 52.413-13"
-          }
-        ],
-        "definition": "This verb will be used to describe how the medication is taken/used."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.doseQuantity.value",
-        "label": "DISPENSE UNITS PER DOSE",
-        "short": "SIG INFO",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @DOSAGE ORDERED 52.413-8"
-          },
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @DISPENSE UNITS PER DOSE 52.413-9"
-          }
-        ],
-        "definition": "This field represents the number of dispense units the patient will receive for a single dose of the medication."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "richAnnotation/comment/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
-          }
-        ],
-        "label": "EXPANDED PATIENT INSTRUCTIONS",
-        "short": "PROVIDER COMMENTS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @PROVIDER COMMENTS 52.41-9"
-          },
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @PHARMACY INSTRUCTIONS 52.41-10"
-          },
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @EXPANDED PATIENT INSTRUCTIONS 52.41105-.01"
-          }
-        ],
-        "definition": "This field will store the expanded patient instructions that are stored in the patient instruction field (#114) or the expanded patient instructions from CPRS."
-      },
-      {
-        "path": "MedicationRequest.requester.onBehalfOf",
-        "label": "RELATED INSTITUTION",
-        "short": "INSTITUTION",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @RELATED INSTITUTION 52.41-100"
-          }
-        ],
-        "definition": "This is the Institution that the order was issued from."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-pharmacyOrderStatus",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"
-          }
-        ],
-        "label": "ORDER TYPE",
-        "short": "ORDER TYPE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PENDING OUTPATIENT ORDERS @ORDER TYPE 52.41-2b"
-          }
-        ],
-        "definition": "This field describes the status of the Pending order."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAUnfinishedOutpatientMedicationOrder",
-  "id": "VAUnfinishedOutpatientMedicationOrder",
-  "type": "MedicationRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrder",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAUnfinishedOutpatientMedicationOrder",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrder",
+	"name": "VAUnfinishedOutpatientMedicationOrder",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "MedicationRequest",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "MedicationRequest.extension:medicationrequest-pharmacyOrderStatus",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-pharmacyOrderStatus",
+				"label": "ORDER TYPE",
+				"short": "ORDER TYPE",
+				"definition": "This field describes the status of the Pending order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @ORDER TYPE 52.41-2b"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:richAnnotation.comment.text",
+				"path": "MedicationRequest.extension",
+				"sliceName": "richAnnotation-comment-text",
+				"label": "EXPANDED PATIENT INSTRUCTIONS",
+				"short": "PROVIDER COMMENTS",
+				"definition": "This field will store the expanded patient instructions that are stored in the patient instruction field (#114) or the expanded patient instructions from CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @PROVIDER COMMENTS 52.41-9"
+					},
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @PHARMACY INSTRUCTIONS 52.41-10"
+					},
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @EXPANDED PATIENT INSTRUCTIONS 52.41105-.01"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-flaggedForClarification",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-flaggedForClarification",
+				"label": "FLAG",
+				"short": "FLAG",
+				"definition": "This field shall designate whether or not a prescription has been flagged for follow up with a provider.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-flaggedForClarification"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @FLAG 52.41-102"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forShipboardHazard",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forShipboardHazard",
+				"label": "PROJ 112/SHAD",
+				"definition": "During CPRS order entry, if a veteran has been identified as having been treated for a condition related to PROJ 112/SHAD, the clinician will be  asked to identify whether or not the outpatient medication order being  prescribed is being used to treat a condition related to PROJ 112/SHAD.  This field will store the response that was entered for this question.   This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forShipboardHazard"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @PROJ 112/SHAD 52.41-110.2"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forCombatService",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forCombatService",
+				"label": "COMBAT VETERAN",
+				"definition": "During CPRS order entry, if a veteran has been identified as having been  treated for a condition related to Combat Services, the clinician will be  asked to identify whether or not the outpatient medication order being prescribed is being used to treat a condition related to Combat Services. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forCombatService"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @COMBAT VETERAN 52.41-110.1"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forHeadOrNeckCancer",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forHeadOrNeckCancer",
+				"label": "HEAD AND/OR NECK CANCER",
+				"definition": "During CPRS order entry, if a veteran has been identified as having been treated for Head and/or Neck Cancer due to nose or throat radium treatments while in the military, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat this condition. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @HEAD AND/OR NECK CANCER 52.41-110"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forSouthwestAsiaConditions",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forSouthwestAsiaConditions",
+				"label": "SOUTHWEST ASIA CONDITIONS",
+				"definition": "During CPRS order entry, if a veteran has been identified as having been exposed to Southwest Asia Conditions during the Persian Gulf War, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forSouthwestAsiaConditions"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @SOUTHWEST ASIA CONDITIONS 52.41-109"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forExposureToIonizingRadiation",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forExposureToIonizingRadiation",
+				"label": "IONIZING RADIATION EXPOSURE",
+				"definition": "During CPRS order entry, if a veteran has been identified as having been exposed to ionizing radiation during military service, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @IONIZING RADIATION EXPOSURE 52.41-108"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forAgentOrangeExposure",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forAgentOrangeExposure",
+				"label": "AGENT ORANGE EXPOSURE",
+				"definition": "During CPRS order entry, if a veteran has been identified as having been exposed to Agent Orange during Vietnam service, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @AGENT ORANGE EXPOSURE 52.41-107"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forMilitarySexualTrauma",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forMilitarySexualTrauma",
+				"label": "MILITARY SEXUAL TRAUMA",
+				"definition": "During CPRS order entry, if a veteran has been identified as having been treated for Military Sexual Trauma, the clinician will be asked to identify whether or not the outpatient medication order being prescribed is being used to treat a condition related to Military Sexual Trauma. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forMilitarySexualTrauma"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @MILITARY SEXUAL TRAUMA 52.41-106"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-forServiceConnectedCondition",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-forServiceConnectedCondition",
+				"label": "SERVICE CONNECTED",
+				"definition": "This indicates whether the order is for a service connected or non-service connected condition.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forServiceConnectedCondition"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @SERVICE CONNECTED 52.41-17"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-permittedFillDate",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-permittedFillDate",
+				"label": "POSSIBLE FILL DATE",
+				"definition": "This field will be used to display the effective date of a discharge med or pass med.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-permittedFillDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @POSSIBLE FILL DATE 52.41-26"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:pharmacy-dispenseChannel",
+				"path": "MedicationRequest.extension",
+				"sliceName": "pharmacy-dispenseChannel",
+				"label": "PICKUP ROUTING",
+				"short": "ROUTING",
+				"definition": "This is how the medication is to be given to the patient.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dispenseChannel"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @PICKUP ROUTING 52.41-19"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:pharmacy-dispenseProduct",
+				"path": "MedicationRequest.extension",
+				"sliceName": "pharmacy-dispenseProduct",
+				"label": "DRUG",
+				"short": "DRUG",
+				"definition": "This is the pointer to the Drug file entry that is associated with the Pharmacy Orderable Item. Not all orders will have a Drug when received from CPRS, but upon finishing the order, a Drug must be entered.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dispenseProduct"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @DRUG 52.41-11"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-orderPlacementChannel",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-orderPlacementChannel",
+				"label": "NATURE OF ORDER",
+				"short": "NATURE OF ORDER",
+				"definition": "This is the Nature of the order, as it is entered through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderPlacementChannel"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @NATURE OF ORDER  52.41-7"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-orderIssueDate",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-orderIssueDate",
+				"label": "EFFECTIVE DATE",
+				"definition": "This is the date the order goes into effect.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderIssueDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @EFFECTIVE DATE 52.41-6"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "MedicationRequest.identifier.system",
+				"fixedUri": "va.gov/identifiers/orders/100",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.identifier.value",
+				"path": "MedicationRequest.identifier.value",
+				"label": "OE/RR ORDER NUMBER",
+				"short": "PLACER NUMBER",
+				"definition": "This is the OE/RR order number from the ORDERS file (#100) associated with this incoming eRx message.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @PLACER NUMBER 52.41-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "ERX HOLDING QUEUE @OE/RR ORDER NUMBER 52.49-.12"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.status",
+				"path": "MedicationRequest.status",
+				"label": "ORDER TYPE",
+				"short": "ORDER TYPE",
+				"definition": "This field describes the status of the Pending order.",
+				"mustSupport": true,
+				"binding": {
+					"strength": "preferred",
+					"valueSetReference": {
+						"reference": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-outpatient-order-status"
+					}
+				},
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @ORDER TYPE 52.41-2"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.priority",
+				"path": "MedicationRequest.priority",
+				"label": "PRIORITY",
+				"short": "ORDER PRIORITY",
+				"definition": "This field is used to indicate the urgency of the order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @PRIORITY 52.41-25"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.medicationCodeableConcept.coding.code",
+				"path": "MedicationRequest.medicationCodeableConcept.coding.code",
+				"label": "PHARMACY ORDERABLE ITEM",
+				"short": "ORDERABLE ITEM",
+				"definition": "This is the Pharmacy Orderable Item for the order, as entered through CPRS.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @PHARMACY ORDERABLE ITEM 52.41-8"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.authoredOn",
+				"path": "MedicationRequest.authoredOn",
+				"label": "LOGIN DATE",
+				"short": "LOGIN DATE",
+				"definition": "This is the date that the order was received from CPRS.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @LOGIN DATE 52.41-15"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.requester.agent",
+				"path": "MedicationRequest.requester.agent",
+				"label": "PROVIDER",
+				"definition": "This is the provider for the order, pointer to the New Person file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @PROVIDER 52.41-5"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.requester.onBehalfOf",
+				"path": "MedicationRequest.requester.onBehalfOf",
+				"label": "RELATED INSTITUTION",
+				"short": "INSTITUTION",
+				"definition": "This is the Institution that the order was issued from.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @RELATED INSTITUTION 52.41-100"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.extension:pharmacy-sigVerb",
+				"path": "MedicationRequest.dosageInstruction.extension",
+				"sliceName": "pharmacy-sigVerb",
+				"label": "VERB",
+				"short": "SIG INFO",
+				"definition": "This verb will be used to describe how the medication is taken/used.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-sigVerb"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @VERB 52.413-13"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.extension:conjunction",
+				"path": "MedicationRequest.dosageInstruction.extension",
+				"sliceName": "conjunction",
+				"label": "CONJUNCTION",
+				"short": "SIG INFO",
+				"definition": "This is a code passed to Pharmacy from CPRS to help build a Possible Sig for a complex medication dose. This code usually expands to an \"and\",  a \"then\", or an \"except\".",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/conjunction"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @CONJUNCTION 52.413-6"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.text",
+				"path": "MedicationRequest.dosageInstruction.text",
+				"label": "QUANTITY/FORM",
+				"short": "SIG INFO",
+				"definition": "This fields usually contains the amount to be given as entered through CPRS. It can also possibly contain the Dose Form of the medication.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @QUANTITY/FORM 52.413-.01"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod",
+				"type": [
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start",
+				"label": "START DATE/TIME",
+				"short": "SIG INFO",
+				"definition": "This is the start date/time of the medication.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @START DATE/TIME 52.413-3"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
+				"label": "END DATE/TIME",
+				"short": "SIG INFO",
+				"definition": "This is the end date/time of the medication.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @END DATE/TIME 52.413-4"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+				"label": "DURATION",
+				"short": "SIG INFO",
+				"definition": "This is the duration that the medication is to be given for, as entered through CPRS.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @DURATION 52.413-2"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.route.coding.system",
+				"fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1-3",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.route.coding.code",
+				"path": "MedicationRequest.dosageInstruction.route.coding.code",
+				"label": "MED ROUTE",
+				"short": "SIG INFO",
+				"definition": "This is the Med Route that the medication is to be administered by.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @MED ROUTE 52.413-10"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.doseQuantity.value",
+				"path": "MedicationRequest.dosageInstruction.doseQuantity.value",
+				"label": "DISPENSE UNITS PER DOSE",
+				"short": "SIG INFO",
+				"definition": "This field represents the number of dispense units the patient will receive for a single dose of the medication.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @DOSAGE ORDERED 52.413-8"
+					},
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @DISPENSE UNITS PER DOSE 52.413-9"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.doseQuantity.unit",
+				"path": "MedicationRequest.dosageInstruction.doseQuantity.unit",
+				"label": "UNITS",
+				"short": "SIG INFO",
+				"definition": "This is the unit of measure associated with the Dosage ordered. It is a pointer to the DRUG UNITS File (#50.607).",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @UNITS 52.413-11"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+				"path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+				"label": "# OF REFILLS",
+				"short": "# OF REFILLS",
+				"definition": "The number of refills allowed for this order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @# OF REFILLS 52.41-13"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dispenseRequest.quantity",
+				"path": "MedicationRequest.dispenseRequest.quantity",
+				"label": "QTY",
+				"short": "QUANTITY",
+				"definition": "This shows the amount of the medication to be dispensed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @QTY 52.41-12"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+				"path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+				"label": "DAYS SUPPLY",
+				"short": "DAYS SUPPLY",
+				"definition": "Enter a whole number between 1 and 90. The maximum upper limit is 90, but may be lower based on the maximum specified for this patient status. This parameter is defined in the RX PATIENT STATUS File (#53).",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @DAYS SUPPLY 52.41-101"
+					}
+				]
+			}
+		]
+	}
 }

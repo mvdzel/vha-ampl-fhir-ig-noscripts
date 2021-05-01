@@ -1,80 +1,82 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Medication.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Medication.ingredient.itemCodeableConcept.text",
-        "label": "PRINT NAME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "IV ADDITIVE @PRINT NAME 52.6-.01"
-          },
-          {
-            "identity": "vista",
-            "map": "IV SOLUTION @PRINT NAME 52.7-.01"
-          }
-        ],
-        "definition": "This field should contain the print name of the solution.  The name that is entered here will be printed on the IV label, manufacturing list, ward list, etc.  The volume should NOT be part of the print name, since the volume of the IV ORDER will be printed next to the print name."
-      },
-      {
-        "path": "Medication.extension",
-        "sliceName": "medication-inactiveDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-inactiveDate"
-          }
-        ],
-        "label": "INACTIVATION DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "IV ADDITIVE @INACTIVATION DATE 52.6-12"
-          },
-          {
-            "identity": "vista",
-            "map": "IV SOLUTION @INACTIVATION DATE 52.7-8"
-          }
-        ],
-        "definition": "This field is used to inactivate a drug.  An IV drug should NEVER be deleted from a file since some IV ORDERS may still be using it.  Enter the date the drug should be inactivated.  Once the date of inactivation arrives, the drug will no longer be a valid choice for IV SOLUTIONS."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VADrugIngredient",
-  "id": "VADrugIngredient",
-  "type": "Medication",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VADrugIngredient",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VADrugIngredient",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VADrugIngredient",
+	"name": "VADrugIngredient",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Medication",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Medication.extension:medication-inactiveDate",
+				"path": "Medication.extension",
+				"sliceName": "medication-inactiveDate",
+				"label": "INACTIVATION DATE",
+				"definition": "This field is used to inactivate a drug.  An IV drug should NEVER be deleted from a file since some IV ORDERS may still be using it.  Enter the date the drug should be inactivated.  Once the date of inactivation arrives, the drug will no longer be a valid choice for IV SOLUTIONS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-inactiveDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "IV ADDITIVE @INACTIVATION DATE 52.6-12"
+					},
+					{
+						"identity": "vista",
+						"map": "IV SOLUTION @INACTIVATION DATE 52.7-8"
+					}
+				]
+			},
+			{
+				"path": "Medication.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Medication.ingredient.itemCodeableConcept.text",
+				"path": "Medication.ingredient.itemCodeableConcept.text",
+				"label": "PRINT NAME",
+				"definition": "This field should contain the print name of the solution.  The name that is entered here will be printed on the IV label, manufacturing list, ward list, etc.  The volume should NOT be part of the print name, since the volume of the IV ORDER will be printed next to the print name.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "IV ADDITIVE @PRINT NAME 52.6-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "IV SOLUTION @PRINT NAME 52.7-.01"
+					}
+				]
+			}
+		]
+	}
 }

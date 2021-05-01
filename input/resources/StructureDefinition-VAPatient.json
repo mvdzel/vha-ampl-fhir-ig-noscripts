@@ -1,957 +1,1000 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Patient.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Patient.birthDate",
-        "label": "DATE OF BIRTH",
-        "short": "Date of Birth",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT FILE @DATE OF BIRTH 2-.03"
-          }
-        ],
-        "definition": "Enter the patient's DATE OF BIRTH which must be later than 12/31/1870.   DATE OF BIRTH cannot be a date after the beneficiary 'Ineligible Date'  or a date after the 'Enrollment Application Date'."
-      },
-      {
-        "path": "Patient.identifier.system",
-        "fixedUri": "identifier.system",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.identifier.value",
-        "label": "SOCIAL SECURITY NUMBER",
-        "short": "Social Security No",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT FILE @INTERNAL ENTRY NUMBER 2-.001"
-          },
-          {
-            "identity": "vista",
-            "map": "PATIENT FILE @SOCIAL SECURITY NUMBER 2-.09"
-          }
-        ],
-        "definition": "Answer with the individual's social security number.  Answer must be 9  numbers in length. The SSN will be sent to the SSA for verification.   This will be displayed next to the SSN.  Once an SSN has received a status of Verified, it is locked from user updating and a \"VERIFIED\" will be displayed by the SSN field.  Only the Identity Management Data QUality Team are able to change a beneficiary's (veteran/non veteran) SSN.  If an Invalid per SSA status is received for the SSN, then an \"INVALID\" will appear next to the invalid SSN of the individual. Facilities should make every effort to obtain the accurate SSN from the individual for any invalid or pseudo SSN entry.   If a valid SSN is not known, then a \"P\" will be entered at the SSN prompt for the system to automatically assign a Pseudo-SSN.  If a Pseudo SSN is entered, a Reason for entering it will be required."
-      },
-      {
-        "path": "Patient.name",
-        "label": "NAME",
-        "short": "Name",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT FILE @NAME 2-.01"
-          }
-        ],
-        "definition": "Enter the patient's name in 'LAST,FIRST MIDDLE SUFFIX' format. This value must be 3-30 characters in length and may contain only uppercase alpha characters, spaces, apostrophes, hyphens and one comma.  All other characters and parenthetical text will be removed."
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "us-core-birthsex",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/us-core-birthsex"
-          }
-        ],
-        "label": "SEX",
-        "short": "Sex",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT FILE @SEX 2-.02"
-          }
-        ],
-        "definition": "Enter 'M' if this applicant is a male, or 'F' if female."
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "selfIdentifiedGender",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/selfIdentifiedGender"
-          }
-        ],
-        "label": "SELF IDENTIFIED GENDER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT @SELF IDENTIFIED GENDER 2-.024"
-          }
-        ],
-        "definition": "This SELF IDENTIFIED GENDER value indicates the patient's view of their gender identity, if they choose to provide it."
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "defaultPrescriptionStatus",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/defaultPrescriptionStatus"
-          }
-        ],
-        "label": "PATIENT STATUS",
-        "short": "Rx Patient status",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @PATIENT STATUS 55-3"
-          }
-        ],
-        "definition": "This field is used to indicate a default patient status."
-      },
-      {
-        "path": "Patient.address.use",
-        "fixedCode": "home",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.address.country",
-        "label": "TEMPORARY ADDRESS COUNTRY",
-        "short": "Temporary Country",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @COUNTRY 2-0.1173"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @TEMPORARY ADDRESS COUNTRY 2-.1223"
-          }
-        ],
-        "definition": "Enter the country where the patient's temporary address is located.   If entering an Army/Air Force Post Office (APO) or a Fleet Post Office  (FPO) address select United States as the country."
-      },
-      {
-        "path": "Patient.address.line",
-        "label": "TEMPORARY STREET [LINE 3]",
-        "short": "Temp Street Add 3",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @STREET ADDRESS [LINE 1]  2-.111"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @STREET ADDRESS [LINE 2]  2-.112"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @STREET ADDRESS [LINE 3]  2-.113"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @TEMPORARY STREET [LINE 1]  2-.1211"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @TEMPORARY STREET [LINE 2]  2-.1212"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @TEMPORARY STREET [LINE 3]  2-.1213"
-          }
-        ],
-        "definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the third line of the temporary street address [2-30 characters], if necessary, otherwise nothing may be entered. This field may not be deleted as long as the need for a temporary address is indicated."
-      },
-      {
-        "path": "Patient.address.postalCode",
-        "label": "TEMPORARY ZIP+4",
-        "short": "Temp zip Code",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @ZIP+4 2-.1112"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @TEMPORARY ZIP+4 2-.12112"
-          }
-        ],
-        "definition": "Answer with either the 5 digit format (e.g. 12345) or the nine digit format (e.g. 12345-6789 or 123456789)."
-      },
-      {
-        "path": "Patient.address.city",
-        "label": "TEMPORARY CITY",
-        "short": "Temp City",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @CITY 2-.114"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @TEMPORARY CITY  2-.1214"
-          }
-        ],
-        "definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the city in which the temporary address lies [2-30 characters], otherwise nothing may be entered.  This field may not be deleted as long as the need for a temporary address is indicated."
-      },
-      {
-        "path": "Patient.address.state",
-        "label": "STATE",
-        "short": "State",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @STATE 2-.115"
-          }
-        ],
-        "definition": "From the available listing choose the state in which this applicant resides."
-      },
-      {
-        "path": "Patient.address.district",
-        "label": "TEMPORARY COUNTY",
-        "short": "Temp County",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @COUNTY 2-.117"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @TEMPORARY COUNTY 2-.12111"
-          }
-        ],
-        "definition": "If a state is entered for the temporary residence, enter the county in which that residence resides.  If a state does not exist for the temporary address, a county can not be entered."
-      },
-      {
-        "path": "Patient.address.extension",
-        "sliceName": "address-validity",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-validity"
-          }
-        ],
-        "label": "BAD ADDRESS INDICATOR",
-        "short": "Bad Address Indicator",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @BAD ADDRESS INDICATOR 2-.121"
-          }
-        ],
-        "definition": "The Bad Address Indicator field applies to the address at which the patient resides.  This field should be set as follows (if applicable):       \"UNDELIVERABLE\" - Bad Address based on returned mail.     \"HOMELESS\" - Patient is known to be homeless.     \"OTHER\" - Other Bad Address Reason   Setting this field will prevent a Bad Address from being shared with HEC and other VAMC facilities. It will also be used to block Means Test  Renewal Letters from being sent.   Once the Bad Address Indicator is set, incoming \"newer\" addresses will automatically remove the Bad Address Indicator, and allow the \"updated\" address to be transmitted to HEC and other VAMC facilities."
-      },
-      {
-        "path": "Patient.telecom.system",
-        "fixedCode": "phone",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.telecom.use",
-        "fixedCode": "home",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.telecom.value",
-        "label": "Temp Phone",
-        "short": "Temp Phone",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @PHONE NUMBER [RESIDENCE]  2-.131"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @PHONE NUMBER [WORK]  2-.132"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @PHONE NUMBER [CELLULAR]  2-.134"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @EMAIL ADDRESS  2-.133"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @Temp Phone 2-.1219"
-          }
-        ],
-        "definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the telephone number at which the applicant can be contacted [4-20 characters] during his/her absence from permanent residence, otherwise nothing may be entered.  This field may not be deleted as long as the need for a temporary address is indicated."
-      },
-      {
-        "path": "Patient.address.type",
-        "fixedCode": "postal",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.contact.address.state",
-        "label": "K2 – State",
-        "short": "K2 – State",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @TEMPORARY STATE 2-.1215"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E – State 2-.337"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 – State 2-.3317"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – State 2-.217"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – State 2-.2197"
-          }
-        ],
-        "definition": "If a secondary NOK is specified select from the available listing the state in which that person resides, otherwise nothing may be entered.  This field cannot be deleted as long as a secondary NOK is on file."
-      },
-      {
-        "path": "Patient.address.period.start",
-        "label": "Temporary Address Start Date",
-        "short": "Temporary Address Start Date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @Temporary Address Start Date 2-.1217"
-          }
-        ],
-        "definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the date on which the applicant will commence being contacted at the temporary address indicated, otherwise nothing may be entered.  This field may not be deleted as long as the need for a temporary address is indicated."
-      },
-      {
-        "path": "Patient.address.period.end",
-        "label": "Temporary Address End Date",
-        "short": "Temporary Address End Date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @Temporary Address End Date  2-.1218"
-          }
-        ],
-        "definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the date as of which the applicant will no longer be contacted at that temporary address, otherwise nothing may be entered.  This field may not be deleted as long as the need for a temporary address is indicated."
-      },
-      {
-        "path": "Patient.address.extension",
-        "sliceName": "address-active",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-active"
-          }
-        ],
-        "label": "Temporary Address Active?",
-        "short": "Temporary Address Active?",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @Temporary Address Active?  2-.12105"
-          }
-        ],
-        "definition": "Enter 'Y' if you wish to enter a temporary address for this applicant at this time, or 'N' if not.  A 'NO' response will cause the temporary address 'Start Date' and 'End Date' fields to be automatically deleted while all other temporary address data will remain on file for future use."
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "emergencyResponseCohort",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/emergencyResponseCohort"
-          }
-        ],
-        "label": "Emergency Response Indicator",
-        "short": "Emergency Response Indicator",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @Emergency Response Indicator  2-.181"
-          }
-        ],
-        "definition": "Enter the appropriate ER Indicator to identify patients from impacted zip code areas designated by FEMA."
-      },
-      {
-        "path": "Patient.contact.relationship.coding.code",
-        "fixedCode": "C",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.contact.relationship.coding.system",
-        "fixedUri": "http://hl7.org/fhir/v2/0131",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.contact.name",
-        "label": "K2 – Name of Secondary NOK",
-        "short": "K2 – Name of Secondary NOK",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @E-Name  2-.331"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 – Name of Secondary Contact  2-.3311"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – Name of Primary NOK  2-.211"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – Name of Secondary NOK  2-.2191"
-          }
-        ],
-        "definition": "Enter the secondary next of kin's name in 'LAST,FIRST MIDDLE SUFFIX' format. This value must be 3-35 characters in length and may contain only uppercase alpha characters, spaces, apostrophes, hyphens and one comma.  All other characters and parenthetical text will be removed."
-      },
-      {
-        "path": "Patient.contact.relationship.text",
-        "label": "K2 – Relationship to Patient",
-        "short": "K2 – Relationship to Patient",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @E-Relationship to Patient  2-.332"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 - Relationship to Patient  2-.3312"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – Relationship to Patient  2-.212"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – Relationship to Patient  2-.2192"
-          }
-        ],
-        "definition": "If a secondary next-of-kin is specified enter the relationship of that person to the applicant [1-30 characters].  This field cannot be deleted as long as a secondary NOK is on file."
-      },
-      {
-        "path": "Patient.contact.address.line",
-        "label": "K2 – Street Address [Line 3]",
-        "short": "K2 – Street Address [Line 3]",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @E – Street Address [Line 1]  2-.333"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E – Street Address [Line 2]  2-.334"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E – Street Address [Line 3]  2-.335"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 – Street Address [Line 1]  2-.3313"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 – Street Address [Line 2]  2-.3314"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 – Street Address [Line 3]  2-.3315"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – Street Address [Line 1]  2-.213"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – Street Address [Line 2]  2-.214"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – Street Address [Line 3]  2-.215"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – Street Address [Line 1]  2-.2193"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – Street Address [Line 2]  2-.2194"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – Street Address [Line 3]  2-.2195"
-          }
-        ],
-        "definition": "If a secondary NOK is specified enter the third line of that person's street address [3-30 characters], if necessary, otherwise nothing may be entered.  This field cannot be deleted as long as a secondary NOK is on file."
-      },
-      {
-        "path": "Patient.contact.address.city",
-        "label": "K2 – City",
-        "short": "K2 – City",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @E – City  2-.336"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 – City  2-.3316"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – City  2-.216"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – City  2-.2196"
-          }
-        ],
-        "definition": "If a secondary NOK is specified enter the city in which that person resides [3-30 characters], otherwise nothing may be entered.  This field cannot be deleted as long as a secondary NOK is on file."
-      },
-      {
-        "path": "Patient.contact.address.postalCode",
-        "label": "K2 – Zip Code",
-        "short": "K2 – Zip Code",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @E – Zip Code 2-.338"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 – Zip Code 2-.3318"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – Zip Code 2-.218"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – Zip Code 2-.2198"
-          }
-        ],
-        "definition": "If a secondary NOK is specified enter the zip code for the city in which that person resides [5 numerics], otherwise nothing may be entered.  This field cannot be deleted as long as a secondary NOK is on file."
-      },
-      {
-        "path": "Patient.contact.telecom.system",
-        "fixedCode": "phone",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.contact.telecom.use",
-        "fixedCode": "home",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.contact.telecom.value",
-        "label": "K2 – Work Phone Number",
-        "short": "K2 – Work Phone Number",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @E - Phone Number 2-.339"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E – Work Phone Number  2-.33011"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 – Phone Number  2-.3319"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @E2 – Work Phone Number  2-.331011"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – Phone Number  2-.219"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K – Work Phone Number  2-.21011"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – Phone Number  2-.2199"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient @K2 – Work Phone Number  2-.211011"
-          }
-        ],
-        "definition": "If the person designated as secondary next of kin for this patient is employed, enter the phone number that individual can be reached at while at work."
-      },
-      {
-        "path": "Patient.generalPractitioner",
-        "label": "*CURRENT PC PRACTITIONER",
-        "short": "Primary Care provider",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @*CURRENT PC PRACTITIONER 2-404.01"
-          }
-        ],
-        "definition": "This field stores the patient's Current Primary Care Practitioner."
-      },
-      {
-        "path": "Patient.photo",
-        "label": "photograph",
-        "short": "Need to be able to access VHIC card for patient image",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @photograph format_001"
-          }
-        ]
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "patient-lastDischargeDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastDischargeDate"
-          }
-        ],
-        "label": "lastest  transaction date/time for transaction type=3",
-        "short": "Last Discharge date/time",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "patient Movement  @lastest  transaction date/time for transaction type=3 405-.01b"
-          }
-        ],
-        "definition": "Enter in this field the date/time of the movement (admission, transfer, discharge, treating specialty transfer, lodger check-in, or lodger check- out).  Time must be included."
-      },
-      {
-        "path": "Patient.deceasedDateTime",
-        "label": "DATE OF DEATH",
-        "short": "Date of Death",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @DATE OF DEATH 2-.351"
-          }
-        ],
-        "definition": "Enter the date the patient died.  Date needs to be a precise date, i.e.  a day, month, and year MUST be included. Date of Death can not be prior to         P&T Effective Date         Date Ruled Incompetent (Civil and VA)         Date of Birth"
-      },
-      {
-        "path": "Patient.communication.extension",
-        "sliceName": "recorded",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/recorded"
-          }
-        ],
-        "label": "Language Date/Time",
-        "short": "Language Date/Time",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Language Date/Time @Language Date/Time  2.07-.01"
-          }
-        ],
-        "definition": "The date/time the preferred language information was given by the patient and recorded in the Patient File."
-      },
-      {
-        "path": "Patient.communication.language.coding.system",
-        "fixedUri": "urn:ietf:bcp:47",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.communication.language.coding.code",
-        "label": "Preferred Language",
-        "short": "Preferred Language",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Language Date/Time @Preferred Language  2.07-\n.02"
-          }
-        ],
-        "definition": "This is the preferred language of the patient. A patient may speak, read and write several languages but this is the one that he/she prefers.\r\nYou may also answer with the 2- or 3-letter code assigned to the language or type in the language name."
-      },
-      {
-        "path": "Patient.maritalStatus.coding.code",
-        "label": "Marital Status",
-        "short": "Married?",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Marital Status 2-.05"
-          }
-        ],
-        "definition": "Select from the available listing this applicant's current marital status."
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "patient-religion",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-religion"
-          }
-        ],
-        "label": "Religious Preference",
-        "short": "Religion",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Religious Preference 2-.08"
-          }
-        ],
-        "definition": "Select from the available listing the religious preference of this applicant."
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "us-core-race",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/us-core-race"
-          }
-        ],
-        "label": "Race Information",
-        "short": "Race",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Race Information @Race Information 2.02-01"
-          }
-        ],
-        "definition": "Patient's race"
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "race-ethicity-collectionMethod",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/race-ethicity-collectionMethod"
-          }
-        ],
-        "label": "Method of Collection",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Race Information @Method of Collection 2.02-.02"
-          },
-          {
-            "identity": "vista",
-            "map": "Ethnicity Information @Method of Collection 2.06-.02"
-          }
-        ],
-        "definition": "Method used to collect patient's ethnicity"
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "us-core-ethnicity",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/us-core-ethnicity"
-          }
-        ],
-        "label": "Ethnicity Information",
-        "short": "Ethnicity",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Ethnicity Information @Ethnicity Information 2.06-.01"
-          }
-        ],
-        "definition": "Patient's ethnicity"
-      },
-      {
-        "path": "Patient.contact.organization",
-        "label": "Enrollment Clinic",
-        "short": "Clinic Enrollment",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Enrollment Clinic @Enrollment Clinic 2.001-.01"
-          }
-        ],
-        "definition": "This multiple field contains the data relating to clinic enrollments for this patient."
-      },
-      {
-        "path": "Patient.contact.extension",
-        "sliceName": "relationshipStatus",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/relationshipStatus"
-          }
-        ],
-        "label": "Current Status",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Enrollment Clinic @Current Status 2.001-2"
-          }
-        ],
-        "definition": "This field will contain 'I' for inactive if this patient is no longer enrolled in this clinic (patient has been discharged from the clinic)."
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "patient-lastTransferTime",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastTransferTime"
-          }
-        ],
-        "label": "latest transaction date/time for transaction type=2",
-        "short": "Last Transfer Date/Time",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient Movement @latest transaction date/time for transaction type=2 405-.01a"
-          }
-        ],
-        "definition": "This field contains the internal entry number of the PATIENT MOVEMENT file denoting the most recent movement for an inpatient. This field is only stored for current inpatients. It must NOT be edited as this could affect\r\nthe integrity of many options within MAS and other packages. When displaying this field, the date/time of the most recent movement will display."
-      },
-      {
-        "path": "Patient.extension",
-        "sliceName": "patient-remarks",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-remarks"
-          }
-        ],
-        "label": "remarks",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @remarks 2-.091"
-          }
-        ],
-        "definition": "If so desired, you may enter a short remark about this applicant between 3-60 characters.  The remark entered should be significant and tact should be exercised since this field is viewable to virtually all other users who have the ability to 'call up' a patient for any purpose."
-      },
-      {
-        "path": "Patient.meta.security.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/38.1-2",
-        "mustSupport": true
-      },
-      {
-        "path": "Patient.meta.security.code",
-        "label": "SECURITY LEVEL",
-        "short": "Identifies Sensitive Patient",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "DG SECURITY LOG FILE  @SECURITY LEVEL 38.1-2"
-          }
-        ],
-        "definition": "This field contains a 1 if the patient record is presently listed as sensitive or a 0 if the patient's record is not currently sensitive."
-      },
-      {
-        "path": "Patient.meta.security.extension",
-        "sliceName": "assignedDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/assignedDate"
-          }
-        ],
-        "label": "DATE/TIME SECURITY ASSIGNED",
-        "short": "Identifies Sensitive Patient",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "DG SECURITY LOG FILE  @DATE/TIME SECURITY ASSIGNED 38.1-4"
-          }
-        ],
-        "definition": "This field contians the date/time that this patient's security level was most recently changed."
-      },
-      {
-        "path": "Patient.gender",
-        "label": "SELF IDENTIFIED GENDER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT @SELF IDENTIFIED GENDER 2-.024b"
-          }
-        ],
-        "definition": "This SELF IDENTIFIED GENDER value indicates the patient's view of their gender identity, if they choose to provide it."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAPatient",
-  "id": "VAPatient",
-  "type": "Patient",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAPatient",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient",
+	"name": "VAPatient",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Patient",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Patient.meta.security.extension:assignedDate",
+				"path": "Patient.meta.security.extension",
+				"sliceName": "assignedDate",
+				"label": "DATE/TIME SECURITY ASSIGNED",
+				"short": "Identifies Sensitive Patient",
+				"definition": "This field contians the date/time that this patient's security level was most recently changed.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/assignedDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "DG SECURITY LOG FILE  @DATE/TIME SECURITY ASSIGNED 38.1-4"
+					}
+				]
+			},
+			{
+				"path": "Patient.meta.security.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/38.1-2",
+				"mustSupport": true
+			},
+			{
+				"id": "Patient.meta.security.code",
+				"path": "Patient.meta.security.code",
+				"label": "SECURITY LEVEL",
+				"short": "Identifies Sensitive Patient",
+				"definition": "This field contains a 1 if the patient record is presently listed as sensitive or a 0 if the patient's record is not currently sensitive.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "DG SECURITY LOG FILE  @SECURITY LEVEL 38.1-2"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:patient-remarks",
+				"path": "Patient.extension",
+				"sliceName": "patient-remarks",
+				"label": "remarks",
+				"definition": "If so desired, you may enter a short remark about this applicant between 3-60 characters.  The remark entered should be significant and tact should be exercised since this field is viewable to virtually all other users who have the ability to 'call up' a patient for any purpose.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-remarks"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @remarks 2-.091"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:patient-lastTransferTime",
+				"path": "Patient.extension",
+				"sliceName": "patient-lastTransferTime",
+				"label": "latest transaction date/time for transaction type=2",
+				"short": "Last Transfer Date/Time",
+				"definition": "This field contains the internal entry number of the PATIENT MOVEMENT file denoting the most recent movement for an inpatient. This field is only stored for current inpatients. It must NOT be edited as this could affect\r\nthe integrity of many options within MAS and other packages. When displaying this field, the date/time of the most recent movement will display.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastTransferTime"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient Movement @latest transaction date/time for transaction type=2 405-.01a"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:us-core-ethnicity",
+				"path": "Patient.extension",
+				"sliceName": "us-core-ethnicity",
+				"label": "Ethnicity Information",
+				"short": "Ethnicity",
+				"definition": "Patient's ethnicity",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/us-core-ethnicity"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Ethnicity Information @Ethnicity Information 2.06-.01"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:race-ethicity-collectionMethod",
+				"path": "Patient.extension",
+				"sliceName": "race-ethicity-collectionMethod",
+				"label": "Method of Collection",
+				"definition": "Method used to collect patient's ethnicity",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/race-ethicity-collectionMethod"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Race Information @Method of Collection 2.02-.02"
+					},
+					{
+						"identity": "vista",
+						"map": "Ethnicity Information @Method of Collection 2.06-.02"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:us-core-race",
+				"path": "Patient.extension",
+				"sliceName": "us-core-race",
+				"label": "Race Information",
+				"short": "Race",
+				"definition": "Patient's race",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/us-core-race"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Race Information @Race Information 2.02-01"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:patient-religion",
+				"path": "Patient.extension",
+				"sliceName": "patient-religion",
+				"label": "Religious Preference",
+				"short": "Religion",
+				"definition": "Select from the available listing the religious preference of this applicant.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-religion"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Religious Preference 2-.08"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:patient-lastDischargeDate",
+				"path": "Patient.extension",
+				"sliceName": "patient-lastDischargeDate",
+				"label": "lastest  transaction date/time for transaction type=3",
+				"short": "Last Discharge date/time",
+				"definition": "Enter in this field the date/time of the movement (admission, transfer, discharge, treating specialty transfer, lodger check-in, or lodger check- out).  Time must be included.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastDischargeDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "patient Movement  @lastest  transaction date/time for transaction type=3 405-.01b"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:emergencyResponseCohort",
+				"path": "Patient.extension",
+				"sliceName": "emergencyResponseCohort",
+				"label": "Emergency Response Indicator",
+				"short": "Emergency Response Indicator",
+				"definition": "Enter the appropriate ER Indicator to identify patients from impacted zip code areas designated by FEMA.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/emergencyResponseCohort"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @Emergency Response Indicator  2-.181"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:defaultPrescriptionStatus",
+				"path": "Patient.extension",
+				"sliceName": "defaultPrescriptionStatus",
+				"label": "PATIENT STATUS",
+				"short": "Rx Patient status",
+				"definition": "This field is used to indicate a default patient status.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/defaultPrescriptionStatus"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @PATIENT STATUS 55-3"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:selfIdentifiedGender",
+				"path": "Patient.extension",
+				"sliceName": "selfIdentifiedGender",
+				"label": "SELF IDENTIFIED GENDER",
+				"definition": "This SELF IDENTIFIED GENDER value indicates the patient's view of their gender identity, if they choose to provide it.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/selfIdentifiedGender"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT @SELF IDENTIFIED GENDER 2-.024"
+					}
+				]
+			},
+			{
+				"id": "Patient.extension:us-core-birthsex",
+				"path": "Patient.extension",
+				"sliceName": "us-core-birthsex",
+				"label": "SEX",
+				"short": "Sex",
+				"definition": "Enter 'M' if this applicant is a male, or 'F' if female.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/us-core-birthsex"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT FILE @SEX 2-.02"
+					}
+				]
+			},
+			{
+				"path": "Patient.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "Patient.identifier.system",
+				"fixedUri": "identifier.system",
+				"mustSupport": true
+			},
+			{
+				"id": "Patient.identifier.value",
+				"path": "Patient.identifier.value",
+				"label": "SOCIAL SECURITY NUMBER",
+				"short": "Social Security No",
+				"definition": "Answer with the individual's social security number.  Answer must be 9  numbers in length. The SSN will be sent to the SSA for verification.   This will be displayed next to the SSN.  Once an SSN has received a status of Verified, it is locked from user updating and a \"VERIFIED\" will be displayed by the SSN field.  Only the Identity Management Data QUality Team are able to change a beneficiary's (veteran/non veteran) SSN.  If an Invalid per SSA status is received for the SSN, then an \"INVALID\" will appear next to the invalid SSN of the individual. Facilities should make every effort to obtain the accurate SSN from the individual for any invalid or pseudo SSN entry.   If a valid SSN is not known, then a \"P\" will be entered at the SSN prompt for the system to automatically assign a Pseudo-SSN.  If a Pseudo SSN is entered, a Reason for entering it will be required.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT FILE @INTERNAL ENTRY NUMBER 2-.001"
+					},
+					{
+						"identity": "vista",
+						"map": "PATIENT FILE @SOCIAL SECURITY NUMBER 2-.09"
+					}
+				]
+			},
+			{
+				"id": "Patient.name",
+				"path": "Patient.name",
+				"label": "NAME",
+				"short": "Name",
+				"definition": "Enter the patient's name in 'LAST,FIRST MIDDLE SUFFIX' format. This value must be 3-30 characters in length and may contain only uppercase alpha characters, spaces, apostrophes, hyphens and one comma.  All other characters and parenthetical text will be removed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT FILE @NAME 2-.01"
+					}
+				]
+			},
+			{
+				"path": "Patient.telecom.system",
+				"fixedCode": "phone",
+				"mustSupport": true
+			},
+			{
+				"id": "Patient.telecom.value",
+				"path": "Patient.telecom.value",
+				"label": "Temp Phone",
+				"short": "Temp Phone",
+				"definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the telephone number at which the applicant can be contacted [4-20 characters] during his/her absence from permanent residence, otherwise nothing may be entered.  This field may not be deleted as long as the need for a temporary address is indicated.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @PHONE NUMBER [RESIDENCE]  2-.131"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @PHONE NUMBER [WORK]  2-.132"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @PHONE NUMBER [CELLULAR]  2-.134"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @EMAIL ADDRESS  2-.133"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @Temp Phone 2-.1219"
+					}
+				]
+			},
+			{
+				"path": "Patient.telecom.use",
+				"fixedCode": "home",
+				"mustSupport": true
+			},
+			{
+				"id": "Patient.gender",
+				"path": "Patient.gender",
+				"label": "SELF IDENTIFIED GENDER",
+				"definition": "This SELF IDENTIFIED GENDER value indicates the patient's view of their gender identity, if they choose to provide it.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT @SELF IDENTIFIED GENDER 2-.024b"
+					}
+				]
+			},
+			{
+				"id": "Patient.birthDate",
+				"path": "Patient.birthDate",
+				"label": "DATE OF BIRTH",
+				"short": "Date of Birth",
+				"definition": "Enter the patient's DATE OF BIRTH which must be later than 12/31/1870.   DATE OF BIRTH cannot be a date after the beneficiary 'Ineligible Date'  or a date after the 'Enrollment Application Date'.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT FILE @DATE OF BIRTH 2-.03"
+					}
+				]
+			},
+			{
+				"id": "Patient.deceasedDateTime",
+				"path": "Patient.deceasedDateTime",
+				"label": "DATE OF DEATH",
+				"short": "Date of Death",
+				"definition": "Enter the date the patient died.  Date needs to be a precise date, i.e.  a day, month, and year MUST be included. Date of Death can not be prior to         P&T Effective Date         Date Ruled Incompetent (Civil and VA)         Date of Birth",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @DATE OF DEATH 2-.351"
+					}
+				]
+			},
+			{
+				"id": "Patient.address.extension:address-active",
+				"path": "Patient.address.extension",
+				"sliceName": "address-active",
+				"label": "Temporary Address Active?",
+				"short": "Temporary Address Active?",
+				"definition": "Enter 'Y' if you wish to enter a temporary address for this applicant at this time, or 'N' if not.  A 'NO' response will cause the temporary address 'Start Date' and 'End Date' fields to be automatically deleted while all other temporary address data will remain on file for future use.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-active"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @Temporary Address Active?  2-.12105"
+					}
+				]
+			},
+			{
+				"id": "Patient.address.extension:address-validity",
+				"path": "Patient.address.extension",
+				"sliceName": "address-validity",
+				"label": "BAD ADDRESS INDICATOR",
+				"short": "Bad Address Indicator",
+				"definition": "The Bad Address Indicator field applies to the address at which the patient resides.  This field should be set as follows (if applicable):       \"UNDELIVERABLE\" - Bad Address based on returned mail.     \"HOMELESS\" - Patient is known to be homeless.     \"OTHER\" - Other Bad Address Reason   Setting this field will prevent a Bad Address from being shared with HEC and other VAMC facilities. It will also be used to block Means Test  Renewal Letters from being sent.   Once the Bad Address Indicator is set, incoming \"newer\" addresses will automatically remove the Bad Address Indicator, and allow the \"updated\" address to be transmitted to HEC and other VAMC facilities.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-validity"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @BAD ADDRESS INDICATOR 2-.121"
+					}
+				]
+			},
+			{
+				"path": "Patient.address.use",
+				"fixedCode": "home",
+				"mustSupport": true
+			},
+			{
+				"path": "Patient.address.type",
+				"fixedCode": "postal",
+				"mustSupport": true
+			},
+			{
+				"id": "Patient.address.line",
+				"path": "Patient.address.line",
+				"label": "TEMPORARY STREET [LINE 3]",
+				"short": "Temp Street Add 3",
+				"definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the third line of the temporary street address [2-30 characters], if necessary, otherwise nothing may be entered. This field may not be deleted as long as the need for a temporary address is indicated.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @STREET ADDRESS [LINE 1]  2-.111"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @STREET ADDRESS [LINE 2]  2-.112"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @STREET ADDRESS [LINE 3]  2-.113"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @TEMPORARY STREET [LINE 1]  2-.1211"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @TEMPORARY STREET [LINE 2]  2-.1212"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @TEMPORARY STREET [LINE 3]  2-.1213"
+					}
+				]
+			},
+			{
+				"id": "Patient.address.city",
+				"path": "Patient.address.city",
+				"label": "TEMPORARY CITY",
+				"short": "Temp City",
+				"definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the city in which the temporary address lies [2-30 characters], otherwise nothing may be entered.  This field may not be deleted as long as the need for a temporary address is indicated.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @CITY 2-.114"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @TEMPORARY CITY  2-.1214"
+					}
+				]
+			},
+			{
+				"id": "Patient.address.district",
+				"path": "Patient.address.district",
+				"label": "TEMPORARY COUNTY",
+				"short": "Temp County",
+				"definition": "If a state is entered for the temporary residence, enter the county in which that residence resides.  If a state does not exist for the temporary address, a county can not be entered.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @COUNTY 2-.117"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @TEMPORARY COUNTY 2-.12111"
+					}
+				]
+			},
+			{
+				"id": "Patient.address.state",
+				"path": "Patient.address.state",
+				"label": "STATE",
+				"short": "State",
+				"definition": "From the available listing choose the state in which this applicant resides.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @STATE 2-.115"
+					}
+				]
+			},
+			{
+				"id": "Patient.address.postalCode",
+				"path": "Patient.address.postalCode",
+				"label": "TEMPORARY ZIP+4",
+				"short": "Temp zip Code",
+				"definition": "Answer with either the 5 digit format (e.g. 12345) or the nine digit format (e.g. 12345-6789 or 123456789).",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @ZIP+4 2-.1112"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @TEMPORARY ZIP+4 2-.12112"
+					}
+				]
+			},
+			{
+				"id": "Patient.address.country",
+				"path": "Patient.address.country",
+				"label": "TEMPORARY ADDRESS COUNTRY",
+				"short": "Temporary Country",
+				"definition": "Enter the country where the patient's temporary address is located.   If entering an Army/Air Force Post Office (APO) or a Fleet Post Office  (FPO) address select United States as the country.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @COUNTRY 2-0.1173"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @TEMPORARY ADDRESS COUNTRY 2-.1223"
+					}
+				]
+			},
+			{
+				"id": "Patient.address.period.start",
+				"path": "Patient.address.period.start",
+				"label": "Temporary Address Start Date",
+				"short": "Temporary Address Start Date",
+				"definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the date on which the applicant will commence being contacted at the temporary address indicated, otherwise nothing may be entered.  This field may not be deleted as long as the need for a temporary address is indicated.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @Temporary Address Start Date 2-.1217"
+					}
+				]
+			},
+			{
+				"id": "Patient.address.period.end",
+				"path": "Patient.address.period.end",
+				"label": "Temporary Address End Date",
+				"short": "Temporary Address End Date",
+				"definition": "If the WANT TO ENTER A TEMPORARY ADDRESS prompt is answered YES enter the date as of which the applicant will no longer be contacted at that temporary address, otherwise nothing may be entered.  This field may not be deleted as long as the need for a temporary address is indicated.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @Temporary Address End Date  2-.1218"
+					}
+				]
+			},
+			{
+				"id": "Patient.maritalStatus.coding.code",
+				"path": "Patient.maritalStatus.coding.code",
+				"label": "Marital Status",
+				"short": "Married?",
+				"definition": "Select from the available listing this applicant's current marital status.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Marital Status 2-.05"
+					}
+				]
+			},
+			{
+				"id": "Patient.photo",
+				"path": "Patient.photo",
+				"label": "photograph",
+				"short": "Need to be able to access VHIC card for patient image",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @photograph format_001"
+					}
+				]
+			},
+			{
+				"id": "Patient.contact.extension:relationshipStatus",
+				"path": "Patient.contact.extension",
+				"sliceName": "relationshipStatus",
+				"label": "Current Status",
+				"definition": "This field will contain 'I' for inactive if this patient is no longer enrolled in this clinic (patient has been discharged from the clinic).",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/relationshipStatus"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Enrollment Clinic @Current Status 2.001-2"
+					}
+				]
+			},
+			{
+				"path": "Patient.contact.relationship.coding.system",
+				"fixedUri": "http://hl7.org/fhir/v2/0131",
+				"mustSupport": true
+			},
+			{
+				"path": "Patient.contact.relationship.coding.code",
+				"fixedCode": "C",
+				"mustSupport": true
+			},
+			{
+				"id": "Patient.contact.relationship.text",
+				"path": "Patient.contact.relationship.text",
+				"label": "K2 – Relationship to Patient",
+				"short": "K2 – Relationship to Patient",
+				"definition": "If a secondary next-of-kin is specified enter the relationship of that person to the applicant [1-30 characters].  This field cannot be deleted as long as a secondary NOK is on file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @E-Relationship to Patient  2-.332"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 - Relationship to Patient  2-.3312"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – Relationship to Patient  2-.212"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – Relationship to Patient  2-.2192"
+					}
+				]
+			},
+			{
+				"id": "Patient.contact.name",
+				"path": "Patient.contact.name",
+				"label": "K2 – Name of Secondary NOK",
+				"short": "K2 – Name of Secondary NOK",
+				"definition": "Enter the secondary next of kin's name in 'LAST,FIRST MIDDLE SUFFIX' format. This value must be 3-35 characters in length and may contain only uppercase alpha characters, spaces, apostrophes, hyphens and one comma.  All other characters and parenthetical text will be removed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @E-Name  2-.331"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 – Name of Secondary Contact  2-.3311"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – Name of Primary NOK  2-.211"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – Name of Secondary NOK  2-.2191"
+					}
+				]
+			},
+			{
+				"path": "Patient.contact.telecom.system",
+				"fixedCode": "phone",
+				"mustSupport": true
+			},
+			{
+				"id": "Patient.contact.telecom.value",
+				"path": "Patient.contact.telecom.value",
+				"label": "K2 – Work Phone Number",
+				"short": "K2 – Work Phone Number",
+				"definition": "If the person designated as secondary next of kin for this patient is employed, enter the phone number that individual can be reached at while at work.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @E - Phone Number 2-.339"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E – Work Phone Number  2-.33011"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 – Phone Number  2-.3319"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 – Work Phone Number  2-.331011"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – Phone Number  2-.219"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – Work Phone Number  2-.21011"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – Phone Number  2-.2199"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – Work Phone Number  2-.211011"
+					}
+				]
+			},
+			{
+				"path": "Patient.contact.telecom.use",
+				"fixedCode": "home",
+				"mustSupport": true
+			},
+			{
+				"id": "Patient.contact.address.line",
+				"path": "Patient.contact.address.line",
+				"label": "K2 – Street Address [Line 3]",
+				"short": "K2 – Street Address [Line 3]",
+				"definition": "If a secondary NOK is specified enter the third line of that person's street address [3-30 characters], if necessary, otherwise nothing may be entered.  This field cannot be deleted as long as a secondary NOK is on file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @E – Street Address [Line 1]  2-.333"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E – Street Address [Line 2]  2-.334"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E – Street Address [Line 3]  2-.335"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 – Street Address [Line 1]  2-.3313"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 – Street Address [Line 2]  2-.3314"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 – Street Address [Line 3]  2-.3315"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – Street Address [Line 1]  2-.213"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – Street Address [Line 2]  2-.214"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – Street Address [Line 3]  2-.215"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – Street Address [Line 1]  2-.2193"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – Street Address [Line 2]  2-.2194"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – Street Address [Line 3]  2-.2195"
+					}
+				]
+			},
+			{
+				"id": "Patient.contact.address.city",
+				"path": "Patient.contact.address.city",
+				"label": "K2 – City",
+				"short": "K2 – City",
+				"definition": "If a secondary NOK is specified enter the city in which that person resides [3-30 characters], otherwise nothing may be entered.  This field cannot be deleted as long as a secondary NOK is on file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @E – City  2-.336"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 – City  2-.3316"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – City  2-.216"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – City  2-.2196"
+					}
+				]
+			},
+			{
+				"id": "Patient.contact.address.state",
+				"path": "Patient.contact.address.state",
+				"label": "K2 – State",
+				"short": "K2 – State",
+				"definition": "If a secondary NOK is specified select from the available listing the state in which that person resides, otherwise nothing may be entered.  This field cannot be deleted as long as a secondary NOK is on file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @TEMPORARY STATE 2-.1215"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E – State 2-.337"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 – State 2-.3317"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – State 2-.217"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – State 2-.2197"
+					}
+				]
+			},
+			{
+				"id": "Patient.contact.address.postalCode",
+				"path": "Patient.contact.address.postalCode",
+				"label": "K2 – Zip Code",
+				"short": "K2 – Zip Code",
+				"definition": "If a secondary NOK is specified enter the zip code for the city in which that person resides [5 numerics], otherwise nothing may be entered.  This field cannot be deleted as long as a secondary NOK is on file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @E – Zip Code 2-.338"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @E2 – Zip Code 2-.3318"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K – Zip Code 2-.218"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient @K2 – Zip Code 2-.2198"
+					}
+				]
+			},
+			{
+				"id": "Patient.contact.organization",
+				"path": "Patient.contact.organization",
+				"label": "Enrollment Clinic",
+				"short": "Clinic Enrollment",
+				"definition": "This multiple field contains the data relating to clinic enrollments for this patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Enrollment Clinic @Enrollment Clinic 2.001-.01"
+					}
+				]
+			},
+			{
+				"id": "Patient.communication.extension:recorded",
+				"path": "Patient.communication.extension",
+				"sliceName": "recorded",
+				"label": "Language Date/Time",
+				"short": "Language Date/Time",
+				"definition": "The date/time the preferred language information was given by the patient and recorded in the Patient File.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/recorded"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Language Date/Time @Language Date/Time  2.07-.01"
+					}
+				]
+			},
+			{
+				"path": "Patient.communication.language.coding.system",
+				"fixedUri": "urn:ietf:bcp:47",
+				"mustSupport": true
+			},
+			{
+				"id": "Patient.communication.language.coding.code",
+				"path": "Patient.communication.language.coding.code",
+				"label": "Preferred Language",
+				"short": "Preferred Language",
+				"definition": "This is the preferred language of the patient. A patient may speak, read and write several languages but this is the one that he/she prefers.\r\nYou may also answer with the 2- or 3-letter code assigned to the language or type in the language name.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Language Date/Time @Preferred Language  2.07-\n.02"
+					}
+				]
+			},
+			{
+				"id": "Patient.generalPractitioner",
+				"path": "Patient.generalPractitioner",
+				"label": "*CURRENT PC PRACTITIONER",
+				"short": "Primary Care provider",
+				"definition": "This field stores the patient's Current Primary Care Practitioner.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @*CURRENT PC PRACTITIONER 2-404.01"
+					}
+				]
+			}
+		]
+	}
 }

@@ -1,120 +1,125 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ACTIVITY LOG @DATE 55.09-.01"
-          }
-        ],
-        "definition": "This is the date (to the second) that the activity took place."
-      },
-      {
-        "path": "Provenance.agent.whoReference",
-        "label": "USER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ACTIVITY LOG @USER 55.09-1"
-          }
-        ],
-        "definition": "This is the user who effected the activity."
-      },
-      {
-        "path": "Provenance.activity.system",
-        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/55.09-2",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.activity.code",
-        "label": "ACTION",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ACTIVITY LOG @ACTION 55.09-2"
-          }
-        ],
-        "definition": "This is the activity that has taken place on the order."
-      },
-      {
-        "path": "Provenance.extension",
-        "sliceName": "reference-targetElement/extension/elementUri",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.elementUri"
-          }
-        ],
-        "label": "FIELD",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ACTIVITY LOG @FIELD 55.09-3"
-          }
-        ],
-        "definition": "This is field that was changed due to the activity."
-      },
-      {
-        "path": "Provenance.extension",
-        "sliceName": "reference-targetElement/extension/change/extension/oldValue",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue"
-          }
-        ],
-        "label": "OLD DATA",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ACTIVITY LOG @OLD DATA 55.09-4"
-          }
-        ],
-        "definition": "This is the previous data that was in the field that was changed."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAInpatientUDMedicationRequestChange",
-  "id": "VAInpatientUDMedicationRequestChange",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestChange",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAInpatientUDMedicationRequestChange",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestChange",
+	"name": "VAInpatientUDMedicationRequestChange",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Provenance.extension:reference-targetElement.extension.change.extension.oldValue",
+				"path": "Provenance.extension",
+				"sliceName": "reference-targetElement-extension-change-extension-oldValue",
+				"label": "OLD DATA",
+				"definition": "This is the previous data that was in the field that was changed.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ACTIVITY LOG @OLD DATA 55.09-4"
+					}
+				]
+			},
+			{
+				"id": "Provenance.extension:reference-targetElement.extension.elementUri",
+				"path": "Provenance.extension",
+				"sliceName": "reference-targetElement-extension-elementUri",
+				"label": "FIELD",
+				"definition": "This is field that was changed due to the activity.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.elementUri"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ACTIVITY LOG @FIELD 55.09-3"
+					}
+				]
+			},
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "DATE",
+				"definition": "This is the date (to the second) that the activity took place.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ACTIVITY LOG @DATE 55.09-.01"
+					}
+				]
+			},
+			{
+				"path": "Provenance.activity.system",
+				"fixedUri": "http://va.gov/terminology/vistaDefinedTerms/55.09-2",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.activity.code",
+				"path": "Provenance.activity.code",
+				"label": "ACTION",
+				"definition": "This is the activity that has taken place on the order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ACTIVITY LOG @ACTION 55.09-2"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "USER",
+				"definition": "This is the user who effected the activity.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ACTIVITY LOG @USER 55.09-1"
+					}
+				]
+			}
+		]
+	}
 }

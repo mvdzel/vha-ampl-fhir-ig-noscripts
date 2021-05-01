@@ -1,79 +1,81 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "DiagnosticReport.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "DiagnosticReport.result.extension",
-        "sliceName": "note/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Observation.note.text"
-          }
-        ],
-        "label": "COMMENTS",
-        "short": "Comments",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "LAB DATA @COMMENTS 63-4:63.04-.99:63.041-.01"
-          }
-        ]
-      },
-      {
-        "path": "DiagnosticReport.result.extension",
-        "sliceName": "note/authorString",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Observation.note.authorString"
-          }
-        ],
-        "label": "PERSON",
-        "short": "Person making comment",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "LAB DATA @PERSON 63-4:63.04-.99:63.041-1"
-          }
-        ]
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAChemLabReportResult",
-  "id": "VAChemLabReportResult",
-  "type": "DiagnosticReport",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReportResult",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAChemLabReportResult",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReportResult",
+	"name": "VAChemLabReportResult",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "DiagnosticReport",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "DiagnosticReport.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "DiagnosticReport.result.extension:note.authorString",
+				"path": "DiagnosticReport.result.extension",
+				"sliceName": "note-authorString",
+				"label": "PERSON",
+				"short": "Person making comment",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Observation.note.authorString"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "LAB DATA @PERSON 63-4:63.04-.99:63.041-1"
+					}
+				]
+			},
+			{
+				"id": "DiagnosticReport.result.extension:note.text",
+				"path": "DiagnosticReport.result.extension",
+				"sliceName": "note-text",
+				"label": "COMMENTS",
+				"short": "Comments",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Observation.note.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "LAB DATA @COMMENTS 63-4:63.04-.99:63.041-.01"
+					}
+				]
+			}
+		]
+	}
 }

@@ -1,54 +1,56 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "medicationrequest-ivType",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType",
-  "name": "medicationrequest-ivType",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType"
-      },
-      {
-        "path": "Extension.valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NON-VERIFIED ORDERS @IV TYPE    53.1-53"
-          }
-        ],
-        "binding": {
-          "strength": "preferred",
-          "valueSetReference": {
-            "reference": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/iv-order-type"
-          }
-        }
-      }
-    ]
-  },
-  "description": "Type of IV - \"A\" for Admixture, \"C\" for Chemotherapy, \"H\" for Hyperal, \"P\" for Piggyback, and \"S\" for Syringe."
+	"resourceType": "StructureDefinition",
+	"id": "medicationrequest-ivType",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType",
+	"name": "medicationrequest-ivType",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "Type of IV - \"A\" for Admixture, \"C\" for Chemotherapy, \"H\" for Hyperal, \"P\" for Piggyback, and \"S\" for Syringe.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType"
+			},
+			{
+				"id": "Extension.valueCodeableConcept",
+				"path": "Extension.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"binding": {
+					"strength": "preferred",
+					"valueSetReference": {
+						"reference": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/iv-order-type"
+					}
+				},
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @IV TYPE    53.1-53"
+					}
+				]
+			}
+		]
+	}
 }

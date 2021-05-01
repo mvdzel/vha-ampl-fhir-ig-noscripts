@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "address-active",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-active",
-  "name": "address-active",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "Patient"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-active"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @Temporary Address Active?  2-.12105"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "Enter 'Y' if you wish to enter a temporary address for this applicant at this time, or 'N' if not.  A 'NO' response will cause the temporary address 'Start Date' and 'End Date' fields to be automatically deleted while all other temporary address data will remain on file for future use."
+	"resourceType": "StructureDefinition",
+	"id": "address-active",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-active",
+	"name": "address-active",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "Enter 'Y' if you wish to enter a temporary address for this applicant at this time, or 'N' if not.  A 'NO' response will cause the temporary address 'Start Date' and 'End Date' fields to be automatically deleted while all other temporary address data will remain on file for future use.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Patient"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-active"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @Temporary Address Active?  2-.12105"
+					}
+				]
+			}
+		]
+	}
 }

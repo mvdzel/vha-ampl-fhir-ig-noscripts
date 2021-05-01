@@ -1,33 +1,33 @@
 {
-  "resourceType": "ValueSet",
-  "id": "inpatient-medication-order-type",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/inpatient-medication-order-type",
-  "name": "inpatient-medication-order-type",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "compose": {
-    "include": [
-      {
-        "system": "http://va.gov/Terminology/VistaDefinedTerms/",
-        "concept": [
-          {
-            "code": "H",
-            "display": "HYPERAL"
-          },
-          {
-            "code": "U",
-            "display": "UNIT DOSE"
-          },
-          {
-            "code": "I",
-            "display": "INPATIENT"
-          },
-          {
-            "code": "F",
-            "display": "FLUID"
-          }
-        ]
-      }
-    ]
-  }
+	"resourceType": "ValueSet",
+	"id": "inpatient-medication-order-type",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/inpatient-medication-order-type",
+	"name": "inpatient-medication-order-type",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"compose": {
+		"include": [
+			{
+				"system": "http://va.gov/Terminology/VistaDefinedTerms/",
+				"concept": [
+					{
+						"code": "H",
+						"display": "HYPERAL"
+					},
+					{
+						"code": "U",
+						"display": "UNIT DOSE"
+					},
+					{
+						"code": "I",
+						"display": "INPATIENT"
+					},
+					{
+						"code": "F",
+						"display": "FLUID"
+					}
+				]
+			}
+		]
+	}
 }

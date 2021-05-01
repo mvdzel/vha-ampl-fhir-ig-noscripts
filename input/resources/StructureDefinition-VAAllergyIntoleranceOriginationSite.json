@@ -1,63 +1,65 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Location.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Location.name",
-        "label": "NAME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "INSTITUTION @NAME 120.8-b:4-.01"
-          }
-        ]
-      },
-      {
-        "path": "Location.identifier",
-        "label": "STATION NUMBER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "INSTITUTION @STATION NUMBER 120.8-b:4-99"
-          }
-        ]
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAAllergyIntoleranceOriginationSite",
-  "id": "VAAllergyIntoleranceOriginationSite",
-  "type": "Location",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceOriginationSite",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAAllergyIntoleranceOriginationSite",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceOriginationSite",
+	"name": "VAAllergyIntoleranceOriginationSite",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Location",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Location.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Location.identifier",
+				"path": "Location.identifier",
+				"label": "STATION NUMBER",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "INSTITUTION @STATION NUMBER 120.8-b:4-99"
+					}
+				]
+			},
+			{
+				"id": "Location.name",
+				"path": "Location.name",
+				"label": "NAME",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "INSTITUTION @NAME 120.8-b:4-.01"
+					}
+				]
+			}
+		]
+	}
 }

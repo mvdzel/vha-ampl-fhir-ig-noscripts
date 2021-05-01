@@ -1,76 +1,78 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.agent.role.coding.code",
-        "fixedCode": "verifyingNurse",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.agent.whoReference",
-        "label": "VERIFYING NURSE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @VERIFYING NURSE 55.06-16"
-          }
-        ],
-        "definition": "This is the nurse who verified the order, or the latest action taken on the order."
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "DATE VERIFIED BY PHARMACIST",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DATE VERIFIED BY NURSE 55.06-17"
-          },
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DATE VERIFIED BY PHARMACIST 55.06-19"
-          }
-        ],
-        "definition": "This is the date the order was verified by the pharmacist.",
-        "short": "Verification Date by Rph"
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAInpatientUDMedicationOrderVerification",
-  "id": "VAInpatientUDMedicationOrderVerification",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationOrderVerification",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource",
-  "description": "Verification of VA unit dose orders"
+	"resourceType": "StructureDefinition",
+	"id": "VAInpatientUDMedicationOrderVerification",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationOrderVerification",
+	"name": "VAInpatientUDMedicationOrderVerification",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "Verification of VA unit dose orders",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "DATE VERIFIED BY PHARMACIST",
+				"short": "Verification Date by Rph",
+				"definition": "This is the date the order was verified by the pharmacist.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DATE VERIFIED BY NURSE 55.06-17"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DATE VERIFIED BY PHARMACIST 55.06-19"
+					}
+				]
+			},
+			{
+				"path": "Provenance.agent.role.coding.code",
+				"fixedCode": "verifyingNurse",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "VERIFYING NURSE",
+				"definition": "This is the nurse who verified the order, or the latest action taken on the order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @VERIFYING NURSE 55.06-16"
+					}
+				]
+			}
+		]
+	}
 }

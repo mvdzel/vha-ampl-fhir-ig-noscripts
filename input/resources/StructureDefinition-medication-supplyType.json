@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "medication-supplyType",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-supplyType",
-  "name": "medication-supplyType",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "Medication"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-supplyType"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY ORDERABLE ITEM @SUPPLY 50.7-.09"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field is used to indicate whether or not the Orderable Item is a supply, 1 indicating a supply."
+	"resourceType": "StructureDefinition",
+	"id": "medication-supplyType",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-supplyType",
+	"name": "medication-supplyType",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field is used to indicate whether or not the Orderable Item is a supply, 1 indicating a supply.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Medication"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-supplyType"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY ORDERABLE ITEM @SUPPLY 50.7-.09"
+					}
+				]
+			}
+		]
+	}
 }

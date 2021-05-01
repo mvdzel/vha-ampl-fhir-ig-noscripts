@@ -1,100 +1,104 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Appointment.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Appointment.participant.actor",
-        "label": "CLINIC",
-        "short": "apointment info",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @CLINIC 2.98-.01p"
-          }
-        ],
-        "definition": "<blank>"
-      },
-      {
-        "path": "Appointment.status",
-        "label": "STATUS",
-        "short": "apointment info",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @STATUS 2.98-3"
-          }
-        ],
-        "definition": "This field contains the current status of the patient's appointment. If the field is blank, it means the appointment has not been no-showed or cancelled and the patient was not an inpatient at the time of the\r\nappointment. This field is set automatically by the scheduling module and must NOT be edited."
-      },
-      {
-        "path": "Appointment.created",
-        "label": "DATE APPT. MADE",
-        "short": "apointment info",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @DATE APPT. MADE  2.98-20"
-          }
-        ],
-        "definition": "This field contains the date the appointment was entered into sheduling system. This field is creatd automatically by the scheduling module and should not be edited."
-      },
-      {
-        "path": "Appointment.extension",
-        "sliceName": "appointmentStatusDetail",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/appointmentStatusDetail"
-          }
-        ],
-        "label": "STATUS",
-        "short": "apointment info",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @STATUS 2.98-3e"
-          }
-        ],
-        "definition": "This field contains the current status of the patient's appointment. If the field is blank, it means the appointment has not been no-showed or cancelled and the patient was not an inpatient at the time of the\r\nappointment. This field is set automatically by the scheduling module and must NOT be edited."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAPatientAppointment",
-  "id": "VAPatientAppointment",
-  "type": "Appointment",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientAppointment",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAPatientAppointment",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientAppointment",
+	"name": "VAPatientAppointment",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Appointment",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Appointment.extension:appointmentStatusDetail",
+				"path": "Appointment.extension",
+				"sliceName": "appointmentStatusDetail",
+				"label": "STATUS",
+				"short": "apointment info",
+				"definition": "This field contains the current status of the patient's appointment. If the field is blank, it means the appointment has not been no-showed or cancelled and the patient was not an inpatient at the time of the\r\nappointment. This field is set automatically by the scheduling module and must NOT be edited.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/appointmentStatusDetail"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @STATUS 2.98-3e"
+					}
+				]
+			},
+			{
+				"path": "Appointment.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Appointment.status",
+				"path": "Appointment.status",
+				"label": "STATUS",
+				"short": "apointment info",
+				"definition": "This field contains the current status of the patient's appointment. If the field is blank, it means the appointment has not been no-showed or cancelled and the patient was not an inpatient at the time of the\r\nappointment. This field is set automatically by the scheduling module and must NOT be edited.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @STATUS 2.98-3"
+					}
+				]
+			},
+			{
+				"id": "Appointment.created",
+				"path": "Appointment.created",
+				"label": "DATE APPT. MADE",
+				"short": "apointment info",
+				"definition": "This field contains the date the appointment was entered into sheduling system. This field is creatd automatically by the scheduling module and should not be edited.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @DATE APPT. MADE  2.98-20"
+					}
+				]
+			},
+			{
+				"id": "Appointment.participant.actor",
+				"path": "Appointment.participant.actor",
+				"label": "CLINIC",
+				"short": "apointment info",
+				"definition": "<blank>",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @CLINIC 2.98-.01p"
+					}
+				]
+			}
+		]
+	}
 }

@@ -1,342 +1,359 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "ReferralRequest.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "ReferralRequest.recipient.display",
-        "label": "ATTENTION",
-        "short": "Attention",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @TO SERVICE 123-1"
-          },
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @ATTENTION 123-7"
-          }
-        ],
-        "definition": "Enter the name of a person you would like to alert about the consult. This person will be sent a notification that a new consult exists. In order for the person to see this type of notification, the person must be set up to receive \"New service consult\" notifications."
-      },
-      {
-        "path": "ReferralRequest.requester.onBehalfOf",
-        "mustSupport": true,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralOrganization"
-          }
-        ],
-        "label": "FROM",
-        "short": "From Service",
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @FROM 123-2"
-          }
-        ],
-        "definition": "This field represents the location that sent the order to the receiving  location."
-      },
-      {
-        "path": "ReferralRequest.serviceRequested.coding.code",
-        "label": "NAME",
-        "short": "Clinical procedure",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @PROCEDURE/REQUEST TYPE 123-4"
-          },
-          {
-            "identity": "vista",
-            "map": "CP DEFINITION FILE @NAME 123-1.01:702.01-.01"
-          }
-        ],
-        "definition": "This is the procedure that was requested via CPRS while ordering."
-      },
-      {
-        "path": "ReferralRequest.type.coding.code",
-        "label": "REQUEST TYPE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "undefined @REQUEST TYPE 123-13"
-          }
-        ],
-        "definition": "This field will indicate whether the order is a consult or procedure request order.  Based on this fields value, the Consultation Body Header alters to indicate \"Consult Type: \" or \"Procedure Request: \"."
-      },
-      {
-        "path": "ReferralRequest.context",
-        "mustSupport": true,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralEncounter"
-          }
-        ],
-        "label": "PATIENT LOCATION",
-        "short": "Patient Location",
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @PATIENT LOCATION 123-.04"
-          }
-        ],
-        "definition": "This is the location of the patient when the consult/request order was placed."
-      },
-      {
-        "path": "ReferralRequest.requester.agent.display",
-        "label": "SENDING PROVIDER",
-        "short": "Requesting Provider",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @SENDING PROVIDER  123-10"
-          }
-        ],
-        "definition": "This is the provider who originated the order."
-      },
-      {
-        "path": "ReferralRequest.priority",
-        "label": "URGENCY",
-        "short": "Urgency",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @URGENCY 123-5"
-          }
-        ],
-        "definition": "This field describes the urgency of the consult. Urgencies are sent in the PROTOCOL File (#101) as: STAT, EMERGENCY, INPATIENT, NEXT AVAILABLE, NOW, ROUTINE, TODAY, WITHIN 24 HOURS, WITHIN 48 HOURS, WITHIN 72 HOURS, WITHIN 1 WEEK, WITHIN 1 MONTH."
-      },
-      {
-        "path": "ReferralRequest.occurrenceDateTime",
-        "label": "CLINICALLY INDICATED DATE",
-        "short": "Clinically indicate date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @CLINICALLY INDICATED DATE 123-17"
-          }
-        ]
-      },
-      {
-        "path": "ReferralRequest.authoredOn",
-        "label": "DATE OF REQUEST",
-        "short": "Date/Time",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @DATE OF REQUEST 123-3"
-          }
-        ],
-        "definition": "This is the date and time the order was released from OE/RR. If the TO service entered the order stub through the Add Order (AD) action, this is the service-specified request date."
-      },
-      {
-        "path": "ReferralRequest.extension",
-        "sliceName": "servicerequest-encounterType",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-encounterType"
-          }
-        ],
-        "label": "SERVICE RENDERED AS IN OR OUT",
-        "short": "Patient will be seen as IP or OP",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @SERVICE RENDERED AS IN OR OUT 123-14"
-          }
-        ],
-        "definition": "This field allows the ordering person to indicate if the service is to be rendered on an outpatient or inpatient basis.  This is to alleviate the confusion if patient is currently an inpatient/outpatient but is just about to be discharged/admitted and become a outpatient/inpatient."
-      },
-      {
-        "path": "ReferralRequest.reasonCode.text",
-        "label": "REASON FOR REQUEST",
-        "short": "Reason for Request",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @PROVISIONAL DIAGNOSIS 123-30"
-          },
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @REASON FOR REQUEST 123.01-20"
-          }
-        ],
-        "definition": "This is the Provisional Diagnosis the ordering clinician would specify on the Consult Form 513."
-      },
-      {
-        "path": "ReferralRequest.reasonCode.coding.code",
-        "label": "PROVISIONAL DIAGNOSIS COD",
-        "short": "Provisional Diagnosis",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @PROVISIONAL DIAGNOSIS COD 123-30.1"
-          }
-        ],
-        "definition": "This field is used to store the coded portion of the Provisional Diagnosis if a coded diagnosis is sent via CPRS."
-      },
-      {
-        "path": "ReferralRequest.reasonCode.extension",
-        "sliceName": "diagnosisDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/diagnosisDate"
-          }
-        ],
-        "label": "PROVISIONAL DIAGNOSIS DATE",
-        "short": "Provisional Diagnosis",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @PROVISIONAL DIAGNOSIS DATE 123-30.2"
-          }
-        ],
-        "definition": "This is the date of the provisional diagnosis and will contain a value if the request is filed with a coded diagnosis.  This field is used internally to help identify if a given code is active."
-      },
-      {
-        "path": "ReferralRequest.reasonCode.coding.system",
-        "label": "PROVISIONAL DIAGNOSIS SYSTEM",
-        "short": "Provisional Diagnosis",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @PROVISIONAL DIAGNOSIS SYSTEM 123-30.3"
-          }
-        ],
-        "definition": "This is the 3-character Source Abbreviation (SAB) for the coding system  to which a given diagnosis code belongs.  This field will only contain a  value when a given service is configured to receive a coded diagnosis.   This field is used internally to check if a given code is active.  For example, ICD is stored if the coding system is ICD-9. 10D is stored if the coding system is ICD-10."
-      },
-      {
-        "path": "ReferralRequest.status",
-        "label": "CPRS STATUS",
-        "short": "Status",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @CPRS STATUS 123-8"
-          }
-        ],
-        "definition": "This is the current CPRS status of the consult or request order. The Action Types which may be taken from the \"Select Action: \" prompt update the status in this file as well as in the Orders File (100)."
-      },
-      {
-        "path": "ReferralRequest.extension",
-        "sliceName": "lastAction",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/lastAction"
-          }
-        ],
-        "label": "LAST ACTION TAKEN",
-        "short": "Last Action",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @LAST ACTION TAKEN 123-9"
-          }
-        ],
-        "definition": "This is the last Action Type taken that updated the activity tracking audit trail."
-      },
-      {
-        "path": "ReferralRequest.extension",
-        "sliceName": "referralrequest-significantFindings",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-significantFindings"
-          }
-        ],
-        "label": "SIGNIFICANT FINDING",
-        "short": "Significant Findings",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @SIGNIFICANT FINDING 123-15"
-          }
-        ],
-        "definition": "If significant findings are noted in the consult results, then this field may be marked \"Yes\", and appropriate comments may be entered in the \"Comment\" field. \"Unknown\" is the default. \"No\" may also be specified to indicate the results do not include significant findings."
-      },
-      {
-        "path": "ReferralRequest.serviceRequested",
-        "label": "ORDRABLE ITEM",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ORDERABLE ITEMS  @ORDRABLE ITEM  101.43-.01"
-          }
-        ],
-        "definition": "This is the name of this item that will be used for displaying and searching."
-      },
-      {
-        "path": "ReferralRequest.extension",
-        "sliceName": "servicerequest-vaStatus",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-vaStatus"
-          }
-        ],
-        "label": "CPRS STATUS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @CPRS STATUS 123-8b"
-          }
-        ]
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAReferral",
-  "id": "VAReferral",
-  "type": "ReferralRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ReferralRequest",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferral",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAReferral",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferral",
+	"name": "VAReferral",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "ReferralRequest",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/ReferralRequest",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "ReferralRequest.extension:servicerequest-vaStatus",
+				"path": "ReferralRequest.extension",
+				"sliceName": "servicerequest-vaStatus",
+				"label": "CPRS STATUS",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-vaStatus"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @CPRS STATUS 123-8b"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.extension:referralrequest-significantFindings",
+				"path": "ReferralRequest.extension",
+				"sliceName": "referralrequest-significantFindings",
+				"label": "SIGNIFICANT FINDING",
+				"short": "Significant Findings",
+				"definition": "If significant findings are noted in the consult results, then this field may be marked \"Yes\", and appropriate comments may be entered in the \"Comment\" field. \"Unknown\" is the default. \"No\" may also be specified to indicate the results do not include significant findings.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-significantFindings"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @SIGNIFICANT FINDING 123-15"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.extension:lastAction",
+				"path": "ReferralRequest.extension",
+				"sliceName": "lastAction",
+				"label": "LAST ACTION TAKEN",
+				"short": "Last Action",
+				"definition": "This is the last Action Type taken that updated the activity tracking audit trail.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/lastAction"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @LAST ACTION TAKEN 123-9"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.extension:servicerequest-encounterType",
+				"path": "ReferralRequest.extension",
+				"sliceName": "servicerequest-encounterType",
+				"label": "SERVICE RENDERED AS IN OR OUT",
+				"short": "Patient will be seen as IP or OP",
+				"definition": "This field allows the ordering person to indicate if the service is to be rendered on an outpatient or inpatient basis.  This is to alleviate the confusion if patient is currently an inpatient/outpatient but is just about to be discharged/admitted and become a outpatient/inpatient.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-encounterType"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @SERVICE RENDERED AS IN OR OUT 123-14"
+					}
+				]
+			},
+			{
+				"path": "ReferralRequest.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "ReferralRequest.status",
+				"path": "ReferralRequest.status",
+				"label": "CPRS STATUS",
+				"short": "Status",
+				"definition": "This is the current CPRS status of the consult or request order. The Action Types which may be taken from the \"Select Action: \" prompt update the status in this file as well as in the Orders File (100).",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @CPRS STATUS 123-8"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.type.coding.code",
+				"path": "ReferralRequest.type.coding.code",
+				"label": "REQUEST TYPE",
+				"definition": "This field will indicate whether the order is a consult or procedure request order.  Based on this fields value, the Consultation Body Header alters to indicate \"Consult Type: \" or \"Procedure Request: \".",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "undefined @REQUEST TYPE 123-13"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.priority",
+				"path": "ReferralRequest.priority",
+				"label": "URGENCY",
+				"short": "Urgency",
+				"definition": "This field describes the urgency of the consult. Urgencies are sent in the PROTOCOL File (#101) as: STAT, EMERGENCY, INPATIENT, NEXT AVAILABLE, NOW, ROUTINE, TODAY, WITHIN 24 HOURS, WITHIN 48 HOURS, WITHIN 72 HOURS, WITHIN 1 WEEK, WITHIN 1 MONTH.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @URGENCY 123-5"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.serviceRequested",
+				"path": "ReferralRequest.serviceRequested",
+				"label": "ORDRABLE ITEM",
+				"definition": "This is the name of this item that will be used for displaying and searching.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ORDERABLE ITEMS  @ORDRABLE ITEM  101.43-.01"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.serviceRequested.coding.code",
+				"path": "ReferralRequest.serviceRequested.coding.code",
+				"label": "NAME",
+				"short": "Clinical procedure",
+				"definition": "This is the procedure that was requested via CPRS while ordering.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @PROCEDURE/REQUEST TYPE 123-4"
+					},
+					{
+						"identity": "vista",
+						"map": "CP DEFINITION FILE @NAME 123-1.01:702.01-.01"
+					}
+				]
+			},
+			{
+				"path": "ReferralRequest.context",
+				"label": "PATIENT LOCATION",
+				"short": "Patient Location",
+				"definition": "This is the location of the patient when the consult/request order was placed.",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralEncounter"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @PATIENT LOCATION 123-.04"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.occurrenceDateTime",
+				"path": "ReferralRequest.occurrenceDateTime",
+				"label": "CLINICALLY INDICATED DATE",
+				"short": "Clinically indicate date",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @CLINICALLY INDICATED DATE 123-17"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.authoredOn",
+				"path": "ReferralRequest.authoredOn",
+				"label": "DATE OF REQUEST",
+				"short": "Date/Time",
+				"definition": "This is the date and time the order was released from OE/RR. If the TO service entered the order stub through the Add Order (AD) action, this is the service-specified request date.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @DATE OF REQUEST 123-3"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.requester.agent.display",
+				"path": "ReferralRequest.requester.agent.display",
+				"label": "SENDING PROVIDER",
+				"short": "Requesting Provider",
+				"definition": "This is the provider who originated the order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @SENDING PROVIDER  123-10"
+					}
+				]
+			},
+			{
+				"path": "ReferralRequest.requester.onBehalfOf",
+				"label": "FROM",
+				"short": "From Service",
+				"definition": "This field represents the location that sent the order to the receiving  location.",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralOrganization"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @FROM 123-2"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.recipient.display",
+				"path": "ReferralRequest.recipient.display",
+				"label": "ATTENTION",
+				"short": "Attention",
+				"definition": "Enter the name of a person you would like to alert about the consult. This person will be sent a notification that a new consult exists. In order for the person to see this type of notification, the person must be set up to receive \"New service consult\" notifications.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @TO SERVICE 123-1"
+					},
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @ATTENTION 123-7"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.reasonCode.extension:diagnosisDate",
+				"path": "ReferralRequest.reasonCode.extension",
+				"sliceName": "diagnosisDate",
+				"label": "PROVISIONAL DIAGNOSIS DATE",
+				"short": "Provisional Diagnosis",
+				"definition": "This is the date of the provisional diagnosis and will contain a value if the request is filed with a coded diagnosis.  This field is used internally to help identify if a given code is active.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/diagnosisDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @PROVISIONAL DIAGNOSIS DATE 123-30.2"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.reasonCode.coding.system",
+				"path": "ReferralRequest.reasonCode.coding.system",
+				"label": "PROVISIONAL DIAGNOSIS SYSTEM",
+				"short": "Provisional Diagnosis",
+				"definition": "This is the 3-character Source Abbreviation (SAB) for the coding system  to which a given diagnosis code belongs.  This field will only contain a  value when a given service is configured to receive a coded diagnosis.   This field is used internally to check if a given code is active.  For example, ICD is stored if the coding system is ICD-9. 10D is stored if the coding system is ICD-10.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @PROVISIONAL DIAGNOSIS SYSTEM 123-30.3"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.reasonCode.coding.code",
+				"path": "ReferralRequest.reasonCode.coding.code",
+				"label": "PROVISIONAL DIAGNOSIS COD",
+				"short": "Provisional Diagnosis",
+				"definition": "This field is used to store the coded portion of the Provisional Diagnosis if a coded diagnosis is sent via CPRS.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @PROVISIONAL DIAGNOSIS COD 123-30.1"
+					}
+				]
+			},
+			{
+				"id": "ReferralRequest.reasonCode.text",
+				"path": "ReferralRequest.reasonCode.text",
+				"label": "REASON FOR REQUEST",
+				"short": "Reason for Request",
+				"definition": "This is the Provisional Diagnosis the ordering clinician would specify on the Consult Form 513.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @PROVISIONAL DIAGNOSIS 123-30"
+					},
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @REASON FOR REQUEST 123.01-20"
+					}
+				]
+			}
+		]
+	}
 }

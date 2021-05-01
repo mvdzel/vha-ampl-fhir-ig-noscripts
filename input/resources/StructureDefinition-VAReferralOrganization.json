@@ -1,72 +1,73 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Organization.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Organization.partOf",
-        "mustSupport": true,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralOrganization2"
-          }
-        ],
-        "label": "ORDERING FACILITY",
-        "short": "Ordering Facility",
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @ORDERING FACILITY 123-.05"
-          }
-        ],
-        "definition": "This field contains the number, from file 4, of the institution/hospital that is requesting the consult.  This field is mandatory if the consult/ request is being sent to another hospital/institution, so that routing information can be obtained in order to return the results to the sending hospital/institution."
-      },
-      {
-        "path": "Organization.name",
-        "label": "FROM",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @FROM 123-2b"
-          }
-        ],
-        "definition": "This field represents the location that sent the order to the receiving  location."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAReferralOrganization",
-  "id": "VAReferralOrganization",
-  "type": "Organization",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralOrganization",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAReferralOrganization",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralOrganization",
+	"name": "VAReferralOrganization",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Organization",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Organization.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Organization.name",
+				"path": "Organization.name",
+				"label": "FROM",
+				"definition": "This field represents the location that sent the order to the receiving  location.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @FROM 123-2b"
+					}
+				]
+			},
+			{
+				"path": "Organization.partOf",
+				"label": "ORDERING FACILITY",
+				"short": "Ordering Facility",
+				"definition": "This field contains the number, from file 4, of the institution/hospital that is requesting the consult.  This field is mandatory if the consult/ request is being sent to another hospital/institution, so that routing information can be obtained in order to return the results to the sending hospital/institution.",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralOrganization2"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @ORDERING FACILITY 123-.05"
+					}
+				]
+			}
+		]
+	}
 }

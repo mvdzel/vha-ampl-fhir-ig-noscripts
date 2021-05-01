@@ -1,93 +1,96 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.activity.code",
-        "fixedCode": "verify",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "VERIFICATION DATE/TIME",
-        "short": "Verification date/time",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @VERIFICATION DATE/TIME 120.8-20"
-          }
-        ],
-        "definition": "The date/time this allergy/adverse reaction has been verified."
-      },
-      {
-        "path": "Provenance.agent.whoReference",
-        "label": "VERIFIER",
-        "short": "Verifier",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @VERIFIER 120.8-21"
-          }
-        ],
-        "definition": "The verifier of the allergy/adverse reaction."
-      },
-      {
-        "path": "Provenance.agent.whoReference.extension",
-        "sliceName": "signatureBlockTitle",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockTitle"
-          }
-        ],
-        "label": "SIGNATURE BLOCK TITLE",
-        "short": "Verifier title",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NEW PERSON @SIGNATURE BLOCK TITLE 120.8-21:200-20.3"
-          }
-        ],
-        "definition": "The verifier of the allergy/adverse reaction."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAAllergyIntoleranceVerification",
-  "id": "VAAllergyIntoleranceVerification",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceVerification",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource",
-  "description": "Provenance of the AllergyIntolerance verification."
+	"resourceType": "StructureDefinition",
+	"id": "VAAllergyIntoleranceVerification",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceVerification",
+	"name": "VAAllergyIntoleranceVerification",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "Provenance of the AllergyIntolerance verification.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "VERIFICATION DATE/TIME",
+				"short": "Verification date/time",
+				"definition": "The date/time this allergy/adverse reaction has been verified.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @VERIFICATION DATE/TIME 120.8-20"
+					}
+				]
+			},
+			{
+				"path": "Provenance.activity.code",
+				"fixedCode": "verify",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "VERIFIER",
+				"short": "Verifier",
+				"definition": "The verifier of the allergy/adverse reaction.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @VERIFIER 120.8-21"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference.extension:signatureBlockTitle",
+				"path": "Provenance.agent.whoReference.extension",
+				"sliceName": "signatureBlockTitle",
+				"label": "SIGNATURE BLOCK TITLE",
+				"short": "Verifier title",
+				"definition": "The verifier of the allergy/adverse reaction.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockTitle"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NEW PERSON @SIGNATURE BLOCK TITLE 120.8-21:200-20.3"
+					}
+				]
+			}
+		]
+	}
 }

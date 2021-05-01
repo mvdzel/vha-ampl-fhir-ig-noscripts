@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "richAnnotation.annotation.author",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author",
-  "name": "richAnnotation.annotation.author",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "AllergyIntolerance"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @USER ENTERING 120.826-1"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field tracks the user who entered this comment.  The field is automatically stuffed when that user enters a comment."
+	"resourceType": "StructureDefinition",
+	"id": "richAnnotation.annotation.author",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author",
+	"name": "richAnnotation.annotation.author",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field tracks the user who entered this comment.  The field is automatically stuffed when that user enters a comment.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"AllergyIntolerance"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @USER ENTERING 120.826-1"
+					}
+				]
+			}
+		]
+	}
 }

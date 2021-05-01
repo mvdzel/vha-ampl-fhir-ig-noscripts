@@ -1,49 +1,49 @@
 {
-  "resourceType": "ValueSet",
-  "id": "pharmacy-pending-inpatient-order-status",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-inpatient-order-status",
-  "name": "pharmacy-pending-inpatient-order-status",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "compose": {
-    "include": [
-      {
-        "system": "http://va.gov/Terminology/VistaDefinedTerms/",
-        "concept": [
-          {
-            "code": "I",
-            "display": "INCOMPLETE"
-          },
-          {
-            "code": "P",
-            "display": "PENDING"
-          },
-          {
-            "code": "N",
-            "display": "NON-VERIFIED"
-          },
-          {
-            "code": "A",
-            "display": "ACTIVE"
-          },
-          {
-            "code": "DE",
-            "display": "DISCONTINUED (EDIT)"
-          },
-          {
-            "code": "DE",
-            "display": "DISCONTINUED (EDIT)"
-          },
-          {
-            "code": "D",
-            "display": "DISCONTINUED"
-          },
-          {
-            "code": "U",
-            "display": "UNRELEASED"
-          }
-        ]
-      }
-    ]
-  }
+	"resourceType": "ValueSet",
+	"id": "pharmacy-pending-inpatient-order-status",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-inpatient-order-status",
+	"name": "pharmacy-pending-inpatient-order-status",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"compose": {
+		"include": [
+			{
+				"system": "http://va.gov/Terminology/VistaDefinedTerms/",
+				"concept": [
+					{
+						"code": "I",
+						"display": "INCOMPLETE"
+					},
+					{
+						"code": "P",
+						"display": "PENDING"
+					},
+					{
+						"code": "N",
+						"display": "NON-VERIFIED"
+					},
+					{
+						"code": "A",
+						"display": "ACTIVE"
+					},
+					{
+						"code": "DE",
+						"display": "DISCONTINUED (EDIT)"
+					},
+					{
+						"code": "DE",
+						"display": "DISCONTINUED (EDIT)"
+					},
+					{
+						"code": "D",
+						"display": "DISCONTINUED"
+					},
+					{
+						"code": "U",
+						"display": "UNRELEASED"
+					}
+				]
+			}
+		]
+	}
 }

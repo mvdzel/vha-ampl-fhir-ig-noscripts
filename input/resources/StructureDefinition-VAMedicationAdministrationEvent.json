@@ -1,120 +1,125 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.agent.whoReference",
-        "label": "USER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "BCMA MEDICATION LOG @USER 53.799-.02"
-          }
-        ],
-        "definition": "Pointer to the user making the change."
-      },
-      {
-        "path": "Provenance.extension",
-        "sliceName": "comment",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment"
-          }
-        ],
-        "label": "TEXT",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "BCMA MEDICATION LOG @TEXT 53.799-.03"
-          }
-        ],
-        "definition": "Description of the change made."
-      },
-      {
-        "path": "Provenance.activity.system",
-        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.799-.04",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.activity.code",
-        "label": "ACTION STATUS LOG",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "BCMA MEDICATION LOG @ACTION STATUS LOG 53.799-.04"
-          }
-        ],
-        "definition": "Action Status that this log entry is tracking."
-      },
-      {
-        "path": "Provenance.extension",
-        "sliceName": "provenance-priorActor",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/provenance-priorActor"
-          }
-        ],
-        "label": "ACTION BY LOG",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "BCMA MEDICATION LOG @ACTION BY LOG 53.799-.05"
-          }
-        ],
-        "definition": "Pointer to the user who was listed as performing the previous action."
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "AUDIT LOG",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "AUDIT LOG @AUDIT LOG 53.799-.01"
-          }
-        ],
-        "definition": "Date/time of audit being filed."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAMedicationAdministrationEvent",
-  "id": "VAMedicationAdministrationEvent",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedicationAdministrationEvent",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAMedicationAdministrationEvent",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedicationAdministrationEvent",
+	"name": "VAMedicationAdministrationEvent",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Provenance.extension:provenance-priorActor",
+				"path": "Provenance.extension",
+				"sliceName": "provenance-priorActor",
+				"label": "ACTION BY LOG",
+				"definition": "Pointer to the user who was listed as performing the previous action.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/provenance-priorActor"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "BCMA MEDICATION LOG @ACTION BY LOG 53.799-.05"
+					}
+				]
+			},
+			{
+				"id": "Provenance.extension:comment",
+				"path": "Provenance.extension",
+				"sliceName": "comment",
+				"label": "TEXT",
+				"definition": "Description of the change made.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "BCMA MEDICATION LOG @TEXT 53.799-.03"
+					}
+				]
+			},
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "AUDIT LOG",
+				"definition": "Date/time of audit being filed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "AUDIT LOG @AUDIT LOG 53.799-.01"
+					}
+				]
+			},
+			{
+				"path": "Provenance.activity.system",
+				"fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.799-.04",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.activity.code",
+				"path": "Provenance.activity.code",
+				"label": "ACTION STATUS LOG",
+				"definition": "Action Status that this log entry is tracking.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "BCMA MEDICATION LOG @ACTION STATUS LOG 53.799-.04"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "USER",
+				"definition": "Pointer to the user making the change.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "BCMA MEDICATION LOG @USER 53.799-.02"
+					}
+				]
+			}
+		]
+	}
 }

@@ -1,65 +1,67 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Organization.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Organization.partOf",
-        "label": "DIVISION",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @DIVISION 8925-1212"
-          }
-        ],
-        "definition": "This field contains the institution associated with the document. It is  extracted from the document's hospital location if known; otherwise it is  extracted from the user's log-on division."
-      },
-      {
-        "path": "Organization.name",
-        "label": "HOSPITAL LOCATION",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @HOSPITAL LOCATION 8925-1205a"
-          }
-        ],
-        "definition": "This is the location (WARD or CLINIC) associated with the document."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAProgressNoteOrganization",
-  "id": "VAProgressNoteOrganization",
-  "type": "Organization",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteOrganization",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAProgressNoteOrganization",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteOrganization",
+	"name": "VAProgressNoteOrganization",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Organization",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Organization.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Organization.name",
+				"path": "Organization.name",
+				"label": "HOSPITAL LOCATION",
+				"definition": "This is the location (WARD or CLINIC) associated with the document.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @HOSPITAL LOCATION 8925-1205a"
+					}
+				]
+			},
+			{
+				"id": "Organization.partOf",
+				"path": "Organization.partOf",
+				"label": "DIVISION",
+				"definition": "This field contains the institution associated with the document. It is  extracted from the document's hospital location if known; otherwise it is  extracted from the user's log-on division.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @DIVISION 8925-1212"
+					}
+				]
+			}
+		]
+	}
 }

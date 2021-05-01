@@ -1,115 +1,120 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "ACTIVITY LOG",
-        "short": "ACTIVITY LOG",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @ACTIVITY LOG 52.3-.01"
-          }
-        ],
-        "definition": "Date when activity occured."
-      },
-      {
-        "path": "Provenance.reason",
-        "label": "REASON",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @REASON 52.3-.02"
-          }
-        ],
-        "definition": "What was done that caused activity to happen."
-      },
-      {
-        "path": "Provenance.agent.whoReference",
-        "label": "INITIATOR OF ACTIVITY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @INITIATOR OF ACTIVITY 52.3-.03"
-          }
-        ],
-        "definition": "The name of the person entering an activity is entered."
-      },
-      {
-        "path": "Provenance.entity.role",
-        "fixedCode": "source",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.entity.whatIdentifier.value",
-        "label": "RX REFERENCE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @RX REFERENCE 52.3-.04"
-          }
-        ],
-        "definition": "This field is used to indicate which fill the activity took place."
-      },
-      {
-        "path": "Provenance.extension",
-        "sliceName": "comment",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment"
-          }
-        ],
-        "label": "COMMENT",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @COMMENT 52.3-.05"
-          }
-        ],
-        "definition": "Any additional comments."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAFinishedOutpatientMedicationOrderChange",
-  "id": "VAFinishedOutpatientMedicationOrderChange",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationOrderChange",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource",
-  "description": "Change to VA finished outpatient medication order"
+	"resourceType": "StructureDefinition",
+	"id": "VAFinishedOutpatientMedicationOrderChange",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationOrderChange",
+	"name": "VAFinishedOutpatientMedicationOrderChange",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "Change to VA finished outpatient medication order",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Provenance.extension:comment",
+				"path": "Provenance.extension",
+				"sliceName": "comment",
+				"label": "COMMENT",
+				"definition": "Any additional comments.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @COMMENT 52.3-.05"
+					}
+				]
+			},
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "ACTIVITY LOG",
+				"short": "ACTIVITY LOG",
+				"definition": "Date when activity occured.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @ACTIVITY LOG 52.3-.01"
+					}
+				]
+			},
+			{
+				"id": "Provenance.reason",
+				"path": "Provenance.reason",
+				"label": "REASON",
+				"definition": "What was done that caused activity to happen.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @REASON 52.3-.02"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "INITIATOR OF ACTIVITY",
+				"definition": "The name of the person entering an activity is entered.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @INITIATOR OF ACTIVITY 52.3-.03"
+					}
+				]
+			},
+			{
+				"path": "Provenance.entity.role",
+				"fixedCode": "source",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.entity.whatIdentifier.value",
+				"path": "Provenance.entity.whatIdentifier.value",
+				"label": "RX REFERENCE",
+				"definition": "This field is used to indicate which fill the activity took place.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @RX REFERENCE 52.3-.04"
+					}
+				]
+			}
+		]
+	}
 }

@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "pharmacy-dosageOrdered",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered",
-  "name": "pharmacy-dosageOrdered",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NON-VERIFIED ORDERS @DOSAGE ORDERED 53.1-109"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This is the amount of the medication the patient is to receive as one dose  for this order. This should be an amount with a unit of measure, such as '500mg' or '50CC'. THIS SHOULD NOT BE THE NUMBER OF TABLETS, ETC."
+	"resourceType": "StructureDefinition",
+	"id": "pharmacy-dosageOrdered",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered",
+	"name": "pharmacy-dosageOrdered",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This is the amount of the medication the patient is to receive as one dose  for this order. This should be an amount with a unit of measure, such as '500mg' or '50CC'. THIS SHOULD NOT BE THE NUMBER OF TABLETS, ETC.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @DOSAGE ORDERED 53.1-109"
+					}
+				]
+			}
+		]
+	}
 }

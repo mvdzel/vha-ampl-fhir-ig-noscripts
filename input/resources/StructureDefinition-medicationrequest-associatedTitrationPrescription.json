@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "medicationrequest-associatedTitrationPrescription",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedTitrationPrescription",
-  "name": "medicationrequest-associatedTitrationPrescription",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedTitrationPrescription"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @TITRATION RX FLAG 52-45.3"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This flag indicates whether the prescription is being dispensed as a  Titration Dose. It is intended to identify a Titration Dose Rx without  a corresponding Maintenance Dose Rx."
+	"resourceType": "StructureDefinition",
+	"id": "medicationrequest-associatedTitrationPrescription",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedTitrationPrescription",
+	"name": "medicationrequest-associatedTitrationPrescription",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This flag indicates whether the prescription is being dispensed as a  Titration Dose. It is intended to identify a Titration Dose Rx without  a corresponding Maintenance Dose Rx.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedTitrationPrescription"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @TITRATION RX FLAG 52-45.3"
+					}
+				]
+			}
+		]
+	}
 }

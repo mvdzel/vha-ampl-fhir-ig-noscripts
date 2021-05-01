@@ -1,54 +1,56 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "medicationrequest-medicationrequestType.coding.code",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationrequestType.coding.code",
-  "name": "medicationrequest-medicationrequestType.coding.code",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationrequestType.coding.code"
-      },
-      {
-        "path": "Extension.valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @TYPE 55.06-4"
-          }
-        ],
-        "binding": {
-          "strength": "preferred",
-          "valueSetReference": {
-            "reference": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/unit-dose-medication-order-type"
-          }
-        }
-      }
-    ]
-  },
-  "description": "This identifies the type of medication ordered."
+	"resourceType": "StructureDefinition",
+	"id": "medicationrequest-medicationrequestType.coding.code",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationrequestType.coding.code",
+	"name": "medicationrequest-medicationrequestType.coding.code",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This identifies the type of medication ordered.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationrequestType.coding.code"
+			},
+			{
+				"id": "Extension.valueCodeableConcept",
+				"path": "Extension.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"binding": {
+					"strength": "preferred",
+					"valueSetReference": {
+						"reference": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/unit-dose-medication-order-type"
+					}
+				},
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @TYPE 55.06-4"
+					}
+				]
+			}
+		]
+	}
 }

@@ -1,105 +1,109 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "LAST RENEW",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Pharmacy Patient @LAST RENEW 55.1138-.01"
-          }
-        ],
-        "definition": "This is the date/time the order was renewed."
-      },
-      {
-        "path": "Provenance.agent.whoReference",
-        "label": "RENEWED BY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "LAST RENEW @RENEWED BY  55.1138-1"
-          }
-        ],
-        "definition": "This is the name of the person who renewed this order."
-      },
-      {
-        "path": "Provenance.extension",
-        "sliceName": "reference-targetElement/extension/change/extension/oldValue",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue"
-          }
-        ],
-        "label": "PREVIOUS STOP DATE/TIME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "LAST RENEW @PREVIOUS PROVIDER 55.1138-2"
-          },
-          {
-            "identity": "vista",
-            "map": "LAST RENEW @PREVIOUS STOP DATE/TIME 55.1138-3"
-          }
-        ],
-        "definition": "This is the stop date/time of the prior order."
-      },
-      {
-        "path": "Provenance.entity.role",
-        "fixedCode": "revision",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.entity.whatIdentifier.value",
-        "label": "PREVIOUS ORDERS FILE ENTRY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "LAST RENEW @PREVIOUS ORDERS FILE ENTRY 55.1138-4"
-          }
-        ],
-        "definition": "When an order is being renewed, this is the pointer value of the corresponding entry in the ORDERS file (100), prior to the renewal."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAInpatientMedicationRequestRenewal",
-  "id": "VAInpatientMedicationRequestRenewal",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientMedicationRequestRenewal",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAInpatientMedicationRequestRenewal",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientMedicationRequestRenewal",
+	"name": "VAInpatientMedicationRequestRenewal",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Provenance.extension:reference-targetElement.extension.change.extension.oldValue",
+				"path": "Provenance.extension",
+				"sliceName": "reference-targetElement-extension-change-extension-oldValue",
+				"label": "PREVIOUS STOP DATE/TIME",
+				"definition": "This is the stop date/time of the prior order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "LAST RENEW @PREVIOUS PROVIDER 55.1138-2"
+					},
+					{
+						"identity": "vista",
+						"map": "LAST RENEW @PREVIOUS STOP DATE/TIME 55.1138-3"
+					}
+				]
+			},
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "LAST RENEW",
+				"definition": "This is the date/time the order was renewed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @LAST RENEW 55.1138-.01"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "RENEWED BY",
+				"definition": "This is the name of the person who renewed this order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "LAST RENEW @RENEWED BY  55.1138-1"
+					}
+				]
+			},
+			{
+				"path": "Provenance.entity.role",
+				"fixedCode": "revision",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.entity.whatIdentifier.value",
+				"path": "Provenance.entity.whatIdentifier.value",
+				"label": "PREVIOUS ORDERS FILE ENTRY",
+				"definition": "When an order is being renewed, this is the pointer value of the corresponding entry in the ORDERS file (100), prior to the renewal.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "LAST RENEW @PREVIOUS ORDERS FILE ENTRY 55.1138-4"
+					}
+				]
+			}
+		]
+	}
 }

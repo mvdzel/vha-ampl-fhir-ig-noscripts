@@ -1,94 +1,97 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.activity.code",
-        "label": "ACTIVITY",
-        "short": "REQUEST PROCESSING ACTIVITY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @ACTIVITY 123.02-1"
-          }
-        ],
-        "definition": "This is the activity that is being updated."
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "DATE/TIME OF ACTUAL ACTIVITY",
-        "short": "REQUEST PROCESSING ACTIVITY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @DATE/TIME OF ACTUAL ACTIVITY 123.02-2"
-          }
-        ],
-        "definition": "The Date and time the actual activity was done.  This may be different  than the DATE/TIME OF ACTION ENTRY for certain actions."
-      },
-      {
-        "path": "Provenance.agent.role.coding.code",
-        "fixedCode": "aut",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.agent.role.coding.system",
-        "fixedUri": "http://hl7.org/fhir/v3/ParticipationType",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.agent.whoReference",
-        "label": "WHO ENTERED ACTIVITY",
-        "short": "REQUEST PROCESSING ACTIVITY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @WHO'S RESPONSIBLE FOR ACTIVITY 123.02-3"
-          },
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @WHO ENTERED ACTIVITY 123.02-4"
-          }
-        ],
-        "definition": "The clinician or service person responsible for the activity."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAReferralProvenance",
-  "id": "VAReferralProvenance",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralProvenance",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAReferralProvenance",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralProvenance",
+	"name": "VAReferralProvenance",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "DATE/TIME OF ACTUAL ACTIVITY",
+				"short": "REQUEST PROCESSING ACTIVITY",
+				"definition": "The Date and time the actual activity was done.  This may be different  than the DATE/TIME OF ACTION ENTRY for certain actions.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @DATE/TIME OF ACTUAL ACTIVITY 123.02-2"
+					}
+				]
+			},
+			{
+				"id": "Provenance.activity.code",
+				"path": "Provenance.activity.code",
+				"label": "ACTIVITY",
+				"short": "REQUEST PROCESSING ACTIVITY",
+				"definition": "This is the activity that is being updated.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @ACTIVITY 123.02-1"
+					}
+				]
+			},
+			{
+				"path": "Provenance.agent.role.coding.system",
+				"fixedUri": "http://hl7.org/fhir/v3/ParticipationType",
+				"mustSupport": true
+			},
+			{
+				"path": "Provenance.agent.role.coding.code",
+				"fixedCode": "aut",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "WHO ENTERED ACTIVITY",
+				"short": "REQUEST PROCESSING ACTIVITY",
+				"definition": "The clinician or service person responsible for the activity.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @WHO'S RESPONSIBLE FOR ACTIVITY 123.02-3"
+					},
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @WHO ENTERED ACTIVITY 123.02-4"
+					}
+				]
+			}
+		]
+	}
 }

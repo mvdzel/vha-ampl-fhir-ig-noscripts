@@ -1,657 +1,696 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "MedicationRequest.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "MedicationRequest.subject",
-        "label": "PATIENT",
-        "short": "PATIENT",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @PATIENT 55-.01ud"
-          }
-        ],
-        "definition": "This is the name of a patient that has some type of pharmacy order."
-      },
-      {
-        "path": "MedicationRequest.identifier.system",
-        "fixedUri": "va.gov/identifiers/orders/55.06",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.identifier.value",
-        "label": "ORDERS FILE ENTRY",
-        "short": "ORDERS FILE ENTRY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ORDER NUMBER 55.06-.01"
-          },
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ORIGINAL ORDER NUMBER 55.06-.25"
-          },
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ORDERS FILE ENTRY 55.06-66"
-          }
-        ],
-        "definition": "This is the pointer value of the corresponding entry in the ORDERS file (100) when the order is entered into OE/RR."
-      },
-      {
-        "path": "MedicationRequest.requester.agent",
-        "label": "PROVIDER",
-        "short": "Provider",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @PROVIDER 55.06-1"
-          }
-        ],
-        "definition": "This is the prescribing physician's name."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.route.coding.system",
-        "fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1-3",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.route.coding.code",
-        "label": "MED ROUTE",
-        "short": "Route",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @MED ROUTE 55.06-3"
-          }
-        ],
-        "definition": "This is the route of administration for this medication. If a  corresponding abbreviation is found for this route in the MEDICATION  ROUTES file, that abbreviation is printed on the various reports in this  package."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-medicationrequestType/coding/code",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationrequestType.coding.code"
-          }
-        ],
-        "label": "TYPE",
-        "short": "Type",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @TYPE 55.06-4"
-          }
-        ],
-        "definition": "This identifies the type of medication ordered."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "pharmacy-patientSelfMedication/extension/selfAdminister",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.selfAdminister"
-          }
-        ],
-        "label": "SELF MED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @SELF MED 55.06-5"
-          }
-        ],
-        "definition": "This should contain a `1' or (`YES') if this medication is to be administered by the patient to himself."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "pharmacy-patientSelfMedication/extension/hospitalSupply",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.hospitalSupply"
-          }
-        ],
-        "label": "HOSPITAL SUPPLIED SELF MED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @HOSPITAL SUPPLIED SELF MED 55.06-6"
-          }
-        ],
-        "definition": "This should contain a `1' (or `YES') if this medication is to be a `SELF MED' and this site's pharmacy is to supply the medication.  This is only asked if the user enters `YES' (or `1') to the SELF MED prompt. If the SELF MED prompt is ever edited to show `NO' (or `0'), this field is automatically deleted."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-medicationScheduleType",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationScheduleType"
-          }
-        ],
-        "label": "SCHEDULE TYPE",
-        "short": "Schedule Type",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @SCHEDULE TYPE 55.06-7"
-          }
-        ],
-        "definition": "This describes the type of schedule for the dispensing of the medication(s) that make up the order.   PRE-OP orders are usually considered to be ON-CALL orders, and orders dispensed as MUTLI-DOSE CONTAINERS are usually considered to be FILL ON REQUEST orders."
-      },
-      {
-        "path": "MedicationRequest.status",
-        "label": "pat-medRequest",
-        "short": "Status",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @pat-medRequest 55.06-28"
-          }
-        ],
-        "definition": "This is the status of the order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-orderDraftDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderDraftDate"
-          }
-        ],
-        "label": "ORDER DATE",
-        "short": "Order Date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ORDER DATE 55.06-27"
-          }
-        ],
-        "definition": "This is the date the order was entered into the computer.  The package enters this date automatically when the order is transcribed."
-      },
-      {
-        "path": "MedicationRequest.authoredOn",
-        "label": "LOG-IN DATE",
-        "short": "Logged Date",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @LOG-IN DATE  55.06-27.1"
-          }
-        ],
-        "definition": "This is the date (to the second) the order was entered."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-lastLocationOfPatient",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastLocationOfPatient"
-          }
-        ],
-        "label": "LAST WARD",
-        "short": "Last Ward",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @LAST WARD 55.06-68"
-          }
-        ],
-        "definition": "This is the last ward the patient was located when the order expired or was discontinued.  This is automatically updated by the Unit Dose package when the package finds that the patient is first admitted or when the patient is found to have been transferred.  This allows any returns that are entered to be credited to the correct ward."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-orderCreationMode",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderCreationMode"
-          }
-        ],
-        "label": "REASON ORDER CREATED",
-        "short": "Reason Order Created",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @REASON ORDER CREATED  55.06-103"
-          }
-        ],
-        "definition": "This is used to show the method used to create this order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "extension-MedicationRequest/statusReason",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason"
-          }
-        ],
-        "label": "DISPLAY STATUS",
-        "short": "Display Status",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DISPLAY STATUS 55.06-136"
-          }
-        ],
-        "definition": "This field captures how a \"Discontinued\" action occurred and this code is  displayed on the short patient profile if the Stop Date/Time is within the time specified in the Inpatient Ward Parameter file (#59.6) or the Pharmacy System file (#59.7). The \"HP\" is to display on the profile if the order was placed on hold by provider through CPRS."
-      },
-      {
-        "path": "MedicationRequest.medicationCodeableConcept.coding.code",
-        "label": "DISPENSE DRUG",
-        "short": "Dispense Drug",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ORDERABLE ITEM 55.06-108"
-          },
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DISPENSE DRUG 55.07-.01"
-          }
-        ],
-        "definition": "This is a medication that will actually be dispensed by pharmacy for this order.  Each dispense drug of an order must be tied to the primary drug of the order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "pharmacy-dosageOrdered",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered"
-          }
-        ],
-        "label": "DOSAGE ORDERED",
-        "short": "Dosage Ordered",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DOSAGE ORDERED 55.06-109"
-          }
-        ],
-        "definition": "This is the amount of the medication the patient is to receive as one dose  for this order. This should be an amount with a unit of measure, such as  '500MG' or '50cc'. THIS SHOULD NOT BE THE NUMBER OF TABLETS, ETC."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-orderPlacementChannel",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderPlacementChannel"
-          }
-        ],
-        "label": "NATURE OF ORDER",
-        "short": "Nature of Orer",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @NATURE OF ORDER 55.06-110"
-          }
-        ],
-        "definition": "This is the method the provider used to communicate to the user to enter (or take any other action) on the order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-extendedPriority",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-extendedPriority"
-          }
-        ],
-        "label": "PRIORITY",
-        "short": "Priority",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @PRIORITY 55.06-.24"
-          },
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @PRIORITY 55.06-.24b"
-          }
-        ],
-        "definition": "This field contains the priority of the order that was received from OERR."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.doseQuantity.value",
-        "label": "DOSE",
-        "short": "Dose",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @DOSE   55.06-120"
-          }
-        ],
-        "definition": "This is the numeric dosage for the order.  It will be combined with the UNIT field to show the dosage ordered.  For a dosage of 325MG, 325 would be stored here."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.doseQuantity.unit",
-        "label": "UNIT",
-        "short": "Unit",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @UNIT    55.06-121"
-          }
-        ],
-        "definition": "This is the field which contains the unit for the numeric dosage.  The combination of these two fields gives you the dosage ordered for this order.  For the doasge 325MG, MG would be stored here."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-flaggedForClarification",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-flaggedForClarification"
-          }
-        ],
-        "label": "FLAGGED",
-        "short": "Flagged",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @FLAGGED 55.06-124"
-          }
-        ],
-        "definition": "This indicates that this order has been flagged for clarification."
-      },
-      {
-        "path": "MedicationRequest.basedOn",
-        "label": "ORDERS FILE PARENT ORDER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ORDERS FILE PARENT ORDER 55.06-125"
-          }
-        ],
-        "definition": "This is the parent of an order that may have a parent/child relationship  in CPRS."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.text",
-        "label": "INSTRUCTIONS",
-        "short": "Instructions",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @INSTRUCTIONS 55.06-111"
-          }
-        ],
-        "definition": "<blank>"
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.doseQuantity",
-        "label": "UNITS PER DOSE",
-        "short": "Units per Dose",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @UNITS PER DOSE 55.07-.02"
-          }
-        ],
-        "definition": "This is the number of UNITS (tablets, capsules, etc.) to be dispensed as a DOSE for this order.  The literals '1/2' and '1/4' may be entered.  If there is no entry, it is assumed to be ONE (1).                          ** PLEASE NOTE **   If a doctor prescribes 30 ml's of a medication that is usually dispensed and administered as 60 ml's, the correct UNITS PER DOSE would be 1/2 (or .5), NOT 30 ml's.  (30 ml's would be entered into the DOSAGE ORDERED field.)   If the UNITS PER DOSE ordered is a variable amount (1-2 tab.), it is suggested that the maximum amount be entered into this field and the amount ordered noted either in the DOSAGE ORDERED or SPECIAL INSTRUCTIONS fields."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod"
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
-        "label": "INACTIVE DATE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @INACTIVE DATE 55.07-.03"
-          }
-        ],
-        "definition": "This is the date that this dispense drug will no longer be dispensed for this order.  Once an order becomes active, dispense drugs cannot be deleted."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "extension/valueAnnotation/comment/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.comment.text"
-          }
-        ],
-        "label": "SPECIAL INSTRUCTIONS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @SPECIAL INSTRUCTIONS 55.06-8"
-          }
-        ],
-        "definition": "This is any special instructions (using abbreviations whenever possible) needed for this order.  This would include the physician's reason for ordering a PRN.  This field utilizes the abbreviations and expansions from the MEDICATION INSTRUCTIONS file."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.code.text",
-        "label": "FREQUENCY (IN MINUTES)",
-        "short": "Frequency",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @SCHEDULE     55.06-26"
-          },
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @FREQUENCY (IN MINUTES) 55.06-42"
-          }
-        ],
-        "definition": "This is either a code or the number of minutes between the times the medication is to be administered."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.extension",
-        "sliceName": "timeOfDay",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/timeOfDay"
-          }
-        ],
-        "label": "ADMIN TIMES",
-        "short": "Admin Times",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @ADMIN TIMES 55.06-41"
-          }
-        ],
-        "definition": "This is the times of the day the medication is to be administered.  This package initially assigns a default set of ADMIN TIMES when a STANDARD SCHEDULE is entered into the SCHEDULE prompt."
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.periodUnit",
-        "fixedCode": "min",
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.frequency",
-        "fixedInteger": 1,
-        "mustSupport": true
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "richAnnotation/comment/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
-          }
-        ],
-        "label": "SPECIAL INSTRUCTIONS (LONG)",
-        "short": "Comments",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @COMMENTS 55.06-15"
-          },
-          {
-            "identity": "vista",
-            "map": "undefined @SPECIAL INSTRUCTIONS (LONG) 55.06-135"
-          }
-        ],
-        "definition": "<blank>"
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-pharmacistVerified",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacistVerified"
-          }
-        ],
-        "label": "PV FLAG",
-        "short": "PV Flag",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @PV FLAG 55.06-50"
-          }
-        ],
-        "definition": "This is an internal flag set whenever a pharmacist verifies the order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-nurseVerified",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-nurseVerified"
-          }
-        ],
-        "label": "NV FLAG",
-        "short": "NV Flag",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @NV FLAG 55.06-51"
-          }
-        ],
-        "definition": "This is an internal flag set whenever a nurse verifies the order."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "extension/valueAnnotation/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.text"
-          }
-        ],
-        "label": "PROVIDER COMMENTS",
-        "short": "Provider Comments",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @PROVIDER COMMENTS  55.06-72"
-          }
-        ],
-        "definition": "This is any instructions or comments entered by the provider for this order."
-      },
-      {
-        "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
-        "label": "REQUESTED DURATION",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @REQUESTED DURATION 55.06-126"
-          }
-        ],
-        "definition": "The duration of an order as requested by the ordering clinician in CPRS. The duration is stored as one of the following upper case letters followed by an integer:    L - Months  W - Weeks  D - Days  H - Hours  M - Minutes  S - Seconds   Example: D6 = Six days."
-      },
-      {
-        "path": "MedicationRequest.extension",
-        "sliceName": "medicationrequest-pharmacyOrderStatus",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"
-          }
-        ],
-        "label": "STATUS",
-        "short": "Status",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY PATIENT FILE @STATUS 55.06-28b"
-          }
-        ],
-        "definition": "This is the status of the order."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAInpatientUDMedicationRequest",
-  "id": "VAInpatientUDMedicationRequest",
-  "type": "MedicationRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequest",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAInpatientUDMedicationRequest",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequest",
+	"name": "VAInpatientUDMedicationRequest",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "MedicationRequest",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "MedicationRequest.extension:medicationrequest-pharmacyOrderStatus",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-pharmacyOrderStatus",
+				"label": "STATUS",
+				"short": "Status",
+				"definition": "This is the status of the order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @STATUS 55.06-28b"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:extension.valueAnnotation.text",
+				"path": "MedicationRequest.extension",
+				"sliceName": "extension-valueAnnotation-text",
+				"label": "PROVIDER COMMENTS",
+				"short": "Provider Comments",
+				"definition": "This is any instructions or comments entered by the provider for this order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @PROVIDER COMMENTS  55.06-72"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-nurseVerified",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-nurseVerified",
+				"label": "NV FLAG",
+				"short": "NV Flag",
+				"definition": "This is an internal flag set whenever a nurse verifies the order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-nurseVerified"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @NV FLAG 55.06-51"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-pharmacistVerified",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-pharmacistVerified",
+				"label": "PV FLAG",
+				"short": "PV Flag",
+				"definition": "This is an internal flag set whenever a pharmacist verifies the order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacistVerified"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @PV FLAG 55.06-50"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:richAnnotation.comment.text",
+				"path": "MedicationRequest.extension",
+				"sliceName": "richAnnotation-comment-text",
+				"label": "SPECIAL INSTRUCTIONS (LONG)",
+				"short": "Comments",
+				"definition": "<blank>",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @COMMENTS 55.06-15"
+					},
+					{
+						"identity": "vista",
+						"map": "undefined @SPECIAL INSTRUCTIONS (LONG) 55.06-135"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:extension.valueAnnotation.comment.text",
+				"path": "MedicationRequest.extension",
+				"sliceName": "extension-valueAnnotation-comment-text",
+				"label": "SPECIAL INSTRUCTIONS",
+				"definition": "This is any special instructions (using abbreviations whenever possible) needed for this order.  This would include the physician's reason for ordering a PRN.  This field utilizes the abbreviations and expansions from the MEDICATION INSTRUCTIONS file.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.comment.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @SPECIAL INSTRUCTIONS 55.06-8"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-flaggedForClarification",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-flaggedForClarification",
+				"label": "FLAGGED",
+				"short": "Flagged",
+				"definition": "This indicates that this order has been flagged for clarification.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-flaggedForClarification"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @FLAGGED 55.06-124"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-extendedPriority",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-extendedPriority",
+				"label": "PRIORITY",
+				"short": "Priority",
+				"definition": "This field contains the priority of the order that was received from OERR.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-extendedPriority"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @PRIORITY 55.06-.24"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @PRIORITY 55.06-.24b"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-orderPlacementChannel",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-orderPlacementChannel",
+				"label": "NATURE OF ORDER",
+				"short": "Nature of Orer",
+				"definition": "This is the method the provider used to communicate to the user to enter (or take any other action) on the order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderPlacementChannel"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @NATURE OF ORDER 55.06-110"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:pharmacy-dosageOrdered",
+				"path": "MedicationRequest.extension",
+				"sliceName": "pharmacy-dosageOrdered",
+				"label": "DOSAGE ORDERED",
+				"short": "Dosage Ordered",
+				"definition": "This is the amount of the medication the patient is to receive as one dose  for this order. This should be an amount with a unit of measure, such as  '500MG' or '50cc'. THIS SHOULD NOT BE THE NUMBER OF TABLETS, ETC.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DOSAGE ORDERED 55.06-109"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:extension-MedicationRequest.statusReason",
+				"path": "MedicationRequest.extension",
+				"sliceName": "extension-MedicationRequest-statusReason",
+				"label": "DISPLAY STATUS",
+				"short": "Display Status",
+				"definition": "This field captures how a \"Discontinued\" action occurred and this code is  displayed on the short patient profile if the Stop Date/Time is within the time specified in the Inpatient Ward Parameter file (#59.6) or the Pharmacy System file (#59.7). The \"HP\" is to display on the profile if the order was placed on hold by provider through CPRS.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DISPLAY STATUS 55.06-136"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-orderCreationMode",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-orderCreationMode",
+				"label": "REASON ORDER CREATED",
+				"short": "Reason Order Created",
+				"definition": "This is used to show the method used to create this order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderCreationMode"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @REASON ORDER CREATED  55.06-103"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-lastLocationOfPatient",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-lastLocationOfPatient",
+				"label": "LAST WARD",
+				"short": "Last Ward",
+				"definition": "This is the last ward the patient was located when the order expired or was discontinued.  This is automatically updated by the Unit Dose package when the package finds that the patient is first admitted or when the patient is found to have been transferred.  This allows any returns that are entered to be credited to the correct ward.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastLocationOfPatient"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @LAST WARD 55.06-68"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-orderDraftDate",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-orderDraftDate",
+				"label": "ORDER DATE",
+				"short": "Order Date",
+				"definition": "This is the date the order was entered into the computer.  The package enters this date automatically when the order is transcribed.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderDraftDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ORDER DATE 55.06-27"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-medicationScheduleType",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-medicationScheduleType",
+				"label": "SCHEDULE TYPE",
+				"short": "Schedule Type",
+				"definition": "This describes the type of schedule for the dispensing of the medication(s) that make up the order.   PRE-OP orders are usually considered to be ON-CALL orders, and orders dispensed as MUTLI-DOSE CONTAINERS are usually considered to be FILL ON REQUEST orders.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationScheduleType"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @SCHEDULE TYPE 55.06-7"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:pharmacy-patientSelfMedication.extension.hospitalSupply",
+				"path": "MedicationRequest.extension",
+				"sliceName": "pharmacy-patientSelfMedication-extension-hospitalSupply",
+				"label": "HOSPITAL SUPPLIED SELF MED",
+				"definition": "This should contain a `1' (or `YES') if this medication is to be a `SELF MED' and this site's pharmacy is to supply the medication.  This is only asked if the user enters `YES' (or `1') to the SELF MED prompt. If the SELF MED prompt is ever edited to show `NO' (or `0'), this field is automatically deleted.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.hospitalSupply"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @HOSPITAL SUPPLIED SELF MED 55.06-6"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:pharmacy-patientSelfMedication.extension.selfAdminister",
+				"path": "MedicationRequest.extension",
+				"sliceName": "pharmacy-patientSelfMedication-extension-selfAdminister",
+				"label": "SELF MED",
+				"definition": "This should contain a `1' or (`YES') if this medication is to be administered by the patient to himself.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.selfAdminister"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @SELF MED 55.06-5"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.extension:medicationrequest-medicationrequestType.coding.code",
+				"path": "MedicationRequest.extension",
+				"sliceName": "medicationrequest-medicationrequestType-coding-code",
+				"label": "TYPE",
+				"short": "Type",
+				"definition": "This identifies the type of medication ordered.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationrequestType.coding.code"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @TYPE 55.06-4"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "MedicationRequest.identifier.system",
+				"fixedUri": "va.gov/identifiers/orders/55.06",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.identifier.value",
+				"path": "MedicationRequest.identifier.value",
+				"label": "ORDERS FILE ENTRY",
+				"short": "ORDERS FILE ENTRY",
+				"definition": "This is the pointer value of the corresponding entry in the ORDERS file (100) when the order is entered into OE/RR.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ORDER NUMBER 55.06-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ORIGINAL ORDER NUMBER 55.06-.25"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ORDERS FILE ENTRY 55.06-66"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.basedOn",
+				"path": "MedicationRequest.basedOn",
+				"label": "ORDERS FILE PARENT ORDER",
+				"definition": "This is the parent of an order that may have a parent/child relationship  in CPRS.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ORDERS FILE PARENT ORDER 55.06-125"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.status",
+				"path": "MedicationRequest.status",
+				"label": "pat-medRequest",
+				"short": "Status",
+				"definition": "This is the status of the order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @pat-medRequest 55.06-28"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.medicationCodeableConcept.coding.code",
+				"path": "MedicationRequest.medicationCodeableConcept.coding.code",
+				"label": "DISPENSE DRUG",
+				"short": "Dispense Drug",
+				"definition": "This is a medication that will actually be dispensed by pharmacy for this order.  Each dispense drug of an order must be tied to the primary drug of the order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ORDERABLE ITEM 55.06-108"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DISPENSE DRUG 55.07-.01"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.subject",
+				"path": "MedicationRequest.subject",
+				"label": "PATIENT",
+				"short": "PATIENT",
+				"definition": "This is the name of a patient that has some type of pharmacy order.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @PATIENT 55-.01ud"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.authoredOn",
+				"path": "MedicationRequest.authoredOn",
+				"label": "LOG-IN DATE",
+				"short": "Logged Date",
+				"definition": "This is the date (to the second) the order was entered.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @LOG-IN DATE  55.06-27.1"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.requester.agent",
+				"path": "MedicationRequest.requester.agent",
+				"label": "PROVIDER",
+				"short": "Provider",
+				"definition": "This is the prescribing physician's name.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @PROVIDER 55.06-1"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.text",
+				"path": "MedicationRequest.dosageInstruction.text",
+				"label": "INSTRUCTIONS",
+				"short": "Instructions",
+				"definition": "<blank>",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @INSTRUCTIONS 55.06-111"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.extension:timeOfDay",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.extension",
+				"sliceName": "timeOfDay",
+				"label": "ADMIN TIMES",
+				"short": "Admin Times",
+				"definition": "This is the times of the day the medication is to be administered.  This package initially assigns a default set of ADMIN TIMES when a STANDARD SCHEDULE is entered into the SCHEDULE prompt.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/timeOfDay"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @ADMIN TIMES 55.06-41"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod",
+				"type": [
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
+				"label": "INACTIVE DATE",
+				"definition": "This is the date that this dispense drug will no longer be dispensed for this order.  Once an order becomes active, dispense drugs cannot be deleted.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @INACTIVE DATE 55.07-.03"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.frequency",
+				"fixedInteger": 1,
+				"mustSupport": true
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.timing.repeat.periodUnit",
+				"fixedCode": "min",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.timing.code.text",
+				"path": "MedicationRequest.dosageInstruction.timing.code.text",
+				"label": "FREQUENCY (IN MINUTES)",
+				"short": "Frequency",
+				"definition": "This is either a code or the number of minutes between the times the medication is to be administered.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @SCHEDULE     55.06-26"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @FREQUENCY (IN MINUTES) 55.06-42"
+					}
+				]
+			},
+			{
+				"path": "MedicationRequest.dosageInstruction.route.coding.system",
+				"fixedUri": "http://va.gov/terminology/vistaDefinedTerms/53.1-3",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.route.coding.code",
+				"path": "MedicationRequest.dosageInstruction.route.coding.code",
+				"label": "MED ROUTE",
+				"short": "Route",
+				"definition": "This is the route of administration for this medication. If a  corresponding abbreviation is found for this route in the MEDICATION  ROUTES file, that abbreviation is printed on the various reports in this  package.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @MED ROUTE 55.06-3"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.doseQuantity",
+				"path": "MedicationRequest.dosageInstruction.doseQuantity",
+				"label": "UNITS PER DOSE",
+				"short": "Units per Dose",
+				"definition": "This is the number of UNITS (tablets, capsules, etc.) to be dispensed as a DOSE for this order.  The literals '1/2' and '1/4' may be entered.  If there is no entry, it is assumed to be ONE (1).                          ** PLEASE NOTE **   If a doctor prescribes 30 ml's of a medication that is usually dispensed and administered as 60 ml's, the correct UNITS PER DOSE would be 1/2 (or .5), NOT 30 ml's.  (30 ml's would be entered into the DOSAGE ORDERED field.)   If the UNITS PER DOSE ordered is a variable amount (1-2 tab.), it is suggested that the maximum amount be entered into this field and the amount ordered noted either in the DOSAGE ORDERED or SPECIAL INSTRUCTIONS fields.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @UNITS PER DOSE 55.07-.02"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.doseQuantity.value",
+				"path": "MedicationRequest.dosageInstruction.doseQuantity.value",
+				"label": "DOSE",
+				"short": "Dose",
+				"definition": "This is the numeric dosage for the order.  It will be combined with the UNIT field to show the dosage ordered.  For a dosage of 325MG, 325 would be stored here.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DOSE   55.06-120"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.doseQuantity.unit",
+				"path": "MedicationRequest.dosageInstruction.doseQuantity.unit",
+				"label": "UNIT",
+				"short": "Unit",
+				"definition": "This is the field which contains the unit for the numeric dosage.  The combination of these two fields gives you the dosage ordered for this order.  For the doasge 325MG, MG would be stored here.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @UNIT    55.06-121"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+				"path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+				"label": "REQUESTED DURATION",
+				"definition": "The duration of an order as requested by the ordering clinician in CPRS. The duration is stored as one of the following upper case letters followed by an integer:    L - Months  W - Weeks  D - Days  H - Hours  M - Minutes  S - Seconds   Example: D6 = Six days.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @REQUESTED DURATION 55.06-126"
+					}
+				]
+			}
+		]
+	}
 }

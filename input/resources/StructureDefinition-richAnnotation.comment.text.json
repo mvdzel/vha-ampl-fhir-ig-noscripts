@@ -1,49 +1,51 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "richAnnotation.comment.text",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text",
-  "name": "richAnnotation.comment.text",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest",
-    "MedicationDispense"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NON-VERIFIED ORDERS @SPECIAL INSTRUCTIONS  53.1-8"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This is any special instructions (using abbreviations whenever possible) needed for this order.  This would include the physician's reason for ordering a PRN.  The abbreviations and expansions from the MEDICATION INSTRUCTIONS file are utilized."
+	"resourceType": "StructureDefinition",
+	"id": "richAnnotation.comment.text",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text",
+	"name": "richAnnotation.comment.text",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This is any special instructions (using abbreviations whenever possible) needed for this order.  This would include the physician's reason for ordering a PRN.  The abbreviations and expansions from the MEDICATION INSTRUCTIONS file are utilized.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest",
+		"MedicationDispense"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @SPECIAL INSTRUCTIONS  53.1-8"
+					}
+				]
+			}
+		]
+	}
 }

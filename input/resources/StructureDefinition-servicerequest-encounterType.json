@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "servicerequest-encounterType",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-encounterType",
-  "name": "servicerequest-encounterType",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "ReferralRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-encounterType"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "REQUEST/CONSULTATION @SERVICE RENDERED AS IN OR OUT 123-14"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field allows the ordering person to indicate if the service is to be rendered on an outpatient or inpatient basis.  This is to alleviate the confusion if patient is currently an inpatient/outpatient but is just about to be discharged/admitted and become a outpatient/inpatient."
+	"resourceType": "StructureDefinition",
+	"id": "servicerequest-encounterType",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-encounterType",
+	"name": "servicerequest-encounterType",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field allows the ordering person to indicate if the service is to be rendered on an outpatient or inpatient basis.  This is to alleviate the confusion if patient is currently an inpatient/outpatient but is just about to be discharged/admitted and become a outpatient/inpatient.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"ReferralRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-encounterType"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @SERVICE RENDERED AS IN OR OUT 123-14"
+					}
+				]
+			}
+		]
+	}
 }

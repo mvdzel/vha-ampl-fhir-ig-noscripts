@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "medicationrequest-associatedMaintenancePrescription",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription",
-  "name": "medicationrequest-associatedMaintenancePrescription",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "MedicationRequest"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PRESCRIPTION @MAINTENANCE DOSE RX 52-45.2"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This is the Maintenance Dose Rx that was created from the corresponding  Titration Dose Rx."
+	"resourceType": "StructureDefinition",
+	"id": "medicationrequest-associatedMaintenancePrescription",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription",
+	"name": "medicationrequest-associatedMaintenancePrescription",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This is the Maintenance Dose Rx that was created from the corresponding  Titration Dose Rx.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"MedicationRequest"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @MAINTENANCE DOSE RX 52-45.2"
+					}
+				]
+			}
+		]
+	}
 }

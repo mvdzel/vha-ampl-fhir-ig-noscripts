@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "medication-nationalFormularyStatus",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-nationalFormularyStatus",
-  "name": "medication-nationalFormularyStatus",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "Medication"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-nationalFormularyStatus"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PHARMACY ORDERABLE ITEM @FORMULARY STATUS 50.7-5"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field will designate the formulary status of the orderable item. The non-formulary status will be displayed to the provider next to the selectable list of orderable item(s) during CPRS order entry (List Manager and GUI). This field is not editable. It is controlled by the software. An Orderable Item will only be marked as non-formulary if there are no active Dispense Drugs matched to the item that are formulary drugs."
+	"resourceType": "StructureDefinition",
+	"id": "medication-nationalFormularyStatus",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-nationalFormularyStatus",
+	"name": "medication-nationalFormularyStatus",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field will designate the formulary status of the orderable item. The non-formulary status will be displayed to the provider next to the selectable list of orderable item(s) during CPRS order entry (List Manager and GUI). This field is not editable. It is controlled by the software. An Orderable Item will only be marked as non-formulary if there are no active Dispense Drugs matched to the item that are formulary drugs.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Medication"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-nationalFormularyStatus"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY ORDERABLE ITEM @FORMULARY STATUS 50.7-5"
+					}
+				]
+			}
+		]
+	}
 }

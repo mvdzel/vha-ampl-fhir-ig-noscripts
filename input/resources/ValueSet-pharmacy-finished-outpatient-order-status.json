@@ -1,61 +1,61 @@
 {
-  "resourceType": "ValueSet",
-  "id": "pharmacy-finished-outpatient-order-status",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-finished-outpatient-order-status",
-  "name": "pharmacy-finished-outpatient-order-status",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "compose": {
-    "include": [
-      {
-        "system": "http://va.gov/Terminology/VistaDefinedTerms/",
-        "concept": [
-          {
-            "code": "16",
-            "display": "PROVIDER HOLD"
-          },
-          {
-            "code": "1",
-            "display": "NON-VERIFIED"
-          },
-          {
-            "code": "3",
-            "display": "HOLD"
-          },
-          {
-            "code": "11",
-            "display": "EXPIRED"
-          },
-          {
-            "code": "4",
-            "display": "DRUG INTERACTIONS"
-          },
-          {
-            "code": "5",
-            "display": "SUSPENDED"
-          },
-          {
-            "code": "10",
-            "display": "DONE"
-          },
-          {
-            "code": "15",
-            "display": "DISCONTINUED (EDIT)"
-          },
-          {
-            "code": "12",
-            "display": "DISCONTINUED"
-          },
-          {
-            "code": "13",
-            "display": "DELETED"
-          },
-          {
-            "code": "0",
-            "display": "ACTIVE"
-          }
-        ]
-      }
-    ]
-  }
+	"resourceType": "ValueSet",
+	"id": "pharmacy-finished-outpatient-order-status",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-finished-outpatient-order-status",
+	"name": "pharmacy-finished-outpatient-order-status",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"compose": {
+		"include": [
+			{
+				"system": "http://va.gov/Terminology/VistaDefinedTerms/",
+				"concept": [
+					{
+						"code": "16",
+						"display": "PROVIDER HOLD"
+					},
+					{
+						"code": "1",
+						"display": "NON-VERIFIED"
+					},
+					{
+						"code": "3",
+						"display": "HOLD"
+					},
+					{
+						"code": "11",
+						"display": "EXPIRED"
+					},
+					{
+						"code": "4",
+						"display": "DRUG INTERACTIONS"
+					},
+					{
+						"code": "5",
+						"display": "SUSPENDED"
+					},
+					{
+						"code": "10",
+						"display": "DONE"
+					},
+					{
+						"code": "15",
+						"display": "DISCONTINUED (EDIT)"
+					},
+					{
+						"code": "12",
+						"display": "DISCONTINUED"
+					},
+					{
+						"code": "13",
+						"display": "DELETED"
+					},
+					{
+						"code": "0",
+						"display": "ACTIVE"
+					}
+				]
+			}
+		]
+	}
 }

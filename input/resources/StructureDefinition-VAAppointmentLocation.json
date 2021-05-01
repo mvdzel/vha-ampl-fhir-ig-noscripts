@@ -1,71 +1,73 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Appointment.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Appointment.participant.status",
-        "fixedCode": "accepted",
-        "mustSupport": true
-      },
-      {
-        "path": "Appointment.participant.actor",
-        "label": "PROVIDER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "HOSPITAL LOCATION @PROVIDER 44.1-.01"
-          }
-        ],
-        "definition": "Enter in this field the providers associated with this clinic.  These providers will then be displayed when updating the provider through Appointment Management or Check Out to assist the user in entering the correct provider."
-      },
-      {
-        "path": "Appointment.participant.actor.identifier",
-        "label": "STATION NUMBER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "INSTITUTION @STATION NUMBER 4-99"
-          }
-        ],
-        "definition": "This is the 3 digit station number plus any modifiers."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAAppointmentLocation",
-  "id": "VAAppointmentLocation",
-  "type": "Appointment",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentLocation",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource",
-  "description": "A location associated with an appointment, providing service information."
+	"resourceType": "StructureDefinition",
+	"id": "VAAppointmentLocation",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentLocation",
+	"name": "VAAppointmentLocation",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "A location associated with an appointment, providing service information.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Appointment",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Appointment.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Appointment.participant.actor",
+				"path": "Appointment.participant.actor",
+				"label": "PROVIDER",
+				"definition": "Enter in this field the providers associated with this clinic.  These providers will then be displayed when updating the provider through Appointment Management or Check Out to assist the user in entering the correct provider.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "HOSPITAL LOCATION @PROVIDER 44.1-.01"
+					}
+				]
+			},
+			{
+				"id": "Appointment.participant.actor.identifier",
+				"path": "Appointment.participant.actor.identifier",
+				"label": "STATION NUMBER",
+				"definition": "This is the 3 digit station number plus any modifiers.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "INSTITUTION @STATION NUMBER 4-99"
+					}
+				]
+			},
+			{
+				"path": "Appointment.participant.status",
+				"fixedCode": "accepted",
+				"mustSupport": true
+			}
+		]
+	}
 }

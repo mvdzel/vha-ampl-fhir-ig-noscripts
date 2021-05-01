@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "referenceDate",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referenceDate",
-  "name": "referenceDate",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "DocumentReference"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referenceDate"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @REFERENCE DATE 8925-1301"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This is the Date (and time) by which the clinician will reference the  document.  For Progress Notes, this will likely be the date of the  provider's encounter with the patient.  For Discharge Summaries, it will  correspond to the Discharge Date of the Admission referenced in the  document.  (If there is no Discharge Date when dictated, it will  correspond to the dictation date of the record instead.) In all cases, this is the date by which the document will be referenced and sorted."
+	"resourceType": "StructureDefinition",
+	"id": "referenceDate",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referenceDate",
+	"name": "referenceDate",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This is the Date (and time) by which the clinician will reference the  document.  For Progress Notes, this will likely be the date of the  provider's encounter with the patient.  For Discharge Summaries, it will  correspond to the Discharge Date of the Admission referenced in the  document.  (If there is no Discharge Date when dictated, it will  correspond to the dictation date of the record instead.) In all cases, this is the date by which the document will be referenced and sorted.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"DocumentReference"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referenceDate"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @REFERENCE DATE 8925-1301"
+					}
+				]
+			}
+		]
+	}
 }

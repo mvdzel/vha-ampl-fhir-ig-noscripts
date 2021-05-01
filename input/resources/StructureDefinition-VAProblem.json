@@ -1,449 +1,472 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Condition.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Condition.note",
-        "label": "NARRATIVE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROVIDER NARRATIVE @NARRATIVE 9999999.27-.01"
-          }
-        ],
-        "definition": "This is the Narrative that the provider has written out that is his description of what he treated the patient for.   Enter a 2 to 80 character description."
-      },
-      {
-        "path": "Condition.code.coding.code",
-        "label": "CODE NUMBER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ICD DIAGNOSIS  @CODE NUMBER 80-.01"
-          }
-        ],
-        "definition": "ICD-9 or ICD-10 Code"
-      },
-      {
-        "path": "Condition.code.coding.system",
-        "label": "CODING SYSTEM",
-        "short": "Coding System",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "ICD DIAGNOSIS  @CODING SYSTEM 80-1.1"
-          }
-        ],
-        "definition": "This is the coding system to which the code belongs."
-      },
-      {
-        "path": "Condition.code.text",
-        "label": "DIAGNOSIS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "DIAGNOSIS @DIAGNOSIS 80.067-1"
-          }
-        ],
-        "definition": "This is the Diagnosis (short text)."
-      },
-      {
-        "path": "Condition.onsetDateTime",
-        "label": "DATE OF ONSET",
-        "short": "Onset",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @DATE OF ONSET 9000011-.13"
-          }
-        ],
-        "definition": "This is the approximate date this problem appeared, as precisely as known."
-      },
-      {
-        "path": "Condition.clinicalStatus",
-        "label": "STATUS",
-        "short": "Status",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @STATUS 9000011-.12"
-          }
-        ],
-        "definition": "This is the current activity status of this problem, whether active or inactive; if more detail is needed, a notation may be filed with this problem."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-priority",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority"
-          }
-        ],
-        "label": "PRIORITY",
-        "short": "Immediacy/Priority",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @PRIORITY 9000011-1.14"
-          }
-        ],
-        "definition": "This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display."
-      },
-      {
-        "path": "Condition.verificationStatus",
-        "label": "CONDITION",
-        "short": "State/Condition",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @CONDITION 9000011-1.02"
-          }
-        ],
-        "definition": "This reflects the current condition of this entry, whether transcribed by a clerk from the paper chart, entered or verified by a provider, or marked as removed from the patient's list."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-relationshipToAgentOrangeExposure",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure"
-          }
-        ],
-        "label": "AGENT ORANGE EXPOSURE",
-        "short": "Exposure",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11"
-          }
-        ],
-        "definition": "If this problem is related to a patient's exposure to Agent Orange, it may be flagged here."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-relationshipToRadiation",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation"
-          }
-        ],
-        "label": "IONIZING RADIATION EXPOSURE",
-        "short": "0",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @IONIZING RADIATION EXPOSURE 9000011-1.12"
-          }
-        ],
-        "definition": "If this problem is related to a patient's exposure to ionizing radiation, it may be flagged here."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-relationshipToPersianGulfService",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService"
-          }
-        ],
-        "label": "PERSIAN GULF EXPOSURE",
-        "short": "0",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13"
-          }
-        ],
-        "definition": "If this problem is related to a patient's service in the Persian Gulf, it may be flagged here."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-relationshipToRadiumTreatment",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment"
-          }
-        ],
-        "label": "HEAD AND.OR NECK CANCER",
-        "short": "0",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @HEAD AND.OR NECK CANCER 9000011-1.15"
-          }
-        ],
-        "definition": "If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-relationshipToMilitarySexualTrauma",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma"
-          }
-        ],
-        "label": "MILITARY SEXUAL TRAUMA",
-        "short": "0",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16"
-          }
-        ],
-        "definition": "If this problem is related to the treatment of military sexual trauma, it may be flagged here."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-relationshipToCombatExperience",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience"
-          }
-        ],
-        "label": "COMBAT VETERAN",
-        "short": "0",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @COMBAT VETERAN 9000011-1.17"
-          }
-        ],
-        "definition": "<blank>"
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-responsibleProvider",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider"
-          }
-        ],
-        "label": "NAME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "NEW PERSON  @NAME 9000011-1.05:200-.01"
-          }
-        ]
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-treatingService",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService"
-          }
-        ],
-        "label": "SERVICE",
-        "short": "Service",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "undefined @SERVICE    9000011-1.06"
-          }
-        ],
-        "definition": "This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-treatingClinic",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic"
-          }
-        ],
-        "label": "NAME",
-        "short": "",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "HOSPITAL LOCATION @NAME 9000011-1.08"
-          }
-        ],
-        "definition": "This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one's view of the list."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-relationshipToShipboardHazardAndDefense",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense"
-          }
-        ],
-        "label": "SHIPBOARD HAZARD & DEFENSE",
-        "short": "0",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @SHIPBOARD HAZARD & DEFENSE 9000011-1.18"
-          }
-        ],
-        "definition": "<blank>"
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "condition-lastModified",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified"
-          }
-        ],
-        "label": "DATE LAST MODIFIED",
-        "short": "Last Update",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "undefined @DATE LAST MODIFIED 9000011-.03"
-          }
-        ],
-        "definition": "This is the last date/time this problem was changed."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "richAnnotation/author",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author"
-          }
-        ],
-        "label": "AUTHOR",
-        "short": "Author",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "undefined @AUTHOR 9000011.1111-.06"
-          }
-        ],
-        "definition": "This is the provider who authored the text of this note."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "richAnnotation/text",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text"
-          }
-        ],
-        "label": "NOTE NARRATIVE",
-        "short": "Note Narrative",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "problem @NOTE NARRATIVE 9000011.1111-.03"
-          }
-        ],
-        "definition": "Additional comments may be entered here to further describe this problem."
-      },
-      {
-        "path": "Condition.extension",
-        "sliceName": "richAnnotation/commentNumber",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber"
-          }
-        ],
-        "label": "NOTE NUMBER",
-        "short": "Note #",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "problem @NOTE NUMBER 9000011.1111-.01"
-          }
-        ],
-        "definition": "This is the unique note identifier."
-      },
-      {
-        "path": "Condition.assertedDate",
-        "label": "DATE ENTERED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "undefined @DATE ENTERED 9000011-.08"
-          }
-        ]
-      },
-      {
-        "path": "Condition.asserter",
-        "label": "ENTERED BY",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "undefined @ENTERED BY 9000011-1.03"
-          }
-        ]
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAProblem",
-  "id": "VAProblem",
-  "type": "Condition",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblem",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAProblem",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblem",
+	"name": "VAProblem",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Condition",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Condition.extension:richAnnotation.commentNumber",
+				"path": "Condition.extension",
+				"sliceName": "richAnnotation-commentNumber",
+				"label": "NOTE NUMBER",
+				"short": "Note #",
+				"definition": "This is the unique note identifier.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "problem @NOTE NUMBER 9000011.1111-.01"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:richAnnotation.text",
+				"path": "Condition.extension",
+				"sliceName": "richAnnotation-text",
+				"label": "NOTE NARRATIVE",
+				"short": "Note Narrative",
+				"definition": "Additional comments may be entered here to further describe this problem.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "problem @NOTE NARRATIVE 9000011.1111-.03"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:richAnnotation.author",
+				"path": "Condition.extension",
+				"sliceName": "richAnnotation-author",
+				"label": "AUTHOR",
+				"short": "Author",
+				"definition": "This is the provider who authored the text of this note.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "undefined @AUTHOR 9000011.1111-.06"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-lastModified",
+				"path": "Condition.extension",
+				"sliceName": "condition-lastModified",
+				"label": "DATE LAST MODIFIED",
+				"short": "Last Update",
+				"definition": "This is the last date/time this problem was changed.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "undefined @DATE LAST MODIFIED 9000011-.03"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-relationshipToShipboardHazardAndDefense",
+				"path": "Condition.extension",
+				"sliceName": "condition-relationshipToShipboardHazardAndDefense",
+				"label": "SHIPBOARD HAZARD & DEFENSE",
+				"short": "0",
+				"definition": "<blank>",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @SHIPBOARD HAZARD & DEFENSE 9000011-1.18"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-treatingClinic",
+				"path": "Condition.extension",
+				"sliceName": "condition-treatingClinic",
+				"label": "NAME",
+				"definition": "This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one's view of the list.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "HOSPITAL LOCATION @NAME 9000011-1.08"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-treatingService",
+				"path": "Condition.extension",
+				"sliceName": "condition-treatingService",
+				"label": "SERVICE",
+				"short": "Service",
+				"definition": "This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "undefined @SERVICE    9000011-1.06"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-responsibleProvider",
+				"path": "Condition.extension",
+				"sliceName": "condition-responsibleProvider",
+				"label": "NAME",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NEW PERSON  @NAME 9000011-1.05:200-.01"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-relationshipToCombatExperience",
+				"path": "Condition.extension",
+				"sliceName": "condition-relationshipToCombatExperience",
+				"label": "COMBAT VETERAN",
+				"short": "0",
+				"definition": "<blank>",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @COMBAT VETERAN 9000011-1.17"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-relationshipToMilitarySexualTrauma",
+				"path": "Condition.extension",
+				"sliceName": "condition-relationshipToMilitarySexualTrauma",
+				"label": "MILITARY SEXUAL TRAUMA",
+				"short": "0",
+				"definition": "If this problem is related to the treatment of military sexual trauma, it may be flagged here.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-relationshipToRadiumTreatment",
+				"path": "Condition.extension",
+				"sliceName": "condition-relationshipToRadiumTreatment",
+				"label": "HEAD AND.OR NECK CANCER",
+				"short": "0",
+				"definition": "If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @HEAD AND.OR NECK CANCER 9000011-1.15"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-relationshipToPersianGulfService",
+				"path": "Condition.extension",
+				"sliceName": "condition-relationshipToPersianGulfService",
+				"label": "PERSIAN GULF EXPOSURE",
+				"short": "0",
+				"definition": "If this problem is related to a patient's service in the Persian Gulf, it may be flagged here.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-relationshipToRadiation",
+				"path": "Condition.extension",
+				"sliceName": "condition-relationshipToRadiation",
+				"label": "IONIZING RADIATION EXPOSURE",
+				"short": "0",
+				"definition": "If this problem is related to a patient's exposure to ionizing radiation, it may be flagged here.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @IONIZING RADIATION EXPOSURE 9000011-1.12"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-relationshipToAgentOrangeExposure",
+				"path": "Condition.extension",
+				"sliceName": "condition-relationshipToAgentOrangeExposure",
+				"label": "AGENT ORANGE EXPOSURE",
+				"short": "Exposure",
+				"definition": "If this problem is related to a patient's exposure to Agent Orange, it may be flagged here.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-priority",
+				"path": "Condition.extension",
+				"sliceName": "condition-priority",
+				"label": "PRIORITY",
+				"short": "Immediacy/Priority",
+				"definition": "This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @PRIORITY 9000011-1.14"
+					}
+				]
+			},
+			{
+				"path": "Condition.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Condition.clinicalStatus",
+				"path": "Condition.clinicalStatus",
+				"label": "STATUS",
+				"short": "Status",
+				"definition": "This is the current activity status of this problem, whether active or inactive; if more detail is needed, a notation may be filed with this problem.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @STATUS 9000011-.12"
+					}
+				]
+			},
+			{
+				"id": "Condition.verificationStatus",
+				"path": "Condition.verificationStatus",
+				"label": "CONDITION",
+				"short": "State/Condition",
+				"definition": "This reflects the current condition of this entry, whether transcribed by a clerk from the paper chart, entered or verified by a provider, or marked as removed from the patient's list.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @CONDITION 9000011-1.02"
+					}
+				]
+			},
+			{
+				"id": "Condition.code.coding.system",
+				"path": "Condition.code.coding.system",
+				"label": "CODING SYSTEM",
+				"short": "Coding System",
+				"definition": "This is the coding system to which the code belongs.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ICD DIAGNOSIS  @CODING SYSTEM 80-1.1"
+					}
+				]
+			},
+			{
+				"id": "Condition.code.coding.code",
+				"path": "Condition.code.coding.code",
+				"label": "CODE NUMBER",
+				"definition": "ICD-9 or ICD-10 Code",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ICD DIAGNOSIS  @CODE NUMBER 80-.01"
+					}
+				]
+			},
+			{
+				"id": "Condition.code.text",
+				"path": "Condition.code.text",
+				"label": "DIAGNOSIS",
+				"definition": "This is the Diagnosis (short text).",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "DIAGNOSIS @DIAGNOSIS 80.067-1"
+					}
+				]
+			},
+			{
+				"id": "Condition.onsetDateTime",
+				"path": "Condition.onsetDateTime",
+				"label": "DATE OF ONSET",
+				"short": "Onset",
+				"definition": "This is the approximate date this problem appeared, as precisely as known.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @DATE OF ONSET 9000011-.13"
+					}
+				]
+			},
+			{
+				"id": "Condition.assertedDate",
+				"path": "Condition.assertedDate",
+				"label": "DATE ENTERED",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "undefined @DATE ENTERED 9000011-.08"
+					}
+				]
+			},
+			{
+				"id": "Condition.asserter",
+				"path": "Condition.asserter",
+				"label": "ENTERED BY",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "undefined @ENTERED BY 9000011-1.03"
+					}
+				]
+			},
+			{
+				"id": "Condition.note",
+				"path": "Condition.note",
+				"label": "NARRATIVE",
+				"definition": "This is the Narrative that the provider has written out that is his description of what he treated the patient for.   Enter a 2 to 80 character description.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROVIDER NARRATIVE @NARRATIVE 9999999.27-.01"
+					}
+				]
+			}
+		]
+	}
 }

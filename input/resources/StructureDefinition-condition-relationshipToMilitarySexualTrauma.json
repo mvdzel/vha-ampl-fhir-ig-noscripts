@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "condition-relationshipToMilitarySexualTrauma",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma",
-  "name": "condition-relationshipToMilitarySexualTrauma",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "Condition"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "If this problem is related to the treatment of military sexual trauma, it may be flagged here."
+	"resourceType": "StructureDefinition",
+	"id": "condition-relationshipToMilitarySexualTrauma",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma",
+	"name": "condition-relationshipToMilitarySexualTrauma",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "If this problem is related to the treatment of military sexual trauma, it may be flagged here.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Condition"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16"
+					}
+				]
+			}
+		]
+	}
 }

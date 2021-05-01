@@ -1,88 +1,91 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "DiagnosticReport.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "DiagnosticReport.performer.actor.display",
-        "label": "RELEASING SITE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "EM @PATHOLOGIST  63.02-.02"
-          },
-          {
-            "identity": "vista",
-            "map": "EM @RELEASING SITE  63.02-.345"
-          }
-        ],
-        "definition": "This field indicates the site that released the clinical report.  This field can be used to determine the information required to correctly indicate the address/location of the laboratory responsible for  releasing the report."
-      },
-      {
-        "path": "DiagnosticReport.issued",
-        "label": "DATE REPORT COMPLETED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "EM @DATE REPORT COMPLETED 63.02-.03"
-          }
-        ],
-        "definition": "This is the date the report was completed."
-      },
-      {
-        "path": "DiagnosticReport.extension",
-        "sliceName": "referencedDocument/display",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.display"
-          }
-        ],
-        "label": "TIU REFERENCE DATE/TIME - EM",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU REFERENCE DATE/TIME - EM @TIU REFERENCE DATE/TIME - EM 63.49-.01"
-          }
-        ],
-        "definition": "This is the date and time that the electron microscopy SF515 was stored in TIU. It will match the REFERENCE DATE (#1301) field of the corresponding document in the TIU DOCUMENT (#8925) file."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAEMLabReport",
-  "id": "VAEMLabReport",
-  "type": "DiagnosticReport",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEMLabReport",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAEMLabReport",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEMLabReport",
+	"name": "VAEMLabReport",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "DiagnosticReport",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "DiagnosticReport.extension:referencedDocument.display",
+				"path": "DiagnosticReport.extension",
+				"sliceName": "referencedDocument-display",
+				"label": "TIU REFERENCE DATE/TIME - EM",
+				"definition": "This is the date and time that the electron microscopy SF515 was stored in TIU. It will match the REFERENCE DATE (#1301) field of the corresponding document in the TIU DOCUMENT (#8925) file.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.display"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU REFERENCE DATE/TIME - EM @TIU REFERENCE DATE/TIME - EM 63.49-.01"
+					}
+				]
+			},
+			{
+				"path": "DiagnosticReport.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "DiagnosticReport.issued",
+				"path": "DiagnosticReport.issued",
+				"label": "DATE REPORT COMPLETED",
+				"definition": "This is the date the report was completed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "EM @DATE REPORT COMPLETED 63.02-.03"
+					}
+				]
+			},
+			{
+				"id": "DiagnosticReport.performer.actor.display",
+				"path": "DiagnosticReport.performer.actor.display",
+				"label": "RELEASING SITE",
+				"definition": "This field indicates the site that released the clinical report.  This field can be used to determine the information required to correctly indicate the address/location of the laboratory responsible for  releasing the report.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "EM @PATHOLOGIST  63.02-.02"
+					},
+					{
+						"identity": "vista",
+						"map": "EM @RELEASING SITE  63.02-.345"
+					}
+				]
+			}
+		]
+	}
 }

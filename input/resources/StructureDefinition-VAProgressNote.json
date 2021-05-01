@@ -1,349 +1,368 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "DocumentReference.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "DocumentReference.class.coding.system",
-        "fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/8925-.04",
-        "mustSupport": true
-      },
-      {
-        "path": "DocumentReference.class.coding.code",
-        "label": "PARENT DOCUMENT TYPE",
-        "short": "Standard Title",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @PARENT DOCUMENT TYPE 8925-.04"
-          }
-        ],
-        "definition": "This field points to the immediate parent class or document type to which the current record belongs.  For example, when the current document has the type  SOAP - GENERAL NOTE, this field will point to PROGRESS NOTE, as the parent  class to which SOAP Notes belong, whereas, if the current record is a  SUBJECTIVE component, then this field will point to SOAP - GENERAL NOTE as  the parent document type to which the component belongs."
-      },
-      {
-        "path": "DocumentReference.context.extension",
-        "sliceName": "referenceDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referenceDate"
-          }
-        ],
-        "label": "REFERENCE DATE",
-        "short": "Date of Note",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @REFERENCE DATE 8925-1301"
-          }
-        ],
-        "definition": "This is the Date (and time) by which the clinician will reference the  document.  For Progress Notes, this will likely be the date of the  provider's encounter with the patient.  For Discharge Summaries, it will  correspond to the Discharge Date of the Admission referenced in the  document.  (If there is no Discharge Date when dictated, it will  correspond to the dictation date of the record instead.) In all cases, this is the date by which the document will be referenced and sorted."
-      },
-      {
-        "path": "DocumentReference.created",
-        "label": "ENTRY DATE/TIME",
-        "short": "Entry Date/Time",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @ENTRY DATE/TIME 8925-1201"
-          }
-        ],
-        "definition": "This is the date/time at which the document was originally entered into the database."
-      },
-      {
-        "path": "DocumentReference.author",
-        "label": "HOSPITAL LOCATION",
-        "short": "Author",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @AUTHOR/DICTATOR 8925-1202"
-          },
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @HOSPITAL LOCATION 8925-1205"
-          }
-        ],
-        "definition": "This is the location (WARD or CLINIC) associated with the document.",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteOrganization"
-          }
-        ]
-      },
-      {
-        "path": "DocumentReference.docStatus",
-        "label": "STATUS",
-        "short": "status",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @STATUS 8925-.05"
-          }
-        ],
-        "definition": "This field is intended to accommodate the status of a given report."
-      },
-      {
-        "path": "DocumentReference.subject",
-        "label": "PATIENT",
-        "short": "Patient",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @PATIENT 8925-.02"
-          }
-        ],
-        "definition": "This field contains a pointer to the patient file."
-      },
-      {
-        "path": "DocumentReference.content.attachment.data",
-        "label": "REPORT TEXT",
-        "short": "Report text",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @REPORT TEXT  8925.02-.01"
-          }
-        ]
-      },
-      {
-        "path": "DocumentReference.masterIdentifier",
-        "label": "INTERNAL ENTRY NUMBER",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @INTERNAL ENTRY NUMBER 8925-.001"
-          }
-        ]
-      },
-      {
-        "path": "DocumentReference.context.encounter",
-        "label": "VISIT LOCATION",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @VISIT 8925-.03"
-          },
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @VISIT TYPE 8925-.13"
-          },
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @VISIT LOCATION 8925-1211"
-          }
-        ],
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteEncounter"
-          }
-        ],
-        "definition": "This is the location at which the visit/admission occurred.  As distinct  from the HOSPITAL LOCATION field, which represents the location at the time  the document was written, this is the location for the visit/admission with  which the note is associated."
-      },
-      {
-        "path": "DocumentReference.extension",
-        "sliceName": "patientMovementDate",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patientMovementDate"
-          }
-        ],
-        "label": "PATIENT MOVEMENT RECORD",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @PATIENT MOVEMENT RECORD  8925-1401"
-          }
-        ]
-      },
-      {
-        "path": "DocumentReference.extension",
-        "sliceName": "cosignatureNeed",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/cosignatureNeed"
-          }
-        ],
-        "label": "COSIGNATURE NEEDED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @COSIGNATURE NEEDED 8925-1506"
-          }
-        ],
-        "definition": "This boolean flag indicates to the system whether or not a cosignature is needed."
-      },
-      {
-        "path": "DocumentReference.relatesTo.code",
-        "fixedCode": "appends",
-        "mustSupport": true
-      },
-      {
-        "path": "DocumentReference.relatesTo.target.identifier",
-        "label": "ID PARENT",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @ID PARENT 8925-2101"
-          }
-        ],
-        "definition": "Applies to ID (interdisciplinary) notes only.  The ID PARENT is the note this note is attached to, making this note an entry in an ID note.   A note with an ID PARENT is referred to as an ID child note. ID parent notes and ID child notes are both file entries in file 8925.    The entries of an interdisciplinary note consist of the first entry, which is also the ID PARENT of the ID note, followed by the ID children."
-      },
-      {
-        "path": "DocumentReference.context.period.start",
-        "label": "EPISODE BEGIN DATE/TIME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @EPISODE BEGIN DATE/TIME 8925-0.07"
-          }
-        ],
-        "definition": "This is the date/time at which the treatment episode associated with thisdocument was initiated (e.g., Amission date/time for a discharge summary,Visit date/time for a clinic note, Transfer date/time for an interimsummary).  Time is optional."
-      },
-      {
-        "path": "DocumentReference.context.period.end",
-        "label": "EPISODE END DATE/TIME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @EPISODE END DATE/TIME 8925-0.08"
-          }
-        ],
-        "definition": "This is the ending date/time for the treatment episode associated withthis document (e.g., .  Time is optional."
-      },
-      {
-        "path": "DocumentReference.context.related.ref",
-        "label": "REQUESTING PACKAGE REFERENCE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @REQUESTING PACKAGE REFERENCE 8925-1405"
-          }
-        ],
-        "definition": "This field allows a linkage to be maintained between the TIU Document and the DHCP Package for which it was generated."
-      },
-      {
-        "path": "DocumentReference.type.text",
-        "label": "NAME",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT DEFINITION FILE @NAME 8925.1-.01"
-          }
-        ],
-        "definition": "The name of a Document Definition entry (.01 field) must be between 3 and 60 characters long and may not begin with a punctuation character. Although names can be entered in any case, they are transformed to upper case before being stored.   It functions as the Technical Name of the entry.  Some sites have put KWIC cross references on it to get, say, all Titles from a given Service.   Name can be used when entering documents as the name of the Title being entered.  Print Name and Abbreviation will also be accepted.   Since it is the Technical, .01 Name, the Document Definition Utility (TIUF) uses this name throughout.   The .01 name differs from the Print Name, which appears in lists of documents and functions as the Title of the document.   It also differs from Item Menu Text (1-20 characters), which is used when selecting documents from 3-COLUMN MENUS.   The ORDER of names in TIUF options Edit Document Definitions and Create Document Definitions is by Item Sequence under the parent.  Order is alphabetic by Menu Text if an Item has no Item Sequence.   When a new entry is added to file 8925.1, the Document Definition Utility (TIUF) enters the Name as the default Print Name.  The Print Name can be edited if a different Print Name is desired.   File 8925.1 permits more than 1 entry with the same name as long as they don't have the same Type.  In that sense, NAMES are reusable.  However, ENTRIES are NOT reusable (except specially marked Components): an entry is NOT allowed to be an item under more than one parent unless it is a Shared Component.  (See Type Component.)   Name is a BASIC Field.                                  OBJECT Name  Object Names, like any other names are 3-60 characters, not starting with punctuation.  Sites may want to namespace object names, use the object Print Name as a more familiar name, and use object Abbreviation as a short name to embed in boilerplate text.  Unlike other Types, Object Abbreviation and Print Name as well as Name must be uppercase.   Object Name, Abbreviation, or Print Name can be embedded in boilerplate text.  Since TIU must be able to determine from this which object is intended, object Names, Abbreviations, and Print Names must be unique.  In fact, an object Name must differ not only from every other object name, but also from every other object Abbreviation and from every other object Print Name.  Same for Abbreviations and Print Names.  For example, if some object has abbreviation 'CND', then 'CND' cannot be used for any other object Name, Abbreviation, or Print Name."
-      },
-      {
-        "path": "DocumentReference.type.extension",
-        "sliceName": "documenttype-nationalStandard",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documenttype-nationalStandard"
-          }
-        ],
-        "label": "NATIONAL STANDARD",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT DEFINITION FILE @NATIONAL STANDARD 8925.1-.13"
-          }
-        ],
-        "definition": "Some Document Definitions, for example, CWAD's, are developed nationally and sent out as standardized entries across the nation.  TIU and other packages depend on their standard definition, and they must not be edited by sites but only by the persons who are nationally responsible for them.   Such entries are marked NATIONAL STANDARD (field has value 1 for YES), which generally prevents sites from editing the entry.   In two cases, sites are permitted to edit National Standard entries.  The first case concerns Titles.  Sites can edit Status and Abbreviation for National Titles.  Status INACTIVE for a National Title prevents manual and upload entry of documents for the Title, while continuing to permit automatic entry for the Title via the TIU application interface for new notes. (Example: Adverse Reaction/Allergy notes are automatically entered by the Allergy package.) Editing Abbreviation gives sites a means of grouping national titles with other National and non-National Titles as they please.   The second case where edit of National entries is permitted concerns the Item Multiple:   If a National Standard entry has Type Class or Document Class, sites can add/delete Nonnational items as they please, and can edit ALL items AS ITEMS (e.g. Item Sequence, etc.).  Sites CANNOT add/delete National items.   If a National Standard entry has Type Title or Component, sites cannot add or delete items, but can still edit items AS ITEMS.   Sites cannot add National Standard entries as Items to parents.  There is one exception: Sites can add National Shared Components to (nonnational) Titles if they wish.  Sites can delete National Standard Items from nonnational parents. (Unless there has been a mistake, such items will be limited to Shared Components only.)   Field is NOT heritable.  If field has no value for an entry, value is 0 by default.  This means that entries created by sites are NOT National Standard.   Technical Note:   National entries (except for Shared Components) must have National ancestors:  if a National entry has a nonNational ancestor, the Document Definition Utility TIUF does not permit it to be activated. (Shared Components need not have National ancestors, and do not have a Status.)   National Standard is a BASIC field."
-      },
-      {
-        "path": "DocumentReference.extension",
-        "sliceName": "postingIndicator",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/postingIndicator"
-          }
-        ],
-        "label": "POSTING INDICATOR",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT DEFINITION FILE @POSTING INDICATOR 8925.1-.14"
-          }
-        ],
-        "definition": "This field is used to help identify indicators of the Patient Posting Type to which the Document Definition should be ascribed."
-      },
-      {
-        "path": "DocumentReference.extension",
-        "sliceName": "documentreference-statusDetail/coding/code",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documentreference-statusDetail.coding.code"
-          }
-        ],
-        "label": "STATUS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @STATUS 8925-.05b"
-          }
-        ],
-        "definition": "This field is intended to accommodate the status of a given report."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAProgressNote",
-  "id": "VAProgressNote",
-  "type": "DocumentReference",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNote",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAProgressNote",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNote",
+	"name": "VAProgressNote",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "DocumentReference",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "DocumentReference.extension:documentreference-statusDetail.coding.code",
+				"path": "DocumentReference.extension",
+				"sliceName": "documentreference-statusDetail-coding-code",
+				"label": "STATUS",
+				"definition": "This field is intended to accommodate the status of a given report.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documentreference-statusDetail.coding.code"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @STATUS 8925-.05b"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.extension:postingIndicator",
+				"path": "DocumentReference.extension",
+				"sliceName": "postingIndicator",
+				"label": "POSTING INDICATOR",
+				"definition": "This field is used to help identify indicators of the Patient Posting Type to which the Document Definition should be ascribed.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/postingIndicator"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT DEFINITION FILE @POSTING INDICATOR 8925.1-.14"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.extension:cosignatureNeed",
+				"path": "DocumentReference.extension",
+				"sliceName": "cosignatureNeed",
+				"label": "COSIGNATURE NEEDED",
+				"definition": "This boolean flag indicates to the system whether or not a cosignature is needed.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/cosignatureNeed"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @COSIGNATURE NEEDED 8925-1506"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.extension:patientMovementDate",
+				"path": "DocumentReference.extension",
+				"sliceName": "patientMovementDate",
+				"label": "PATIENT MOVEMENT RECORD",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patientMovementDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @PATIENT MOVEMENT RECORD  8925-1401"
+					}
+				]
+			},
+			{
+				"path": "DocumentReference.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "DocumentReference.masterIdentifier",
+				"path": "DocumentReference.masterIdentifier",
+				"label": "INTERNAL ENTRY NUMBER",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @INTERNAL ENTRY NUMBER 8925-.001"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.docStatus",
+				"path": "DocumentReference.docStatus",
+				"label": "STATUS",
+				"short": "status",
+				"definition": "This field is intended to accommodate the status of a given report.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @STATUS 8925-.05"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.type.extension:documenttype-nationalStandard",
+				"path": "DocumentReference.type.extension",
+				"sliceName": "documenttype-nationalStandard",
+				"label": "NATIONAL STANDARD",
+				"definition": "Some Document Definitions, for example, CWAD's, are developed nationally and sent out as standardized entries across the nation.  TIU and other packages depend on their standard definition, and they must not be edited by sites but only by the persons who are nationally responsible for them.   Such entries are marked NATIONAL STANDARD (field has value 1 for YES), which generally prevents sites from editing the entry.   In two cases, sites are permitted to edit National Standard entries.  The first case concerns Titles.  Sites can edit Status and Abbreviation for National Titles.  Status INACTIVE for a National Title prevents manual and upload entry of documents for the Title, while continuing to permit automatic entry for the Title via the TIU application interface for new notes. (Example: Adverse Reaction/Allergy notes are automatically entered by the Allergy package.) Editing Abbreviation gives sites a means of grouping national titles with other National and non-National Titles as they please.   The second case where edit of National entries is permitted concerns the Item Multiple:   If a National Standard entry has Type Class or Document Class, sites can add/delete Nonnational items as they please, and can edit ALL items AS ITEMS (e.g. Item Sequence, etc.).  Sites CANNOT add/delete National items.   If a National Standard entry has Type Title or Component, sites cannot add or delete items, but can still edit items AS ITEMS.   Sites cannot add National Standard entries as Items to parents.  There is one exception: Sites can add National Shared Components to (nonnational) Titles if they wish.  Sites can delete National Standard Items from nonnational parents. (Unless there has been a mistake, such items will be limited to Shared Components only.)   Field is NOT heritable.  If field has no value for an entry, value is 0 by default.  This means that entries created by sites are NOT National Standard.   Technical Note:   National entries (except for Shared Components) must have National ancestors:  if a National entry has a nonNational ancestor, the Document Definition Utility TIUF does not permit it to be activated. (Shared Components need not have National ancestors, and do not have a Status.)   National Standard is a BASIC field.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documenttype-nationalStandard"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT DEFINITION FILE @NATIONAL STANDARD 8925.1-.13"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.type.text",
+				"path": "DocumentReference.type.text",
+				"label": "NAME",
+				"definition": "The name of a Document Definition entry (.01 field) must be between 3 and 60 characters long and may not begin with a punctuation character. Although names can be entered in any case, they are transformed to upper case before being stored.   It functions as the Technical Name of the entry.  Some sites have put KWIC cross references on it to get, say, all Titles from a given Service.   Name can be used when entering documents as the name of the Title being entered.  Print Name and Abbreviation will also be accepted.   Since it is the Technical, .01 Name, the Document Definition Utility (TIUF) uses this name throughout.   The .01 name differs from the Print Name, which appears in lists of documents and functions as the Title of the document.   It also differs from Item Menu Text (1-20 characters), which is used when selecting documents from 3-COLUMN MENUS.   The ORDER of names in TIUF options Edit Document Definitions and Create Document Definitions is by Item Sequence under the parent.  Order is alphabetic by Menu Text if an Item has no Item Sequence.   When a new entry is added to file 8925.1, the Document Definition Utility (TIUF) enters the Name as the default Print Name.  The Print Name can be edited if a different Print Name is desired.   File 8925.1 permits more than 1 entry with the same name as long as they don't have the same Type.  In that sense, NAMES are reusable.  However, ENTRIES are NOT reusable (except specially marked Components): an entry is NOT allowed to be an item under more than one parent unless it is a Shared Component.  (See Type Component.)   Name is a BASIC Field.                                  OBJECT Name  Object Names, like any other names are 3-60 characters, not starting with punctuation.  Sites may want to namespace object names, use the object Print Name as a more familiar name, and use object Abbreviation as a short name to embed in boilerplate text.  Unlike other Types, Object Abbreviation and Print Name as well as Name must be uppercase.   Object Name, Abbreviation, or Print Name can be embedded in boilerplate text.  Since TIU must be able to determine from this which object is intended, object Names, Abbreviations, and Print Names must be unique.  In fact, an object Name must differ not only from every other object name, but also from every other object Abbreviation and from every other object Print Name.  Same for Abbreviations and Print Names.  For example, if some object has abbreviation 'CND', then 'CND' cannot be used for any other object Name, Abbreviation, or Print Name.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT DEFINITION FILE @NAME 8925.1-.01"
+					}
+				]
+			},
+			{
+				"path": "DocumentReference.class.coding.system",
+				"fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/8925-.04",
+				"mustSupport": true
+			},
+			{
+				"id": "DocumentReference.class.coding.code",
+				"path": "DocumentReference.class.coding.code",
+				"label": "PARENT DOCUMENT TYPE",
+				"short": "Standard Title",
+				"definition": "This field points to the immediate parent class or document type to which the current record belongs.  For example, when the current document has the type  SOAP - GENERAL NOTE, this field will point to PROGRESS NOTE, as the parent  class to which SOAP Notes belong, whereas, if the current record is a  SUBJECTIVE component, then this field will point to SOAP - GENERAL NOTE as  the parent document type to which the component belongs.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @PARENT DOCUMENT TYPE 8925-.04"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.subject",
+				"path": "DocumentReference.subject",
+				"label": "PATIENT",
+				"short": "Patient",
+				"definition": "This field contains a pointer to the patient file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @PATIENT 8925-.02"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.created",
+				"path": "DocumentReference.created",
+				"label": "ENTRY DATE/TIME",
+				"short": "Entry Date/Time",
+				"definition": "This is the date/time at which the document was originally entered into the database.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @ENTRY DATE/TIME 8925-1201"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.author",
+				"path": "DocumentReference.author",
+				"label": "HOSPITAL LOCATION",
+				"short": "Author",
+				"definition": "This is the location (WARD or CLINIC) associated with the document.",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteOrganization"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @AUTHOR/DICTATOR 8925-1202"
+					},
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @HOSPITAL LOCATION 8925-1205"
+					}
+				]
+			},
+			{
+				"path": "DocumentReference.relatesTo.code",
+				"fixedCode": "appends",
+				"mustSupport": true
+			},
+			{
+				"id": "DocumentReference.relatesTo.target.identifier",
+				"path": "DocumentReference.relatesTo.target.identifier",
+				"label": "ID PARENT",
+				"definition": "Applies to ID (interdisciplinary) notes only.  The ID PARENT is the note this note is attached to, making this note an entry in an ID note.   A note with an ID PARENT is referred to as an ID child note. ID parent notes and ID child notes are both file entries in file 8925.    The entries of an interdisciplinary note consist of the first entry, which is also the ID PARENT of the ID note, followed by the ID children.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @ID PARENT 8925-2101"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.content.attachment.data",
+				"path": "DocumentReference.content.attachment.data",
+				"label": "REPORT TEXT",
+				"short": "Report text",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @REPORT TEXT  8925.02-.01"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.context.extension:referenceDate",
+				"path": "DocumentReference.context.extension",
+				"sliceName": "referenceDate",
+				"label": "REFERENCE DATE",
+				"short": "Date of Note",
+				"definition": "This is the Date (and time) by which the clinician will reference the  document.  For Progress Notes, this will likely be the date of the  provider's encounter with the patient.  For Discharge Summaries, it will  correspond to the Discharge Date of the Admission referenced in the  document.  (If there is no Discharge Date when dictated, it will  correspond to the dictation date of the record instead.) In all cases, this is the date by which the document will be referenced and sorted.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referenceDate"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @REFERENCE DATE 8925-1301"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.context.encounter",
+				"path": "DocumentReference.context.encounter",
+				"label": "VISIT LOCATION",
+				"definition": "This is the location at which the visit/admission occurred.  As distinct  from the HOSPITAL LOCATION field, which represents the location at the time  the document was written, this is the location for the visit/admission with  which the note is associated.",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteEncounter"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @VISIT 8925-.03"
+					},
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @VISIT TYPE 8925-.13"
+					},
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @VISIT LOCATION 8925-1211"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.context.period.start",
+				"path": "DocumentReference.context.period.start",
+				"label": "EPISODE BEGIN DATE/TIME",
+				"definition": "This is the date/time at which the treatment episode associated with thisdocument was initiated (e.g., Amission date/time for a discharge summary,Visit date/time for a clinic note, Transfer date/time for an interimsummary).  Time is optional.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @EPISODE BEGIN DATE/TIME 8925-0.07"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.context.period.end",
+				"path": "DocumentReference.context.period.end",
+				"label": "EPISODE END DATE/TIME",
+				"definition": "This is the ending date/time for the treatment episode associated withthis document (e.g., .  Time is optional.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @EPISODE END DATE/TIME 8925-0.08"
+					}
+				]
+			},
+			{
+				"id": "DocumentReference.context.related.ref",
+				"path": "DocumentReference.context.related.ref",
+				"label": "REQUESTING PACKAGE REFERENCE",
+				"definition": "This field allows a linkage to be maintained between the TIU Document and the DHCP Package for which it was generated.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @REQUESTING PACKAGE REFERENCE 8925-1405"
+					}
+				]
+			}
+		]
+	}
 }

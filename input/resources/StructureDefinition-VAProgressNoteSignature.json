@@ -1,133 +1,138 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Provenance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Provenance.activity.code",
-        "fixedCode": "AU",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.activity.system",
-        "fixedUri": "http://hl7.org/fhir/v3/DocumentCompletion",
-        "mustSupport": true
-      },
-      {
-        "path": "Provenance.recorded",
-        "label": "SIGNATURE DATE/TIME",
-        "short": "Signer",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @SIGNATURE DATE/TIME 8925-1501"
-          }
-        ]
-      },
-      {
-        "path": "Provenance.agent.whoReference",
-        "label": "SIGNED BY",
-        "short": "Signer",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @SIGNED BY 8925-1502"
-          }
-        ]
-      },
-      {
-        "path": "Provenance.agent.whoReference.extension",
-        "sliceName": "signatureBlockName",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockName"
-          }
-        ],
-        "label": "SIGNATURE BLOCK NAME",
-        "short": "Signer",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @SIGNATURE BLOCK NAME 8925-1503"
-          }
-        ]
-      },
-      {
-        "path": "Provenance.agent.whoReference.extension",
-        "sliceName": "signatureBlockTitle",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockTitle"
-          }
-        ],
-        "label": "SIGNATURE BLOCK TITLE",
-        "short": "Signer",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @SIGNATURE BLOCK TITLE 8925-1504"
-          }
-        ],
-        "definition": "This is the encrypted signature block title of the person who signed the document."
-      },
-      {
-        "path": "Provenance.agent.whoReference.extension",
-        "sliceName": "signatureMode/coding/code",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureMode.coding.code"
-          }
-        ],
-        "label": "SIGNATURE MODE",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "TIU DOCUMENT @SIGNATURE MODE  8925-1505"
-          }
-        ],
-        "definition": "This is the mode by which the signature was obtained (i.e., either electronic or chart)."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAProgressNoteSignature",
-  "id": "VAProgressNoteSignature",
-  "type": "Provenance",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteSignature",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAProgressNoteSignature",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteSignature",
+	"name": "VAProgressNoteSignature",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Provenance.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "SIGNATURE DATE/TIME",
+				"short": "Signer",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @SIGNATURE DATE/TIME 8925-1501"
+					}
+				]
+			},
+			{
+				"path": "Provenance.activity.system",
+				"fixedUri": "http://hl7.org/fhir/v3/DocumentCompletion",
+				"mustSupport": true
+			},
+			{
+				"path": "Provenance.activity.code",
+				"fixedCode": "AU",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "SIGNED BY",
+				"short": "Signer",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @SIGNED BY 8925-1502"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference.extension:signatureMode.coding.code",
+				"path": "Provenance.agent.whoReference.extension",
+				"sliceName": "signatureMode-coding-code",
+				"label": "SIGNATURE MODE",
+				"definition": "This is the mode by which the signature was obtained (i.e., either electronic or chart).",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureMode.coding.code"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @SIGNATURE MODE  8925-1505"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference.extension:signatureBlockTitle",
+				"path": "Provenance.agent.whoReference.extension",
+				"sliceName": "signatureBlockTitle",
+				"label": "SIGNATURE BLOCK TITLE",
+				"short": "Signer",
+				"definition": "This is the encrypted signature block title of the person who signed the document.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockTitle"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @SIGNATURE BLOCK TITLE 8925-1504"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference.extension:signatureBlockName",
+				"path": "Provenance.agent.whoReference.extension",
+				"sliceName": "signatureBlockName",
+				"label": "SIGNATURE BLOCK NAME",
+				"short": "Signer",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockName"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @SIGNATURE BLOCK NAME 8925-1503"
+					}
+				]
+			}
+		]
+	}
 }

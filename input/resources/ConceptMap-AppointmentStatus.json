@@ -1,76 +1,76 @@
 {
-  "resourceType": "ConceptMap",
-  "id": "AppointmentStatus",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus",
-  "name": "AppointmentStatus",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "group": [
-    {
-      "source": "http://va.gov/Terminology/VistaDefinedTerms/2.98-3",
-      "target": "http://hl7.org/fhir/appointmentstatus",
-      "element": [
-        {
-          "code": "N",
-          "target": [
-            {
-              "code": "noshow",
-              "equivalence": "equal",
-              "comment": "NO-SHOW"
-            }
-          ]
-        },
-        {
-          "code": "C",
-          "target": [
-            {
-              "code": "cancelled",
-              "equivalence": "wider",
-              "comment": "CANCELLED BY CLINC"
-            }
-          ]
-        },
-        {
-          "code": "NA",
-          "target": [
-            {
-              "code": "noshow",
-              "equivalence": "wider",
-              "comment": "NO-SHOW & AUTO RE-BOOK"
-            }
-          ]
-        },
-        {
-          "code": "CA",
-          "target": [
-            {
-              "code": "cancelled",
-              "equivalence": "wider",
-              "comment": "CANCELLED BY CLINIC & AUTO RE-BOOK"
-            }
-          ]
-        },
-        {
-          "code": "PC",
-          "target": [
-            {
-              "code": "cancelled",
-              "equivalence": "wider",
-              "comment": "CANCELLED BY PATIENT"
-            }
-          ]
-        },
-        {
-          "code": "PCA",
-          "target": [
-            {
-              "code": "cancelled",
-              "equivalence": "wider",
-              "comment": "CANCELLED BY PATIENT & AUTO-REBOOK"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"resourceType": "ConceptMap",
+	"id": "AppointmentStatus",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus",
+	"name": "AppointmentStatus",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"group": [
+		{
+			"source": "http://va.gov/Terminology/VistaDefinedTerms/2.98-3",
+			"target": "http://hl7.org/fhir/appointmentstatus",
+			"element": [
+				{
+					"code": "N",
+					"target": [
+						{
+							"code": "noshow",
+							"equivalence": "equal",
+							"comment": "NO-SHOW"
+						}
+					]
+				},
+				{
+					"code": "C",
+					"target": [
+						{
+							"code": "cancelled",
+							"equivalence": "wider",
+							"comment": "CANCELLED BY CLINC"
+						}
+					]
+				},
+				{
+					"code": "NA",
+					"target": [
+						{
+							"code": "noshow",
+							"equivalence": "wider",
+							"comment": "NO-SHOW & AUTO RE-BOOK"
+						}
+					]
+				},
+				{
+					"code": "CA",
+					"target": [
+						{
+							"code": "cancelled",
+							"equivalence": "wider",
+							"comment": "CANCELLED BY CLINIC & AUTO RE-BOOK"
+						}
+					]
+				},
+				{
+					"code": "PC",
+					"target": [
+						{
+							"code": "cancelled",
+							"equivalence": "wider",
+							"comment": "CANCELLED BY PATIENT"
+						}
+					]
+				},
+				{
+					"code": "PCA",
+					"target": [
+						{
+							"code": "cancelled",
+							"equivalence": "wider",
+							"comment": "CANCELLED BY PATIENT & AUTO-REBOOK"
+						}
+					]
+				}
+			]
+		}
+	]
 }

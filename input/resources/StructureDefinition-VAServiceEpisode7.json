@@ -1,111 +1,124 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.system",
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.code",
-        "fixedCode": "2-.322019",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.display",
-        "fixedString": 0,
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.status",
-        "fixedCode": "final",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.valueCodeableConcept"
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.code",
-        "label": "Yugoslavia Service Indicated?",
-        "short": "Conflict Location information",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Yugoslavia Service Indicated?  2-.322019"
-          }
-        ],
-        "definition": "Field stores code indicating if patient served in the Yugolslavia Conflict."
-      },
-      {
-        "path": "Observation.effectivePeriod"
-      },
-      {
-        "path": "Observation.effectivePeriod.start",
-        "label": "Yugoslavia From Date",
-        "short": "Conflict Location information",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Yugoslavia From Date  2-.32202"
-          }
-        ],
-        "definition": "Enter the date that service in the Yugoslavia Conflict began for this patient.  Earliest possible date is 6/22/1992."
-      },
-      {
-        "path": "Observation.effectivePeriod.end",
-        "label": "Yugoslavia To Date",
-        "short": "Conflict Location information",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Yugoslavia To Date 2-.322021"
-          }
-        ],
-        "definition": "The date service in the Yugoslavia Conflict ended for this patient."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAServiceEpisode7",
-  "id": "VAServiceEpisode7",
-  "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode7",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAServiceEpisode7",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode7",
+	"name": "VAServiceEpisode7",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Observation.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.322019",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.display",
+				"fixedString": "0",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.effectivePeriod",
+				"type": [
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "Observation.effectivePeriod.start",
+				"path": "Observation.effectivePeriod.start",
+				"label": "Yugoslavia From Date",
+				"short": "Conflict Location information",
+				"definition": "Enter the date that service in the Yugoslavia Conflict began for this patient.  Earliest possible date is 6/22/1992.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Yugoslavia From Date  2-.32202"
+					}
+				]
+			},
+			{
+				"id": "Observation.effectivePeriod.end",
+				"path": "Observation.effectivePeriod.end",
+				"label": "Yugoslavia To Date",
+				"short": "Conflict Location information",
+				"definition": "The date service in the Yugoslavia Conflict ended for this patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Yugoslavia To Date 2-.322021"
+					}
+				]
+			},
+			{
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "Yugoslavia Service Indicated?",
+				"short": "Conflict Location information",
+				"definition": "Field stores code indicating if patient served in the Yugolslavia Conflict.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Yugoslavia Service Indicated?  2-.322019"
+					}
+				]
+			}
+		]
+	}
 }

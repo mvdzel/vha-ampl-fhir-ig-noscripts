@@ -1,111 +1,115 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Encounter.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Encounter.location.location.identifier",
-        "label": "ROOM-BED",
-        "short": "ROOM-BED",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @WARD LOCATION 2-.1"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @ROOM-BED 2-.101"
-          }
-        ],
-        "definition": "If desired, for this inpatient, enter the room and bed indicator to which s/he is assigned in 'ROOM-BED' format."
-      },
-      {
-        "path": "Encounter.participant.type.coding.code",
-        "fixedCode": "PPRF",
-        "mustSupport": true
-      },
-      {
-        "path": "Encounter.participant.type.coding.system",
-        "fixedUri": "http://hl7.org/fhir/ValueSet/encounter-participant-type",
-        "mustSupport": true
-      },
-      {
-        "path": "Encounter.participant.individual",
-        "label": "ATTENDING PHYSICIAN",
-        "short": "INPATIENT ATTENDING",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient File @PROVIDER 2-.104"
-          },
-          {
-            "identity": "vista",
-            "map": "Patient File @ATTENDING PHYSICIAN 2-.1041"
-          }
-        ],
-        "definition": "This field contains the attending physician currently responsible for the care of this patient.  This field is maintained automatically for all inpatients and must not be edited.  Once a patient is discharged, the data in this field is removed."
-      },
-      {
-        "path": "Encounter.reason.coding.code",
-        "label": "DIAGNOSIS",
-        "short": "ADMITTING DIAGNOSIS",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT MOVEMENT @DIAGNOSIS 405-.1"
-          }
-        ],
-        "definition": "When admitting a patient, you will be asked to provide a brief desciption of the diagnosis of this patient upon admission."
-      },
-      {
-        "path": "Encounter.period.start",
-        "label": "CURRENT ADMISSION",
-        "short": "Current Admission",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient  @CURRENT ADMISSION 2-.105"
-          }
-        ],
-        "definition": "This field contains the internal entry number of the PATIENT MOVEMENT file denoting the current admission for an inpatient.  This field is only stored for current inpatients.  It must NOT be edited as this could affect the integrity of many options within MAS and other DHCP packages.  When displaying this field, the date/time of the current admission will be displayed."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VACurrentEncounter",
-  "id": "VACurrentEncounter",
-  "type": "Encounter",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACurrentEncounter",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VACurrentEncounter",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACurrentEncounter",
+	"name": "VACurrentEncounter",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Encounter",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Encounter.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "Encounter.participant.type.coding.system",
+				"fixedUri": "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+				"mustSupport": true
+			},
+			{
+				"path": "Encounter.participant.type.coding.code",
+				"fixedCode": "PPRF",
+				"mustSupport": true
+			},
+			{
+				"id": "Encounter.participant.individual",
+				"path": "Encounter.participant.individual",
+				"label": "ATTENDING PHYSICIAN",
+				"short": "INPATIENT ATTENDING",
+				"definition": "This field contains the attending physician currently responsible for the care of this patient.  This field is maintained automatically for all inpatients and must not be edited.  Once a patient is discharged, the data in this field is removed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @PROVIDER 2-.104"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @ATTENDING PHYSICIAN 2-.1041"
+					}
+				]
+			},
+			{
+				"id": "Encounter.period.start",
+				"path": "Encounter.period.start",
+				"label": "CURRENT ADMISSION",
+				"short": "Current Admission",
+				"definition": "This field contains the internal entry number of the PATIENT MOVEMENT file denoting the current admission for an inpatient.  This field is only stored for current inpatients.  It must NOT be edited as this could affect the integrity of many options within MAS and other DHCP packages.  When displaying this field, the date/time of the current admission will be displayed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient  @CURRENT ADMISSION 2-.105"
+					}
+				]
+			},
+			{
+				"id": "Encounter.reason.coding.code",
+				"path": "Encounter.reason.coding.code",
+				"label": "DIAGNOSIS",
+				"short": "ADMITTING DIAGNOSIS",
+				"definition": "When admitting a patient, you will be asked to provide a brief desciption of the diagnosis of this patient upon admission.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT MOVEMENT @DIAGNOSIS 405-.1"
+					}
+				]
+			},
+			{
+				"id": "Encounter.location.location.identifier",
+				"path": "Encounter.location.location.identifier",
+				"label": "ROOM-BED",
+				"short": "ROOM-BED",
+				"definition": "If desired, for this inpatient, enter the room and bed indicator to which s/he is assigned in 'ROOM-BED' format.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @WARD LOCATION 2-.1"
+					},
+					{
+						"identity": "vista",
+						"map": "Patient File @ROOM-BED 2-.101"
+					}
+				]
+			}
+		]
+	}
 }

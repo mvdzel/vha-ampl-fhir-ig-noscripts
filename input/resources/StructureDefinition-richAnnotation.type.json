@@ -1,48 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "richAnnotation.type",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.type",
-  "name": "richAnnotation.type",
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "date": "2021-03-12T16:05:11.288Z",
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "abstract": false,
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "kind": "resource",
-  "contextType": "resource",
-  "context": [
-    "AllergyIntolerance"
-  ],
-  "differential": {
-    "element": [
-      {
-        "path": "Extension.url",
-        "fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.type"
-      },
-      {
-        "path": "Extension.valueString",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "PATIENT ALLERGIES @COMMENT TYPE 120.826-1.5"
-          }
-        ]
-      }
-    ]
-  },
-  "description": "This field indicates the type of comments. If this field is answered \"V\", then these comments are verifier entered.  If this field is answered \"O\", then these are observer comments.  If this field is answered \"E\", then these are entered in error comments."
+	"resourceType": "StructureDefinition",
+	"id": "richAnnotation.type",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.type",
+	"name": "richAnnotation.type",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"description": "This field indicates the type of comments. If this field is answered \"V\", then these comments are verifier entered.  If this field is answered \"O\", then these are observer comments.  If this field is answered \"E\", then these are entered in error comments.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"AllergyIntolerance"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.type"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PATIENT ALLERGIES @COMMENT TYPE 120.826-1.5"
+					}
+				]
+			}
+		]
+	}
 }

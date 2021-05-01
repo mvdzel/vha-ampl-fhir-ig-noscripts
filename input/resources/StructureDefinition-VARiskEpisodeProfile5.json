@@ -1,142 +1,161 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.system",
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.code",
-        "fixedCode": "2-.525",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.display",
-        "fixedString": "Was this patient a Prisoner of War?",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedElement",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.status",
-        "fixedCode": "final",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.valueCodeableConcept"
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.code",
-        "label": "POW Status Indicated?",
-        "short": "POW Information",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @POW Status Indicated?  2-.525"
-          }
-        ],
-        "definition": "For this veteran applicant enter 'Y' if s/he was confined as a prisoner of war, 'N' if not, or 'U' if unknown.  Once the POW Status is verified  by the HEC, it is no longer editable."
-      },
-      {
-        "path": "Observation.effectivePeriod"
-      },
-      {
-        "path": "Observation.effectivePeriod.start",
-        "label": "POW From Date",
-        "short": "POW Information",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @POW From Date  2-.527"
-          }
-        ],
-        "definition": "For this veteran applicant who was confined as a prisoner of war (WERE YOU A PRISONER OF WAR prompt must be answered YES) enter the date on which confinement commenced.  Once the service record is verified only those users who hold the designated security key may enter/edit this field.  This field cannot be deleted as long as applicant is identified as a former POW."
-      },
-      {
-        "path": "Observation.effectivePeriod.end",
-        "label": "POW To Date",
-        "short": "POW Information",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @POW To Date  2-.528"
-          }
-        ],
-        "definition": "For this veteran applicant who was confined as a prisoner of war (WERE YOU A PRISONER OF WAR prompt must be answered YES) enter the date on which confinement ended.  Once the service record is verified only those users who hold the designated security key may enter/edit this field.  This field cannot be deleted as long as applicant is identified as a former POW."
-      },
-      {
-        "path": "Observation.component.code.coding.code",
-        "fixedCode": "2-.526",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.component.code.coding.display",
-        "fixedString": "POW Confinement Location",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.component.code.coding.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.component.valueCodeableConcept"
-      },
-      {
-        "path": "Observation.component.valueCodeableConcept.coding.code",
-        "label": "POW Confinement Location",
-        "short": "POW Information",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @POW Confinement Location  2-.526"
-          }
-        ],
-        "definition": "For this veteran applicant who was confined as a prisoner of war (WERE YOU A PRISONER OF WAR prompt must be answered YES) enter the war during which confined.  Once the service record is verified only those users who hold the designated security key may enter/edit this field.  This field cannot be deleted as long as applicant is identified as a former POW."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VARiskEpisodeProfile5",
-  "id": "VARiskEpisodeProfile5",
-  "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile5",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VARiskEpisodeProfile5",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile5",
+	"name": "VARiskEpisodeProfile5",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Observation.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElement",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.525",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.display",
+				"fixedString": "Was this patient a Prisoner of War?",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.effectivePeriod",
+				"type": [
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "Observation.effectivePeriod.start",
+				"path": "Observation.effectivePeriod.start",
+				"label": "POW From Date",
+				"short": "POW Information",
+				"definition": "For this veteran applicant who was confined as a prisoner of war (WERE YOU A PRISONER OF WAR prompt must be answered YES) enter the date on which confinement commenced.  Once the service record is verified only those users who hold the designated security key may enter/edit this field.  This field cannot be deleted as long as applicant is identified as a former POW.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @POW From Date  2-.527"
+					}
+				]
+			},
+			{
+				"id": "Observation.effectivePeriod.end",
+				"path": "Observation.effectivePeriod.end",
+				"label": "POW To Date",
+				"short": "POW Information",
+				"definition": "For this veteran applicant who was confined as a prisoner of war (WERE YOU A PRISONER OF WAR prompt must be answered YES) enter the date on which confinement ended.  Once the service record is verified only those users who hold the designated security key may enter/edit this field.  This field cannot be deleted as long as applicant is identified as a former POW.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @POW To Date  2-.528"
+					}
+				]
+			},
+			{
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "POW Status Indicated?",
+				"short": "POW Information",
+				"definition": "For this veteran applicant enter 'Y' if s/he was confined as a prisoner of war, 'N' if not, or 'U' if unknown.  Once the POW Status is verified  by the HEC, it is no longer editable.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @POW Status Indicated?  2-.525"
+					}
+				]
+			},
+			{
+				"path": "Observation.component.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.component.code.coding.code",
+				"fixedCode": "2-.526",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.component.code.coding.display",
+				"fixedString": "POW Confinement Location",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.component.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Observation.component.valueCodeableConcept.coding.code",
+				"path": "Observation.component.valueCodeableConcept.coding.code",
+				"label": "POW Confinement Location",
+				"short": "POW Information",
+				"definition": "For this veteran applicant who was confined as a prisoner of war (WERE YOU A PRISONER OF WAR prompt must be answered YES) enter the war during which confined.  Once the service record is verified only those users who hold the designated security key may enter/edit this field.  This field cannot be deleted as long as applicant is identified as a former POW.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @POW Confinement Location  2-.526"
+					}
+				]
+			}
+		]
+	}
 }

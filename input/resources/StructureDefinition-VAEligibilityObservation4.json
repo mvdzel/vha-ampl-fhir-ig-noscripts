@@ -1,82 +1,88 @@
 {
-  "fhirVersion": "3.0.2",
-  "status": "draft",
-  "resourceType": "StructureDefinition",
-  "differential": {
-    "element": [
-      {
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/2-.3611",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.code",
-        "fixedCode": "2-.3611",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.display",
-        "fixedString": "ELIGIBILITY STATUS",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://va.gov/Terminology/VistaDefinedElements/",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.status",
-        "fixedCode": "final",
-        "mustSupport": true
-      },
-      {
-        "path": "Observation.valueCodeableConcept"
-      },
-      {
-        "path": "Observation.valueCodeableConcept.coding.code",
-        "label": "Eligibility Status",
-        "short": "Eligibility",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "vista",
-            "map": "Patient @Eligibility Status  2-.3611"
-          }
-        ],
-        "definition": "Select from the available listing the appropriate eligibility status for this applicant.  Only users who hold the designated security key may enter/edit this field."
-      }
-    ]
-  },
-  "abstract": false,
-  "name": "VAEligibilityObservation4",
-  "id": "VAEligibilityObservation4",
-  "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-  "derivation": "constraint",
-  "mapping": [
-    {
-      "identity": "vista",
-      "name": "VistA",
-      "uri": "http://va.gov/vista/"
-    }
-  ],
-  "date": "2021-03-12T16:05:11.288Z",
-  "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation4",
-  "meta": {
-    "lastUpdated": "2021-03-12T16:05:11.288Z"
-  },
-  "kind": "resource"
+	"resourceType": "StructureDefinition",
+	"id": "VAEligibilityObservation4",
+	"meta": {
+		"lastUpdated": "2021-05-01T07:59:44.528Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation4",
+	"name": "VAEligibilityObservation4",
+	"status": "draft",
+	"date": "2021-05-01T07:59:44.528Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"path": "Observation.extension",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "url"
+						}
+					],
+					"ordered": false,
+					"rules": "open"
+				}
+			},
+			{
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements/",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.3611",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.code.coding.display",
+				"fixedString": "ELIGIBILITY STATUS",
+				"mustSupport": true
+			},
+			{
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/2-.3611",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "Eligibility Status",
+				"short": "Eligibility",
+				"definition": "Select from the available listing the appropriate eligibility status for this applicant.  Only users who hold the designated security key may enter/edit this field.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Eligibility Status  2-.3611"
+					}
+				]
+			}
+		]
+	}
 }
