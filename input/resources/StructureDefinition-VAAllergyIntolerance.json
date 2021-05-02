@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAAllergyIntolerance",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntolerance",
 	"name": "VAAllergyIntolerance",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "An AllergyIntolerance resource with extensions supporting VA processes.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
@@ -193,19 +193,6 @@
 				]
 			},
 			{
-				"path": "AllergyIntolerance.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
 				"id": "AllergyIntolerance.verificationStatus",
 				"path": "AllergyIntolerance.verificationStatus",
 				"label": "ENTERED IN ERROR",
@@ -238,6 +225,7 @@
 				]
 			},
 			{
+				"id": "AllergyIntolerance.code.coding.system",
 				"path": "AllergyIntolerance.code.coding.system",
 				"label": "GMR ALLERGY",
 				"definition": "This field is a variable pointer to help relate this allergy to some record in one of the files to which this field points.  The files that are pointed to are the GMR Allergies (120.82) file, National Drug (50.6) file, Drug (50) file, Drug Ingredients (50.416) file and VA Drug Class (50.605) file.",
@@ -391,6 +379,7 @@
 				]
 			},
 			{
+				"id": "AllergyIntolerance.reaction.manifestation.coding.system",
 				"path": "AllergyIntolerance.reaction.manifestation.coding.system",
 				"fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/120.83",
 				"mustSupport": true

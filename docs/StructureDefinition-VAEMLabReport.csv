@@ -22,7 +22,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "DiagnosticReport.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"DiagnosticReport.extension","referencedDocument/display","","TIU REFERENCE DATE/TIME - EM",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.display]]} {[]}
+"DiagnosticReport.extension","referencedDocument-display","","TIU REFERENCE DATE/TIME - EM",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.display]]} {[]}
 ","Extension","This is the date and time that the electron microscopy SF515 was stored in TIU. It will match the REFERENCE DATE (#1301) field of the corresponding document in the TIU DOCUMENT (#8925) file.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","TIU REFERENCE DATE/TIME - EM @TIU REFERENCE DATE/TIME - EM 63.49-.01"

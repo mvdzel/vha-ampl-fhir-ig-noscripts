@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderDraftDate",
 	"name": "medicationrequest-orderDraftDate",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "This is the date the medication was ordered.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

@@ -3,1974 +3,1862 @@
     "id": "event-statusReason",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/StructureDefinition/event-processState",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "event-statusReason"
   },
   {
     "id": "AppointmentStatus",
     "type": "ConceptMap",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "AppointmentStatus"
   },
   {
     "id": "ClinicalDangerLevel",
     "type": "ConceptMap",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/ClinicalDangerLevel",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "ClinicalDangerLevel"
   },
   {
     "id": "vha-ampl-ig",
     "type": "ImplementationGuide",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "vha-ampl-ig"
   },
   {
     "id": "NonVAMedicationIssue",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/NonVAMedicationIssue",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "NonVAMedicationIssue"
   },
   {
     "id": "NonVAMedicationStatement",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/NonVAMedicationStatement",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "NonVAMedicationStatement"
   },
   {
     "id": "ProblemListChange",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/ProblemListChange",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "ProblemListChange"
   },
   {
     "id": "VAAllergyIntolerance",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntolerance",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAllergyIntolerance"
   },
   {
     "id": "VAAllergyIntoleranceAssessment",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceAssessment",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAllergyIntoleranceAssessment"
   },
   {
     "id": "VAAllergyIntoleranceEntryInError",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceEntryInError",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAllergyIntoleranceEntryInError"
   },
   {
     "id": "VAAllergyIntoleranceOrigination",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceOrigination",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAllergyIntoleranceOrigination"
   },
   {
     "id": "VAAllergyIntoleranceOriginationSite",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceOriginationSite",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAllergyIntoleranceOriginationSite"
   },
   {
     "id": "VAAllergyIntoleranceVerification",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceVerification",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAllergyIntoleranceVerification"
   },
   {
     "id": "VAAppointment",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAppointment"
   },
   {
     "id": "VAAppointment-ext",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment-ext",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAppointment-ext"
   },
   {
     "id": "VAAppointmentLocation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentLocation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAppointmentLocation"
   },
   {
     "id": "VAAppointmentPracitioner",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentPracitioner",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAAppointmentPracitioner"
   },
   {
     "id": "VACareTeam",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACareTeam",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VACareTeam"
   },
   {
     "id": "VAChemLabReport",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReport",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAChemLabReport"
-  },
-  {
-    "id": "VAChemLabReportOrder",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReportOrder",
-    "version": "0.0.64",
-    "name": "VAChemLabReportOrder"
   },
   {
     "id": "VAChemLabReportResult",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReportResult",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAChemLabReportResult"
-  },
-  {
-    "id": "VAChemLabReportSpecimen",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReportSpecimen",
-    "version": "0.0.64",
-    "name": "VAChemLabReportSpecimen"
   },
   {
     "id": "VACoverage",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACoverage",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VACoverage"
   },
   {
     "id": "VACurrentEncounter",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACurrentEncounter",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VACurrentEncounter"
   },
   {
     "id": "VACytopathologyLabOrder",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACytopathologyLabOrder",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VACytopathologyLabOrder"
-  },
-  {
-    "id": "VACytopathologyLabOrderSpecimen",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACytopathologyLabOrderSpecimen",
-    "version": "0.0.64",
-    "name": "VACytopathologyLabOrderSpecimen"
   },
   {
     "id": "VACytopathologyLabReport",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACytopathologyLabReport",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VACytopathologyLabReport"
-  },
-  {
-    "id": "VACytopathologyLabSpecimen",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACytopathologyLabSpecimen",
-    "version": "0.0.64",
-    "name": "VACytopathologyLabSpecimen"
   },
   {
     "id": "VADrug",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VADrug",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VADrug"
   },
   {
     "id": "VADrugIngredient",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VADrugIngredient",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VADrugIngredient"
   },
   {
     "id": "VAEMLabReport",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEMLabReport",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAEMLabReport"
-  },
-  {
-    "id": "VAEMLabReportEncounter",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEMLabReportEncounter",
-    "version": "0.0.64",
-    "name": "VAEMLabReportEncounter"
   },
   {
     "id": "VAEMLabReportOrder",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEMLabReportOrder",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAEMLabReportOrder"
-  },
-  {
-    "id": "VAEMLabReportOrderSpecimen",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEMLabReportOrderSpecimen",
-    "version": "0.0.64",
-    "name": "VAEMLabReportOrderSpecimen"
-  },
-  {
-    "id": "VAEMLabReportSpecimen",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEMLabReportSpecimen",
-    "version": "0.0.64",
-    "name": "VAEMLabReportSpecimen"
   },
   {
     "id": "VAEligibilityObservation1",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation1",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAEligibilityObservation1"
   },
   {
     "id": "VAEligibilityObservation2",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation2",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAEligibilityObservation2"
   },
   {
     "id": "VAEligibilityObservation3",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation3",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAEligibilityObservation3"
   },
   {
     "id": "VAEligibilityObservation4",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation4",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAEligibilityObservation4"
   },
   {
     "id": "VAFinishedOutpatientMedicationDispense",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationDispense",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAFinishedOutpatientMedicationDispense"
   },
   {
     "id": "VAFinishedOutpatientMedicationDispenseEncounter",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationDispenseEncounter",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAFinishedOutpatientMedicationDispenseEncounter"
   },
   {
     "id": "VAFinishedOutpatientMedicationOrderCancellation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationOrderCancellation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAFinishedOutpatientMedicationOrderCancellation"
   },
   {
     "id": "VAFinishedOutpatientMedicationOrderChange",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationOrderChange",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAFinishedOutpatientMedicationOrderChange"
-  },
-  {
-    "id": "VAFinishedOutpatientMedicationOrderEncounter",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationOrderEncounter",
-    "version": "0.0.64",
-    "name": "VAFinishedOutpatientMedicationOrderEncounter"
   },
   {
     "id": "VAFinishedOutpatientMedicationPartial",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationPartial",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAFinishedOutpatientMedicationPartial"
   },
   {
     "id": "VAFinishedOutpatientMedicationRequest",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationRequest",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAFinishedOutpatientMedicationRequest"
   },
   {
     "id": "VAImmunization",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAImmunization",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAImmunization"
   },
   {
     "id": "VAInpatientIVMedication",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedication",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAInpatientIVMedication"
   },
   {
     "id": "VAInpatientIVMedicationRequest",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequest",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAInpatientIVMedicationRequest"
   },
   {
     "id": "VAInpatientIVMedicationRequestChange",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequestChange",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAInpatientIVMedicationRequestChange"
-  },
-  {
-    "id": "VAInpatientIVMedicationRequestEncounter",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequestEncounter",
-    "version": "0.0.64",
-    "name": "VAInpatientIVMedicationRequestEncounter"
   },
   {
     "id": "VAInpatientIVMedicationRequestVerification",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequestVerification",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAInpatientIVMedicationRequestVerification"
   },
   {
     "id": "VAInpatientMedicationRequestRenewal",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientMedicationRequestRenewal",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAInpatientMedicationRequestRenewal"
   },
   {
     "id": "VAInpatientUDMedicationOrderVerification",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationOrderVerification",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAInpatientUDMedicationOrderVerification"
   },
   {
     "id": "VAInpatientUDMedicationRequest",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequest",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAInpatientUDMedicationRequest"
   },
   {
     "id": "VAInpatientUDMedicationRequestChange",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestChange",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAInpatientUDMedicationRequestChange"
-  },
-  {
-    "id": "VAInpatientUDMedicationRequestEncounter",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestEncounter",
-    "version": "0.0.64",
-    "name": "VAInpatientUDMedicationRequestEncounter"
   },
   {
     "id": "VAInpatientUDMedicationRequestRenewal",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestRenewal",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAInpatientUDMedicationRequestRenewal"
   },
   {
     "id": "VAMedication",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedication",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAMedication"
   },
   {
     "id": "VAMedicationAdministration",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedicationAdministration",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAMedicationAdministration"
   },
   {
     "id": "VAMedicationAdministrationEvent",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedicationAdministrationEvent",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAMedicationAdministrationEvent"
   },
   {
     "id": "VAMicroLabReport",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMicroLabReport",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAMicroLabReport"
   },
   {
     "id": "VAMicroLabReportOrder",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMicroLabReportOrder",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAMicroLabReportOrder"
-  },
-  {
-    "id": "VAMicroLabReportOrderSpecimen",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMicroLabReportOrderSpecimen",
-    "version": "0.0.64",
-    "name": "VAMicroLabReportOrderSpecimen"
-  },
-  {
-    "id": "VAMicroLabReportResult",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMicroLabReportResult",
-    "version": "0.0.64",
-    "name": "VAMicroLabReportResult"
-  },
-  {
-    "id": "VAMicroLabReportSpecimen",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMicroLabReportSpecimen",
-    "version": "0.0.64",
-    "name": "VAMicroLabReportSpecimen"
   },
   {
     "id": "VAOrderCheck",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAOrderCheck",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAOrderCheck"
   },
   {
     "id": "VAPatient",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAPatient"
   },
   {
     "id": "VAPatientAppointment",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientAppointment",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAPatientAppointment"
   },
   {
     "id": "VAPatientFlagAssignment",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientFlagAssignment",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAPatientFlagAssignment"
   },
   {
     "id": "VAPatientPrimaryEligibilityObservation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientPrimaryEligibilityObservation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAPatientPrimaryEligibilityObservation"
   },
   {
     "id": "VAPatientRatedDisabilityObservation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientRatedDisabilityObservation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAPatientRatedDisabilityObservation"
   },
   {
     "id": "VAPatientRecordFlag",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientRecordFlag",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAPatientRecordFlag"
   },
   {
     "id": "VAPatientServiceConnectionObservation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientServiceConnectionObservation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAPatientServiceConnectionObservation"
   },
   {
     "id": "VAPrimaryCareTeam",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPrimaryCareTeam",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAPrimaryCareTeam"
   },
   {
     "id": "VAProblem",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblem",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAProblem"
   },
   {
     "id": "VAProblemAuthorship",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblemAuthorship",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAProblemAuthorship"
   },
   {
     "id": "VAProgressNote",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNote",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAProgressNote"
   },
   {
     "id": "VAProgressNoteCosignature",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteCosignature",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAProgressNoteCosignature"
   },
   {
     "id": "VAProgressNoteDictation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteDictation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAProgressNoteDictation"
   },
   {
     "id": "VAProgressNoteEncounter",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteEncounter",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAProgressNoteEncounter"
   },
   {
     "id": "VAProgressNoteOrganization",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteOrganization",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAProgressNoteOrganization"
   },
   {
     "id": "VAProgressNoteSignature",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteSignature",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAProgressNoteSignature"
   },
   {
     "id": "VAPurpleHeartStatusProfile",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPurpleHeartStatusProfile",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAPurpleHeartStatusProfile"
   },
   {
     "id": "VAReferral",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferral",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAReferral"
   },
   {
     "id": "VAReferralEncounter",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralEncounter",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAReferralEncounter"
   },
   {
     "id": "VAReferralEncounterReport",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralEncounterReport",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAReferralEncounterReport"
   },
   {
     "id": "VAReferralOrganization",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralOrganization",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAReferralOrganization"
   },
   {
     "id": "VAReferralOrganization2",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralOrganization2",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAReferralOrganization2"
   },
   {
     "id": "VAReferralProvenance",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralProvenance",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAReferralProvenance"
   },
   {
     "id": "VARiskEpisodeProfile1",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile1",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VARiskEpisodeProfile1"
   },
   {
     "id": "VARiskEpisodeProfile2",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile2",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VARiskEpisodeProfile2"
   },
   {
     "id": "VARiskEpisodeProfile3",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile3",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VARiskEpisodeProfile3"
   },
   {
     "id": "VARiskEpisodeProfile4",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile4",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VARiskEpisodeProfile4"
   },
   {
     "id": "VARiskEpisodeProfile5",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile5",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VARiskEpisodeProfile5"
   },
   {
     "id": "VARiskEpisodeProfile6",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile6",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VARiskEpisodeProfile6"
   },
   {
     "id": "VAServiceEpisode1",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode1",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAServiceEpisode1"
   },
   {
     "id": "VAServiceEpisode2",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode2",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAServiceEpisode2"
   },
   {
     "id": "VAServiceEpisode3",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode3",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAServiceEpisode3"
   },
   {
     "id": "VAServiceEpisode4",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode4",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAServiceEpisode4"
   },
   {
     "id": "VAServiceEpisode5",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode5",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAServiceEpisode5"
   },
   {
     "id": "VAServiceEpisode6",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode6",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAServiceEpisode6"
   },
   {
     "id": "VAServiceEpisode7",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode7",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAServiceEpisode7"
   },
   {
     "id": "VAServiceHistoryObservation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceHistoryObservation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAServiceHistoryObservation"
   },
   {
     "id": "VASurgicalPathologyReport",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASurgicalPathologyReport",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VASurgicalPathologyReport"
-  },
-  {
-    "id": "VAUnfinishedInpatientMedication",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedication",
-    "version": "0.0.64",
-    "name": "VAUnfinishedInpatientMedication"
   },
   {
     "id": "VAUnfinishedInpatientMedicationRequest",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequest",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAUnfinishedInpatientMedicationRequest"
   },
   {
     "id": "VAUnfinishedInpatientMedicationRequestActivity",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequestActivity",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAUnfinishedInpatientMedicationRequestActivity"
-  },
-  {
-    "id": "VAUnfinishedInpatientMedicationRequestAppointment",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequestAppointment",
-    "version": "0.0.64",
-    "name": "VAUnfinishedInpatientMedicationRequestAppointment"
   },
   {
     "id": "VAUnfinishedInpatientMedicationRequestEncounter",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequestEncounter",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAUnfinishedInpatientMedicationRequestEncounter"
   },
   {
     "id": "VAUnfinishedOutpatientMedicationOrder",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrder",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAUnfinishedOutpatientMedicationOrder"
-  },
-  {
-    "id": "VAUnfinishedOutpatientMedicationOrderEncounter",
-    "type": "StructureDefinition",
-    "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrderEncounter",
-    "version": "0.0.64",
-    "name": "VAUnfinishedOutpatientMedicationOrderEncounter"
   },
   {
     "id": "VAUnfinishedOutpatientMedicationOrderIssue",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrderIssue",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAUnfinishedOutpatientMedicationOrderIssue"
   },
   {
     "id": "VAVitals",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAVitals",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAVitals"
   },
   {
     "id": "VAVitalsEntry",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAVitalsEntry",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "VAVitalsEntry"
   },
   {
     "id": "address-active",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-active",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "address-active"
   },
   {
     "id": "address-validity",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-validity",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "address-validity"
   },
   {
     "id": "allergyIntolerance-substanceIngredient",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyIntolerance-substanceIngredient",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "allergyIntolerance-substanceIngredient"
   },
   {
     "id": "allergyintolerance-reactionAssessed",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionAssessed",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "allergyintolerance-reactionAssessed"
   },
   {
     "id": "allergyintolerance-reactionDateEntered",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionDateEntered",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "allergyintolerance-reactionDateEntered"
   },
   {
     "id": "allergyintolerance-reactionObservationMode",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionObservationMode",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "allergyintolerance-reactionObservationMode"
   },
   {
     "id": "allergyintolerance-vaSubstanceCategory",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-vaSubstanceCategory",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "allergyintolerance-vaSubstanceCategory"
   },
   {
     "id": "appointmentStatusDetail",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/appointmentStatusDetail",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "appointmentStatusDetail"
   },
   {
     "id": "assignedDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/assignedDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "assignedDate"
   },
   {
     "id": "comment",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "comment"
   },
   {
     "id": "condition-lastModified",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-lastModified"
   },
   {
     "id": "condition-priority",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-priority"
   },
   {
     "id": "condition-relationshipToAgentOrangeExposure",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-relationshipToAgentOrangeExposure"
   },
   {
     "id": "condition-relationshipToCombatExperience",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-relationshipToCombatExperience"
   },
   {
     "id": "condition-relationshipToMilitarySexualTrauma",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-relationshipToMilitarySexualTrauma"
   },
   {
     "id": "condition-relationshipToPersianGulfService",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-relationshipToPersianGulfService"
   },
   {
     "id": "condition-relationshipToRadiation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-relationshipToRadiation"
   },
   {
     "id": "condition-relationshipToRadiumTreatment",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-relationshipToRadiumTreatment"
   },
   {
     "id": "condition-relationshipToShipboardHazardAndDefense",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-relationshipToShipboardHazardAndDefense"
   },
   {
     "id": "condition-responsibleProvider",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-responsibleProvider"
   },
   {
     "id": "condition-treatingClinic",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-treatingClinic"
   },
   {
     "id": "condition-treatingService",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "condition-treatingService"
   },
   {
     "id": "conjunction",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/conjunction",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "conjunction"
   },
   {
     "id": "cosignatureNeed",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/cosignatureNeed",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "cosignatureNeed"
   },
   {
     "id": "defaultPrescriptionStatus",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/defaultPrescriptionStatus",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "defaultPrescriptionStatus"
   },
   {
     "id": "detectedissue-orderCheckContext",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/detectedissue-orderCheckContext",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "detectedissue-orderCheckContext"
   },
   {
     "id": "detectedissue-orderCheckRecipient",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/detectedissue-orderCheckRecipient",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "detectedissue-orderCheckRecipient"
   },
   {
     "id": "diagnosisDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/diagnosisDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "diagnosisDate"
   },
   {
     "id": "documentreference-statusDetail.coding.code",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documentreference-statusDetail.coding.code",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "documentreference-statusDetail.coding.code"
   },
   {
     "id": "documenttype-nationalStandard",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documenttype-nationalStandard",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "documenttype-nationalStandard"
   },
   {
     "id": "dosageInstruction-ivBottleNumber",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/dosageInstruction-ivBottleNumber",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "dosageInstruction-ivBottleNumber"
   },
   {
     "id": "doseNumberString",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/doseNumberString",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "doseNumberString"
   },
   {
     "id": "emergencyResponseCohort",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/emergencyResponseCohort",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "emergencyResponseCohort"
   },
   {
     "id": "extension-MedicationRequest.statusReason",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "extension-MedicationRequest.statusReason"
   },
   {
     "id": "extension.valueAnnotation.comment.text",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.comment.text",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "extension.valueAnnotation.comment.text"
   },
   {
     "id": "extension.valueAnnotation.text",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.text",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "extension.valueAnnotation.text"
   },
   {
     "id": "flag-nextReviewDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-nextReviewDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "flag-nextReviewDate"
   },
   {
     "id": "flag-owner",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-owner",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "flag-owner"
   },
   {
     "id": "flag-rationale",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-rationale",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "flag-rationale"
   },
   {
     "id": "flagSourceDocument",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flagSourceDocument",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "flagSourceDocument"
   },
   {
     "id": "immunization-contraindicated",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-contraindicated",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "immunization-contraindicated"
   },
   {
     "id": "immunization-maxNumberinSeries",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-maxNumberinSeries",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "immunization-maxNumberinSeries"
   },
   {
     "id": "immunization-orderingFacility.identifier",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-orderingFacility.identifier",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "immunization-orderingFacility.identifier"
   },
   {
     "id": "immunization-orderingFacility.name",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-orderingFacility.name",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "immunization-orderingFacility.name"
   },
   {
     "id": "immunization.education.documentType",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization.education.documentType",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "immunization.education.documentType"
   },
   {
     "id": "immunization.education.publication.language",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization.education.publication.language",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "immunization.education.publication.language"
   },
   {
     "id": "immunization.education.publicationDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization.education.publicationDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "immunization.education.publicationDate"
   },
   {
     "id": "lastAction",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/lastAction",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "lastAction"
   },
   {
     "id": "medication-cmopDispense",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-cmopDispense",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medication-cmopDispense"
   },
   {
     "id": "medication-controlledSubstanceSchedule",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-controlledSubstanceSchedule",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medication-controlledSubstanceSchedule"
   },
   {
     "id": "medication-deaSpecialHandling",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-deaSpecialHandling",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medication-deaSpecialHandling"
   },
   {
     "id": "medication-inactiveDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-inactiveDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medication-inactiveDate"
   },
   {
     "id": "medication-localFormularyStatus",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-localFormularyStatus",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medication-localFormularyStatus"
   },
   {
     "id": "medication-nationalFormularyStatus",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-nationalFormularyStatus",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medication-nationalFormularyStatus"
   },
   {
     "id": "medication-packagesUsingDrug",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-packagesUsingDrug",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medication-packagesUsingDrug"
   },
   {
     "id": "medication-supplyType",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-supplyType",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medication-supplyType"
   },
   {
     "id": "medicationadministration-scheduledTime",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationadministration-scheduledTime",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationadministration-scheduledTime"
   },
   {
     "id": "medicationadministration-statusDetail",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationadministration-statusDetail",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationadministration-statusDetail"
   },
   {
     "id": "medicationdispense-authorization",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-authorization",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-authorization"
   },
   {
     "id": "medicationdispense-copayTransactionType",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-copayTransactionType",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-copayTransactionType"
   },
   {
     "id": "medicationdispense-cumulativeDoses",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-cumulativeDoses",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-cumulativeDoses"
   },
   {
     "id": "medicationdispense-dispenseChannel",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispenseChannel",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-dispenseChannel"
   },
   {
     "id": "medicationdispense-dispensedAsWritten",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispensedAsWritten",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-dispensedAsWritten"
   },
   {
     "id": "medicationdispense-fillDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-fillDate"
   },
   {
     "id": "medicationdispense-fillRequestDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillRequestDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-fillRequestDate"
   },
   {
     "id": "medicationdispense-holdFlag",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-holdFlag",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-holdFlag"
   },
   {
     "id": "medicationdispense-ivLabelsPerDay",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-ivLabelsPerDay",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-ivLabelsPerDay"
   },
   {
     "id": "medicationdispense-ivPrepRoom",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-ivPrepRoom",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-ivPrepRoom"
   },
   {
     "id": "medicationdispense-labelCopies",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-labelCopies",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-labelCopies"
   },
   {
     "id": "medicationdispense-medicationReturnedToStock",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-medicationReturnedToStock",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-medicationReturnedToStock"
   },
   {
     "id": "medicationdispense-patientCounseled",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-patientCounseled",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-patientCounseled"
   },
   {
     "id": "medicationdispense-patientCounselingUnderstood",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-patientCounselingUnderstood",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-patientCounselingUnderstood"
   },
   {
     "id": "medicationdispense-pickupInstructions",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-pickupInstructions",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationdispense-pickupInstructions"
   },
   {
     "id": "medicationrequest-associatedMaintenancePrescription",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-associatedMaintenancePrescription"
   },
   {
     "id": "medicationrequest-associatedTitrationPrescription",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedTitrationPrescription",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-associatedTitrationPrescription"
   },
   {
     "id": "medicationrequest-cosigningProvider",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-cosigningProvider",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-cosigningProvider"
   },
   {
     "id": "medicationrequest-dateEnded",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-dateEnded",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-dateEnded"
   },
   {
     "id": "medicationrequest-extendedPriority",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-extendedPriority",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-extendedPriority"
   },
   {
     "id": "medicationrequest-flaggedForClarification",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-flaggedForClarification",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-flaggedForClarification"
   },
   {
     "id": "medicationrequest-forAgentOrangeExposure",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-forAgentOrangeExposure"
   },
   {
     "id": "medicationrequest-forCombatService",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forCombatService",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-forCombatService"
   },
   {
     "id": "medicationrequest-forExposureToIonizingRadiation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-forExposureToIonizingRadiation"
   },
   {
     "id": "medicationrequest-forHeadOrNeckCancer",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-forHeadOrNeckCancer"
   },
   {
     "id": "medicationrequest-forMilitarySexualTrauma",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forMilitarySexualTrauma",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-forMilitarySexualTrauma"
   },
   {
     "id": "medicationrequest-forServiceConnectedCondition",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forServiceConnectedCondition",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-forServiceConnectedCondition"
   },
   {
     "id": "medicationrequest-forShipboardHazard",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forShipboardHazard",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-forShipboardHazard"
   },
   {
     "id": "medicationrequest-forSouthwestAsiaConditions",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forSouthwestAsiaConditions",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-forSouthwestAsiaConditions"
   },
   {
     "id": "medicationrequest-ivType",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-ivType"
   },
   {
     "id": "medicationrequest-lastDispensedDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastDispensedDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-lastDispensedDate"
   },
   {
     "id": "medicationrequest-lastFillDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastFillDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-lastFillDate"
   },
   {
     "id": "medicationrequest-lastFillQuantity",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastFillQuantity",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-lastFillQuantity"
   },
   {
     "id": "medicationrequest-lastLocationOfPatient",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastLocationOfPatient",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-lastLocationOfPatient"
   },
   {
     "id": "medicationrequest-medicationScheduleType",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationScheduleType",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-medicationScheduleType"
   },
   {
     "id": "medicationrequest-medicationrequestType",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationrequestType",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-medicationrequestType"
   },
   {
     "id": "medicationrequest-medicationrequestType.coding.code",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-medicationrequestType.coding.code",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-medicationrequestType.coding.code"
   },
   {
     "id": "medicationrequest-nurseVerified",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-nurseVerified",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-nurseVerified"
   },
   {
     "id": "medicationrequest-orderCreationMode",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderCreationMode",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-orderCreationMode"
   },
   {
     "id": "medicationrequest-orderDraftDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderDraftDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-orderDraftDate"
   },
   {
     "id": "medicationrequest-orderIssueDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderIssueDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-orderIssueDate"
   },
   {
     "id": "medicationrequest-orderPlacementChannel",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderPlacementChannel",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-orderPlacementChannel"
   },
   {
     "id": "medicationrequest-permittedFillDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-permittedFillDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-permittedFillDate"
   },
   {
     "id": "medicationrequest-pharmacistVerified",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacistVerified",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-pharmacistVerified"
   },
   {
     "id": "medicationrequest-pharmacyOrderStatus",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-pharmacyOrderStatus"
   },
   {
     "id": "medicationrequest-requestedStartDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-requestedStartDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationrequest-requestedStartDate"
   },
   {
     "id": "medicationstatement-orderLocation",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-orderLocation",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationstatement-orderLocation"
   },
   {
     "id": "medicationstatement-recorder",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-recorder",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "medicationstatement-recorder"
   },
   {
     "id": "nonVAMedicationDisclaimer",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/nonVAMedicationDisclaimer",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "nonVAMedicationDisclaimer"
   },
   {
     "id": "participant-primaryCareRole",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/participant-primaryCareRole",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "participant-primaryCareRole"
   },
   {
     "id": "participant-roleStatus",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/participant-roleStatus",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "participant-roleStatus"
   },
   {
     "id": "patient-lastDischargeDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastDischargeDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "patient-lastDischargeDate"
   },
   {
     "id": "patient-lastTransferTime",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastTransferTime",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "patient-lastTransferTime"
   },
   {
     "id": "patient-religion",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-religion",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "patient-religion"
   },
   {
     "id": "patient-remarks",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-remarks",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "patient-remarks"
   },
   {
     "id": "patientMovementDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patientMovementDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "patientMovementDate"
   },
   {
     "id": "pharmacy-dispenseChannel",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dispenseChannel",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-dispenseChannel"
   },
   {
     "id": "pharmacy-dispenseProduct",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dispenseProduct",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-dispenseProduct"
   },
   {
     "id": "pharmacy-dosageOrdered",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-dosageOrdered",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-dosageOrdered"
   },
   {
     "id": "pharmacy-patientSelfMedication.extension.hospitalSupply",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.hospitalSupply",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-patientSelfMedication.extension.hospitalSupply"
   },
   {
     "id": "pharmacy-patientSelfMedication.extension.selfAdminister",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-patientSelfMedication.extension.selfAdminister",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-patientSelfMedication.extension.selfAdminister"
   },
   {
     "id": "pharmacy-sigVerb",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-sigVerb",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-sigVerb"
   },
   {
     "id": "postingIndicator",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/postingIndicator",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "postingIndicator"
   },
   {
     "id": "practitioner-title",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/practitioner-title",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "practitioner-title"
   },
   {
     "id": "provenance-priorActor",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/provenance-priorActor",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "provenance-priorActor"
   },
   {
     "id": "race-ethicity-collectionMethod",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/race-ethicity-collectionMethod",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "race-ethicity-collectionMethod"
   },
   {
     "id": "recorded",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/recorded",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "recorded"
   },
   {
     "id": "reference-targetElement.extension.change.extension.newValue",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.newValue",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "reference-targetElement.extension.change.extension.newValue"
   },
   {
     "id": "reference-targetElement.extension.change.extension.oldValue",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "reference-targetElement.extension.change.extension.oldValue"
   },
   {
     "id": "reference-targetElement.extension.elementUri",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.elementUri",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "reference-targetElement.extension.elementUri"
   },
   {
     "id": "referenceDate",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referenceDate",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "referenceDate"
   },
   {
     "id": "referencedDocument.display",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.display",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "referencedDocument.display"
   },
   {
     "id": "referencedDocument.uri",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.uri",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "referencedDocument.uri"
   },
   {
     "id": "referralrequest-locationType",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-locationType",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "referralrequest-locationType"
   },
   {
     "id": "referralrequest-significantFindings",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-significantFindings",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "referralrequest-significantFindings"
   },
   {
     "id": "relationshipStatus",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/relationshipStatus",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "relationshipStatus"
   },
   {
     "id": "request-extendedPriority",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/request-extendedPriority",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "request-extendedPriority"
   },
   {
     "id": "richAnnotation.annotation.author",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "richAnnotation.annotation.author"
   },
   {
     "id": "richAnnotation.annotation.author.extension.practitioner-title",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author.extension.practitioner-title",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "richAnnotation.annotation.author.extension.practitioner-title"
   },
   {
     "id": "richAnnotation.annotation.date",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.date",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "richAnnotation.annotation.date"
   },
   {
     "id": "richAnnotation.annotation.text",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.text",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "richAnnotation.annotation.text"
   },
   {
     "id": "richAnnotation.author",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "richAnnotation.author"
   },
   {
     "id": "richAnnotation.comment.text",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "richAnnotation.comment.text"
   },
   {
     "id": "richAnnotation.commentNumber",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "richAnnotation.commentNumber"
   },
   {
     "id": "richAnnotation.text",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "richAnnotation.text"
   },
   {
     "id": "richAnnotation.type",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.type",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "richAnnotation.type"
   },
   {
     "id": "selfIdentifiedGender",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/selfIdentifiedGender",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "selfIdentifiedGender"
   },
   {
     "id": "servicerequest-encounterType",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-encounterType",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "servicerequest-encounterType"
   },
   {
     "id": "servicerequest-vaStatus",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/servicerequest-vaStatus",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "servicerequest-vaStatus"
   },
   {
     "id": "signatureBlockName",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockName",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "signatureBlockName"
   },
   {
     "id": "signatureBlockTitle",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureBlockTitle",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "signatureBlockTitle"
   },
   {
     "id": "signatureMode.coding.code",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureMode.coding.code",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "signatureMode.coding.code"
   },
   {
     "id": "timeOfDay",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/timeOfDay",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "timeOfDay"
   },
   {
     "id": "unverifiedMedicationOrderFinishPrompt",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/unverifiedMedicationOrderFinishPrompt",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "unverifiedMedicationOrderFinishPrompt"
   },
   {
     "id": "us-core-birthsex",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/us-core-birthsex",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "us-core-birthsex"
   },
   {
     "id": "us-core-ethnicity",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/us-core-ethnicity",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "us-core-ethnicity"
   },
   {
     "id": "us-core-race",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/us-core-race",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "us-core-race"
   },
   {
     "id": "valueCodeableConcept.coding.code",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueCodeableConcept.coding.code",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "valueCodeableConcept.coding.code"
   },
   {
     "id": "valueReference",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueReference",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "valueReference"
   },
   {
     "id": "whenPerformed",
     "type": "StructureDefinition",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/whenPerformed",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "whenPerformed"
   },
   {
     "id": "chemotherapy-order-type",
     "type": "ValueSet",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/chemotherapy-order-type",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "chemotherapy-order-type"
   },
   {
     "id": "inpatient-medication-order-type",
     "type": "ValueSet",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/inpatient-medication-order-type",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "inpatient-medication-order-type"
   },
   {
     "id": "iv-order-type",
     "type": "ValueSet",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/iv-order-type",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "iv-order-type"
   },
   {
     "id": "pharmacy-finished-outpatient-order-status",
     "type": "ValueSet",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-finished-outpatient-order-status",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-finished-outpatient-order-status"
   },
   {
     "id": "pharmacy-iv-order-status",
     "type": "ValueSet",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-iv-order-status",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-iv-order-status"
   },
   {
     "id": "pharmacy-pending-inpatient-order-status",
     "type": "ValueSet",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-inpatient-order-status",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-pending-inpatient-order-status"
   },
   {
     "id": "pharmacy-pending-outpatient-order-status",
     "type": "ValueSet",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-outpatient-order-status",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-pending-outpatient-order-status"
   },
   {
     "id": "pharmacy-unit-dose-order-status",
     "type": "ValueSet",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-unit-dose-order-status",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "pharmacy-unit-dose-order-status"
   },
   {
     "id": "unit-dose-medication-order-type",
     "type": "ValueSet",
     "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/unit-dose-medication-order-type",
-    "version": "0.0.64",
+    "version": "0.0.69",
     "name": "unit-dose-medication-order-type"
   }
 ]

@@ -3,44 +3,43 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="VAProblem"/>
   <meta>
-    <lastUpdated value="2021-03-12T16:05:11.288Z"/>
+    <lastUpdated value="2021-05-02T08:06:07.686Z"/>
   </meta>
   <text>
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition">Condition</a><a name="Condition"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/condition.html">Condition</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Detailed information about conditions, problems or diagnoses</span></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck12.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Simple Extension" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension">extension</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/extensibility.html#Extension">Extension</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">Slice: </span>Unordered, Open by value:url</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-priority" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority">condition-priority</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Immediacy/Priority<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-priority.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToAgentOrangeExposure" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure">condition-relationshipToAgentOrangeExposure</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exposure<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToAgentOrangeExposure.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToRadiation" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation">condition-relationshipToRadiation</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToRadiation.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToPersianGulfService" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService">condition-relationshipToPersianGulfService</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToPersianGulfService.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToRadiumTreatment" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment">condition-relationshipToRadiumTreatment</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToRadiumTreatment.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToMilitarySexualTrauma" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma">condition-relationshipToMilitarySexualTrauma</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToMilitarySexualTrauma.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToCombatExperience" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience">condition-relationshipToCombatExperience</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToCombatExperience.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-responsibleProvider" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider">condition-responsibleProvider</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-responsibleProvider.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-treatingService" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService">condition-treatingService</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Service<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-treatingService.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-treatingClinic" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic">condition-treatingClinic</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-treatingClinic.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToShipboardHazardAndDefense" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense">condition-relationshipToShipboardHazardAndDefense</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToShipboardHazardAndDefense.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-lastModified" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified">condition-lastModified</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Last Update<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-lastModified.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:richAnnotation/author" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author">richAnnotation.author</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Author<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-richAnnotation.author.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:richAnnotation/text" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text">richAnnotation.text</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Note Narrative<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-richAnnotation.text.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:richAnnotation/commentNumber" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber">richAnnotation.commentNumber</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Note #<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-richAnnotation.commentNumber.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.clinicalStatus" title="This is the current activity status of this problem, whether active or inactive; if more detail is needed, a notation may be filed with this problem.">clinicalStatus</a><a name="Condition.clinicalStatus"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Status</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.verificationStatus" title="This reflects the current condition of this entry, whether transcribed by a clerk from the paper chart, entered or verified by a provider, or marked as removed from the patient's list.">verificationStatus</a><a name="Condition.verificationStatus"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">State/Condition</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code">code</a><a name="Condition.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck111.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code.coding">coding</a><a name="Condition.code.coding"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code.coding.system" title="This is the coding system to which the code belongs.">system</a><a name="Condition.code.coding.system"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coding System</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code.coding.code" title="ICD-9 or ICD-10 Code">code</a><a name="Condition.code.coding.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code.text" title="This is the Diagnosis (short text).">text</a><a name="Condition.code.text"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Plain text representation of the concept</span></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.onsetDateTime" title="This is the approximate date this problem appeared, as precisely as known.">onsetDateTime</a><a name="Condition.onsetDateTime"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Onset</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.assertedDate">assertedDate</a><a name="Condition.assertedDate"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Date record was believed accurate</span></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.asserter">asserter</a><a name="Condition.asserter"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner</a> | <a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/patient.html">Patient</a> | <a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Person who asserts this condition</span></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.note" title="This is the Narrative that the provider has written out that is his description of what he treated the patient for.   Enter a 2 to 80 character description.">note</a><a name="Condition.note"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#Annotation">Annotation</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Additional information about the Condition</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:richAnnotation-commentNumber" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber">richAnnotation.commentNumber</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Note #<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-richAnnotation.commentNumber.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:richAnnotation-text" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text">richAnnotation.text</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Note Narrative<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-richAnnotation.text.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:richAnnotation-author" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author">richAnnotation.author</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Author<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-richAnnotation.author.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-lastModified" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified">condition-lastModified</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Last Update<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-lastModified.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToShipboardHazardAndDefense" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense">condition-relationshipToShipboardHazardAndDefense</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToShipboardHazardAndDefense.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-treatingClinic" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic">condition-treatingClinic</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-treatingClinic.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-treatingService" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService">condition-treatingService</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Service<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-treatingService.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-responsibleProvider" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider">condition-responsibleProvider</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-responsibleProvider.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToCombatExperience" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience">condition-relationshipToCombatExperience</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToCombatExperience.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToMilitarySexualTrauma" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma">condition-relationshipToMilitarySexualTrauma</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToMilitarySexualTrauma.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToRadiumTreatment" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment">condition-relationshipToRadiumTreatment</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToRadiumTreatment.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToPersianGulfService" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService">condition-relationshipToPersianGulfService</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToPersianGulfService.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToRadiation" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation">condition-relationshipToRadiation</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToRadiation.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-relationshipToAgentOrangeExposure" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure">condition-relationshipToAgentOrangeExposure</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exposure<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-relationshipToAgentOrangeExposure.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.extension:condition-priority" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority">condition-priority</a><a name="Condition.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Immediacy/Priority<br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-condition-priority.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.clinicalStatus" title="This is the current activity status of this problem, whether active or inactive; if more detail is needed, a notation may be filed with this problem.">clinicalStatus</a><a name="Condition.clinicalStatus"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Status</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.verificationStatus" title="This reflects the current condition of this entry, whether transcribed by a clerk from the paper chart, entered or verified by a provider, or marked as removed from the patient's list.">verificationStatus</a><a name="Condition.verificationStatus"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">State/Condition</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code">code</a><a name="Condition.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck111.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code.coding">coding</a><a name="Condition.code.coding"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code.coding.system" title="This is the coding system to which the code belongs.">system</a><a name="Condition.code.coding.system"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coding System</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code.coding.code" title="ICD-9 or ICD-10 Code">code</a><a name="Condition.code.coding.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.code.text" title="This is the Diagnosis (short text).">text</a><a name="Condition.code.text"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Plain text representation of the concept</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.onsetDateTime" title="This is the approximate date this problem appeared, as precisely as known.">onsetDateTime</a><a name="Condition.onsetDateTime"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Onset</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.assertedDate">assertedDate</a><a name="Condition.assertedDate"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Date record was believed accurate</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.asserter">asserter</a><a name="Condition.asserter"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner</a> | <a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/patient.html">Patient</a> | <a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson</a>)</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Person who asserts this condition</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-VAProblem-definitions.html#Condition.note" title="This is the Narrative that the provider has written out that is his description of what he treated the patient for.   Enter a 2 to 80 character description.">note</a><a name="Condition.note"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#Annotation">Annotation</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Additional information about the Condition</span></td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblem"/>
-  <version value="0.0.64"/>
+  <version value="0.0.69"/>
   <name value="VAProblem"/>
   <status value="draft"/>
-  <date value="2021-03-12T16:05:11.288Z"/>
+  <date value="2021-05-02T08:06:07.686Z"/>
   <publisher value="JPSys"/>
   <contact>
     <telecom>
@@ -327,12 +326,12 @@
         <code value="Extension"/>
       </type>
     </element>
-    <element id="Condition.extension:condition-priority">
+    <element id="Condition.extension:richAnnotation-commentNumber">
       <path value="Condition.extension"/>
-      <sliceName value="condition-priority"/>
-      <label value="PRIORITY"/>
-      <short value="Immediacy/Priority"/>
-      <definition value="This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display."/>
+      <sliceName value="richAnnotation-commentNumber"/>
+      <label value="NOTE NUMBER"/>
+      <short value="Note #"/>
+      <definition value="This is the unique note identifier."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -342,7 +341,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber"/>
       </type>
       <condition value="ele-1"/>
       <constraint>
@@ -372,15 +371,15 @@
       </mapping>
       <mapping>
         <identity value="vista"/>
-        <map value="PROBLEM  @PRIORITY 9000011-1.14"/>
+        <map value="problem @NOTE NUMBER 9000011.1111-.01"/>
       </mapping>
     </element>
-    <element id="Condition.extension:condition-relationshipToAgentOrangeExposure">
+    <element id="Condition.extension:richAnnotation-text">
       <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToAgentOrangeExposure"/>
-      <label value="AGENT ORANGE EXPOSURE"/>
-      <short value="Exposure"/>
-      <definition value="If this problem is related to a patient&#39;s exposure to Agent Orange, it may be flagged here."/>
+      <sliceName value="richAnnotation-text"/>
+      <label value="NOTE NARRATIVE"/>
+      <short value="Note Narrative"/>
+      <definition value="Additional comments may be entered here to further describe this problem."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -390,7 +389,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text"/>
       </type>
       <condition value="ele-1"/>
       <constraint>
@@ -420,15 +419,15 @@
       </mapping>
       <mapping>
         <identity value="vista"/>
-        <map value="PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11"/>
+        <map value="problem @NOTE NARRATIVE 9000011.1111-.03"/>
       </mapping>
     </element>
-    <element id="Condition.extension:condition-relationshipToRadiation">
+    <element id="Condition.extension:richAnnotation-author">
       <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToRadiation"/>
-      <label value="IONIZING RADIATION EXPOSURE"/>
-      <short value="0"/>
-      <definition value="If this problem is related to a patient&#39;s exposure to ionizing radiation, it may be flagged here."/>
+      <sliceName value="richAnnotation-author"/>
+      <label value="AUTHOR"/>
+      <short value="Author"/>
+      <definition value="This is the provider who authored the text of this note."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -438,7 +437,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author"/>
       </type>
       <condition value="ele-1"/>
       <constraint>
@@ -468,391 +467,7 @@
       </mapping>
       <mapping>
         <identity value="vista"/>
-        <map value="PROBLEM  @IONIZING RADIATION EXPOSURE 9000011-1.12"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToPersianGulfService">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToPersianGulfService"/>
-      <label value="PERSIAN GULF EXPOSURE"/>
-      <short value="0"/>
-      <definition value="If this problem is related to a patient&#39;s service in the Persian Gulf, it may be flagged here."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService"/>
-      </type>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToRadiumTreatment">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToRadiumTreatment"/>
-      <label value="HEAD AND.OR NECK CANCER"/>
-      <short value="0"/>
-      <definition value="If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment"/>
-      </type>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @HEAD AND.OR NECK CANCER 9000011-1.15"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToMilitarySexualTrauma">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToMilitarySexualTrauma"/>
-      <label value="MILITARY SEXUAL TRAUMA"/>
-      <short value="0"/>
-      <definition value="If this problem is related to the treatment of military sexual trauma, it may be flagged here."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma"/>
-      </type>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToCombatExperience">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToCombatExperience"/>
-      <label value="COMBAT VETERAN"/>
-      <short value="0"/>
-      <definition value="&lt;blank&gt;"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience"/>
-      </type>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @COMBAT VETERAN 9000011-1.17"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-responsibleProvider">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-responsibleProvider"/>
-      <label value="NAME"/>
-      <short value="Optional Extensions Element"/>
-      <definition value="Optional Extension Element - found in all resources."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider"/>
-      </type>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="vista"/>
-        <map value="NEW PERSON  @NAME 9000011-1.05:200-.01"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-treatingService">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-treatingService"/>
-      <label value="SERVICE"/>
-      <short value="Service"/>
-      <definition value="This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService"/>
-      </type>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="vista"/>
-        <map value="undefined @SERVICE    9000011-1.06"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-treatingClinic">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-treatingClinic"/>
-      <label value="NAME"/>
-      <short value="Optional Extensions Element"/>
-      <definition value="This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one&#39;s view of the list."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic"/>
-      </type>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="vista"/>
-        <map value="HOSPITAL LOCATION @NAME 9000011-1.08"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToShipboardHazardAndDefense">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToShipboardHazardAndDefense"/>
-      <label value="SHIPBOARD HAZARD &amp; DEFENSE"/>
-      <short value="0"/>
-      <definition value="&lt;blank&gt;"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense"/>
-      </type>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="ext-1"/>
-        <severity value="error"/>
-        <human value="Must have either extensions or value[x], not both"/>
-        <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
-      </constraint>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @SHIPBOARD HAZARD &amp; DEFENSE 9000011-1.18"/>
+        <map value="undefined @AUTHOR 9000011.1111-.06"/>
       </mapping>
     </element>
     <element id="Condition.extension:condition-lastModified">
@@ -903,12 +518,12 @@
         <map value="undefined @DATE LAST MODIFIED 9000011-.03"/>
       </mapping>
     </element>
-    <element id="Condition.extension:richAnnotation/author">
+    <element id="Condition.extension:condition-relationshipToShipboardHazardAndDefense">
       <path value="Condition.extension"/>
-      <sliceName value="richAnnotation/author"/>
-      <label value="AUTHOR"/>
-      <short value="Author"/>
-      <definition value="This is the provider who authored the text of this note."/>
+      <sliceName value="condition-relationshipToShipboardHazardAndDefense"/>
+      <label value="SHIPBOARD HAZARD &amp; DEFENSE"/>
+      <short value="0"/>
+      <definition value="&lt;blank&gt;"/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -918,7 +533,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense"/>
       </type>
       <condition value="ele-1"/>
       <constraint>
@@ -948,15 +563,15 @@
       </mapping>
       <mapping>
         <identity value="vista"/>
-        <map value="undefined @AUTHOR 9000011.1111-.06"/>
+        <map value="PROBLEM  @SHIPBOARD HAZARD &amp; DEFENSE 9000011-1.18"/>
       </mapping>
     </element>
-    <element id="Condition.extension:richAnnotation/text">
+    <element id="Condition.extension:condition-treatingClinic">
       <path value="Condition.extension"/>
-      <sliceName value="richAnnotation/text"/>
-      <label value="NOTE NARRATIVE"/>
-      <short value="Note Narrative"/>
-      <definition value="Additional comments may be entered here to further describe this problem."/>
+      <sliceName value="condition-treatingClinic"/>
+      <label value="NAME"/>
+      <short value="Optional Extensions Element"/>
+      <definition value="This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one&#39;s view of the list."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -966,7 +581,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic"/>
       </type>
       <condition value="ele-1"/>
       <constraint>
@@ -996,15 +611,15 @@
       </mapping>
       <mapping>
         <identity value="vista"/>
-        <map value="problem @NOTE NARRATIVE 9000011.1111-.03"/>
+        <map value="HOSPITAL LOCATION @NAME 9000011-1.08"/>
       </mapping>
     </element>
-    <element id="Condition.extension:richAnnotation/commentNumber">
+    <element id="Condition.extension:condition-treatingService">
       <path value="Condition.extension"/>
-      <sliceName value="richAnnotation/commentNumber"/>
-      <label value="NOTE NUMBER"/>
-      <short value="Note #"/>
-      <definition value="This is the unique note identifier."/>
+      <sliceName value="condition-treatingService"/>
+      <label value="SERVICE"/>
+      <short value="Service"/>
+      <definition value="This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -1014,7 +629,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService"/>
       </type>
       <condition value="ele-1"/>
       <constraint>
@@ -1044,7 +659,391 @@
       </mapping>
       <mapping>
         <identity value="vista"/>
-        <map value="problem @NOTE NUMBER 9000011.1111-.01"/>
+        <map value="undefined @SERVICE    9000011-1.06"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-responsibleProvider">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-responsibleProvider"/>
+      <label value="NAME"/>
+      <short value="Optional Extensions Element"/>
+      <definition value="Optional Extension Element - found in all resources."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="vista"/>
+        <map value="NEW PERSON  @NAME 9000011-1.05:200-.01"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToCombatExperience">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToCombatExperience"/>
+      <label value="COMBAT VETERAN"/>
+      <short value="0"/>
+      <definition value="&lt;blank&gt;"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @COMBAT VETERAN 9000011-1.17"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToMilitarySexualTrauma">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToMilitarySexualTrauma"/>
+      <label value="MILITARY SEXUAL TRAUMA"/>
+      <short value="0"/>
+      <definition value="If this problem is related to the treatment of military sexual trauma, it may be flagged here."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToRadiumTreatment">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToRadiumTreatment"/>
+      <label value="HEAD AND.OR NECK CANCER"/>
+      <short value="0"/>
+      <definition value="If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @HEAD AND.OR NECK CANCER 9000011-1.15"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToPersianGulfService">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToPersianGulfService"/>
+      <label value="PERSIAN GULF EXPOSURE"/>
+      <short value="0"/>
+      <definition value="If this problem is related to a patient&#39;s service in the Persian Gulf, it may be flagged here."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToRadiation">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToRadiation"/>
+      <label value="IONIZING RADIATION EXPOSURE"/>
+      <short value="0"/>
+      <definition value="If this problem is related to a patient&#39;s exposure to ionizing radiation, it may be flagged here."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @IONIZING RADIATION EXPOSURE 9000011-1.12"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToAgentOrangeExposure">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToAgentOrangeExposure"/>
+      <label value="AGENT ORANGE EXPOSURE"/>
+      <short value="Exposure"/>
+      <definition value="If this problem is related to a patient&#39;s exposure to Agent Orange, it may be flagged here."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-priority">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-priority"/>
+      <label value="PRIORITY"/>
+      <short value="Immediacy/Priority"/>
+      <definition value="This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @PRIORITY 9000011-1.14"/>
       </mapping>
     </element>
     <element id="Condition.modifierExtension">
@@ -2339,188 +2338,52 @@
     <element id="Condition">
       <path value="Condition"/>
     </element>
-    <element id="Condition.extension">
+    <element id="Condition.extension:richAnnotation-commentNumber">
       <path value="Condition.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Condition.extension:condition-priority">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-priority"/>
-      <label value="PRIORITY"/>
-      <short value="Immediacy/Priority"/>
-      <definition value="This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display."/>
+      <sliceName value="richAnnotation-commentNumber"/>
+      <label value="NOTE NUMBER"/>
+      <short value="Note #"/>
+      <definition value="This is the unique note identifier."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber"/>
       </type>
       <mustSupport value="true"/>
       <mapping>
         <identity value="vista"/>
-        <map value="PROBLEM  @PRIORITY 9000011-1.14"/>
+        <map value="problem @NOTE NUMBER 9000011.1111-.01"/>
       </mapping>
     </element>
-    <element id="Condition.extension:condition-relationshipToAgentOrangeExposure">
+    <element id="Condition.extension:richAnnotation-text">
       <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToAgentOrangeExposure"/>
-      <label value="AGENT ORANGE EXPOSURE"/>
-      <short value="Exposure"/>
-      <definition value="If this problem is related to a patient&#39;s exposure to Agent Orange, it may be flagged here."/>
+      <sliceName value="richAnnotation-text"/>
+      <label value="NOTE NARRATIVE"/>
+      <short value="Note Narrative"/>
+      <definition value="Additional comments may be entered here to further describe this problem."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text"/>
       </type>
       <mustSupport value="true"/>
       <mapping>
         <identity value="vista"/>
-        <map value="PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11"/>
+        <map value="problem @NOTE NARRATIVE 9000011.1111-.03"/>
       </mapping>
     </element>
-    <element id="Condition.extension:condition-relationshipToRadiation">
+    <element id="Condition.extension:richAnnotation-author">
       <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToRadiation"/>
-      <label value="IONIZING RADIATION EXPOSURE"/>
-      <short value="0"/>
-      <definition value="If this problem is related to a patient&#39;s exposure to ionizing radiation, it may be flagged here."/>
+      <sliceName value="richAnnotation-author"/>
+      <label value="AUTHOR"/>
+      <short value="Author"/>
+      <definition value="This is the provider who authored the text of this note."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author"/>
       </type>
       <mustSupport value="true"/>
       <mapping>
         <identity value="vista"/>
-        <map value="PROBLEM  @IONIZING RADIATION EXPOSURE 9000011-1.12"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToPersianGulfService">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToPersianGulfService"/>
-      <label value="PERSIAN GULF EXPOSURE"/>
-      <short value="0"/>
-      <definition value="If this problem is related to a patient&#39;s service in the Persian Gulf, it may be flagged here."/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService"/>
-      </type>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToRadiumTreatment">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToRadiumTreatment"/>
-      <label value="HEAD AND.OR NECK CANCER"/>
-      <short value="0"/>
-      <definition value="If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here."/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment"/>
-      </type>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @HEAD AND.OR NECK CANCER 9000011-1.15"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToMilitarySexualTrauma">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToMilitarySexualTrauma"/>
-      <label value="MILITARY SEXUAL TRAUMA"/>
-      <short value="0"/>
-      <definition value="If this problem is related to the treatment of military sexual trauma, it may be flagged here."/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma"/>
-      </type>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToCombatExperience">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToCombatExperience"/>
-      <label value="COMBAT VETERAN"/>
-      <short value="0"/>
-      <definition value="&lt;blank&gt;"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience"/>
-      </type>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @COMBAT VETERAN 9000011-1.17"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-responsibleProvider">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-responsibleProvider"/>
-      <label value="NAME"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider"/>
-      </type>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="vista"/>
-        <map value="NEW PERSON  @NAME 9000011-1.05:200-.01"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-treatingService">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-treatingService"/>
-      <label value="SERVICE"/>
-      <short value="Service"/>
-      <definition value="This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting."/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService"/>
-      </type>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="vista"/>
-        <map value="undefined @SERVICE    9000011-1.06"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-treatingClinic">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-treatingClinic"/>
-      <label value="NAME"/>
-      <definition value="This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one&#39;s view of the list."/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic"/>
-      </type>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="vista"/>
-        <map value="HOSPITAL LOCATION @NAME 9000011-1.08"/>
-      </mapping>
-    </element>
-    <element id="Condition.extension:condition-relationshipToShipboardHazardAndDefense">
-      <path value="Condition.extension"/>
-      <sliceName value="condition-relationshipToShipboardHazardAndDefense"/>
-      <label value="SHIPBOARD HAZARD &amp; DEFENSE"/>
-      <short value="0"/>
-      <definition value="&lt;blank&gt;"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense"/>
-      </type>
-      <mustSupport value="true"/>
-      <mapping>
-        <identity value="vista"/>
-        <map value="PROBLEM  @SHIPBOARD HAZARD &amp; DEFENSE 9000011-1.18"/>
+        <map value="undefined @AUTHOR 9000011.1111-.06"/>
       </mapping>
     </element>
     <element id="Condition.extension:condition-lastModified">
@@ -2539,52 +2402,177 @@
         <map value="undefined @DATE LAST MODIFIED 9000011-.03"/>
       </mapping>
     </element>
-    <element id="Condition.extension:richAnnotation/author">
+    <element id="Condition.extension:condition-relationshipToShipboardHazardAndDefense">
       <path value="Condition.extension"/>
-      <sliceName value="richAnnotation/author"/>
-      <label value="AUTHOR"/>
-      <short value="Author"/>
-      <definition value="This is the provider who authored the text of this note."/>
+      <sliceName value="condition-relationshipToShipboardHazardAndDefense"/>
+      <label value="SHIPBOARD HAZARD &amp; DEFENSE"/>
+      <short value="0"/>
+      <definition value="&lt;blank&gt;"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense"/>
       </type>
       <mustSupport value="true"/>
       <mapping>
         <identity value="vista"/>
-        <map value="undefined @AUTHOR 9000011.1111-.06"/>
+        <map value="PROBLEM  @SHIPBOARD HAZARD &amp; DEFENSE 9000011-1.18"/>
       </mapping>
     </element>
-    <element id="Condition.extension:richAnnotation/text">
+    <element id="Condition.extension:condition-treatingClinic">
       <path value="Condition.extension"/>
-      <sliceName value="richAnnotation/text"/>
-      <label value="NOTE NARRATIVE"/>
-      <short value="Note Narrative"/>
-      <definition value="Additional comments may be entered here to further describe this problem."/>
+      <sliceName value="condition-treatingClinic"/>
+      <label value="NAME"/>
+      <definition value="This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one&#39;s view of the list."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic"/>
       </type>
       <mustSupport value="true"/>
       <mapping>
         <identity value="vista"/>
-        <map value="problem @NOTE NARRATIVE 9000011.1111-.03"/>
+        <map value="HOSPITAL LOCATION @NAME 9000011-1.08"/>
       </mapping>
     </element>
-    <element id="Condition.extension:richAnnotation/commentNumber">
+    <element id="Condition.extension:condition-treatingService">
       <path value="Condition.extension"/>
-      <sliceName value="richAnnotation/commentNumber"/>
-      <label value="NOTE NUMBER"/>
-      <short value="Note #"/>
-      <definition value="This is the unique note identifier."/>
+      <sliceName value="condition-treatingService"/>
+      <label value="SERVICE"/>
+      <short value="Service"/>
+      <definition value="This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService"/>
       </type>
       <mustSupport value="true"/>
       <mapping>
         <identity value="vista"/>
-        <map value="problem @NOTE NUMBER 9000011.1111-.01"/>
+        <map value="undefined @SERVICE    9000011-1.06"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-responsibleProvider">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-responsibleProvider"/>
+      <label value="NAME"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="vista"/>
+        <map value="NEW PERSON  @NAME 9000011-1.05:200-.01"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToCombatExperience">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToCombatExperience"/>
+      <label value="COMBAT VETERAN"/>
+      <short value="0"/>
+      <definition value="&lt;blank&gt;"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @COMBAT VETERAN 9000011-1.17"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToMilitarySexualTrauma">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToMilitarySexualTrauma"/>
+      <label value="MILITARY SEXUAL TRAUMA"/>
+      <short value="0"/>
+      <definition value="If this problem is related to the treatment of military sexual trauma, it may be flagged here."/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToRadiumTreatment">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToRadiumTreatment"/>
+      <label value="HEAD AND.OR NECK CANCER"/>
+      <short value="0"/>
+      <definition value="If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here."/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @HEAD AND.OR NECK CANCER 9000011-1.15"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToPersianGulfService">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToPersianGulfService"/>
+      <label value="PERSIAN GULF EXPOSURE"/>
+      <short value="0"/>
+      <definition value="If this problem is related to a patient&#39;s service in the Persian Gulf, it may be flagged here."/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToRadiation">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToRadiation"/>
+      <label value="IONIZING RADIATION EXPOSURE"/>
+      <short value="0"/>
+      <definition value="If this problem is related to a patient&#39;s exposure to ionizing radiation, it may be flagged here."/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @IONIZING RADIATION EXPOSURE 9000011-1.12"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-relationshipToAgentOrangeExposure">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-relationshipToAgentOrangeExposure"/>
+      <label value="AGENT ORANGE EXPOSURE"/>
+      <short value="Exposure"/>
+      <definition value="If this problem is related to a patient&#39;s exposure to Agent Orange, it may be flagged here."/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11"/>
+      </mapping>
+    </element>
+    <element id="Condition.extension:condition-priority">
+      <path value="Condition.extension"/>
+      <sliceName value="condition-priority"/>
+      <label value="PRIORITY"/>
+      <short value="Immediacy/Priority"/>
+      <definition value="This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display."/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="vista"/>
+        <map value="PROBLEM  @PRIORITY 9000011-1.14"/>
       </mapping>
     </element>
     <element id="Condition.clinicalStatus">

@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAAppointment",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment",
 	"name": "VAAppointment",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "An Appointment profiled to support VA requirements.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
@@ -24,19 +24,6 @@
 	"derivation": "constraint",
 	"differential": {
 		"element": [
-			{
-				"path": "Appointment.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
 			{
 				"id": "Appointment.status",
 				"path": "Appointment.status",
@@ -64,6 +51,7 @@
 				]
 			},
 			{
+				"id": "Appointment.participant.status",
 				"path": "Appointment.participant.status",
 				"fixedCode": "accepted",
 				"mustSupport": true

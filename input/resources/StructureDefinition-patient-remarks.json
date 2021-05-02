@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-remarks",
 	"name": "patient-remarks",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "If so desired, you may enter a short remark about this applicant between 3-60 characters.  The remark entered should be significant and tact should be exercised since this field is viewable to virtually all other users who have the ability to 'call up' a patient for any purpose.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

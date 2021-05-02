@@ -21,22 +21,22 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "MedicationDispense.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"MedicationDispense.extension","medicationdispense-fillDate","","PARTIAL DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate]]} {[]}
-","Extension","This is the date the partial was made.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @PARTIAL DATE 52.2-.01"
-"MedicationDispense.extension","medicationdispense-dispenseChannel","","MAIL/WINDOW",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispenseChannel]]} {[]}
-","Extension","This field tells whether the medication was picked up  or mailed to the patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @MAIL/WINDOW 52.2-.02"
-"MedicationDispense.extension","richAnnotation/comment/text","","REMARKS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text]]} {[]}
-","Extension","These are any additional comments.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @REMARKS 52.2-.03"
 "MedicationDispense.extension","medicationdispense-fillRequestDate","","LOGIN DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillRequestDate]]} {[]}
 ","Extension","This is the date that the prescription was entered.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @LOGIN DATE 52.2-.08"
+"MedicationDispense.extension","richAnnotation-comment-text","","REMARKS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text]]} {[]}
+","Extension","These are any additional comments.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @REMARKS 52.2-.03"
+"MedicationDispense.extension","medicationdispense-dispenseChannel","","MAIL/WINDOW",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispenseChannel]]} {[]}
+","Extension","This field tells whether the medication was picked up  or mailed to the patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @MAIL/WINDOW 52.2-.02"
+"MedicationDispense.extension","medicationdispense-fillDate","","PARTIAL DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate]]} {[]}
+","Extension","This is the date the partial was made.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @PARTIAL DATE 52.2-.01"
 "MedicationDispense.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","","N/A"

@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig"/>
-  <version value="0.0.64"/>
+  <version value="0.0.69"/>
   <name value="vha-ampl-ig"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-03-12T16:08:26+00:00"/>
+  <date value="2021-05-02T08:11:21+00:00"/>
   <publisher value="JPSys"/>
   <contact>
     <telecom>
@@ -1298,16 +1298,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAUnfinishedInpatientMedication"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAUnfinishedInpatientMedication"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
@@ -1315,16 +1305,6 @@
       <description value="This is the bottle number (or numbers, separated by commas) in which  this additive will be included for this IV order. If this field is blank,  it means that the additive will be included in all bottles."/>
       <sourceReference>
         <reference value="StructureDefinition/dosageInstruction-ivBottleNumber"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAUnfinishedInpatientMedicationRequestAppointment"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAUnfinishedInpatientMedicationRequestAppointment"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1774,16 +1754,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAInpatientUDMedicationRequestEncounter"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAInpatientUDMedicationRequestEncounter"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
@@ -1868,16 +1838,6 @@
       <description value="This is a flag set to 1 whenever the order is placed on HOLD or 0 whenever the order is removed from hold."/>
       <sourceReference>
         <reference value="StructureDefinition/medicationdispense-holdFlag"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAInpatientIVMedicationRequestEncounter"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAInpatientIVMedicationRequestEncounter"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1976,17 +1936,6 @@
       <description value="This field is used to show the status of the patient at the time the  medication was filled."/>
       <sourceReference>
         <reference value="StructureDefinition/medicationdispense-authorization"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAFinishedOutpatientMedicationOrderEncounter"/>
-      <description value="Encounter during which VA finished outpatient medication order is placed"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAFinishedOutpatientMedicationOrderEncounter"/>
       </sourceReference>
     </resource>
     <resource>
@@ -2431,16 +2380,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAUnfinishedOutpatientMedicationOrderEncounter"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAUnfinishedOutpatientMedicationOrderEncounter"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
@@ -2645,29 +2584,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAChemLabReportSpecimen"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAChemLabReportSpecimen"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
       <name value="VAChemLabReport"/>
       <sourceReference>
         <reference value="StructureDefinition/VAChemLabReport"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAChemLabReportOrder"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAChemLabReportOrder"/>
       </sourceReference>
     </resource>
     <resource>
@@ -2688,16 +2607,6 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAMicroLabReportSpecimen"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAMicroLabReportSpecimen"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
       <name value="VAMicroLabReport"/>
       <sourceReference>
         <reference value="StructureDefinition/VAMicroLabReport"/>
@@ -2713,39 +2622,9 @@
         <reference value="StructureDefinition/VAMicroLabReportOrder"/>
       </sourceReference>
     </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAMicroLabReportOrderSpecimen"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAMicroLabReportOrderSpecimen"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAMicroLabReportResult"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAMicroLabReportResult"/>
-      </sourceReference>
-    </resource>
   </package>
   <package id="group-11">
     <name value="Coversheet Area: Lab - Cytopathology"/>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VACytopathologyLabSpecimen"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VACytopathologyLabSpecimen"/>
-      </sourceReference>
-    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
@@ -2786,16 +2665,6 @@
       <description value="This field is a pointer to the TIU DOCUMENT (#8925) file.  It stores the pointer for a cytopathology SF515 that has been electronically signed and stored in TIU."/>
       <sourceReference>
         <reference value="StructureDefinition/referencedDocument.uri"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VACytopathologyLabOrderSpecimen"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VACytopathologyLabOrderSpecimen"/>
       </sourceReference>
     </resource>
   </package>
@@ -2925,16 +2794,6 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAEMLabReportSpecimen"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAEMLabReportSpecimen"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
       <name value="VAEMLabReport"/>
       <sourceReference>
         <reference value="StructureDefinition/VAEMLabReport"/>
@@ -2948,26 +2807,6 @@
       <name value="VAEMLabReportOrder"/>
       <sourceReference>
         <reference value="StructureDefinition/VAEMLabReportOrder"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAEMLabReportEncounter"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAEMLabReportEncounter"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAEMLabReportOrderSpecimen"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAEMLabReportOrderSpecimen"/>
       </sourceReference>
     </resource>
     <resource>

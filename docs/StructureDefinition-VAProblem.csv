@@ -31,66 +31,66 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "Condition.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"Condition.extension","condition-priority","","PRIORITY",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority]]} {[]}
-","Immediacy/Priority","This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"Condition.extension","richAnnotation-commentNumber","","NOTE NUMBER",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber]]} {[]}
+","Note #","This is the unique note identifier.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @PRIORITY 9000011-1.14","n/a","N/A"
-"Condition.extension","condition-relationshipToAgentOrangeExposure","","AGENT ORANGE EXPOSURE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure]]} {[]}
-","Exposure","If this problem is related to a patient's exposure to Agent Orange, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","problem @NOTE NUMBER 9000011.1111-.01","n/a","N/A"
+"Condition.extension","richAnnotation-text","","NOTE NARRATIVE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text]]} {[]}
+","Note Narrative","Additional comments may be entered here to further describe this problem.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11","n/a","N/A"
-"Condition.extension","condition-relationshipToRadiation","","IONIZING RADIATION EXPOSURE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation]]} {[]}
-","0","If this problem is related to a patient's exposure to ionizing radiation, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","problem @NOTE NARRATIVE 9000011.1111-.03","n/a","N/A"
+"Condition.extension","richAnnotation-author","","AUTHOR",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author]]} {[]}
+","Author","This is the provider who authored the text of this note.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @IONIZING RADIATION EXPOSURE 9000011-1.12","n/a","N/A"
-"Condition.extension","condition-relationshipToPersianGulfService","","PERSIAN GULF EXPOSURE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService]]} {[]}
-","0","If this problem is related to a patient's service in the Persian Gulf, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13","n/a","N/A"
-"Condition.extension","condition-relationshipToRadiumTreatment","","HEAD AND.OR NECK CANCER",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment]]} {[]}
-","0","If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @HEAD AND.OR NECK CANCER 9000011-1.15","n/a","N/A"
-"Condition.extension","condition-relationshipToMilitarySexualTrauma","","MILITARY SEXUAL TRAUMA",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma]]} {[]}
-","0","If this problem is related to the treatment of military sexual trauma, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16","n/a","N/A"
-"Condition.extension","condition-relationshipToCombatExperience","","COMBAT VETERAN",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience]]} {[]}
-","0","<blank>","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @COMBAT VETERAN 9000011-1.17","n/a","N/A"
-"Condition.extension","condition-responsibleProvider","","NAME",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider]]} {[]}
-","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","NEW PERSON  @NAME 9000011-1.05:200-.01","n/a","N/A"
-"Condition.extension","condition-treatingService","","SERVICE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService]]} {[]}
-","Service","This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","undefined @SERVICE    9000011-1.06","n/a","N/A"
-"Condition.extension","condition-treatingClinic","","NAME",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic]]} {[]}
-","Optional Extensions Element","This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one's view of the list.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","HOSPITAL LOCATION @NAME 9000011-1.08","n/a","N/A"
-"Condition.extension","condition-relationshipToShipboardHazardAndDefense","","SHIPBOARD HAZARD & DEFENSE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense]]} {[]}
-","0","<blank>","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @SHIPBOARD HAZARD & DEFENSE 9000011-1.18","n/a","N/A"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","undefined @AUTHOR 9000011.1111-.06","n/a","N/A"
 "Condition.extension","condition-lastModified","","DATE LAST MODIFIED",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified]]} {[]}
 ","Last Update","This is the last date/time this problem was changed.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","undefined @DATE LAST MODIFIED 9000011-.03","n/a","N/A"
-"Condition.extension","richAnnotation/author","","AUTHOR",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author]]} {[]}
-","Author","This is the provider who authored the text of this note.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"Condition.extension","condition-relationshipToShipboardHazardAndDefense","","SHIPBOARD HAZARD & DEFENSE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense]]} {[]}
+","0","<blank>","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","undefined @AUTHOR 9000011.1111-.06","n/a","N/A"
-"Condition.extension","richAnnotation/text","","NOTE NARRATIVE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text]]} {[]}
-","Note Narrative","Additional comments may be entered here to further describe this problem.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @SHIPBOARD HAZARD & DEFENSE 9000011-1.18","n/a","N/A"
+"Condition.extension","condition-treatingClinic","","NAME",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic]]} {[]}
+","Optional Extensions Element","This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one's view of the list.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","problem @NOTE NARRATIVE 9000011.1111-.03","n/a","N/A"
-"Condition.extension","richAnnotation/commentNumber","","NOTE NUMBER",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber]]} {[]}
-","Note #","This is the unique note identifier.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","HOSPITAL LOCATION @NAME 9000011-1.08","n/a","N/A"
+"Condition.extension","condition-treatingService","","SERVICE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService]]} {[]}
+","Service","This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","problem @NOTE NUMBER 9000011.1111-.01","n/a","N/A"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","undefined @SERVICE    9000011-1.06","n/a","N/A"
+"Condition.extension","condition-responsibleProvider","","NAME",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider]]} {[]}
+","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","NEW PERSON  @NAME 9000011-1.05:200-.01","n/a","N/A"
+"Condition.extension","condition-relationshipToCombatExperience","","COMBAT VETERAN",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience]]} {[]}
+","0","<blank>","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @COMBAT VETERAN 9000011-1.17","n/a","N/A"
+"Condition.extension","condition-relationshipToMilitarySexualTrauma","","MILITARY SEXUAL TRAUMA",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma]]} {[]}
+","0","If this problem is related to the treatment of military sexual trauma, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @MILITARY SEXUAL TRAUMA 9000011-1.16","n/a","N/A"
+"Condition.extension","condition-relationshipToRadiumTreatment","","HEAD AND.OR NECK CANCER",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment]]} {[]}
+","0","If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @HEAD AND.OR NECK CANCER 9000011-1.15","n/a","N/A"
+"Condition.extension","condition-relationshipToPersianGulfService","","PERSIAN GULF EXPOSURE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService]]} {[]}
+","0","If this problem is related to a patient's service in the Persian Gulf, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @PERSIAN GULF EXPOSURE 9000011-1.13","n/a","N/A"
+"Condition.extension","condition-relationshipToRadiation","","IONIZING RADIATION EXPOSURE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation]]} {[]}
+","0","If this problem is related to a patient's exposure to ionizing radiation, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @IONIZING RADIATION EXPOSURE 9000011-1.12","n/a","N/A"
+"Condition.extension","condition-relationshipToAgentOrangeExposure","","AGENT ORANGE EXPOSURE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure]]} {[]}
+","Exposure","If this problem is related to a patient's exposure to Agent Orange, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11","n/a","N/A"
+"Condition.extension","condition-priority","","PRIORITY",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority]]} {[]}
+","Immediacy/Priority","This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @PRIORITY 9000011-1.14","n/a","N/A"
 "Condition.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","","N/A"

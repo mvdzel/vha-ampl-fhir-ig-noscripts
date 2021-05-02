@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-significantFindings",
 	"name": "referralrequest-significantFindings",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "If significant findings are noted in the consult results, then this field may be marked \"Yes\", and appropriate comments may be entered in the \"Comment\" field. \"Unknown\" is the default. \"No\" may also be specified to indicate the results do not include significant findings.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

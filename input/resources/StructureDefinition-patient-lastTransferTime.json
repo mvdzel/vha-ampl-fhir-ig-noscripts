@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastTransferTime",
 	"name": "patient-lastTransferTime",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "This field contains the internal entry number of the PATIENT MOVEMENT file denoting the most recent movement for an inpatient. This field is only stored for current inpatients. It must NOT be edited as this could affect\r\nthe integrity of many options within MAS and other packages. When displaying this field, the date/time of the most recent movement will display.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

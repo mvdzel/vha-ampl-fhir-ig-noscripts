@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAProblemAuthorship",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblemAuthorship",
 	"name": "VAProblemAuthorship",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -24,19 +24,6 @@
 	"differential": {
 		"element": [
 			{
-				"path": "Provenance.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
 				"id": "Provenance.recorded",
 				"path": "Provenance.recorded",
 				"label": "DATE ENTERED",
@@ -51,21 +38,25 @@
 				]
 			},
 			{
+				"id": "Provenance.activity.system",
 				"path": "Provenance.activity.system",
 				"fixedUri": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
 				"mustSupport": true
 			},
 			{
+				"id": "Provenance.activity.code",
 				"path": "Provenance.activity.code",
 				"fixedCode": "CREATE",
 				"mustSupport": true
 			},
 			{
+				"id": "Provenance.agent.role.coding.system",
 				"path": "Provenance.agent.role.coding.system",
 				"fixedUri": "http://terminology.hl7.org/CodeSystem/v3-RoleClass",
 				"mustSupport": true
 			},
 			{
+				"id": "Provenance.agent.role.coding.code",
 				"path": "Provenance.agent.role.coding.code",
 				"fixedCode": "SDLOC",
 				"mustSupport": true

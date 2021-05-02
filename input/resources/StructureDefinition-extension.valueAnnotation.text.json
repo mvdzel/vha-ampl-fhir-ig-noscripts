@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.text",
 	"name": "extension.valueAnnotation.text",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "This is any instructions or comments entered by the provider for this order.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

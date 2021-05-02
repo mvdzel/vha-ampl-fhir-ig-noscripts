@@ -21,18 +21,18 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "MedicationStatement.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"MedicationStatement.extension","medicationstatement-recorder","","DOCUMENTED BY",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-recorder]]} {[]}
-","DOCUMENTED BY","This is the person responsible for documenting the Non-VA Med order.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PHARMACY PATIENT FILE @DOCUMENTED BY 55.05-12","n/a","N/A"
-"MedicationStatement.extension","medicationstatement-orderLocation","","CLINIC",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-orderLocation]]} {[]}
-","CLINIC","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PHARMACY PATIENT FILE @CLINIC 55.05-13","n/a","N/A"
 "MedicationStatement.extension","nonVAMedicationDisclaimer","","DISCLAIMER",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/nonVAMedicationDisclaimer]]} {[]}
 ","Optional Extensions Element","This is the multiple for the Non-VA Med Disclaimer (Statement/Explanation)","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PHARMACY PATIENT FILE @DISCLAIMER 55.05-10","n/a","N/A"
+"MedicationStatement.extension","medicationstatement-orderLocation","","CLINIC",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-orderLocation]]} {[]}
+","CLINIC","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PHARMACY PATIENT FILE @CLINIC 55.05-13","n/a","N/A"
+"MedicationStatement.extension","medicationstatement-recorder","","DOCUMENTED BY",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationstatement-recorder]]} {[]}
+","DOCUMENTED BY","This is the person responsible for documenting the Non-VA Med order.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PHARMACY PATIENT FILE @DOCUMENTED BY 55.05-12","n/a","N/A"
 "MedicationStatement.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","","N/A"
@@ -89,9 +89,9 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "MedicationStatement.effective[x].start","","","START DATE",0,1,"Y","","Y","dateTime {[]} {[]}
 ","START DATE","This is the date the patient started taking the Non-VA Medication.","If the low element is missing, the meaning is that the low boundary is not known.","","","","","","","","",,,,,"",,,,"Period.start",0,1,"per-1
 ","","PHARMACY PATIENT FILE @START DATE 55.05-8","./low","DR.1"
-"MedicationStatement.effective[x].end","","","",0,1,"","","Y","dateTime {[]} {[]}
-","End time with inclusive boundary, if not ongoing","The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.","The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has a end value of 2012-02-03.","","","If the end of the period is missing, it means that the period is ongoing","","","","","",,,,,"",,,,"Period.end",0,1,"per-1
-","","./high","DR.2"
+"MedicationStatement.effective[x].end","","","DISCONTINUED DATE",0,1,"Y","","Y","dateTime {[]} {[]}
+","DISCONTINUED DATE","This is the date the patient stopped taking the Non-VA Medication.","The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has a end value of 2012-02-03.","","","If the end of the period is missing, it means that the period is ongoing","","","","","",,,,,"",,,,"Period.end",0,1,"per-1
+","","PHARMACY PATIENT FILE @DISCONTINUED DATE 55.05-6","./high","DR.2"
 "MedicationStatement.dateAsserted","","","DOCUMENTED DATE",0,1,"Y","","Y","dateTime {[]} {[]}
 ","DOCUMENTED DATE","This is the date the Non-VA Med order was entered to the system.","","","","","","","","","",,,,,"",,,,"MedicationStatement.dateAsserted",0,1,"","","PHARMACY PATIENT FILE @DOCUMENTED DATE 55.05-11",".participation[typeCode=AUT].time","when.recorded"
 "MedicationStatement.informationSource","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}

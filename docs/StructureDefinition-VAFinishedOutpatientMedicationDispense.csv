@@ -21,54 +21,54 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "MedicationDispense.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"MedicationDispense.extension","medicationdispense-authorization","","PATIENT STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-authorization]]} {[]}
-","Rx Patient Status","This field is used to show the status of the patient at the time the  medication was filled.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"MedicationDispense.extension","richAnnotation-comment-text","","REMARKS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text]]} {[]}
+","Extension","This field contains comments as deemed necessary by the pharmacy staff.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @PATIENT STATUS 52-3","n/a","N/A"
-"MedicationDispense.extension","medicationdispense-labelCopies","","COPIES",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-labelCopies]]} {[]}
-","Optional Extensions Element","The number of copies made of the label for the prescription.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @COPIES 52-10.6","n/a","N/A"
-"MedicationDispense.extension","medicationdispense-dispenseChannel","","MAIL/WINDOW",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispenseChannel]]} {[]}
-","Refill mail/Window","This field contains 'M' if the refill is to be mailed to the patient and 'W' if the refill is to be picked up at the pharmacy window.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @MAIL/WINDOW 52-11","PRESCRIPTION @MAIL/WINDOW 52.1-2","n/a","N/A"
-"MedicationDispense.extension","medicationdispense-fillDate","","FILL DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate]]} {[]}
-","Original Fill Date","The date the prescription was filled.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @FILL DATE 52-22","n/a","N/A"
-"MedicationDispense.extension","medicationdispense-patientCounseled","","WAS THE PATIENT COUNSELED",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-patientCounseled]]} {[]}
-","Optional Extensions Element","This field indicates whether or not the patient received counseling about the prescription.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @WAS THE PATIENT COUNSELED 52-41","n/a","N/A"
-"MedicationDispense.extension","medicationdispense-patientCounselingUnderstood","","WAS COUNSELING UNDERSTOOD",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-patientCounselingUnderstood]]} {[]}
-","Optional Extensions Element","This field indicates whether or not the patient understood the counseling on the prescription, if the patient was counseled.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @WAS COUNSELING UNDERSTOOD 52-42","n/a","N/A"
-"MedicationDispense.extension","medicationdispense-medicationReturnedToStock","","RETURNED TO STOCK",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-medicationReturnedToStock]]} {[]}
-","Optional Extensions Element","This field is used to indicate when and if the medication was returned to inventory due to the prescription not being picked up or mailed to the patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @RETURNED TO STOCK 52-32.1","PRESCRIPTION @RETURNED TO STOCK 52.1-14","n/a","N/A"
-"MedicationDispense.extension","medicationdispense-pickupInstructions","","METHOD OF PICKUP",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-pickupInstructions]]} {[]}
-","Optional Extensions Element","Enter any special instructions that should appear on mailing address portion of the label, specifing where, or when the RX(s) should be  picked up.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @METHOD OF PICKUP 52-35","n/a","N/A"
-"MedicationDispense.extension","medicationdispense-copayTransactionType","","COPAY TRANSACTION TYPE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-copayTransactionType]]} {[]}
-","Optional Extensions Element","This field contains the internal entry number of the pointer to the IB Action Type file (#350.1).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @COPAY TRANSACTION TYPE 52-105","n/a","N/A"
-"MedicationDispense.extension","medicationdispense-dispensedAsWritten","","DAW CODE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispensedAsWritten]]} {[]}
-","Optional Extensions Element","Dispensed As Written code. This information is used for electronic claim transmission to third party payers (insurance companies).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @DAW CODE 52-81","n/a","N/A"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @REMARKS 52.1-3"
 "MedicationDispense.extension","medicationdispense-fillRequestDate","","LOGIN DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillRequestDate]]} {[]}
 ","Optional Extensions Element","This is the date the refill request was entered.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @LOGIN DATE 52.1-7","n/a","N/A"
-"MedicationDispense.extension","richAnnotation/comment/text","","REMARKS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text]]} {[]}
-","Extension","This field contains comments as deemed necessary by the pharmacy staff.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"MedicationDispense.extension","medicationdispense-dispensedAsWritten","","DAW CODE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispensedAsWritten]]} {[]}
+","Optional Extensions Element","Dispensed As Written code. This information is used for electronic claim transmission to third party payers (insurance companies).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @REMARKS 52.1-3"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @DAW CODE 52-81","n/a","N/A"
+"MedicationDispense.extension","medicationdispense-copayTransactionType","","COPAY TRANSACTION TYPE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-copayTransactionType]]} {[]}
+","Optional Extensions Element","This field contains the internal entry number of the pointer to the IB Action Type file (#350.1).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @COPAY TRANSACTION TYPE 52-105","n/a","N/A"
+"MedicationDispense.extension","medicationdispense-pickupInstructions","","METHOD OF PICKUP",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-pickupInstructions]]} {[]}
+","Optional Extensions Element","Enter any special instructions that should appear on mailing address portion of the label, specifing where, or when the RX(s) should be  picked up.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @METHOD OF PICKUP 52-35","n/a","N/A"
+"MedicationDispense.extension","medicationdispense-medicationReturnedToStock","","RETURNED TO STOCK",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-medicationReturnedToStock]]} {[]}
+","Optional Extensions Element","This field is used to indicate when and if the medication was returned to inventory due to the prescription not being picked up or mailed to the patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @RETURNED TO STOCK 52-32.1","PRESCRIPTION @RETURNED TO STOCK 52.1-14","n/a","N/A"
+"MedicationDispense.extension","medicationdispense-patientCounselingUnderstood","","WAS COUNSELING UNDERSTOOD",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-patientCounselingUnderstood]]} {[]}
+","Optional Extensions Element","This field indicates whether or not the patient understood the counseling on the prescription, if the patient was counseled.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @WAS COUNSELING UNDERSTOOD 52-42","n/a","N/A"
+"MedicationDispense.extension","medicationdispense-patientCounseled","","WAS THE PATIENT COUNSELED",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-patientCounseled]]} {[]}
+","Optional Extensions Element","This field indicates whether or not the patient received counseling about the prescription.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @WAS THE PATIENT COUNSELED 52-41","n/a","N/A"
+"MedicationDispense.extension","medicationdispense-fillDate","","FILL DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate]]} {[]}
+","Original Fill Date","The date the prescription was filled.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @FILL DATE 52-22","n/a","N/A"
+"MedicationDispense.extension","medicationdispense-dispenseChannel","","MAIL/WINDOW",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispenseChannel]]} {[]}
+","Refill mail/Window","This field contains 'M' if the refill is to be mailed to the patient and 'W' if the refill is to be picked up at the pharmacy window.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @MAIL/WINDOW 52-11","PRESCRIPTION @MAIL/WINDOW 52.1-2","n/a","N/A"
+"MedicationDispense.extension","medicationdispense-labelCopies","","COPIES",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-labelCopies]]} {[]}
+","Optional Extensions Element","The number of copies made of the label for the prescription.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @COPIES 52-10.6","n/a","N/A"
+"MedicationDispense.extension","medicationdispense-authorization","","PATIENT STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-authorization]]} {[]}
+","Rx Patient Status","This field is used to show the status of the patient at the time the  medication was filled.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @PATIENT STATUS 52-3","n/a","N/A"
 "MedicationDispense.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","","N/A"
@@ -132,8 +132,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "MedicationDispense.performer.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","","N/A"
-"MedicationDispense.performer.actor","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]]}
-","Individual who was performing","The device, practitioner, etc. who performed the action.  It should be assumed that the actor is the dispenser of the medication.","","","","","","","","","",,,,,"",,,,"MedicationDispense.performer.actor",1,1,"","","….actor",".role"
+"MedicationDispense.performer.actor","","","REMOTE PHARMACIST",1,1,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]]}
+","finishing person","This is the name of the Pharmacist that remotely completed a refill for a prescription.","","","","","","","","","",,,,,"",,,,"MedicationDispense.performer.actor",1,1,"","","PRESCRIPTION @PHARMACIST NAME 52-23","PRESCRIPTION @DIVISION 52-20","PRESCRIPTION @VERIFYING PHARMACIST 52-104","PRESCRIPTION @FINISHING PERSON  52-38","PRESCRIPTION @FILLING PERSON 52-38.1","PRESCRIPTION @PHARMACIST NAME 52.1-4","PRESCRIPTION @REMOTE PHARMACIST 52.1-92","….actor",".role"
 "MedicationDispense.performer.onBehalfOf","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Organization organization was acting for","The organization the device or practitioner was acting on behalf of.","","","","","","","","","",,,,,"",,,,"MedicationDispense.performer.onBehalfOf",0,1,"","","….onBehalfOf",".role.scopingOrganization"
 "MedicationDispense.authorizingPrescription","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest]]}

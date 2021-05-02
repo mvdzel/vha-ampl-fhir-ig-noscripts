@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType",
 	"name": "medicationrequest-ivType",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "Type of IV - \"A\" for Admixture, \"C\" for Chemotherapy, \"H\" for Hyperal, \"P\" for Piggyback, and \"S\" for Syringe.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

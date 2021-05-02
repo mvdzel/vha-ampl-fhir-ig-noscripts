@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAProgressNoteEncounter",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteEncounter",
 	"name": "VAProgressNoteEncounter",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -24,19 +24,6 @@
 	"differential": {
 		"element": [
 			{
-				"path": "Encounter.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
 				"id": "Encounter.class.code",
 				"path": "Encounter.class.code",
 				"label": "VISIT TYPE",
@@ -50,11 +37,13 @@
 				]
 			},
 			{
+				"id": "Encounter.participant.type.coding.system",
 				"path": "Encounter.participant.type.coding.system",
 				"fixedUri": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
 				"mustSupport": true
 			},
 			{
+				"id": "Encounter.participant.type.coding.code",
 				"path": "Encounter.participant.type.coding.code",
 				"fixedCode": "ATND",
 				"mustSupport": true

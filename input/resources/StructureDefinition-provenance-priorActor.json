@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/provenance-priorActor",
 	"name": "provenance-priorActor",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "Pointer to the user who was listed as performing the previous action.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

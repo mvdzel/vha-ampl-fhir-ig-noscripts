@@ -22,22 +22,22 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "Flag.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"Flag.extension","flag-rationale","","ASSIGNMENT NARRATIVE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-rationale]]} {[]}
-","Assignment Narrative","This word processing field contains the patient record flag assignment narrative text. The assignment narrative text is a description of the incident or reason that generated the need for this patient record flag assignment.  The description is followed by recommended actions that should be performed by a person working with this specific patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRF ASSIGNMENT FILE @ASSIGNMENT NARRATIVE 26.13-1","n/a","N/A"
-"Flag.extension","flag-nextReviewDate","","REVIEW DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-nextReviewDate]]} {[]}
-","Next Review Date","This field will contain the date that the flag assignment is due for  review to determine continuing appropriateness.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRF ASSIGNMENT FILE @REVIEW DATE 26.13-.06","n/a","N/A"
-"Flag.extension","flag-owner","","OWNER SITE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-owner]]} {[]}
-","Owner Site","This field contains the current site that owns this patient flag assignment. Patient assignments may only be edited by the owner site. The owner site normally corresponds to the site providing primary care to the patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRF ASSIGNMENT FILE @OWNER SITE 26.13-.04","n/a","N/A"
 "Flag.extension","flagSourceDocument","","TIU PN TITLE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flagSourceDocument]]} {[]}
 ","TIU Title - Local (Progress Note Title)","This field contains the Category II Progress Note Title that is associated with this Patient Record Flag.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRF LOCAL FLAG FILE @TIU PN TITLE 26.11-.07","n/a","N/A"
+"Flag.extension","flag-owner","","OWNER SITE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-owner]]} {[]}
+","Owner Site","This field contains the current site that owns this patient flag assignment. Patient assignments may only be edited by the owner site. The owner site normally corresponds to the site providing primary care to the patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRF ASSIGNMENT FILE @OWNER SITE 26.13-.04","n/a","N/A"
+"Flag.extension","flag-nextReviewDate","","REVIEW DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-nextReviewDate]]} {[]}
+","Next Review Date","This field will contain the date that the flag assignment is due for  review to determine continuing appropriateness.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRF ASSIGNMENT FILE @REVIEW DATE 26.13-.06","n/a","N/A"
+"Flag.extension","flag-rationale","","ASSIGNMENT NARRATIVE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/flag-rationale]]} {[]}
+","Assignment Narrative","This word processing field contains the patient record flag assignment narrative text. The assignment narrative text is a description of the incident or reason that generated the need for this patient record flag assignment.  The description is followed by recommended actions that should be performed by a person working with this specific patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRF ASSIGNMENT FILE @ASSIGNMENT NARRATIVE 26.13-1","n/a","N/A"
 "Flag.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","","N/A"

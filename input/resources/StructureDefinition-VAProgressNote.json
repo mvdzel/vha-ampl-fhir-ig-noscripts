@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAProgressNote",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNote",
 	"name": "VAProgressNote",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -103,19 +103,6 @@
 				]
 			},
 			{
-				"path": "DocumentReference.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
 				"id": "DocumentReference.masterIdentifier",
 				"path": "DocumentReference.masterIdentifier",
 				"label": "INTERNAL ENTRY NUMBER",
@@ -175,6 +162,7 @@
 				]
 			},
 			{
+				"id": "DocumentReference.class.coding.system",
 				"path": "DocumentReference.class.coding.system",
 				"fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/8925-.04",
 				"mustSupport": true
@@ -246,6 +234,7 @@
 				]
 			},
 			{
+				"id": "DocumentReference.relatesTo.code",
 				"path": "DocumentReference.relatesTo.code",
 				"fixedCode": "appends",
 				"mustSupport": true

@@ -52,7 +52,7 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.64 - draft</p>
+          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.69 - draft</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -123,7 +123,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 5" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.64). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.69). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -197,18 +197,19 @@
   <a name="vista"> </a><h3>Mappings for VistA (http://va.gov/vista/)</h3><table class="grid">
  <tr><td colspan="3"><b>VAAllergyIntolerance</b></td></tr>
  <tr><td>AllergyIntolerance</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/annotation/text)</td><td>PATIENT ALLERGIES @COMMENTS  120.8262-2</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyIntolerance-substanceIngredient)</td><td>PATIENT ALLERGIES @DRUG INGREDIENTS (MULTIPLE) 120.802-2</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyintolerance-vaSubstanceCategory)</td><td>PATIENT ALLERGIES @ALLERGY TYPE 120.8-3.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-type)</td><td>PATIENT ALLERGIES @COMMENT TYPE 120.826-1.5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-annotation-author-extension-practitioner-title)</td><td>NEW PERSON @TITLE 120.826-1:200-8</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-annotation-author)</td><td>PATIENT ALLERGIES @USER ENTERING 120.826-1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-annotation-date)</td><td>PATIENT ALLERGIES @DATE/TIME COMMENT ENTERED 120.826-.01</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyintolerance-reactionAssessed)</td><td>ADVERSE REACTION ASSESSMENT  @REACTION ASSESSMENT 120.86-1</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/annotation/date)</td><td>PATIENT ALLERGIES @DATE/TIME COMMENT ENTERED 120.826-.01</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/annotation/author)</td><td>PATIENT ALLERGIES @USER ENTERING 120.826-1</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/annotation/author/extension/practitioner-title)</td><td>NEW PERSON @TITLE 120.826-1:200-8</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/type)</td><td>PATIENT ALLERGIES @COMMENT TYPE 120.826-1.5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyintolerance-vaSubstanceCategory)</td><td>PATIENT ALLERGIES @ALLERGY TYPE 120.8-3.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyIntolerance-substanceIngredient)</td><td>PATIENT ALLERGIES @DRUG INGREDIENTS (MULTIPLE) 120.802-2</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-annotation-text)</td><td>PATIENT ALLERGIES @COMMENTS  120.8262-2</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;verificationStatus</td><td>PATIENT ALLERGIES @VERIFIED 120.8-19, PATIENT ALLERGIES @ENTERED IN ERROR 120.8-22</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>PATIENT ALLERGIES @MECHANISM 120.8-17</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>PATIENT ALLERGIES @GMR ALLERGY 120.8-1</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>PATIENT ALLERGIES @GMR ALLERGY 120.8-1, PATIENT ALLERGIES @DRUG CLASSES (MULTIPLE) 120.803-3</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>PATIENT ALLERGIES @REACTANT 120.8-.02</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td></td> </tr>
@@ -218,22 +219,28 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (practitioner-title)</td><td>NEW PERSON @SIGNATURE BLOCK TITLE 120.8-5:200-20.3</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;asserter</td><td>PATIENT ALLERGIES @ORIGINATOR 120.8-5</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reaction</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (allergyintolerance-reactionDateEntered)</td><td>PATIENT ALLERGIES @DATE ENTERED 120.81-3</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (allergyintolerance-reactionObservationMode)</td><td>PATIENT ALLERGIES @OBSERVED/HISTORICAL 120.8-6</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (allergyintolerance-reactionDateEntered)</td><td>PATIENT ALLERGIES @DATE ENTERED 120.81-3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifestation</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>PATIENT ALLERGIES @REACTION  120.81-.01</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>PATIENT ALLERGIES @OTHER REACTION 120.81-1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onset</td><td>ADVERSE REACTION REPORTING @DATE/TIME OF EVENT (OBSERVATION) 120.85-.01</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;severity</td><td>ADVERSE REACTION REPORTING @SEVERITY 120.85-14.5</td> </tr>
 </table>
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>VAAllergyIntolerance</b></td></tr>
  <tr><td>AllergyIntolerance</td><td>Entity. Role, or Act, Observation[classCode=OBS, moodCode=EVN]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/annotation/text)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyIntolerance-substanceIngredient)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyintolerance-vaSubstanceCategory)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-type)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-annotation-author-extension-practitioner-title)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-annotation-author)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-annotation-date)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyintolerance-reactionAssessed)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/annotation/date)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/annotation/author)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/annotation/author/extension/practitioner-title)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/type)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyintolerance-vaSubstanceCategory)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (allergyIntolerance-substanceIngredient)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-annotation-text)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>id</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;clinicalStatus</td><td>Observation ACT
@@ -275,11 +282,22 @@
  <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>subjectOf.observationEvent[code=&quot;annotation&quot;].value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reaction</td><td>outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code &lt;= CommonClinicalObservationType, value &lt;= ObservationValue (Reaction Type)]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (allergyintolerance-reactionDateEntered)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (allergyintolerance-reactionObservationMode)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (allergyintolerance-reactionDateEntered)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;substance</td><td>outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifestation</td><td>code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>./codeSystem</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version</td><td>./codeSystemVersion</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>CV.displayName</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userSelected</td><td>CD.codingRationale</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description</td><td>text</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onset</td><td>effectiveTime.low</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;severity</td><td>inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value &lt;= SeverityObservation (Severity Level)]</td> </tr>
@@ -322,6 +340,13 @@
  <tr><td>&nbsp;&nbsp;&nbsp;asserter</td><td>IAM-14 (if patient) / IAM-18 (if practitioner)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reaction</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifestation</td><td>AL1-5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>C*E.3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version</td><td>C*E.7</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>C*E.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>C*E.2 - but note this is not well followed</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userSelected</td><td>Sometimes implied by being first</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onset</td><td>AL1-6</td> </tr>
 </table>
 
@@ -375,11 +400,13 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.64 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Mar 12, 2021 16:08+0000">2021-03-12</span>
+          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.69 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Sun, May 2, 2021 08:11+0000">2021-05-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 
+                
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -401,6 +428,13 @@
   <script>anchors.options.visible = 'hover'
 anchors.add()</script>
   
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
   <!-- Analytics Below
   ================================================== -->
   </body>

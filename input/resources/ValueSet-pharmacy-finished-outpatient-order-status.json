@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-finished-outpatient-order-status",
 	"name": "pharmacy-finished-outpatient-order-status",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"compose": {
 		"include": [
 			{

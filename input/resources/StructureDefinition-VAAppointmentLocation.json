@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAAppointmentLocation",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentLocation",
 	"name": "VAAppointmentLocation",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "A location associated with an appointment, providing service information.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
@@ -24,19 +24,6 @@
 	"derivation": "constraint",
 	"differential": {
 		"element": [
-			{
-				"path": "Appointment.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
 			{
 				"id": "Appointment.participant.actor",
 				"path": "Appointment.participant.actor",
@@ -64,6 +51,7 @@
 				]
 			},
 			{
+				"id": "Appointment.participant.status",
 				"path": "Appointment.participant.status",
 				"fixedCode": "accepted",
 				"mustSupport": true

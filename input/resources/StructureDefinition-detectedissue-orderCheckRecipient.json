@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/detectedissue-orderCheckRecipient",
 	"name": "detectedissue-orderCheckRecipient",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "This is the user that saw the order checks.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

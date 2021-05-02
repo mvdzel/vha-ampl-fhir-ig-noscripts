@@ -21,22 +21,22 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "DocumentReference.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"DocumentReference.extension","patientMovementDate","","PATIENT MOVEMENT RECORD",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patientMovementDate]]} {[]}
-","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"DocumentReference.extension","documentreference-statusDetail-coding-code","","STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documentreference-statusDetail.coding.code]]} {[]}
+","Optional Extensions Element","This field is intended to accommodate the status of a given report.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","TIU DOCUMENT @PATIENT MOVEMENT RECORD  8925-1401","n/a","N/A"
-"DocumentReference.extension","cosignatureNeed","","COSIGNATURE NEEDED",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/cosignatureNeed]]} {[]}
-","Optional Extensions Element","This boolean flag indicates to the system whether or not a cosignature is needed.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","TIU DOCUMENT @COSIGNATURE NEEDED 8925-1506","n/a","N/A"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","TIU DOCUMENT @STATUS 8925-.05b","n/a","N/A"
 "DocumentReference.extension","postingIndicator","","POSTING INDICATOR",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/postingIndicator]]} {[]}
 ","Optional Extensions Element","This field is used to help identify indicators of the Patient Posting Type to which the Document Definition should be ascribed.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","TIU DOCUMENT DEFINITION FILE @POSTING INDICATOR 8925.1-.14","n/a","N/A"
-"DocumentReference.extension","documentreference-statusDetail/coding/code","","STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documentreference-statusDetail.coding.code]]} {[]}
-","Optional Extensions Element","This field is intended to accommodate the status of a given report.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"DocumentReference.extension","cosignatureNeed","","COSIGNATURE NEEDED",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/cosignatureNeed]]} {[]}
+","Optional Extensions Element","This boolean flag indicates to the system whether or not a cosignature is needed.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","TIU DOCUMENT @STATUS 8925-.05b","n/a","N/A"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","TIU DOCUMENT @COSIGNATURE NEEDED 8925-1506","n/a","N/A"
+"DocumentReference.extension","patientMovementDate","","PATIENT MOVEMENT RECORD",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patientMovementDate]]} {[]}
+","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","TIU DOCUMENT @PATIENT MOVEMENT RECORD  8925-1401","n/a","N/A"
 "DocumentReference.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","","N/A"

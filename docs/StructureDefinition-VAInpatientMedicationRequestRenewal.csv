@@ -22,7 +22,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "Provenance.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"Provenance.extension","reference-targetElement/extension/change/extension/oldValue","","PREVIOUS STOP DATE/TIME",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue]]} {[]}
+"Provenance.extension","reference-targetElement-extension-change-extension-oldValue","","PREVIOUS STOP DATE/TIME",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue]]} {[]}
 ","Extension","This is the stop date/time of the prior order.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","LAST RENEW @PREVIOUS PROVIDER 55.1138-2","LAST RENEW @PREVIOUS STOP DATE/TIME 55.1138-3"

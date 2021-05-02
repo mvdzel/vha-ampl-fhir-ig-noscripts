@@ -6,11 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>vha-ampl-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
   },
   "url": "http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig",
-  "version": "0.0.64",
+  "version": "0.0.69",
   "name": "vha-ampl-ig",
   "status": "draft",
   "experimental": false,
-  "date": "2021-03-12T16:08:26+00:00",
+  "date": "2021-05-02T08:11:21+00:00",
   "publisher": "JPSys",
   "contact": [
     {
@@ -1688,19 +1688,6 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAUnfinishedInpatientMedication",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAUnfinishedInpatientMedication"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
               "valueString": "StructureDefinition:extension"
             }
           ],
@@ -1709,19 +1696,6 @@
           "description": "This is the bottle number (or numbers, separated by commas) in which  this additive will be included for this IV order. If this field is blank,  it means that the additive will be included in all bottles.",
           "sourceReference": {
             "reference": "StructureDefinition/dosageInstruction-ivBottleNumber"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAUnfinishedInpatientMedicationRequestAppointment",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAUnfinishedInpatientMedicationRequestAppointment"
           }
         },
         {
@@ -2305,19 +2279,6 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAInpatientUDMedicationRequestEncounter",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAInpatientUDMedicationRequestEncounter"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
               "valueString": "StructureDefinition:extension"
             }
           ],
@@ -2427,19 +2388,6 @@
           "description": "This is a flag set to 1 whenever the order is placed on HOLD or 0 whenever the order is removed from hold.",
           "sourceReference": {
             "reference": "StructureDefinition/medicationdispense-holdFlag"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAInpatientIVMedicationRequestEncounter",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAInpatientIVMedicationRequestEncounter"
           }
         },
         {
@@ -2568,20 +2516,6 @@
           "description": "This field is used to show the status of the patient at the time the  medication was filled.",
           "sourceReference": {
             "reference": "StructureDefinition/medicationdispense-authorization"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAFinishedOutpatientMedicationOrderEncounter",
-          "description": "Encounter during which VA finished outpatient medication order is placed",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAFinishedOutpatientMedicationOrderEncounter"
           }
         },
         {
@@ -3154,19 +3088,6 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAUnfinishedOutpatientMedicationOrderEncounter",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAUnfinishedOutpatientMedicationOrderEncounter"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
               "valueString": "StructureDefinition:extension"
             }
           ],
@@ -3435,35 +3356,9 @@
             }
           ],
           "example": false,
-          "name": "VAChemLabReportSpecimen",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAChemLabReportSpecimen"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
           "name": "VAChemLabReport",
           "sourceReference": {
             "reference": "StructureDefinition/VAChemLabReport"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAChemLabReportOrder",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAChemLabReportOrder"
           }
         },
         {
@@ -3493,19 +3388,6 @@
             }
           ],
           "example": false,
-          "name": "VAMicroLabReportSpecimen",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAMicroLabReportSpecimen"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
           "name": "VAMicroLabReport",
           "sourceReference": {
             "reference": "StructureDefinition/VAMicroLabReport"
@@ -3523,32 +3405,6 @@
           "sourceReference": {
             "reference": "StructureDefinition/VAMicroLabReportOrder"
           }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAMicroLabReportOrderSpecimen",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAMicroLabReportOrderSpecimen"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAMicroLabReportResult",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAMicroLabReportResult"
-          }
         }
       ]
     },
@@ -3556,19 +3412,6 @@
       "id": "group-11",
       "name": "Coversheet Area: Lab - Cytopathology",
       "resource": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VACytopathologyLabSpecimen",
-          "sourceReference": {
-            "reference": "StructureDefinition/VACytopathologyLabSpecimen"
-          }
-        },
         {
           "extension": [
             {
@@ -3621,19 +3464,6 @@
           "description": "This field is a pointer to the TIU DOCUMENT (#8925) file.  It stores the pointer for a cytopathology SF515 that has been electronically signed and stored in TIU.",
           "sourceReference": {
             "reference": "StructureDefinition/referencedDocument.uri"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VACytopathologyLabOrderSpecimen",
-          "sourceReference": {
-            "reference": "StructureDefinition/VACytopathologyLabOrderSpecimen"
           }
         }
       ]
@@ -3811,19 +3641,6 @@
             }
           ],
           "example": false,
-          "name": "VAEMLabReportSpecimen",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAEMLabReportSpecimen"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
           "name": "VAEMLabReport",
           "sourceReference": {
             "reference": "StructureDefinition/VAEMLabReport"
@@ -3840,32 +3657,6 @@
           "name": "VAEMLabReportOrder",
           "sourceReference": {
             "reference": "StructureDefinition/VAEMLabReportOrder"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAEMLabReportEncounter",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAEMLabReportEncounter"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAEMLabReportOrderSpecimen",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAEMLabReportOrderSpecimen"
           }
         },
         {

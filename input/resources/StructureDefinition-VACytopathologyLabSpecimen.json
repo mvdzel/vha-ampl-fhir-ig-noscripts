@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VACytopathologyLabSpecimen",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-01T08:26:35.261Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACytopathologyLabSpecimen",
 	"name": "VACytopathologyLabSpecimen",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-01T08:26:35.261Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -24,6 +24,7 @@
 	"differential": {
 		"element": [
 			{
+				"id": "DiagnosticReport.extension",
 				"path": "DiagnosticReport.extension",
 				"slicing": {
 					"discriminator": [

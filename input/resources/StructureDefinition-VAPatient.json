@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAPatient",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient",
 	"name": "VAPatient",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -45,6 +45,7 @@
 				]
 			},
 			{
+				"id": "Patient.meta.security.system",
 				"path": "Patient.meta.security.system",
 				"fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/38.1-2",
 				"mustSupport": true
@@ -296,19 +297,7 @@
 				]
 			},
 			{
-				"path": "Patient.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
+				"id": "Patient.identifier.system",
 				"path": "Patient.identifier.system",
 				"fixedUri": "identifier.system",
 				"mustSupport": true
@@ -346,6 +335,7 @@
 				]
 			},
 			{
+				"id": "Patient.telecom.system",
 				"path": "Patient.telecom.system",
 				"fixedCode": "phone",
 				"mustSupport": true
@@ -381,6 +371,7 @@
 				]
 			},
 			{
+				"id": "Patient.telecom.use",
 				"path": "Patient.telecom.use",
 				"fixedCode": "home",
 				"mustSupport": true
@@ -469,11 +460,13 @@
 				]
 			},
 			{
+				"id": "Patient.address.use",
 				"path": "Patient.address.use",
 				"fixedCode": "home",
 				"mustSupport": true
 			},
 			{
+				"id": "Patient.address.type",
 				"path": "Patient.address.type",
 				"fixedCode": "postal",
 				"mustSupport": true
@@ -674,11 +667,13 @@
 				]
 			},
 			{
+				"id": "Patient.contact.relationship.coding.system",
 				"path": "Patient.contact.relationship.coding.system",
 				"fixedUri": "http://hl7.org/fhir/v2/0131",
 				"mustSupport": true
 			},
 			{
+				"id": "Patient.contact.relationship.coding.code",
 				"path": "Patient.contact.relationship.coding.code",
 				"fixedCode": "C",
 				"mustSupport": true
@@ -736,6 +731,7 @@
 				]
 			},
 			{
+				"id": "Patient.contact.telecom.system",
 				"path": "Patient.contact.telecom.system",
 				"fixedCode": "phone",
 				"mustSupport": true
@@ -783,6 +779,7 @@
 				]
 			},
 			{
+				"id": "Patient.contact.telecom.use",
 				"path": "Patient.contact.telecom.use",
 				"fixedCode": "home",
 				"mustSupport": true
@@ -963,6 +960,7 @@
 				]
 			},
 			{
+				"id": "Patient.communication.language.coding.system",
 				"path": "Patient.communication.language.coding.system",
 				"fixedUri": "urn:ietf:bcp:47",
 				"mustSupport": true

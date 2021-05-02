@@ -44,15 +44,15 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6.165"}
-    h3,h4,h5,h6{--heading-prefix:"6.165"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.162"}
+    h3,h4,h5,h6{--heading-prefix:"6.162"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.64 - draft</p>
+          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.69 - draft</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -123,7 +123,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 5" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.64). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.69). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -197,24 +197,24 @@
   <a name="vista"> </a><h3>Mappings for VistA (http://va.gov/vista/)</h3><table class="grid">
  <tr><td colspan="3"><b>VAInpatientIVMedicationRequest</b></td></tr>
  <tr><td>MedicationRequest</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-pharmacyOrderStatus)</td><td>Pharmacy Patient @STATUS 55.01-100b</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-ivType)</td><td>Pharmacy Patient @TYPE 55.01-.04, Pharmacy Patient @CHEMOTHERAPY TYPE 55.01-106</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (valueCodeableConcept/coding/code)</td><td>Pharmacy Patient @INTERMITTENT SYRING 55.01-108</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-cumulativeDoses)</td><td>Pharmacy Patient @CUMULATIVE DOSES 55.01-.24</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (extension-MedicationRequest/statusReason)</td><td>Pharmacy Patient @DISPLAY STATUS 55.01-157</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-orderPlacementChannel)</td><td>Pharmacy Patient @NATURE OF ORDER 55.01-137</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-holdFlag)</td><td>Pharmacy Patient @HOLD FLAG 55.01-149</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (extension/valueAnnotation/text)</td><td>Pharmacy Patient @REMARKS 55.01-.1</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-ivPrepRoom)</td><td>Pharmacy Patient @IV ROOM 55.01-.22</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-orderCreationMode)</td><td>Pharmacy Patient @REASON ORDER CREATED 55.01-122</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (valueReference)</td><td>Pharmacy Patient @ENTRY BY 55.01-135</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation/comment/text)</td><td>Pharmacy Patient @OTHER PRINT INFO 55.01-31, Pharmacy Patient @PROVIDER COMMENTS 55.01-115, Pharmacy Patient @OTHER PRINT INFO (LONG)  55.01-154, Pharmacy Patient @SPECIAL INSTRUCTIONS (LONG)  55.01-103</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-pharmacistVerified)</td><td>Pharmacy Patient @PV FLAG 55.01-142</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-nurseVerified)</td><td>Pharmacy Patient @NV FLAG 55.01-143</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-ivLabelsPerDay)</td><td>Pharmacy Patient @LABELS PER DAY 55.01-155</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-lastFillDate)</td><td>Pharmacy Patient @LAST FILL 55.01-.15</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-lastFillQuantity)</td><td>Pharmacy Patient @LAST QTY FILLED 55.01-.16</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-extendedPriority)</td><td>Pharmacy Patient @PRIORITY 55.01-134b</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-lastFillQuantity)</td><td>Pharmacy Patient @LAST QTY FILLED 55.01-.16</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-lastFillDate)</td><td>Pharmacy Patient @LAST FILL 55.01-.15</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-ivLabelsPerDay)</td><td>Pharmacy Patient @LABELS PER DAY 55.01-155</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-nurseVerified)</td><td>Pharmacy Patient @NV FLAG 55.01-143</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-pharmacistVerified)</td><td>Pharmacy Patient @PV FLAG 55.01-142</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-comment-text)</td><td>Pharmacy Patient @OTHER PRINT INFO 55.01-31, Pharmacy Patient @PROVIDER COMMENTS 55.01-115, Pharmacy Patient @OTHER PRINT INFO (LONG)  55.01-154, Pharmacy Patient @SPECIAL INSTRUCTIONS (LONG)  55.01-103</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (valueReference)</td><td>Pharmacy Patient @ENTRY BY 55.01-135</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-orderCreationMode)</td><td>Pharmacy Patient @REASON ORDER CREATED 55.01-122</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-ivPrepRoom)</td><td>Pharmacy Patient @IV ROOM 55.01-.22</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (extension-valueAnnotation-text)</td><td>Pharmacy Patient @REMARKS 55.01-.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-holdFlag)</td><td>Pharmacy Patient @HOLD FLAG 55.01-149</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-orderPlacementChannel)</td><td>Pharmacy Patient @NATURE OF ORDER 55.01-137</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (extension-MedicationRequest-statusReason)</td><td>Pharmacy Patient @DISPLAY STATUS 55.01-157</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-cumulativeDoses)</td><td>Pharmacy Patient @CUMULATIVE DOSES 55.01-.24</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (valueCodeableConcept-coding-code)</td><td>Pharmacy Patient @INTERMITTENT SYRING 55.01-108</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-ivType)</td><td>Pharmacy Patient @TYPE 55.01-.04, Pharmacy Patient @CHEMOTHERAPY TYPE 55.01-106</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-pharmacyOrderStatus)</td><td>Pharmacy Patient @STATUS 55.01-100b</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>Pharmacy Patient @ORDER NUMBER 55.01-.01, Pharmacy Patient @ORDERS FILE ENTRY  55.01-110</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>Pharmacy Patient @ORDERS FILE PARENT ORDER 55.01-150</td> </tr>
@@ -226,6 +226,23 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agent</td><td>Pharmacy Patient @PROVIDER 55.01-.06</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;dosageInstruction</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (dosageInstruction-ivBottleNumber)</td><td>Pharmacy Patient @BOTTLE 55.02-.03</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>Pharmacy Patient @INSTRUCTIONS 55.01-133</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timing</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repeat</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (timeOfDay)</td><td>Pharmacy Patient @ADMINISTRATION TIMES 55.01-.12</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bounds[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bounds[x] (boundsPeriod)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>Pharmacy Patient @START DATE/TIME 55.01-.02</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>Pharmacy Patient @STOP DATE/TIME 55.01-.03</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duration</td><td>Pharmacy Patient @REQUESTED DURATION 55.01-151</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>Pharmacy Patient @SCHEDULE INTERVAL 55.01-.17</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>Pharmacy Patient @SCHEDULE 55.01-.09</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>Pharmacy Patient @MED ROUTE 55.01-132</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxDosePerPeriod</td><td>Pharmacy Patient @REQUESTED IV LIMITATION 55.01-152</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate[x] (rateRatio)</td><td>Pharmacy Patient @INFUSION RATE 55.01-.08</td> </tr>
 </table>
 <a name="workflow"> </a><h3>Mappings for Workflow Mapping (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>VAInpatientIVMedicationRequest</b></td></tr>
@@ -281,12 +298,12 @@
  <tr><td>MedicationRequest</td><td>Entity. Role, or Act, CombinedMedicationRequest</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (valueCodeableConcept/coding/code)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-cumulativeDoses)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-holdFlag)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (valueReference)</td><td>n/a, N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-lastFillDate)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-lastFillQuantity)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-lastFillDate)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (valueReference)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-holdFlag)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationdispense-cumulativeDoses)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (valueCodeableConcept-coding-code)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
@@ -329,15 +346,58 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;additionalInstruction</td><td>.text</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;patientInstruction</td><td>.text</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timing</td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;event</td><td>QLIST&lt;TS&gt;</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repeat</td><td>Implies PIVL or EIVL</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bounds[x]</td><td>IVL(TS) used in a QSI</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bounds[x] (boundsPeriod)</td><td>IVL(TS) used in a QSI</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>./low</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>./high</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count</td><td>PIVL.count</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;countMax</td><td>PIVL.count</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duration</td><td>PIVL.phase</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;durationMax</td><td>PIVL.phase</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;durationUnit</td><td>PIVL.phase.unit</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frequency</td><td>PIVL.phase</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frequencyMax</td><td>PIVL.phase</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>PIVL.phase</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;periodMax</td><td>PIVL.phase</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;periodUnit</td><td>PIVL.phase.unit</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dayOfWeek</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timeOfDay</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when</td><td>EIVL.event</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset</td><td>EIVL.offset</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>QSC.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;asNeeded[x]</td><td>.outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=&quot;as needed&quot;].value=boolean or codable concept</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;site</td><td>.approachSiteCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td>.routeCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>./codeSystem</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version</td><td>./codeSystemVersion</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>CV.displayName</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userSelected</td><td>CD.codingRationale</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method</td><td>.doseQuantity</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose[x]</td><td>.doseQuantity</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxDosePerPeriod</td><td>.maxDoseQuantity</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxDosePerAdministration</td><td>not supported</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxDosePerLifetime</td><td>not supported</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate[x]</td><td>.rateQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate[x] (rateRatio)</td><td>.rateQuantity</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;dispenseRequest</td><td>component.supplyEvent</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
@@ -394,6 +454,24 @@
  <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agent</td><td>RXE-13-Ordering Provider's DEA Number / RXO-14-Ordering Provider's DEA Number / RXE-14-Pharmacist/Treatment Supplier's Verifier ID / RXO-15-Pharmacist/Treatment Supplier's Verifier ID / ORC-12-Ordering Provider / PRT-5-Participation Person: PRT-4-Participation='OP' (all but last deprecated)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>ORC-16-Order Control Code Reason /RXE-27-Give Indication/RXO-20-Indication / RXD-21-Indication / RXG-22-Indication / RXA-19-Indication</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;dosageInstruction</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timing</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repeat</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bounds[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bounds[x] (boundsPeriod)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>DR.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>DR.2</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>C*E.3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version</td><td>C*E.7</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>C*E.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>C*E.2 - but note this is not well followed</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userSelected</td><td>Sometimes implied by being first</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;dispenseRequest</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberOfRepeatsAllowed</td><td>RXE-12-Number of Refills</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantity</td><td>RXD-4-Actual Dispense Amount / RXD-5.1-Actual Dispense Units.code / RXD-5.3-Actual Dispense Units.name of coding system</td> </tr>
@@ -452,11 +530,13 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.64 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Mar 12, 2021 16:08+0000">2021-03-12</span>
+          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.69 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Sun, May 2, 2021 08:11+0000">2021-05-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 
+                
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -478,6 +558,13 @@
   <script>anchors.options.visible = 'hover'
 anchors.add()</script>
   
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
   <!-- Analytics Below
   ================================================== -->
   </body>

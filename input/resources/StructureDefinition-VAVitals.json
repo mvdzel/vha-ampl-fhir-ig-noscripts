@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAVitals",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAVitals",
 	"name": "VAVitals",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -24,19 +24,7 @@
 	"differential": {
 		"element": [
 			{
-				"path": "Observation.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
+				"id": "Observation.code.coding.system",
 				"path": "Observation.code.coding.system",
 				"fixedUri": "http://www.va.gov/Terminology/VistADefinedTerms/120.5-.03",
 				"mustSupport": true
@@ -74,6 +62,7 @@
 				]
 			},
 			{
+				"id": "Observation.valueQuantity",
 				"path": "Observation.valueQuantity",
 				"type": [
 					{
@@ -110,6 +99,7 @@
 				]
 			},
 			{
+				"id": "Observation.component.code.coding.code",
 				"path": "Observation.component.code.coding.code",
 				"label": "QUALIFIER",
 				"short": "Qualifier",

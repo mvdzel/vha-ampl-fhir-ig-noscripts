@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.newValue",
 	"name": "reference-targetElement.extension.change.extension.newValue",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"description": "This is the new value now stored in the Problem file global (internal format).",
 	"fhirVersion": "3.0.2",
 	"mapping": [

@@ -21,38 +21,38 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "Medication.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"Medication.extension","medication-localFormularyStatus","","LOCAL NON-FORMULARY",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-localFormularyStatus]]} {[]}
-","Optional Extensions Element","This is used to designate the drug as non-formulary.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @LOCAL NON-FORMULARY 50-51","n/a","N/A"
-"Medication.extension","medication-packagesUsingDrug","","PACKAGES' USE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-packagesUsingDrug]]} {[]}
-","Optional Extensions Element","This field is free text, but contains the codes of the DHCP packages that consider this drug part of its formulary.  This field is set through the routine ^PSGIU, and NOT through VA FileMan.   NOTES: Uneditable through VA FileMan.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @PACKAGES' USE 50-63","n/a","N/A"
-"Medication.extension","medication-inactiveDate","","INACTIVE DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-inactiveDate]]} {[]}
-","Optional Extensions Element","This is the date the drug is inactive.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @INACTIVE DATE 50-100","n/a","N/A"
-"Medication.extension","medication-deaSpecialHandling","","DEA, SPECIAL HDLG",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-deaSpecialHandling]]} {[]}
-","Optional Extensions Element","This field is used to show the DEA Special Handling .","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @DEA, SPECIAL HDLG 50-3","n/a","N/A"
-"Medication.extension","medication-cmopDispense","","CMOP DISPENSE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-cmopDispense]]} {[]}
-","Optional Extensions Element","Indicates if this drug may be dispensed from the Consolidated Mail Outpatient Pharmacy System.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @CMOP DISPENSE 50-213","n/a","N/A"
-"Medication.extension","medication-controlledSubstanceSchedule","","CS FEDERAL SCHEDULE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-controlledSubstanceSchedule]]} {[]}
-","Optional Extensions Element","This is the Federal Schedule for controlled substances.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","VA PRODUCT FILE @CS FEDERAL SCHEDULE 50.68-19","n/a","N/A"
-"Medication.extension","medication-nationalFormularyStatus","","FORMULARY STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-nationalFormularyStatus]]} {[]}
-","Optional Extensions Element","This field will designate the formulary status of the orderable item. The non-formulary status will be displayed to the provider next to the selectable list of orderable item(s) during CPRS order entry (List Manager and GUI). This field is not editable. It is controlled by the software. An Orderable Item will only be marked as non-formulary if there are no active Dispense Drugs matched to the item that are formulary drugs.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PHARMACY ORDERABLE ITEM @FORMULARY STATUS 50.7-5","n/a","N/A"
 "Medication.extension","medication-supplyType","","SUPPLY",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-supplyType]]} {[]}
 ","Optional Extensions Element","This field is used to indicate whether or not the Orderable Item is a supply, 1 indicating a supply.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PHARMACY ORDERABLE ITEM @SUPPLY 50.7-.09","n/a","N/A"
+"Medication.extension","medication-nationalFormularyStatus","","FORMULARY STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-nationalFormularyStatus]]} {[]}
+","Optional Extensions Element","This field will designate the formulary status of the orderable item. The non-formulary status will be displayed to the provider next to the selectable list of orderable item(s) during CPRS order entry (List Manager and GUI). This field is not editable. It is controlled by the software. An Orderable Item will only be marked as non-formulary if there are no active Dispense Drugs matched to the item that are formulary drugs.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PHARMACY ORDERABLE ITEM @FORMULARY STATUS 50.7-5","n/a","N/A"
+"Medication.extension","medication-controlledSubstanceSchedule","","CS FEDERAL SCHEDULE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-controlledSubstanceSchedule]]} {[]}
+","Optional Extensions Element","This is the Federal Schedule for controlled substances.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","VA PRODUCT FILE @CS FEDERAL SCHEDULE 50.68-19","n/a","N/A"
+"Medication.extension","medication-cmopDispense","","CMOP DISPENSE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-cmopDispense]]} {[]}
+","Optional Extensions Element","Indicates if this drug may be dispensed from the Consolidated Mail Outpatient Pharmacy System.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @CMOP DISPENSE 50-213","n/a","N/A"
+"Medication.extension","medication-deaSpecialHandling","","DEA, SPECIAL HDLG",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-deaSpecialHandling]]} {[]}
+","Optional Extensions Element","This field is used to show the DEA Special Handling .","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @DEA, SPECIAL HDLG 50-3","n/a","N/A"
+"Medication.extension","medication-inactiveDate","","INACTIVE DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-inactiveDate]]} {[]}
+","Optional Extensions Element","This is the date the drug is inactive.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @INACTIVE DATE 50-100","n/a","N/A"
+"Medication.extension","medication-packagesUsingDrug","","PACKAGES' USE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-packagesUsingDrug]]} {[]}
+","Optional Extensions Element","This field is free text, but contains the codes of the DHCP packages that consider this drug part of its formulary.  This field is set through the routine ^PSGIU, and NOT through VA FileMan.   NOTES: Uneditable through VA FileMan.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @PACKAGES' USE 50-63","n/a","N/A"
+"Medication.extension","medication-localFormularyStatus","","LOCAL NON-FORMULARY",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-localFormularyStatus]]} {[]}
+","Optional Extensions Element","This is used to designate the drug as non-formulary.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","DRUG @LOCAL NON-FORMULARY 50-51","n/a","N/A"
 "Medication.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","","N/A"

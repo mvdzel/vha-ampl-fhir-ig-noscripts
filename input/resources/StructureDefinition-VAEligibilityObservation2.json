@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAEligibilityObservation2",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation2",
 	"name": "VAEligibilityObservation2",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -24,39 +24,31 @@
 	"differential": {
 		"element": [
 			{
-				"path": "Observation.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
+				"id": "Observation.status",
 				"path": "Observation.status",
 				"fixedCode": "final",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.code.coding.system",
 				"path": "Observation.code.coding.system",
 				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements/",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.code.coding.code",
 				"path": "Observation.code.coding.code",
 				"fixedCode": "2-.14",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.code.coding.display",
 				"path": "Observation.code.coding.display",
 				"fixedString": "Current Means Test Status",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.valueCodeableConcept",
 				"path": "Observation.valueCodeableConcept",
 				"type": [
 					{
@@ -65,6 +57,7 @@
 				]
 			},
 			{
+				"id": "Observation.valueCodeableConcept.coding.system",
 				"path": "Observation.valueCodeableConcept.coding.system",
 				"fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/2-.14",
 				"mustSupport": true

@@ -1,6 +1,6 @@
 {
   "package": "vha-ampl-ig",
-  "version": "0.0.64",
+  "version": "0.0.69",
   "fhirVersion": "3.0.2",
   "jurisdiction": "840",
   "extensions": [
@@ -1358,20 +1358,12 @@
     ],
     "MedicationRequest": [
       {
-        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequestAppointment",
-        "title": "VAUnfinishedInpatientMedicationRequestAppointment"
-      },
-      {
         "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequestEncounter",
         "title": "VAUnfinishedInpatientMedicationRequestEncounter"
       },
       {
         "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrder",
         "title": "VAUnfinishedOutpatientMedicationOrder"
-      },
-      {
-        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrderEncounter",
-        "title": "VAUnfinishedOutpatientMedicationOrderEncounter"
       }
     ],
     "Immunization": [
@@ -1545,6 +1537,9 @@
     ],
     "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/detectedissue-orderCheckRecipient": [
       "DetectedIssue"
+    ],
+    "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/diagnosisDate": [
+      "ReferralRequest.reasonCode"
     ],
     "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documentreference-statusDetail.coding.code": [
       "DocumentReference"

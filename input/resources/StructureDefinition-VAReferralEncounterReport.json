@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAReferralEncounterReport",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralEncounterReport",
 	"name": "VAReferralEncounterReport",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -23,19 +23,6 @@
 	"derivation": "constraint",
 	"differential": {
 		"element": [
-			{
-				"path": "DocumentReference.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
 			{
 				"id": "DocumentReference.content.attachment.data",
 				"path": "DocumentReference.content.attachment.data",

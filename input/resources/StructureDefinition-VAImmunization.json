@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAImmunization",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAImmunization",
 	"name": "VAImmunization",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -166,19 +166,7 @@
 				]
 			},
 			{
-				"path": "Immunization.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
+				"id": "Immunization.vaccineCode.coding.system",
 				"path": "Immunization.vaccineCode.coding.system",
 				"fixedUri": "http://hl7.org/fhir/sid/ndc",
 				"mustSupport": true
@@ -357,6 +345,7 @@
 				]
 			},
 			{
+				"id": "Immunization.practitioner.role.coding.code",
 				"path": "Immunization.practitioner.role.coding.code",
 				"fixedCode": "AP",
 				"mustSupport": true

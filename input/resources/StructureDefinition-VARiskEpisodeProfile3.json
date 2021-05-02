@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VARiskEpisodeProfile3",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile3",
 	"name": "VARiskEpisodeProfile3",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -24,34 +24,25 @@
 	"differential": {
 		"element": [
 			{
-				"path": "Observation.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
+				"id": "Observation.status",
 				"path": "Observation.status",
 				"fixedCode": "final",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.code.coding.system",
 				"path": "Observation.code.coding.system",
 				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.code.coding.code",
 				"path": "Observation.code.coding.code",
 				"fixedCode": "2-.322013",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.code.coding.display",
 				"path": "Observation.code.coding.display",
 				"fixedString": "Southwest Asia Conditions",
 				"mustSupport": true
@@ -71,6 +62,7 @@
 				]
 			},
 			{
+				"id": "Observation.valueCodeableConcept",
 				"path": "Observation.valueCodeableConcept",
 				"type": [
 					{
@@ -79,6 +71,7 @@
 				]
 			},
 			{
+				"id": "Observation.valueCodeableConcept.coding.system",
 				"path": "Observation.valueCodeableConcept.coding.system",
 				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
 				"mustSupport": true

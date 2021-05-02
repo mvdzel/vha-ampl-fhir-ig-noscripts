@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VASurgicalPathologyReport",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASurgicalPathologyReport",
 	"name": "VASurgicalPathologyReport",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -62,19 +62,6 @@
 						"map": "undefined @TIU REFERENCE DATE/TIME - SP 63.19-.01"
 					}
 				]
-			},
-			{
-				"path": "DiagnosticReport.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
 			},
 			{
 				"id": "DiagnosticReport.basedOn.extension:request-extendedPriority",

@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VARiskEpisodeProfile5",
 	"meta": {
-		"lastUpdated": "2021-05-01T07:59:44.528Z"
+		"lastUpdated": "2021-05-02T08:06:07.686Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile5",
 	"name": "VARiskEpisodeProfile5",
 	"status": "draft",
-	"date": "2021-05-01T07:59:44.528Z",
+	"date": "2021-05-02T08:06:07.686Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -24,39 +24,31 @@
 	"differential": {
 		"element": [
 			{
-				"path": "Observation.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
-			},
-			{
+				"id": "Observation.status",
 				"path": "Observation.status",
 				"fixedCode": "final",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.code.coding.system",
 				"path": "Observation.code.coding.system",
 				"fixedUri": "http://va.gov/Terminology/VistaDefinedElement",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.code.coding.code",
 				"path": "Observation.code.coding.code",
 				"fixedCode": "2-.525",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.code.coding.display",
 				"path": "Observation.code.coding.display",
 				"fixedString": "Was this patient a Prisoner of War?",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.effectivePeriod",
 				"path": "Observation.effectivePeriod",
 				"type": [
 					{
@@ -93,6 +85,7 @@
 				]
 			},
 			{
+				"id": "Observation.valueCodeableConcept",
 				"path": "Observation.valueCodeableConcept",
 				"type": [
 					{
@@ -101,6 +94,7 @@
 				]
 			},
 			{
+				"id": "Observation.valueCodeableConcept.coding.system",
 				"path": "Observation.valueCodeableConcept.coding.system",
 				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
 				"mustSupport": true
@@ -120,21 +114,25 @@
 				]
 			},
 			{
+				"id": "Observation.component.code.coding.system",
 				"path": "Observation.component.code.coding.system",
 				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.component.code.coding.code",
 				"path": "Observation.component.code.coding.code",
 				"fixedCode": "2-.526",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.component.code.coding.display",
 				"path": "Observation.component.code.coding.display",
 				"fixedString": "POW Confinement Location",
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.component.valueCodeableConcept",
 				"path": "Observation.component.valueCodeableConcept",
 				"type": [
 					{
