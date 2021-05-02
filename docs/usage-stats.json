@@ -1,6 +1,6 @@
 {
   "package": "vha-ampl-ig",
-  "version": "0.0.69",
+  "version": "0.0.70",
   "fhirVersion": "3.0.2",
   "jurisdiction": "840",
   "extensions": [

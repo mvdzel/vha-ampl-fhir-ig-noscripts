@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAFinishedOutpatientMedicationRequest",
 	"meta": {
-		"lastUpdated": "2021-05-02T08:06:07.686Z"
+		"lastUpdated": "2021-05-02T09:09:12.802Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationRequest",
 	"name": "VAFinishedOutpatientMedicationRequest",
 	"status": "draft",
-	"date": "2021-05-02T08:06:07.686Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -411,6 +411,15 @@
 				]
 			},
 			{
+				"id": "MedicationRequest.medicationCodeableConcept",
+				"path": "MedicationRequest.medicationCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
 				"id": "MedicationRequest.medicationCodeableConcept.coding.code",
 				"path": "MedicationRequest.medicationCodeableConcept.coding.code",
 				"label": "PHARMACY ORDERABLE ITEM",
@@ -601,6 +610,15 @@
 					{
 						"identity": "vista",
 						"map": "PRESCRIPTION @ROUTE 52.0113-6"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.doseQuantity",
+				"path": "MedicationRequest.dosageInstruction.doseQuantity",
+				"type": [
+					{
+						"code": "Quantity"
 					}
 				]
 			},

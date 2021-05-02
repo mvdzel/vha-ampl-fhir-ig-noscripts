@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.display",
 	"name": "referencedDocument.display",
 	"status": "draft",
-	"date": "2021-05-02T08:06:07.686Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"description": "This is the date and time that the cytopathology SF515 was stored in TIU.  It will match the REFERENCE DATE (#1301) field of the corresponding document in the TIU DOCUMENT (#8925) file.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

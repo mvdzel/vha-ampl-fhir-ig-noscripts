@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forSouthwestAsiaConditions",
 	"name": "medicationrequest-forSouthwestAsiaConditions",
 	"status": "draft",
-	"date": "2021-05-02T08:06:07.686Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to Southwest Asia Conditions (formerly referred to as Environmental Contaminants), the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

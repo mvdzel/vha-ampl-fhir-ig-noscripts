@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig"/>
-  <version value="0.0.69"/>
+  <version value="0.0.70"/>
   <name value="vha-ampl-ig"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-05-02T08:11:21+00:00"/>
+  <date value="2021-05-02T08:47:56+00:00"/>
   <publisher value="JPSys"/>
   <contact>
     <telecom>
@@ -1294,6 +1294,16 @@
       <description value="The number of IV labels needed each day. If populated, this value will  override the system-calculated number of labels."/>
       <sourceReference>
         <reference value="StructureDefinition/medicationdispense-ivLabelsPerDay"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAUnfinishedInpatientMedication"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAUnfinishedInpatientMedication"/>
       </sourceReference>
     </resource>
     <resource>

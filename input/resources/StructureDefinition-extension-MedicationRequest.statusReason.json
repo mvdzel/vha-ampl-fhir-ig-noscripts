@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason",
 	"name": "extension-MedicationRequest.statusReason",
 	"status": "draft",
-	"date": "2021-05-02T08:06:07.686Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"description": "This field captures how a \"Discontinued\" action occurred and this code is  displayed on the short patient profile if the Stop Date/Time is within the time specified in the Inpatient Ward Parameter file (#59.6) or the Pharmacy System file (#59.7). The \"HP\" is to display on the profile if the order was placed on hold by provider through CPRS.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

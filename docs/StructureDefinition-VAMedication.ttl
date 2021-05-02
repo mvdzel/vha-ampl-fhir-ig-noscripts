@@ -9,17 +9,17 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "VAMedication"];
   fhir:Resource.meta [
-     fhir:Meta.lastUpdated [ fhir:value "2021-05-02T08:06:07.686Z"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2021-05-02T08:44:32.765Z"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Minimum and Maximum # of times the the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense\">MedicationDispense</a><a name=\"MedicationDispense\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/medicationdispense.html\">MedicationDispense</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Dispensing a medication to a named patient</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.medicationReference\">medicationReference</a><a name=\"MedicationDispense.medicationReference\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/references.html\">Reference</a>()</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">What medication was supplied</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction\">dosageInstruction</a><a name=\"MedicationDispense.dosageInstruction\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck001.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction.timing\">timing</a><a name=\"MedicationDispense.dosageInstruction.timing\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0001.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction.timing.repeat\">repeat</a><a name=\"MedicationDispense.dosageInstruction.timing.repeat\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00001.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod\">boundsPeriod</a><a name=\"MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end\" title=\"The date the medication expires.  This is required to be put on the labels of medication sent to a nursing home.\">end</a><a name=\"MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Expiration Date</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Minimum and Maximum # of times the the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense\">MedicationDispense</a><a name=\"MedicationDispense\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/medicationdispense.html\">MedicationDispense</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Dispensing a medication to a named patient</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.medicationReference\">medicationReference</a><a name=\"MedicationDispense.medicationReference\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/references.html\">Reference</a>()</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">What medication was supplied</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction\">dosageInstruction</a><a name=\"MedicationDispense.dosageInstruction\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck001.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction.timing\">timing</a><a name=\"MedicationDispense.dosageInstruction.timing\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0001.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction.timing.repeat\">repeat</a><a name=\"MedicationDispense.dosageInstruction.timing.repeat\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00001.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod\">boundsPeriod</a><a name=\"MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/datatypes.html#Period\">Period</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Length/Range of lengths, or (Start and/or end) limits</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAMedication-definitions.html#MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end\" title=\"The date the medication expires.  This is required to be put on the labels of medication sent to a nursing home.\">end</a><a name=\"MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5\" href=\"http://hl7.org/fhir/STU3/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Expiration Date</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMedication"];
-  fhir:StructureDefinition.version [ fhir:value "0.0.69"];
+  fhir:StructureDefinition.version [ fhir:value "0.0.70"];
   fhir:StructureDefinition.name [ fhir:value "VAMedication"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
-  fhir:StructureDefinition.date [ fhir:value "2021-05-02T08:06:07.686Z"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-05-02T08:44:32.765Z"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "JPSys"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -1633,6 +1633,15 @@
        fhir:index 47;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x]" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x]" ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index 0;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "type" ];
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
+         ];
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "closed" ]
+       ];
        fhir:ElementDefinition.short [ fhir:value "Length/Range of lengths, or (Start and/or end) limits" ];
        fhir:ElementDefinition.definition [ fhir:value "Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -1644,12 +1653,6 @@
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Duration" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.type.code [ fhir:value "Range" ]
-       ], [
-         fhir:index 2;
          fhir:ElementDefinition.type.code [ fhir:value "Period" ]
        ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
@@ -1660,7 +1663,31 @@
        ]
      ], [
        fhir:index 48;
-       fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x].id" ];
+       fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x]" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "boundsPeriod" ];
+       fhir:ElementDefinition.short [ fhir:value "Length/Range of lengths, or (Start and/or end) limits" ];
+       fhir:ElementDefinition.definition [ fhir:value "Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Timing.repeat.bounds[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "IVL(TS) used in a QSI" ]
+       ]
+     ], [
+       fhir:index 49;
+       fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.id" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x].id" ];
        fhir:ElementDefinition.representation [
          fhir:value "xmlAttr";
@@ -1685,8 +1712,8 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 49;
-       fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x].extension" ];
+       fhir:index 50;
+       fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.extension" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x].extension" ];
        fhir:ElementDefinition.slicing [
          fhir:ElementDefinition.slicing.discriminator [
@@ -1709,6 +1736,11 @@
        ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
        fhir:ElementDefinition.type [
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
@@ -1719,7 +1751,78 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 50;
+       fhir:index 51;
+       fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.start" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x].start" ];
+       fhir:ElementDefinition.short [ fhir:value "Starting time with inclusive boundary" ];
+       fhir:ElementDefinition.definition [ fhir:value "The start of the period. The boundary is inclusive." ];
+       fhir:ElementDefinition.comment [ fhir:value "If the low element is missing, the meaning is that the low boundary is not known." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Period.start" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "per-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "DR.1" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./low" ]
+       ]
+     ], [
+       fhir:index 52;
+       fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.end" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.bounds[x].end" ];
+       fhir:ElementDefinition.label [ fhir:value "EXPIRATION DATE" ];
+       fhir:ElementDefinition.short [ fhir:value "Expiration Date" ];
+       fhir:ElementDefinition.definition [ fhir:value "The date the medication expires.  This is required to be put on the labels of medication sent to a nursing home." ];
+       fhir:ElementDefinition.comment [ fhir:value "The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has a end value of 2012-02-03." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Period.end" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.meaningWhenMissing [ fhir:value "If the end of the period is missing, it means that the period is ongoing" ];
+       fhir:ElementDefinition.condition [
+         fhir:value "per-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "DR.2" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./high" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "vista" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "PRESCRIPTION @EXPIRATION DATE   52-26" ]
+       ]
+     ], [
+       fhir:index 53;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.count" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.count" ];
        fhir:ElementDefinition.short [ fhir:value "Number of times to repeat" ];
@@ -1744,7 +1847,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.count" ]
        ]
      ], [
-       fhir:index 51;
+       fhir:index 54;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.countMax" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.countMax" ];
        fhir:ElementDefinition.short [ fhir:value "Maximum number of times to repeat" ];
@@ -1767,7 +1870,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.count" ]
        ]
      ], [
-       fhir:index 52;
+       fhir:index 55;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.duration" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.duration" ];
        fhir:ElementDefinition.short [ fhir:value "How long when it happens" ];
@@ -1792,7 +1895,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.phase" ]
        ]
      ], [
-       fhir:index 53;
+       fhir:index 56;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.durationMax" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.durationMax" ];
        fhir:ElementDefinition.short [ fhir:value "How long when it happens (Max)" ];
@@ -1817,7 +1920,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.phase" ]
        ]
      ], [
-       fhir:index 54;
+       fhir:index 57;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.durationUnit" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.durationUnit" ];
        fhir:ElementDefinition.short [ fhir:value "s | min | h | d | wk | mo | a - unit of time (UCUM)" ];
@@ -1853,7 +1956,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.phase.unit" ]
        ]
      ], [
-       fhir:index 55;
+       fhir:index 58;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.frequency" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.frequency" ];
        fhir:ElementDefinition.short [ fhir:value "Event occurs frequency times per period" ];
@@ -1877,7 +1980,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.phase" ]
        ]
      ], [
-       fhir:index 56;
+       fhir:index 59;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.frequencyMax" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.frequencyMax" ];
        fhir:ElementDefinition.short [ fhir:value "Event occurs up to frequencyMax times per period" ];
@@ -1900,7 +2003,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.phase" ]
        ]
      ], [
-       fhir:index 57;
+       fhir:index 60;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.period" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.period" ];
        fhir:ElementDefinition.short [ fhir:value "Event occurs frequency times per period" ];
@@ -1923,7 +2026,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.phase" ]
        ]
      ], [
-       fhir:index 58;
+       fhir:index 61;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.periodMax" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.periodMax" ];
        fhir:ElementDefinition.short [ fhir:value "Upper limit of period (3-4 hours)" ];
@@ -1946,7 +2049,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.phase" ]
        ]
      ], [
-       fhir:index 59;
+       fhir:index 62;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.periodUnit" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.periodUnit" ];
        fhir:ElementDefinition.short [ fhir:value "s | min | h | d | wk | mo | a - unit of time (UCUM)" ];
@@ -1982,7 +2085,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PIVL.phase.unit" ]
        ]
      ], [
-       fhir:index 60;
+       fhir:index 63;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.dayOfWeek" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.dayOfWeek" ];
        fhir:ElementDefinition.short [ fhir:value "mon | tue | wed | thu | fri | sat | sun" ];
@@ -2018,7 +2121,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 61;
+       fhir:index 64;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.timeOfDay" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.timeOfDay" ];
        fhir:ElementDefinition.short [ fhir:value "Time of day for action" ];
@@ -2042,7 +2145,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 62;
+       fhir:index 65;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.when" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.when" ];
        fhir:ElementDefinition.short [ fhir:value "Regular life events the event is tied to" ];
@@ -2080,7 +2183,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "EIVL.event" ]
        ]
      ], [
-       fhir:index 63;
+       fhir:index 66;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.offset" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.offset" ];
        fhir:ElementDefinition.short [ fhir:value "Minutes from event (before or after)" ];
@@ -2103,7 +2206,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "EIVL.offset" ]
        ]
      ], [
-       fhir:index 64;
+       fhir:index 67;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.code" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.code" ];
        fhir:ElementDefinition.short [ fhir:value "BID | TID | QID | AM | PM | QD | QOD | Q4H | Q6H +" ];
@@ -2140,7 +2243,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "QSC.code" ]
        ]
      ], [
-       fhir:index 65;
+       fhir:index 68;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.asNeeded[x]" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.asNeeded[x]" ];
        fhir:ElementDefinition.short [ fhir:value "Take \"as needed\" (for x)" ];
@@ -2180,7 +2283,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=\"as needed\"].value=boolean or codable concept" ]
        ]
      ], [
-       fhir:index 66;
+       fhir:index 69;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.site" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.site" ];
        fhir:ElementDefinition.short [ fhir:value "Body site to administer to" ];
@@ -2218,7 +2321,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".approachSiteCode" ]
        ]
      ], [
-       fhir:index 67;
+       fhir:index 70;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.route" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.route" ];
        fhir:ElementDefinition.short [ fhir:value "How drug should enter body" ];
@@ -2255,7 +2358,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".routeCode" ]
        ]
      ], [
-       fhir:index 68;
+       fhir:index 71;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.method" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.method" ];
        fhir:ElementDefinition.short [ fhir:value "Technique for administering medication" ];
@@ -2293,7 +2396,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".doseQuantity" ]
        ]
      ], [
-       fhir:index 69;
+       fhir:index 72;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.dose[x]" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.dose[x]" ];
        fhir:ElementDefinition.short [ fhir:value "Amount of medication per dose" ];
@@ -2322,7 +2425,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".doseQuantity" ]
        ]
      ], [
-       fhir:index 70;
+       fhir:index 73;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.maxDosePerPeriod" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.maxDosePerPeriod" ];
        fhir:ElementDefinition.short [ fhir:value "Upper limit on medication per unit of time" ];
@@ -2347,7 +2450,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".maxDoseQuantity" ]
        ]
      ], [
-       fhir:index 71;
+       fhir:index 74;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.maxDosePerAdministration" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.maxDosePerAdministration" ];
        fhir:ElementDefinition.short [ fhir:value "Upper limit on medication per administration" ];
@@ -2373,7 +2476,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "not supported" ]
        ]
      ], [
-       fhir:index 72;
+       fhir:index 75;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.maxDosePerLifetime" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.maxDosePerLifetime" ];
        fhir:ElementDefinition.short [ fhir:value "Upper limit on medication per lifetime of the patient" ];
@@ -2398,7 +2501,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "not supported" ]
        ]
      ], [
-       fhir:index 73;
+       fhir:index 76;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.rate[x]" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.rate[x]" ];
        fhir:ElementDefinition.short [ fhir:value "Amount of medication per unit of time" ];
@@ -2430,7 +2533,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".rateQuantity" ]
        ]
      ], [
-       fhir:index 74;
+       fhir:index 77;
        fhir:Element.id [ fhir:value "MedicationDispense.substitution" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.substitution" ];
        fhir:ElementDefinition.short [ fhir:value "Whether a substitution was performed on the dispense" ];
@@ -2461,7 +2564,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=COMP].target[classCode=SUBST, moodCode=EVN]" ]
        ]
      ], [
-       fhir:index 75;
+       fhir:index 78;
        fhir:Element.id [ fhir:value "MedicationDispense.substitution.id" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.substitution.id" ];
        fhir:ElementDefinition.representation [
@@ -2487,7 +2590,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 76;
+       fhir:index 79;
        fhir:Element.id [ fhir:value "MedicationDispense.substitution.extension" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.substitution.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
@@ -2517,7 +2620,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 77;
+       fhir:index 80;
        fhir:Element.id [ fhir:value "MedicationDispense.substitution.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.substitution.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
@@ -2552,7 +2655,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 78;
+       fhir:index 81;
        fhir:Element.id [ fhir:value "MedicationDispense.substitution.wasSubstituted" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.substitution.wasSubstituted" ];
        fhir:ElementDefinition.short [ fhir:value "Whether a substitution was or was not performed on the dispense" ];
@@ -2574,7 +2677,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".actionNegationInd" ]
        ]
      ], [
-       fhir:index 79;
+       fhir:index 82;
        fhir:Element.id [ fhir:value "MedicationDispense.substitution.type" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.substitution.type" ];
        fhir:ElementDefinition.short [ fhir:value "Code signifying whether a different drug was dispensed from what was prescribed" ];
@@ -2613,7 +2716,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".code" ]
        ]
      ], [
-       fhir:index 80;
+       fhir:index 83;
        fhir:Element.id [ fhir:value "MedicationDispense.substitution.reason" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.substitution.reason" ];
        fhir:ElementDefinition.short [ fhir:value "Why was substitution made" ];
@@ -2648,7 +2751,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".reasonCode" ]
        ]
      ], [
-       fhir:index 81;
+       fhir:index 84;
        fhir:Element.id [ fhir:value "MedicationDispense.substitution.responsibleParty" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.substitution.responsibleParty" ];
        fhir:ElementDefinition.short [ fhir:value "Who is responsible for the substitution" ];
@@ -2671,7 +2774,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=PFM].role[classCode=ASSIGN]" ]
        ]
      ], [
-       fhir:index 82;
+       fhir:index 85;
        fhir:Element.id [ fhir:value "MedicationDispense.detectedIssue" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.detectedIssue" ];
        fhir:ElementDefinition.short [ fhir:value "Clinical issue with action" ];
@@ -2704,7 +2807,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship[typeCode=SUBJ]/source[classCode=ALRT,moodCode=EVN].value" ]
        ]
      ], [
-       fhir:index 83;
+       fhir:index 86;
        fhir:Element.id [ fhir:value "MedicationDispense.notDone" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.notDone" ];
        fhir:ElementDefinition.short [ fhir:value "Whether the dispense was or was not performed" ];
@@ -2730,7 +2833,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".actionNegationInd" ]
        ]
      ], [
-       fhir:index 84;
+       fhir:index 87;
        fhir:Element.id [ fhir:value "MedicationDispense.notDoneReason[x]" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.notDoneReason[x]" ];
        fhir:ElementDefinition.short [ fhir:value "Why a dispense was not performed" ];
@@ -2760,7 +2863,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RSON]/target[classCode=OBS,moodCode=EVN, code=\"not done reason\"].value" ]
        ]
      ], [
-       fhir:index 85;
+       fhir:index 88;
        fhir:Element.id [ fhir:value "MedicationDispense.eventHistory" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.eventHistory" ];
        fhir:ElementDefinition.short [ fhir:value "A list of releveant lifecycle events" ];
@@ -2800,6 +2903,14 @@
        ]
      ], [
        fhir:index 2;
+       fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ]
+     ], [
+       fhir:index 3;
        fhir:Element.id [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end" ];
        fhir:ElementDefinition.label [ fhir:value "EXPIRATION DATE" ];

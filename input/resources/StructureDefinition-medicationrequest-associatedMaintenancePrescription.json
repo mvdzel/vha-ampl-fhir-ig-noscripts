@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription",
 	"name": "medicationrequest-associatedMaintenancePrescription",
 	"status": "draft",
-	"date": "2021-05-02T08:06:07.686Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"description": "This is the Maintenance Dose Rx that was created from the corresponding  Titration Dose Rx.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

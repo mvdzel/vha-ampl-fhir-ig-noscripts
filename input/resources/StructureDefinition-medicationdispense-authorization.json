@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-authorization",
 	"name": "medicationdispense-authorization",
 	"status": "draft",
-	"date": "2021-05-02T08:06:07.686Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"description": "This field is used to show the status of the patient at the time the  medication was filled.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

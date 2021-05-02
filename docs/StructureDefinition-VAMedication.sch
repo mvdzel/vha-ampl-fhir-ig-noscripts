@@ -56,7 +56,6 @@
     <sch:title>f:MedicationDispense/f:dosageInstruction/f:timing/f:repeat</sch:title>
     <sch:rule context="f:MedicationDispense/f:dosageInstruction/f:timing/f:repeat">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:bounds[x]) &lt;= 1">bounds[x]: maximum cardinality of 'bounds[x]' is 1</sch:assert>
       <sch:assert test="count(f:count) &lt;= 1">count: maximum cardinality of 'count' is 1</sch:assert>
       <sch:assert test="count(f:countMax) &lt;= 1">countMax: maximum cardinality of 'countMax' is 1</sch:assert>
       <sch:assert test="count(f:duration) &lt;= 1">duration: maximum cardinality of 'duration' is 1</sch:assert>
@@ -89,6 +88,8 @@
     <sch:title>f:MedicationDispense/f:dosageInstruction/f:timing/f:repeat/f:bounds[x] 1</sch:title>
     <sch:rule context="f:MedicationDispense/f:dosageInstruction/f:timing/f:repeat/f:bounds[x]">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:start) &lt;= 1">start: maximum cardinality of 'start' is 1</sch:assert>
+      <sch:assert test="count(f:end) &lt;= 1">end: maximum cardinality of 'end' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

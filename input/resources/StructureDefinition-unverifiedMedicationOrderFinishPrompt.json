@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/unverifiedMedicationOrderFinishPrompt",
 	"name": "unverifiedMedicationOrderFinishPrompt",
 	"status": "draft",
-	"date": "2021-05-02T08:06:07.686Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"description": "This field will be used during the finishing process to determine if the user should be prompted whether they wish to finish the order as an IV or Unit Dose order.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

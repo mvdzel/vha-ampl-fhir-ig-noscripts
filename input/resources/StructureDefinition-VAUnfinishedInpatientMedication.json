@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAUnfinishedInpatientMedication",
 	"meta": {
-		"lastUpdated": "2021-05-01T08:26:35.261Z"
+		"lastUpdated": "2021-05-02T09:09:12.802Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedication",
 	"name": "VAUnfinishedInpatientMedication",
 	"status": "draft",
-	"date": "2021-05-01T08:26:35.261Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -24,18 +24,13 @@
 	"differential": {
 		"element": [
 			{
-				"id": "MedicationRequest.extension",
-				"path": "MedicationRequest.extension",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "url"
-						}
-					],
-					"ordered": false,
-					"rules": "open"
-				}
+				"id": "MedicationRequest.medicationReference",
+				"path": "MedicationRequest.medicationReference",
+				"type": [
+					{
+						"code": "Reference"
+					}
+				]
 			}
 		]
 	}

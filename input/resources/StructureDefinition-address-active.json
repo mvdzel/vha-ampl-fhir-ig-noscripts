@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-active",
 	"name": "address-active",
 	"status": "draft",
-	"date": "2021-05-02T08:06:07.686Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"description": "Enter 'Y' if you wish to enter a temporary address for this applicant at this time, or 'N' if not.  A 'NO' response will cause the temporary address 'Start Date' and 'End Date' fields to be automatically deleted while all other temporary address data will remain on file for future use.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

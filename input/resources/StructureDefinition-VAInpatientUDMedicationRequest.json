@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAInpatientUDMedicationRequest",
 	"meta": {
-		"lastUpdated": "2021-05-02T08:06:07.686Z"
+		"lastUpdated": "2021-05-02T09:09:12.802Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequest",
 	"name": "VAInpatientUDMedicationRequest",
 	"status": "draft",
-	"date": "2021-05-02T08:06:07.686Z",
+	"date": "2021-05-02T09:09:12.802Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -462,6 +462,15 @@
 				]
 			},
 			{
+				"id": "MedicationRequest.medicationCodeableConcept",
+				"path": "MedicationRequest.medicationCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
 				"id": "MedicationRequest.medicationCodeableConcept.coding.code",
 				"path": "MedicationRequest.medicationCodeableConcept.coding.code",
 				"label": "DISPENSE DRUG",
@@ -634,6 +643,11 @@
 				"label": "UNITS PER DOSE",
 				"short": "Units per Dose",
 				"definition": "This is the number of UNITS (tablets, capsules, etc.) to be dispensed as a DOSE for this order.  The literals '1/2' and '1/4' may be entered.  If there is no entry, it is assumed to be ONE (1).                          ** PLEASE NOTE **   If a doctor prescribes 30 ml's of a medication that is usually dispensed and administered as 60 ml's, the correct UNITS PER DOSE would be 1/2 (or .5), NOT 30 ml's.  (30 ml's would be entered into the DOSAGE ORDERED field.)   If the UNITS PER DOSE ordered is a variable amount (1-2 tab.), it is suggested that the maximum amount be entered into this field and the amount ordered noted either in the DOSAGE ORDERED or SPECIAL INSTRUCTIONS fields.",
+				"type": [
+					{
+						"code": "Quantity"
+					}
+				],
 				"mustSupport": true,
 				"mapping": [
 					{

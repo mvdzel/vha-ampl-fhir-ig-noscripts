@@ -6,10 +6,10 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://va.gov/Terminology/VistaDefinedTerms/</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>A</td><td>ADMIXTURE</td></tr><tr><td>C</td><td>CHEMOTHERAPY</td></tr><tr><td>P</td><td>PIGGYBACK</td></tr><tr><td>U</td><td>UNIT DOSE</td></tr><tr><td>T</td><td>TPN</td></tr></table></li></ul></div>"
   },
   "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/unit-dose-medication-order-type",
-  "version": "0.0.69",
+  "version": "0.0.70",
   "name": "unit-dose-medication-order-type",
   "status": "draft",
-  "date": "2021-05-02T08:06:07.686Z",
+  "date": "2021-05-02T08:44:32.765Z",
   "publisher": "JPSys",
   "contact": [
     {

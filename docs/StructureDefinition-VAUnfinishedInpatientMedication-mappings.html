@@ -52,7 +52,7 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.64 - draft</p>
+          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.70 - draft</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -123,7 +123,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 5" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.64). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.70). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -208,6 +208,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;intent</td><td>…intent</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>…priority</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>…code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x] (medicationReference)</td><td>…code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>…subject</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>…context</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>…authoredOn</td> </tr>
@@ -228,6 +229,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>no mapping</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>Message/Body/NewRx/MedicationPrescribed/Directionsor Message/Body/NewRx/MedicationPrescribed/StructuredSIG</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>Message/Body/NewRx/MedicationPrescribedMedication.code.coding.code = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCodeMedication.code.coding.system = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCodeQualifierMedication.code.coding.display = Message/Body/NewRx/MedicationPrescribed/DrugDescription</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x] (medicationReference)</td><td>Message/Body/NewRx/MedicationPrescribedMedication.code.coding.code = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCodeMedication.code.coding.system = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCodeQualifierMedication.code.coding.display = Message/Body/NewRx/MedicationPrescribed/DrugDescription</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>Message/Body/NewRx/Patient(need detail to link to specific patient … Patient.Identification in SCRIPT)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>no mapping</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>Message/Body/NewRx/MedicationPrescribed/WrittenDate</td> </tr>
@@ -251,6 +253,7 @@
  <tr><td>MedicationRequest</td><td>Entity. Role, or Act, CombinedMedicationRequest</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;definition</td><td>.outboundRelationship[typeCode=DEFN].target[classCode=unspecified]</td> </tr>
@@ -261,6 +264,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>.inboundRelationship[typeCode=COMP].source[classCode=OBS, moodCode=EVN, code=&quot;type of medication usage&quot;].value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>.priorityCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>consumable.administrableMedication</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x] (medicationReference)</td><td>consumable.administrableMedication</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=AUT].role</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>.inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN, code=&quot;type of encounter or episode&quot;]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;supportingInformation</td><td>.outboundRelationship[typeCode=PERT].target[A_SupportingClinicalStatement CMET minimal with many different choices of classCodes(ORG, ENC, PROC, SPLY, SBADM, OBS) and each of the act class codes draws from one or more of the following moodCodes (EVN, DEF, INT PRMS, RQO, PRP, APT, ARQ, GOL)]</td> </tr>
@@ -304,6 +308,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>class</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>grade</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>what</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x] (medicationReference)</td><td>what</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>who.focus</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>context</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;supportingInformation</td><td>context</td> </tr>
@@ -320,6 +325,7 @@
  <tr><td>MedicationRequest</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>ORC-2-Placer Order Number / ORC-3-Filler Order Number</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>RXE-2-Give Code / RXO-1-Requested Give Code / RXC-2-Component Code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x] (medicationReference)</td><td>RXE-2-Give Code / RXO-1-Requested Give Code / RXC-2-Component Code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID-3-Patient ID List</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>PV1-19-Visit Number</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>RXE-32-Original Order Date/Time / ORC-9-Date/Time of Transaction</td> </tr>
@@ -384,11 +390,13 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.64 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Mar 12, 2021 16:08+0000">2021-03-12</span>
+          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.70 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Sun, May 2, 2021 08:47+0000">2021-05-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 
+                
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -410,6 +418,13 @@
   <script>anchors.options.visible = 'hover'
 anchors.add()</script>
   
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
   <!-- Analytics Below
   ================================================== -->
   </body>

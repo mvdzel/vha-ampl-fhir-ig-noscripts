@@ -44,15 +44,15 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6.134"}
-    h3,h4,h5,h6{--heading-prefix:"6.134"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.135"}
+    h3,h4,h5,h6{--heading-prefix:"6.135"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.69 - draft</p>
+          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.70 - draft</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -123,7 +123,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 5" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.69). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.70). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -198,6 +198,10 @@
  <tr><td colspan="3"><b>VAProblemAuthorship</b></td></tr>
  <tr><td>Provenance</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>undefined @DATE ENTERED 9000011-.08</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who[x] (whoReference)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td>undefined @STATION NUMBER 9999999.06-.01:4-99</td> </tr>
 </table>
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>VAProblemAuthorship</b></td></tr>
@@ -237,8 +241,12 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userSelected</td><td>CD.codingRationale</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who[x]</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who[x] (whoReference)</td><td>.id</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td>.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onBehalfOf[x]</td><td>Person, Practitioner, Organization, Device :* .role [classCode = RoleClassMutualRelationship; role.code and * .scopes[Role](classCode=IDENT) and *.plays [Role.Code]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;relatedAgentType</td><td>.typeCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;entity</td><td>./subjectOf</td> </tr>
@@ -277,6 +285,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;activity</td><td>why</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;agent</td><td>who</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who[x]</td><td>who.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who[x] (whoReference)</td><td>who.actor</td> </tr>
 </table>
 <a name="fhirauditevent"> </a><h3>Mappings for FHIR AuditEvent (<a href="http://hl7.org/fhir/auditevent.html">http://hl7.org/fhir/auditevent</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>VAProblemAuthorship</b></td></tr>
@@ -344,7 +353,7 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.69 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Sun, May 2, 2021 08:11+0000">2021-05-02</span>
+          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.70 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Sun, May 2, 2021 08:47+0000">2021-05-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
