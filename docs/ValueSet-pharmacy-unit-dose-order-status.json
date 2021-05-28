@@ -6,10 +6,10 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://va.gov/Terminology/VistaDefinedTerms/</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>H</td><td>HOLD</td></tr><tr><td>RE</td><td>REINSTATED</td></tr><tr><td>D</td><td>DISCONTINUED</td></tr><tr><td>A</td><td>ACTIVE</td></tr><tr><td>E</td><td>EXPIRED</td></tr><tr><td>DR</td><td>DISCONTINUED (RENEWAL)</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>R</td><td>RENEWED</td></tr></table></li></ul></div>"
   },
   "url": "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-unit-dose-order-status",
-  "version": "0.0.70",
+  "version": "0.0.74",
   "name": "pharmacy-unit-dose-order-status",
   "status": "draft",
-  "date": "2021-05-02T08:44:32.765Z",
+  "date": "2021-05-17T15:52:07.695Z",
   "publisher": "JPSys",
   "contact": [
     {

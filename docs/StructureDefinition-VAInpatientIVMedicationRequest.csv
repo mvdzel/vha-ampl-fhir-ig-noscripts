@@ -23,9 +23,9 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
 "MedicationRequest.extension","medicationrequest-extendedPriority","","PRIORITY",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-extendedPriority]]} {[]}
-","Extension","This field contains the priority of the order that was received from OERR.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Optional Extensions Element","This field contains the priority of the order that was received from OERR.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @PRIORITY 55.01-134b"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @PRIORITY 55.01-134b","n/a","N/A"
 "MedicationRequest.extension","medicationrequest-lastFillQuantity","","LAST QTY FILLED",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastFillQuantity]]} {[]}
 ","Optional Extensions Element","Quantity of last filled prescription.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
@@ -41,11 +41,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "MedicationRequest.extension","medicationrequest-nurseVerified","","NV FLAG",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-nurseVerified]]} {[]}
 ","nv flag","This is an internal flag set whenever a nurse verifies the order.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @NV FLAG 55.01-143"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @NV FLAG 55.01-143","n/a","N/A"
 "MedicationRequest.extension","medicationrequest-pharmacistVerified","","PV FLAG",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacistVerified]]} {[]}
 ","pv flag","This is an internal flag set whenever a pharmacist verifies the order.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @PV FLAG 55.01-142"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @PV FLAG 55.01-142","n/a","N/A"
 "MedicationRequest.extension","richAnnotation-comment-text","","SPECIAL INSTRUCTIONS (LONG)",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text]]} {[]}
 ","other print info","This field contains any special instructions or messages appropriate for this IV order. This field may only be edited when entering an order through the OE/RR package, and will only be displayed when viewing
 the order until the order has been verified.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
@@ -66,7 +66,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "MedicationRequest.extension","extension-valueAnnotation-text","","REMARKS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension.valueAnnotation.text]]} {[]}
 ","remarks","This field is not shown on the IV labels, but is shown on some of the IV reports.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @REMARKS 55.01-.1"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @REMARKS 55.01-.1","n/a","N/A"
 "MedicationRequest.extension","medicationdispense-holdFlag","","HOLD FLAG",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-holdFlag]]} {[]}
 ","Optional Extensions Element","This is a flag set to 1 whenever the order is placed on HOLD or 0 whenever the order is removed from hold.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
@@ -78,7 +78,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "MedicationRequest.extension","extension-MedicationRequest-statusReason","","DISPLAY STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason]]} {[]}
 ","display satus","This field captures how a ""Discontinued"" action occurred and this code is  displayed on the short patient profile if the Stop Date/Time is within the time specified in the Inpatient Ward Parameter file (#59.6) or the Pharmacy System file (#59.7). The ""HP"" is to display on the profile if the order was placed on hold by provider through CPRS.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @DISPLAY STATUS 55.01-157"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @DISPLAY STATUS 55.01-157","n/a","N/A"
 "MedicationRequest.extension","medicationdispense-cumulativeDoses","","CUMULATIVE DOSES",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-cumulativeDoses]]} {[]}
 ","cumulative doses","Cumulative doses of IV for patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
@@ -87,10 +87,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","intermittent syringe","A syringe IV order may be continuous or intermittent.  If a syringe type is continuous (not intermittent), the same order entry procedure will be followed as if a hyperal or admixture is being entered.  If a syringe order is to be intermittent, the same order entry method as the piggback type will be followed.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @INTERMITTENT SYRING 55.01-108","n/a","N/A"
-"MedicationRequest.extension","medicationrequest-ivType","","CHEMOTHERAPY TYPE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType]]} {[]}
-","chemotherapy type","A chemotherapy IV order may be one of three types: admixture, piggyback, or syringe.  The type of chemotherapy IV must be identified as one of these types, so the system will know what kinds of questions to ask in order to properly complete this order.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"MedicationRequest.extension","medicationrequest-ivType","","TYPE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType]]} {[]}
+","type","Type of IV - 'A' for Admixture, 'C' for chemotherapy, 'H' for Hyperal, 'P' for Piggyback, and 'S' for Syringe.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @TYPE 55.01-.04","Pharmacy Patient @CHEMOTHERAPY TYPE 55.01-106"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Pharmacy Patient @TYPE 55.01-.04"
 "MedicationRequest.extension","medicationrequest-pharmacyOrderStatus","","STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus]]} {[]}
 ","Extension","Status of order. Enter one of following codes: A for active, H for hold, R for renewed, D for discontinued, E for expired, P for purge, O for on  call, N for nonverified.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}

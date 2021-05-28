@@ -9,10 +9,10 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-pharmacyOrderStatus"/>
-  <version value="0.0.70"/>
+  <version value="0.0.74"/>
   <name value="medicationrequest-pharmacyOrderStatus"/>
   <status value="draft"/>
-  <date value="2021-05-02T08:44:32.765Z"/>
+  <date value="2021-05-17T15:52:07.695Z"/>
   <publisher value="JPSys"/>
   <contact>
     <telecom>

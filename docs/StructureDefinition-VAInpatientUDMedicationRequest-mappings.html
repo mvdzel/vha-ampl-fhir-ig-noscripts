@@ -15,7 +15,6 @@
     <link href="fhir.css" rel="stylesheet"/>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
     <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
 
     <!-- Project extras -->
@@ -44,15 +43,15 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6.150"}
-    h3,h4,h5,h6{--heading-prefix:"6.150"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.126"}
+    h3,h4,h5,h6{--heading-prefix:"6.126"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.70 - draft</p>
+          <p><span style="font-size:12pt;font-weight:bold">Draft VA Pharmacy FHIR Implementation Guide</span><br/>0.0.74 - draft</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -113,17 +112,27 @@
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
           <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>VAInpatientUDMedicationRequest</b></li>
+          <span style="float:right;">
+
+            <a href="StructureDefinition-VAInpatientUDMedicationRequest-definitions.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="StructureDefinition-VAInpatientUDMedicationRequest.profile.xml.html">next&gt;</a>
+
+          </span>
         </ul>
       </div>  <!-- /container -->
     </div>  <!-- /segment-breadcrumb -->
 
-    <div id="segment-content">  <!-- segment-content -->
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
       <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 5" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.70). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Draft VA Pharmacy FHIR Implementation Guide - Local Development build (v0.0.74). See the <a href="http://va.gov/fhir/us/vha-ampl-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -201,7 +210,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;extension (extension-valueAnnotation-text)</td><td>PHARMACY PATIENT FILE @PROVIDER COMMENTS  55.06-72</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-nurseVerified)</td><td>PHARMACY PATIENT FILE @NV FLAG 55.06-51</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-pharmacistVerified)</td><td>PHARMACY PATIENT FILE @PV FLAG 55.06-50</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-comment-text)</td><td>PHARMACY PATIENT FILE @COMMENTS 55.06-15, undefined @SPECIAL INSTRUCTIONS (LONG) 55.06-135</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (extension-valueAnnotation-comment-text)</td><td>PHARMACY PATIENT FILE @SPECIAL INSTRUCTIONS 55.06-8</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-flaggedForClarification)</td><td>PHARMACY PATIENT FILE @FLAGGED 55.06-124</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-extendedPriority)</td><td>PHARMACY PATIENT FILE @PRIORITY 55.06-.24, PHARMACY PATIENT FILE @PRIORITY 55.06-.24b</td> </tr>
@@ -215,6 +223,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;extension (pharmacy-patientSelfMedication-extension-hospitalSupply)</td><td>PHARMACY PATIENT FILE @HOSPITAL SUPPLIED SELF MED 55.06-6</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (pharmacy-patientSelfMedication-extension-selfAdminister)</td><td>PHARMACY PATIENT FILE @SELF MED 55.06-5</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (medicationrequest-medicationrequestType-coding-code)</td><td>PHARMACY PATIENT FILE @TYPE 55.06-4</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (richAnnotation-comment-text)</td><td>undefined @SPECIAL INSTRUCTIONS (LONG) 55.06-135, PHARMACY PATIENT FILE @COMMENTS 55.06-15</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>PHARMACY PATIENT FILE @ORDER NUMBER 55.06-.01, PHARMACY PATIENT FILE @ORIGINAL ORDER NUMBER 55.06-.25, PHARMACY PATIENT FILE @ORDERS FILE ENTRY 55.06-66</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>PHARMACY PATIENT FILE @ORDERS FILE PARENT ORDER 55.06-125</td> </tr>
@@ -223,7 +232,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;medication[x] (medicationCodeableConcept)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>PHARMACY PATIENT FILE @ORDERABLE ITEM 55.06-108, PHARMACY PATIENT FILE @DISPENSE DRUG 55.07-.01</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PHARMACY PATIENT FILE @PATIENT 55-.01ud</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PHARMACY PATIENT FILE @PATIENT 55-.01ud, PHARMACY PATIENT FILE @PATIENT NAME 55.06-.5</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>PHARMACY PATIENT FILE @LOG-IN DATE  55.06-27.1</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agent</td><td>PHARMACY PATIENT FILE @PROVIDER 55.06-1</td> </tr>
@@ -567,11 +576,33 @@
       }
     });
   </script>
+  <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="StructureDefinition-VAInpatientUDMedicationRequest-definitions.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="StructureDefinition-VAInpatientUDMedicationRequest.profile.xml.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.70 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Sun, May 2, 2021 08:47+0000">2021-05-02</span>
+          IG &#169; 2021 <a style="color: #81BEF7" href="https://jpsys.com">JPSys</a>.  Package vha-ampl-ig#0.0.74 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, May 17, 2021 15:55+0000">2021-05-17</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

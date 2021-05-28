@@ -9,10 +9,10 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillRequestDate"/>
-  <version value="0.0.70"/>
+  <version value="0.0.74"/>
   <name value="medicationdispense-fillRequestDate"/>
   <status value="draft"/>
-  <date value="2021-05-02T08:44:32.765Z"/>
+  <date value="2021-05-17T15:52:07.695Z"/>
   <publisher value="JPSys"/>
   <contact>
     <telecom>
@@ -20,7 +20,7 @@
       <value value="https://jpsys.com"/>
     </telecom>
   </contact>
-  <description value="This is the date the refill request was entered."/>
+  <description value="This is the date that the prescription was entered."/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -195,7 +195,7 @@
       </mapping>
       <mapping>
         <identity value="vista"/>
-        <map value="PRESCRIPTION @LOGIN DATE 52.1-7"/>
+        <map value="PRESCRIPTION @LOGIN DATE 52.2-.08"/>
       </mapping>
     </element>
   </snapshot>
@@ -214,7 +214,7 @@
       </type>
       <mapping>
         <identity value="vista"/>
-        <map value="PRESCRIPTION @LOGIN DATE 52.1-7"/>
+        <map value="PRESCRIPTION @LOGIN DATE 52.2-.08"/>
       </mapping>
     </element>
   </differential>

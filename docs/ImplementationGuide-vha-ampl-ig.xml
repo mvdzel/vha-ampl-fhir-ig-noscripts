@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig"/>
-  <version value="0.0.70"/>
+  <version value="0.0.74"/>
   <name value="vha-ampl-ig"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-05-02T08:47:56+00:00"/>
+  <date value="2021-05-17T15:55:30+00:00"/>
   <publisher value="JPSys"/>
   <contact>
     <telecom>
@@ -627,6 +627,16 @@
         <reference value="StructureDefinition/immunization-orderingFacility.identifier"/>
       </sourceReference>
     </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAImmunizationReaction"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAImmunizationReaction"/>
+      </sourceReference>
+    </resource>
   </package>
   <package id="group-95">
     <name value="Coversheet Area: undefined"/>
@@ -656,10 +666,10 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
-      <name value="selfIdentifiedGender"/>
+      <name value="patient-genderIdentity"/>
       <description value="This SELF IDENTIFIED GENDER value indicates the patient&#39;s view of their gender identity, if they choose to provide it."/>
       <sourceReference>
-        <reference value="StructureDefinition/selfIdentifiedGender"/>
+        <reference value="StructureDefinition/patient-genderIdentity"/>
       </sourceReference>
     </resource>
     <resource>
@@ -667,10 +677,10 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
-      <name value="defaultPrescriptionStatus"/>
+      <name value="patient-defaultPrescriptionStatus"/>
       <description value="This field is used to indicate a default patient status."/>
       <sourceReference>
-        <reference value="StructureDefinition/defaultPrescriptionStatus"/>
+        <reference value="StructureDefinition/patient-defaultPrescriptionStatus"/>
       </sourceReference>
     </resource>
     <resource>
@@ -758,10 +768,10 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
-      <name value="emergencyResponseCohort"/>
+      <name value="patient-emergencyResponseCohort"/>
       <description value="Enter the appropriate ER Indicator to identify patients from impacted zip code areas designated by FEMA."/>
       <sourceReference>
-        <reference value="StructureDefinition/emergencyResponseCohort"/>
+        <reference value="StructureDefinition/patient-emergencyResponseCohort"/>
       </sourceReference>
     </resource>
   </package>
@@ -900,9 +910,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAServiceEpisode1"/>
+      <name value="VAVNServiceEpisode"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAServiceEpisode1"/>
+        <reference value="StructureDefinition/VAVNServiceEpisode"/>
       </sourceReference>
     </resource>
     <resource>
@@ -910,9 +920,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAServiceEpisode2"/>
+      <name value="VALebServiceEpisode"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAServiceEpisode2"/>
+        <reference value="StructureDefinition/VALebServiceEpisode"/>
       </sourceReference>
     </resource>
     <resource>
@@ -920,9 +930,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAServiceEpisode3"/>
+      <name value="VAGreServiceEpisode"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAServiceEpisode3"/>
+        <reference value="StructureDefinition/VAGreServiceEpisode"/>
       </sourceReference>
     </resource>
     <resource>
@@ -930,9 +940,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAServiceEpisode4"/>
+      <name value="VAPanServiceEpisode"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAServiceEpisode4"/>
+        <reference value="StructureDefinition/VAPanServiceEpisode"/>
       </sourceReference>
     </resource>
     <resource>
@@ -940,9 +950,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAServiceEpisode5"/>
+      <name value="VAPGServiceEpisode"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAServiceEpisode5"/>
+        <reference value="StructureDefinition/VAPGServiceEpisode"/>
       </sourceReference>
     </resource>
     <resource>
@@ -950,9 +960,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAServiceEpisode6"/>
+      <name value="VASomServiceEpisode"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAServiceEpisode6"/>
+        <reference value="StructureDefinition/VASomServiceEpisode"/>
       </sourceReference>
     </resource>
     <resource>
@@ -960,9 +970,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAServiceEpisode7"/>
+      <name value="VAYugServiceEpisode"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAServiceEpisode7"/>
+        <reference value="StructureDefinition/VAYugServiceEpisode"/>
       </sourceReference>
     </resource>
     <resource>
@@ -970,9 +980,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VARiskEpisodeProfile1"/>
+      <name value="VAAgentOrangeRiskProfile"/>
       <sourceReference>
-        <reference value="StructureDefinition/VARiskEpisodeProfile1"/>
+        <reference value="StructureDefinition/VAAgentOrangeRiskProfile"/>
       </sourceReference>
     </resource>
     <resource>
@@ -980,9 +990,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VARiskEpisodeProfile2"/>
+      <name value="VARadiationRiskProfile"/>
       <sourceReference>
-        <reference value="StructureDefinition/VARiskEpisodeProfile2"/>
+        <reference value="StructureDefinition/VARadiationRiskProfile"/>
       </sourceReference>
     </resource>
     <resource>
@@ -990,9 +1000,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VARiskEpisodeProfile3"/>
+      <name value="VASWARiskProfile"/>
       <sourceReference>
-        <reference value="StructureDefinition/VARiskEpisodeProfile3"/>
+        <reference value="StructureDefinition/VASWARiskProfile"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1000,9 +1010,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VARiskEpisodeProfile4"/>
+      <name value="VANTRRiskProfile"/>
       <sourceReference>
-        <reference value="StructureDefinition/VARiskEpisodeProfile4"/>
+        <reference value="StructureDefinition/VANTRRiskProfile"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1010,9 +1020,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VARiskEpisodeProfile5"/>
+      <name value="VAPOWRiskProfile"/>
       <sourceReference>
-        <reference value="StructureDefinition/VARiskEpisodeProfile5"/>
+        <reference value="StructureDefinition/VAPOWRiskProfile"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1020,9 +1030,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VARiskEpisodeProfile6"/>
+      <name value="VACombatRiskProfile"/>
       <sourceReference>
-        <reference value="StructureDefinition/VARiskEpisodeProfile6"/>
+        <reference value="StructureDefinition/VACombatRiskProfile"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1040,10 +1050,10 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
-      <name value="event-statusReason"/>
+      <name value="event-processState"/>
       <description value="This field cannot be edited locally.  If Current Purple Heart Indicator is set to &#39;Yes&#39; by the local site, a Current Purple Heart Status of &#39;Pending&#39; will be stuffed into the field.  Other editing or updating is done by the HEC."/>
       <sourceReference>
-        <reference value="StructureDefinition/event-statusReason"/>
+        <reference value="StructureDefinition/event-processState"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1051,9 +1061,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAEligibilityObservation1"/>
+      <name value="VACombatEligibilityObservation"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAEligibilityObservation1"/>
+        <reference value="StructureDefinition/VACombatEligibilityObservation"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1061,9 +1071,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAEligibilityObservation2"/>
+      <name value="VAMeansEligibilityObservation"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAEligibilityObservation2"/>
+        <reference value="StructureDefinition/VAMeansEligibilityObservation"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1071,9 +1081,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAEligibilityObservation3"/>
+      <name value="VACopayEligibilityObservation"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAEligibilityObservation3"/>
+        <reference value="StructureDefinition/VACopayEligibilityObservation"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1081,9 +1091,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
-      <name value="VAEligibilityObservation4"/>
+      <name value="VABaseEligibilityObservation"/>
       <sourceReference>
-        <reference value="StructureDefinition/VAEligibilityObservation4"/>
+        <reference value="StructureDefinition/VABaseEligibilityObservation"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1360,299 +1370,19 @@
       </sourceReference>
     </resource>
   </package>
-  <package id="group-29">
-    <name value="Coversheet Area: Problem List"/>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAProblem"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAProblem"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-priority"/>
-      <description value="This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display."/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-priority"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-relationshipToAgentOrangeExposure"/>
-      <description value="If this problem is related to a patient&#39;s exposure to Agent Orange, it may be flagged here."/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-relationshipToAgentOrangeExposure"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-relationshipToRadiation"/>
-      <description value="If this problem is related to a patient&#39;s exposure to ionizing radiation, it may be flagged here."/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-relationshipToRadiation"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-relationshipToPersianGulfService"/>
-      <description value="If this problem is related to a patient&#39;s service in the Persian Gulf, it may be flagged here."/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-relationshipToPersianGulfService"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-relationshipToRadiumTreatment"/>
-      <description value="If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here."/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-relationshipToRadiumTreatment"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-relationshipToMilitarySexualTrauma"/>
-      <description value="If this problem is related to the treatment of military sexual trauma, it may be flagged here."/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-relationshipToMilitarySexualTrauma"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-relationshipToCombatExperience"/>
-      <description value="&lt;blank&gt;"/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-relationshipToCombatExperience"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-responsibleProvider"/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-responsibleProvider"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-treatingService"/>
-      <description value="This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting."/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-treatingService"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-treatingClinic"/>
-      <description value="This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one&#39;s view of the list."/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-treatingClinic"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAProblemAuthorship"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAProblemAuthorship"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-relationshipToShipboardHazardAndDefense"/>
-      <description value="&lt;blank&gt;"/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-relationshipToShipboardHazardAndDefense"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="condition-lastModified"/>
-      <description value="This is the last date/time this problem was changed."/>
-      <sourceReference>
-        <reference value="StructureDefinition/condition-lastModified"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="richAnnotation.author"/>
-      <description value="This is the provider who authored the text of this note."/>
-      <sourceReference>
-        <reference value="StructureDefinition/richAnnotation.author"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="richAnnotation.text"/>
-      <description value="Additional comments may be entered here to further describe this problem."/>
-      <sourceReference>
-        <reference value="StructureDefinition/richAnnotation.text"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="richAnnotation.commentNumber"/>
-      <description value="This is the unique note identifier."/>
-      <sourceReference>
-        <reference value="StructureDefinition/richAnnotation.commentNumber"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="ProblemListChange"/>
-      <sourceReference>
-        <reference value="StructureDefinition/ProblemListChange"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="reference-targetElement.extension.change.extension.newValue"/>
-      <description value="This is the new value now stored in the Problem file global (internal format)."/>
-      <sourceReference>
-        <reference value="StructureDefinition/reference-targetElement.extension.change.extension.newValue"/>
-      </sourceReference>
-    </resource>
-  </package>
-  <package id="group-28">
-    <name value="Coversheet Area: Primary Care Management "/>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAPrimaryCareTeam"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAPrimaryCareTeam"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="participant-primaryCareRole"/>
-      <description value="This is used to indicate if patient - team position assigment is a  special one (e.g. primary care practitioner or primary care attending)."/>
-      <sourceReference>
-        <reference value="StructureDefinition/participant-primaryCareRole"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="participant-roleStatus"/>
-      <description value="This indicates whether the practitioner&#39;s position assignment is active or inactive."/>
-      <sourceReference>
-        <reference value="StructureDefinition/participant-roleStatus"/>
-      </sourceReference>
-    </resource>
-  </package>
-  <package id="group-7">
-    <name value="Coversheet Area: Appointment Button"/>
-    <description value="This use case addresses upcoming appointments with locations and prior appointments with associated documents."/>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAAppointment"/>
-      <description value="An Appointment profiled to support VA requirements."/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAAppointment"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAAppointmentLocation"/>
-      <description value="A location associated with an appointment, providing service information."/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAAppointmentLocation"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAAppointmentPracitioner"/>
-      <description value="A practitioner associated with a location."/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAAppointmentPracitioner"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAAppointment-ext"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAAppointment-ext"/>
-      </sourceReference>
-    </resource>
-  </package>
   <package id="group-17">
     <name value="Coversheet Area: Inpatient Orders Unit Dose/Clinic Medications"/>
     <description value="Verified inpatient or clinic unit dose orders"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAInpatientUDMedicationRequestRenewal"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAInpatientUDMedicationRequestRenewal"/>
+      </sourceReference>
+    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
@@ -1764,6 +1494,16 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAInpatientUDMedicationRequestEncounter"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAInpatientUDMedicationRequestEncounter"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
@@ -1781,16 +1521,6 @@
       <name value="VAInpatientUDMedicationRequestChange"/>
       <sourceReference>
         <reference value="StructureDefinition/VAInpatientUDMedicationRequestChange"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAInpatientUDMedicationRequestRenewal"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAInpatientUDMedicationRequestRenewal"/>
       </sourceReference>
     </resource>
   </package>
@@ -1855,17 +1585,6 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
-      <name value="valueReference"/>
-      <description value="This field contains the pointer value for the person entered the IV order."/>
-      <sourceReference>
-        <reference value="StructureDefinition/valueReference"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
       <name value="medicationrequest-lastFillDate"/>
       <description value="Last time the prescription was filled."/>
       <sourceReference>
@@ -1921,6 +1640,49 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
+      <name value="VAFinishedOutpatientMedicationPartial"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAFinishedOutpatientMedicationPartial"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="medicationdispense-dispenseChannel"/>
+      <description value="This field tells whether the medication was picked up  or mailed to the patient."/>
+      <sourceReference>
+        <reference value="StructureDefinition/medicationdispense-dispenseChannel"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAMedication"/>
+      <description value="Medication with support for VA requirements"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAMedication"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="medicationdispense-fillRequestDate"/>
+      <description value="This is the date that the prescription was entered."/>
+      <sourceReference>
+        <reference value="StructureDefinition/medicationdispense-fillRequestDate"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
       <name value="VAFinishedOutpatientMedicationRequest"/>
       <sourceReference>
         <reference value="StructureDefinition/VAFinishedOutpatientMedicationRequest"/>
@@ -1964,17 +1726,6 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <example value="false"/>
-      <name value="medicationdispense-dispenseChannel"/>
-      <description value="Indicates if the medication will be picked up or mailed  to the patient."/>
-      <sourceReference>
-        <reference value="StructureDefinition/medicationdispense-dispenseChannel"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
       <name value="medicationrequest-orderIssueDate"/>
       <description value="Date when doctor wrote prescription."/>
       <sourceReference>
@@ -1990,17 +1741,6 @@
       <description value="The date the prescription was filled."/>
       <sourceReference>
         <reference value="StructureDefinition/medicationdispense-fillDate"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAMedication"/>
-      <description value="Medication with support for VA requirements"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAMedication"/>
       </sourceReference>
     </resource>
     <resource>
@@ -2268,27 +2008,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <example value="false"/>
-      <name value="medicationdispense-fillRequestDate"/>
-      <description value="This is the date the refill request was entered."/>
-      <sourceReference>
-        <reference value="StructureDefinition/medicationdispense-fillRequestDate"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <example value="false"/>
-      <name value="VAFinishedOutpatientMedicationPartial"/>
-      <sourceReference>
-        <reference value="StructureDefinition/VAFinishedOutpatientMedicationPartial"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <example value="false"/>
@@ -2307,6 +2026,318 @@
       <description value="Any additional comments."/>
       <sourceReference>
         <reference value="StructureDefinition/comment"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package id="group-29">
+    <name value="Coversheet Area: Problem List"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAProblem"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAProblem"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-priority"/>
+      <description value="This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-priority"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-relationshipToService"/>
+      <description value="If the patient has service connection on file in the DHCP Patient file #2, this problem specifically may be flagged as being service connected."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-relationshipToService"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-relationshipToAgentOrangeExposure"/>
+      <description value="If this problem is related to a patient&#39;s exposure to Agent Orange, it may be flagged here."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-relationshipToAgentOrangeExposure"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-relationshipToRadiation"/>
+      <description value="If this problem is related to a patient&#39;s exposure to ionizing radiation, it may be flagged here."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-relationshipToRadiation"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-relationshipToPersianGulfService"/>
+      <description value="If this problem is related to a patient&#39;s service in the Persian Gulf, it may be flagged here."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-relationshipToPersianGulfService"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-relationshipToRadiumTreatment"/>
+      <description value="If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-relationshipToRadiumTreatment"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-relationshipToMilitarySexualTrauma"/>
+      <description value="If this problem is related to the treatment of military sexual trauma, it may be flagged here."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-relationshipToMilitarySexualTrauma"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-relationshipToCombatExperience"/>
+      <description value="&lt;blank&gt;"/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-relationshipToCombatExperience"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-responsibleProvider"/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-responsibleProvider"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-treatingService"/>
+      <description value="This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-treatingService"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-treatingClinic"/>
+      <description value="This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one&#39;s view of the list."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-treatingClinic"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAProblemAuthorship"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAProblemAuthorship"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-relationshipToShipboardHazardAndDefense"/>
+      <description value="&lt;blank&gt;"/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-relationshipToShipboardHazardAndDefense"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-lastModified"/>
+      <description value="This is the last date/time this problem was changed."/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-lastModified"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="richAnnotation.author"/>
+      <description value="This is the provider who authored the text of this note."/>
+      <sourceReference>
+        <reference value="StructureDefinition/richAnnotation.author"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="richAnnotation.text"/>
+      <description value="Additional comments may be entered here to further describe this problem."/>
+      <sourceReference>
+        <reference value="StructureDefinition/richAnnotation.text"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="richAnnotation.commentNumber"/>
+      <description value="This is the unique note identifier."/>
+      <sourceReference>
+        <reference value="StructureDefinition/richAnnotation.commentNumber"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="ProblemListChange"/>
+      <sourceReference>
+        <reference value="StructureDefinition/ProblemListChange"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="reference-targetElement.extension.change.extension.newValue"/>
+      <description value="This is the new value now stored in the Problem file global (internal format)."/>
+      <sourceReference>
+        <reference value="StructureDefinition/reference-targetElement.extension.change.extension.newValue"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package id="group-28">
+    <name value="Coversheet Area: Primary Care Management "/>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAPrimaryCareTeam"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAPrimaryCareTeam"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="valueReference"/>
+      <description value="This is the phone number associated with the team."/>
+      <sourceReference>
+        <reference value="StructureDefinition/valueReference"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="participant-primaryCareRole"/>
+      <description value="This is used to indicate if patient - team position assigment is a  special one (e.g. primary care practitioner or primary care attending)."/>
+      <sourceReference>
+        <reference value="StructureDefinition/participant-primaryCareRole"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="participant-roleStatus"/>
+      <description value="This indicates whether the practitioner&#39;s position assignment is active or inactive."/>
+      <sourceReference>
+        <reference value="StructureDefinition/participant-roleStatus"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package id="group-7">
+    <name value="Coversheet Area: Appointment Button"/>
+    <description value="This use case addresses upcoming appointments with locations and prior appointments with associated documents."/>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAAppointment"/>
+      <description value="An Appointment profiled to support VA requirements."/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAAppointment"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAAppointmentLocation"/>
+      <description value="A location associated with an appointment, providing service information."/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAAppointmentLocation"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAAppointmentPracitioner"/>
+      <description value="A practitioner associated with a location."/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAAppointmentPracitioner"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VAAppointment-ext"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VAAppointment-ext"/>
       </sourceReference>
     </resource>
   </package>
@@ -2609,6 +2640,26 @@
         <reference value="StructureDefinition/VAChemLabReportResult"/>
       </sourceReference>
     </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="note.text"/>
+      <sourceReference>
+        <reference value="StructureDefinition/note.text"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <example value="false"/>
+      <name value="note.authorString"/>
+      <sourceReference>
+        <reference value="StructureDefinition/note.authorString"/>
+      </sourceReference>
+    </resource>
   </package>
   <package id="group-20">
     <name value="Coversheet Area: Lab - Microbiology"/>
@@ -2688,6 +2739,16 @@
       <name value="VASurgicalPathologyReport"/>
       <sourceReference>
         <reference value="StructureDefinition/VASurgicalPathologyReport"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <example value="false"/>
+      <name value="VASurgicalPathologyProcedureRequest"/>
+      <sourceReference>
+        <reference value="StructureDefinition/VASurgicalPathologyProcedureRequest"/>
       </sourceReference>
     </resource>
   </package>

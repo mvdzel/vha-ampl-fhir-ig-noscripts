@@ -81,8 +81,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "Provenance.agent.who[x]","","","",1,1,"","","Y","Reference {[]} {[]}
 ","Who participated","The individual, device or organization that participated in the event.","","","","","","","","","",,,,,"","type:$this}
 ","",,"closed","Provenance.agent.who[x]",1,1,"","",".id","who.actor"
-"Provenance.agent.who[x]","whoReference","","VERIFYING NURSE",1,1,"Y","","Y","Reference {[]} {[]}
-","Who participated","This is the nurse who verified the order, or the latest action taken on the order.","","","","","","","","","",,,,,"",,,,"Provenance.agent.who[x]",1,1,"","","PHARMACY PATIENT FILE @VERIFYING NURSE 55.06-16",".id","who.actor"
+"Provenance.agent.who[x]","whoReference","","VERIFYING PHARMACIST",1,1,"Y","","Y","Reference {[]} {[]}
+","verifying RPH","This is the pharmacist who verified the order.","","","","","","","","","",,,,,"",,,,"Provenance.agent.who[x]",1,1,"","","PHARMACY PATIENT FILE @VERIFYING NURSE 55.06-16","PHARMACY PATIENT FILE @VERIFYING PHARMACIST 55.06-18",".id","who.actor"
 "Provenance.agent.onBehalfOf[x]","","","",0,1,"","","","uri {[]} {[]}
 Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}","Who the agent is representing","The individual, device, or organization for whom the change was made.","","","","","","","","","",,,,,"",,,,"Provenance.agent.onBehalfOf[x]",0,1,"","","Person, Practitioner, Organization, Device :* .role [classCode = RoleClassMutualRelationship; role.code and * .scopes[Role](classCode=IDENT) and *.plays [Role.Code]"
 "Provenance.agent.relatedAgentType","","","",0,1,"","","","CodeableConcept {[]} {[]}

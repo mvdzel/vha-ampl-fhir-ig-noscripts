@@ -87,6 +87,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Exposure","If this problem is related to a patient's exposure to Agent Orange, it may be flagged here.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11","n/a","N/A"
+"Condition.extension","condition-relationshipToService","","SERVICE CONNECTED",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToService]]} {[]}
+","Service Connected Condition","If the patient has service connection on file in the DHCP Patient file #2, this problem specifically may be flagged as being service connected.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PROBLEM  @SERVICE CONNECTED 9000011-1.1","n/a","N/A"
 "Condition.extension","condition-priority","","PRIORITY",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority]]} {[]}
 ","Immediacy/Priority","This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}

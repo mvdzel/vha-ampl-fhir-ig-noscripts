@@ -2,17 +2,17 @@
   "resourceType": "StructureDefinition",
   "id": "VAUnfinishedInpatientMedication",
   "meta": {
-    "lastUpdated": "2021-05-02T08:44:32.765Z"
+    "lastUpdated": "2021-05-17T15:52:07.695Z"
   },
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Minimum and Maximum # of times the the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAUnfinishedInpatientMedication-definitions.html#MedicationRequest\">MedicationRequest</a><a name=\"MedicationRequest\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/medicationrequest.html\">MedicationRequest</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Ordering of medication for patient or group</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAUnfinishedInpatientMedication-definitions.html#MedicationRequest.medicationReference\">medicationReference</a><a name=\"MedicationRequest.medicationReference\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/references.html\">Reference</a>()</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Medication to be taken</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Minimum and Maximum # of times the the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAUnfinishedInpatientMedication-definitions.html#Medication\">Medication</a><a name=\"Medication\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/medication.html\">Medication</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Definition of a Medication</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAUnfinishedInpatientMedication-definitions.html#Medication.ingredient\">ingredient</a><a name=\"Medication.ingredient\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAUnfinishedInpatientMedication-definitions.html#Medication.ingredient.itemCodeableConcept\">itemCodeableConcept</a><a name=\"Medication.ingredient.itemCodeableConcept\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The product contained</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAUnfinishedInpatientMedication-definitions.html#Medication.ingredient.itemCodeableConcept.text\" title=\"The additive selected as part of the IV order.  This entry is a pointer  to the ADDITIVES file (52.6).\">text</a><a name=\"Medication.ingredient.itemCodeableConcept.text\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5\" href=\"http://hl7.org/fhir/STU3/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Plain text representation of the concept</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VAUnfinishedInpatientMedication-definitions.html#Medication.ingredient.amount\" title=\"&quot;STRENGTH&quot; is the amount of an additive to be used in the manufacturing of the IV order. NOTE! You will be expected to use the strength units that were previously defined within the IV ADDITIVE file (52.6) for each\r\nadditive. For example, if the DRUG UNITS field of the IV ADDITIVES file specifies the units for ampicillin to be in grams, it would be incorrect to enter 500 for a half-gram dose. Enter 0.5 instead.\">amount</a><a name=\"Medication.ingredient.amount\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5\" href=\"http://hl7.org/fhir/STU3/datatypes.html#Ratio\">Ratio</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">strength</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
   },
   "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedication",
-  "version": "0.0.70",
+  "version": "0.0.74",
   "name": "VAUnfinishedInpatientMedication",
   "status": "draft",
-  "date": "2021-05-02T08:44:32.765Z",
+  "date": "2021-05-17T15:52:07.695Z",
   "publisher": "JPSys",
   "contact": [
     {
@@ -42,11 +42,6 @@
       "name": "VistA"
     },
     {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Mapping"
-    },
-    {
       "identity": "script10.6",
       "uri": "http://ncpdp.org/SCRIPT10_6",
       "name": "Mapping to NCPDP SCRIPT 10.6"
@@ -69,24 +64,20 @@
   ],
   "kind": "resource",
   "abstract": false,
-  "type": "MedicationRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
   "derivation": "constraint",
   "snapshot": {
     "element": [
       {
-        "id": "MedicationRequest",
-        "path": "MedicationRequest",
-        "short": "Ordering of medication for patient or group",
-        "definition": "An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called \"MedicationRequest\" rather than \"MedicationPrescription\" or \"MedicationOrder\" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.",
-        "alias": [
-          "Prescription",
-          "Order"
-        ],
+        "id": "Medication",
+        "path": "Medication",
+        "short": "Definition of a Medication",
+        "definition": "This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication.",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "MedicationRequest",
+          "path": "Medication",
           "min": 0,
           "max": "*"
         },
@@ -130,16 +121,12 @@
             "map": "Entity. Role, or Act"
           },
           {
-            "identity": "workflow",
-            "map": "..Request"
-          },
-          {
             "identity": "script10.6",
-            "map": "Message/Body/NewRx"
+            "map": "NewRx/MedicationPrescribed\r-or-\rRxFill/MedicationDispensed\r-or-\rRxHistoryResponse/MedicationDispensed\r-or-\rRxHistoryResponse/MedicationPrescribed"
           },
           {
             "identity": "rim",
-            "map": "CombinedMedicationRequest"
+            "map": "ManufacturedProduct[classCode=ADMM]"
           },
           {
             "identity": "w5",
@@ -148,8 +135,8 @@
         ]
       },
       {
-        "id": "MedicationRequest.id",
-        "path": "MedicationRequest.id",
+        "id": "Medication.id",
+        "path": "Medication.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
         "comment": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
@@ -168,8 +155,8 @@
         "isSummary": true
       },
       {
-        "id": "MedicationRequest.meta",
-        "path": "MedicationRequest.meta",
+        "id": "Medication.meta",
+        "path": "Medication.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
         "min": 0,
@@ -187,8 +174,8 @@
         "isSummary": true
       },
       {
-        "id": "MedicationRequest.implicitRules",
-        "path": "MedicationRequest.implicitRules",
+        "id": "Medication.implicitRules",
+        "path": "Medication.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
         "comment": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. \n\nThis element is labelled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation.",
@@ -208,8 +195,8 @@
         "isSummary": true
       },
       {
-        "id": "MedicationRequest.language",
-        "path": "MedicationRequest.language",
+        "id": "Medication.language",
+        "path": "Medication.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
         "comment": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
@@ -250,8 +237,8 @@
         }
       },
       {
-        "id": "MedicationRequest.text",
-        "path": "MedicationRequest.text",
+        "id": "Medication.text",
+        "path": "Medication.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
         "comment": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded in formation is added later.",
@@ -284,8 +271,8 @@
         ]
       },
       {
-        "id": "MedicationRequest.contained",
-        "path": "MedicationRequest.contained",
+        "id": "Medication.contained",
+        "path": "Medication.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
         "comment": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
@@ -314,8 +301,8 @@
         ]
       },
       {
-        "id": "MedicationRequest.extension",
-        "path": "MedicationRequest.extension",
+        "id": "Medication.extension",
+        "path": "Medication.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -343,8 +330,8 @@
         ]
       },
       {
-        "id": "MedicationRequest.modifierExtension",
-        "path": "MedicationRequest.modifierExtension",
+        "id": "Medication.modifierExtension",
+        "path": "Medication.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -373,244 +360,49 @@
         ]
       },
       {
-        "id": "MedicationRequest.identifier",
-        "path": "MedicationRequest.identifier",
-        "short": "External ids for this request",
-        "definition": "This records identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. For example a re-imbursement system might issue its own id for each prescription that is created.  This is particularly important where FHIR only provides part of an entire workflow process where records must be tracked through an entire system.",
+        "id": "Medication.code",
+        "path": "Medication.code",
+        "short": "Codes that identify this medication",
+        "definition": "A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.",
+        "comment": "Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: \"A coding may be marked as a \"userSelected\" if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc.",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
-          "path": "MedicationRequest.identifier",
+          "path": "Medication.code",
           "min": 0,
-          "max": "*"
+          "max": "1"
         },
         "type": [
           {
-            "code": "Identifier"
+            "code": "CodeableConcept"
           }
         ],
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "MedicationFormalRepresentation"
+            }
+          ],
+          "strength": "example",
+          "description": "A coded concept that defines the type of a medication",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-codes"
+          }
+        },
         "mapping": [
           {
-            "identity": "workflow",
-            "map": "…identifer"
-          },
-          {
             "identity": "script10.6",
-            "map": "Message/Header/PrescriberOrderNumber"
+            "map": "coding.code = //element(*,MedicationType)/DrugCoded/ProductCode\r\rcoding.system = //element(*,MedicationType)/DrugCoded/ProductCodeQualifier\r\rcoding.display = //element(*,MedicationType)/DrugDescription"
           },
           {
             "identity": "v2",
-            "map": "ORC-2-Placer Order Number / ORC-3-Filler Order Number"
+            "map": "RXO-1.1-Requested Give Code.code / RXE-2.1-Give Code.code / RXD-2.1-Dispense/Give Code.code / RXG-4.1-Give Code.code /RXA-5.1-Administered Code.code / RXC-2.1 Component Code"
           },
           {
             "identity": "rim",
-            "map": ".id"
-          },
-          {
-            "identity": "w5",
-            "map": "id"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.definition",
-        "path": "MedicationRequest.definition",
-        "short": "Protocol or definition",
-        "definition": "Protocol or definition followed by this request.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "MedicationRequest.definition",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/ActivityDefinition"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…definition"
-          },
-          {
-            "identity": "rim",
-            "map": ".outboundRelationship[typeCode=DEFN].target[classCode=unspecified]"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.basedOn",
-        "path": "MedicationRequest.basedOn",
-        "short": "What request fulfills",
-        "definition": "A plan or request that is fulfilled in whole or in part by this medication request.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "MedicationRequest.basedOn",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/CarePlan"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/ProcedureRequest"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/ReferralRequest"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…basedOn"
-          },
-          {
-            "identity": "rim",
-            "map": ".outboundRelationship[typeCode=FLFS].target[classCode=SBADM or PROC or PCPR or OBS, moodCode=RQO orPLAN or PRP]"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.groupIdentifier",
-        "path": "MedicationRequest.groupIdentifier",
-        "short": "Composite request this is part of",
-        "definition": "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition or prescription.",
-        "requirements": "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition. Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.groupIdentifier",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…groupIdentifier"
-          },
-          {
-            "identity": "rim",
-            "map": ".outboundRelationship(typeCode=COMP].target[classCode=SBADM, moodCode=INT].id"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.status",
-        "path": "MedicationRequest.status",
-        "short": "active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown",
-        "definition": "A code specifying the current state of the order.  Generally this will be active or completed state.",
-        "comment": "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.status",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "isModifier": true,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationRequestStatus"
-            }
-          ],
-          "strength": "required",
-          "description": "A coded concept specifying the state of the prescribing event. Describes the lifecycle of the prescription",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/medication-request-status"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…status"
-          },
-          {
-            "identity": "script10.6",
-            "map": "no mapping"
-          },
-          {
-            "identity": "rim",
-            "map": ".statusCode"
-          },
-          {
-            "identity": "w5",
-            "map": "status"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.intent",
-        "path": "MedicationRequest.intent",
-        "short": "proposal | plan | order | instance-order",
-        "definition": "Whether the request is a proposal, plan, or an original order.",
-        "comment": "It is expected that the type of requester will be restricted for different stages of a MedicationRequest.  For example, Proposals can be created by a patient, relatedPerson, Practitioner or Device.  Plans can be created by Practitioners, Patients, RelatedPersons and Devices.  Original orders can be created by a Practitioner only.\r\rAn instance-order is an instantiation of a request or order and may be used to populate Medication Administration Record.\n\nThis element is labeled as a modifier because the intent alters when and how the resource is actually applicable.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.intent",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "isModifier": true,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationRequestIntent"
-            }
-          ],
-          "strength": "required",
-          "description": "The kind of medication order",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/medication-request-intent"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…intent"
-          },
-          {
-            "identity": "rim",
-            "map": ".moodCode (nuances beyond PRP/PLAN/RQO would need to be elsewhere)"
+            "map": ".code"
           },
           {
             "identity": "w5",
@@ -619,14 +411,154 @@
         ]
       },
       {
-        "id": "MedicationRequest.category",
-        "path": "MedicationRequest.category",
-        "short": "Type of medication usage",
-        "definition": "Indicates the type of medication order and where the medication is expected to be consumed or administered.",
+        "id": "Medication.status",
+        "path": "Medication.status",
+        "short": "active | inactive | entered-in-error",
+        "definition": "A code to indicate if the medication is in active use.",
+        "comment": "This status is not intended to specify if a medication is part of a formulary.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "MedicationRequest.category",
+          "path": "Medication.status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "MedicationStatus"
+            }
+          ],
+          "strength": "required",
+          "description": "A coded concept defining if the medication is in active use",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode"
+          }
+        ]
+      },
+      {
+        "id": "Medication.isBrand",
+        "path": "Medication.isBrand",
+        "short": "True if a brand",
+        "definition": "Set to true if the item is attributable to a specific manufacturer.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Medication.isBrand",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "script10.6",
+            "map": "no mapping"
+          },
+          {
+            "identity": "rim",
+            "map": "true if .player.scopingRole[typeCode=MANU] exists"
+          },
+          {
+            "identity": "w5",
+            "map": "class"
+          }
+        ]
+      },
+      {
+        "id": "Medication.isOverTheCounter",
+        "path": "Medication.isOverTheCounter",
+        "short": "True if medication does not require a prescription",
+        "definition": "Set to true if the medication can be obtained without an order from a prescriber.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Medication.isOverTheCounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "NA"
+          },
+          {
+            "identity": "w5",
+            "map": "class"
+          }
+        ]
+      },
+      {
+        "id": "Medication.manufacturer",
+        "path": "Medication.manufacturer",
+        "short": "Manufacturer of the item",
+        "definition": "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Medication.manufacturer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "script10.6",
+            "map": "no mapping"
+          },
+          {
+            "identity": "v2",
+            "map": "RXD-20-Substance Manufacturer Name / RXG-21-Substance Manufacturer Name / RXA-17-Substance Manufacturer Name"
+          },
+          {
+            "identity": "rim",
+            "map": ".player.scopingRole[typeCode=MANU].scoper"
+          },
+          {
+            "identity": "w5",
+            "map": "who.actor"
+          }
+        ]
+      },
+      {
+        "id": "Medication.form",
+        "path": "Medication.form",
+        "short": "powder | tablets | capsule +",
+        "definition": "Describes the form of the item.  Powder; tablets; capsule.",
+        "comment": "When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationAdministration, this is administered form.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Medication.form",
           "min": 0,
           "max": "1"
         },
@@ -639,79 +571,156 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationRequestCategory"
+              "valueString": "MedicationForm"
             }
           ],
-          "strength": "preferred",
-          "description": "A coded concept identifying where the medication ordered is expected to be consumed or administered",
+          "strength": "example",
+          "description": "A coded concept defining the form of a medication",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/medication-request-category"
+            "reference": "http://hl7.org/fhir/ValueSet/medication-form-codes"
           }
         },
         "mapping": [
           {
             "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed/Directions\r\ror \r\rMessage/Body/NewRx/MedicationPrescribed/StructuredSIG"
+            "map": "coding.code =  //element(*,DrugCodedType)/FormCode\r\rcoding.system = //element(*,DrugCodedType)/FormSourceCode"
+          },
+          {
+            "identity": "v2",
+            "map": "RXO-5-Requested Dosage Form / RXE-6-Give Dosage Form / RXD-6-Actual Dosage Form / RXG-8-Give Dosage Form / RXA-8-Administered Dosage Form"
           },
           {
             "identity": "rim",
-            "map": ".inboundRelationship[typeCode=COMP].source[classCode=OBS, moodCode=EVN, code=\"type of medication usage\"].value"
-          },
-          {
-            "identity": "w5",
-            "map": "class"
+            "map": ".formCode"
           }
         ]
       },
       {
-        "id": "MedicationRequest.priority",
-        "path": "MedicationRequest.priority",
-        "short": "routine | urgent | stat | asap",
-        "definition": "Indicates how quickly the Medication Request should be addressed with respect to other requests.",
+        "id": "Medication.ingredient",
+        "path": "Medication.ingredient",
+        "short": "Active or inactive ingredient",
+        "definition": "Identifies a particular constituent of interest in the product.",
+        "comment": "The ingredients need not be a complete list.  If an ingredient is not specified, this does not indicate whether an ingredient is present or absent.  If an ingredient is specified it does not mean that all ingredients are specified.  It is possible to specify both inactive and active ingredients.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Medication.ingredient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() | (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".scopesRole[typeCode=INGR]"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.id",
+        "path": "Medication.ingredient.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "MedicationRequest.priority",
+          "path": "Element.id",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "code"
+            "code": "string"
           }
         ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationRequestPriority"
-            }
-          ],
-          "strength": "required",
-          "description": "Identifies the level of importance to be assigned to actioning the request",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/medication-request-priority"
-          }
-        },
         "mapping": [
           {
-            "identity": "workflow",
-            "map": "…priority"
-          },
-          {
             "identity": "rim",
-            "map": ".priorityCode"
-          },
-          {
-            "identity": "w5",
-            "map": "grade"
+            "map": "n/a"
           }
         ]
       },
       {
-        "id": "MedicationRequest.medication[x]",
-        "path": "MedicationRequest.medication[x]",
+        "id": "Medication.ingredient.extension",
+        "path": "Medication.ingredient.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.modifierExtension",
+        "path": "Medication.ingredient.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.item[x]",
+        "path": "Medication.ingredient.item[x]",
         "slicing": {
           "discriminator": [
             {
@@ -722,304 +731,71 @@
           "ordered": false,
           "rules": "closed"
         },
-        "short": "Medication to be taken",
-        "definition": "Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications.",
-        "comment": "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number or if the medication is compounded or extemporaneously prepared, then you must reference the Medication resource. .",
+        "short": "The product contained",
+        "definition": "The actual ingredient - either a substance (simple ingredient) or another medication.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "MedicationRequest.medication[x]",
+          "path": "Medication.ingredient.item[x]",
           "min": 1,
           "max": "1"
         },
         "type": [
           {
-            "code": "Reference"
+            "code": "CodeableConcept"
           }
         ],
-        "isSummary": true,
         "mapping": [
           {
-            "identity": "workflow",
-            "map": "…code"
-          },
-          {
             "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed\r\rMedication.code.coding.code = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCode\r\rMedication.code.coding.system = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCodeQualifier\r\rMedication.code.coding.display = Message/Body/NewRx/MedicationPrescribed/DrugDescription"
+            "map": "coding.code = //element(*,MedicationType)/DrugCoded/ProductCode\r\rcoding.system = //element(*,MedicationType)/DrugCoded/ProductCodeQualifier\r\rcoding.display = //element(*,MedicationType)/DrugDescription"
           },
           {
             "identity": "v2",
-            "map": "RXE-2-Give Code / RXO-1-Requested Give Code / RXC-2-Component Code"
+            "map": "RXC-2-Component Code  if medication: RXO-1-Requested Give Code / RXE-2-Give Code / RXD-2-Dispense/Give Code / RXG-4-Give Code / RXA-5-Administered Code"
           },
           {
             "identity": "rim",
-            "map": "consumable.administrableMedication"
-          },
-          {
-            "identity": "w5",
-            "map": "what"
+            "map": ".player"
           }
         ]
       },
       {
-        "id": "MedicationRequest.medication[x]:medicationReference",
-        "path": "MedicationRequest.medication[x]",
-        "sliceName": "medicationReference",
-        "short": "Medication to be taken",
-        "definition": "Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications.",
-        "comment": "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number or if the medication is compounded or extemporaneously prepared, then you must reference the Medication resource. .",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept",
+        "path": "Medication.ingredient.item[x]",
+        "sliceName": "itemCodeableConcept",
+        "short": "The product contained",
+        "definition": "The actual ingredient - either a substance (simple ingredient) or another medication.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "MedicationRequest.medication[x]",
+          "path": "Medication.ingredient.item[x]",
           "min": 1,
           "max": "1"
         },
         "type": [
           {
-            "code": "Reference"
+            "code": "CodeableConcept"
           }
         ],
-        "isSummary": true,
         "mapping": [
           {
-            "identity": "workflow",
-            "map": "…code"
-          },
-          {
             "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed\r\rMedication.code.coding.code = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCode\r\rMedication.code.coding.system = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCodeQualifier\r\rMedication.code.coding.display = Message/Body/NewRx/MedicationPrescribed/DrugDescription"
+            "map": "coding.code = //element(*,MedicationType)/DrugCoded/ProductCode\r\rcoding.system = //element(*,MedicationType)/DrugCoded/ProductCodeQualifier\r\rcoding.display = //element(*,MedicationType)/DrugDescription"
           },
           {
             "identity": "v2",
-            "map": "RXE-2-Give Code / RXO-1-Requested Give Code / RXC-2-Component Code"
+            "map": "RXC-2-Component Code  if medication: RXO-1-Requested Give Code / RXE-2-Give Code / RXD-2-Dispense/Give Code / RXG-4-Give Code / RXA-5-Administered Code"
           },
           {
             "identity": "rim",
-            "map": "consumable.administrableMedication"
-          },
-          {
-            "identity": "w5",
-            "map": "what"
+            "map": ".player"
           }
         ]
       },
       {
-        "id": "MedicationRequest.subject",
-        "path": "MedicationRequest.subject",
-        "short": "Who or group medication request is for",
-        "definition": "A link to a resource representing the person or set of individuals to whom the medication will be given.",
-        "comment": "The subject on a medication request is mandatory.  For the secondary use case where the actual subject is not provided, there still must be an anonymized subject specified.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.subject",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Patient"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Group"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…subject"
-          },
-          {
-            "identity": "script10.6",
-            "map": "Message/Body/NewRx/Patient\r\r(need detail to link to specific patient … Patient.Identification in SCRIPT)"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-3-Patient ID List"
-          },
-          {
-            "identity": "rim",
-            "map": ".participation[typeCode=AUT].role"
-          },
-          {
-            "identity": "w5",
-            "map": "who.focus"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.context",
-        "path": "MedicationRequest.context",
-        "short": "Created during encounter/admission/stay",
-        "definition": "A link to an encounter, or episode of care, that identifies the particular occurrence or set occurrences of contact between patient and health care provider.",
-        "comment": "SubstanceAdministration->component->EncounterEvent.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.context",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Encounter"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…context"
-          },
-          {
-            "identity": "script10.6",
-            "map": "no mapping"
-          },
-          {
-            "identity": "v2",
-            "map": "PV1-19-Visit Number"
-          },
-          {
-            "identity": "rim",
-            "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN, code=\"type of encounter or episode\"]"
-          },
-          {
-            "identity": "w5",
-            "map": "context"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.supportingInformation",
-        "path": "MedicationRequest.supportingInformation",
-        "short": "Information to support ordering of the medication",
-        "definition": "Include additional information (for example, patient height and weight) that supports the ordering of the medication.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "MedicationRequest.supportingInformation",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Resource"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".outboundRelationship[typeCode=PERT].target[A_SupportingClinicalStatement CMET minimal with many different choices of classCodes(ORG, ENC, PROC, SPLY, SBADM, OBS) and each of the act class codes draws from one or more of the following moodCodes (EVN, DEF, INT PRMS, RQO, PRP, APT, ARQ, GOL)]"
-          },
-          {
-            "identity": "w5",
-            "map": "context"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.authoredOn",
-        "path": "MedicationRequest.authoredOn",
-        "short": "When request was initially authored",
-        "definition": "The date (and perhaps time) when the prescription was initially written or authored on.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.authoredOn",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…authoredOn"
-          },
-          {
-            "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed/WrittenDate"
-          },
-          {
-            "identity": "v2",
-            "map": "RXE-32-Original Order Date/Time / ORC-9-Date/Time of Transaction"
-          },
-          {
-            "identity": "rim",
-            "map": "author.time"
-          },
-          {
-            "identity": "w5",
-            "map": "when.recorded"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.requester",
-        "path": "MedicationRequest.requester",
-        "short": "Who/What requested the Request",
-        "definition": "The individual, organization or device that initiated the request and has responsibility for its activation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.requester",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() | (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "mps-1",
-            "severity": "error",
-            "human": "onBehalfOf can only be specified if agent is practitioner or device",
-            "expression": "(agent.resolve().empty()) or (agent.resolve() is Device) or (agent.resolve() is Practitioner) or onBehalfOf.exists().not()",
-            "xpath": "contains(f:agent/f:reference/@value, '/Practitioner/') or contains(f:agent/f:reference/@value, '/Device/') or not(exists(f:onBehalfOf))"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…requester"
-          },
-          {
-            "identity": "rim",
-            "map": ".participation[typeCode=AUT].role"
-          },
-          {
-            "identity": "w5",
-            "map": "who.author"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.requester.id",
-        "path": "MedicationRequest.requester.id",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.id",
+        "path": "Medication.ingredient.item[x].id",
         "representation": [
           "xmlAttr"
         ],
@@ -1045,8 +821,18 @@
         ]
       },
       {
-        "id": "MedicationRequest.requester.extension",
-        "path": "MedicationRequest.requester.extension",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.extension",
+        "path": "Medication.ingredient.item[x].extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -1074,8 +860,247 @@
         ]
       },
       {
-        "id": "MedicationRequest.requester.modifierExtension",
-        "path": "MedicationRequest.requester.modifierExtension",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding",
+        "path": "Medication.ingredient.item[x].coding",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
+        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1-8, C*E.10-22"
+          },
+          {
+            "identity": "rim",
+            "map": "union(., ./translation)"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Medication.ingredient.item[x].text",
+        "label": "ADDITIVE",
+        "short": "Plain text representation of the concept",
+        "definition": "The additive selected as part of the IV order.  This entry is a pointer  to the ADDITIVES file (52.6).",
+        "comment": "Very often the text is the same as a displayName of one of the codings.",
+        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.9. But note many systems use C*E.2 for this"
+          },
+          {
+            "identity": "rim",
+            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @ADDITIVE 53.157-.01b"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.isActive",
+        "path": "Medication.ingredient.isActive",
+        "short": "Active ingredient indicator",
+        "definition": "Indication of whether this ingredient affects the therapeutic action of the drug.",
+        "requirements": "True indicates that the ingredient affects the therapeutic action of the drug (i.e. active). \rFalse indicates that the ingredient does not affect the therapeutic action of the drug (i.e. inactive).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Medication.ingredient.isActive",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "NA"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.amount",
+        "path": "Medication.ingredient.amount",
+        "label": "STRENGTH",
+        "short": "strength",
+        "definition": "\"STRENGTH\" is the amount of an additive to be used in the manufacturing of the IV order. NOTE! You will be expected to use the strength units that were previously defined within the IV ADDITIVE file (52.6) for each\r\nadditive. For example, if the DRUG UNITS field of the IV ADDITIVES file specifies the units for ampicillin to be in grams, it would be incorrect to enter 500 for a half-gram dose. Enter 0.5 instead.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Medication.ingredient.amount",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Ratio"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "script10.6",
+            "map": "//element(*,DrugCodedType)/Strength"
+          },
+          {
+            "identity": "v2",
+            "map": "RXC-3-Component Amount & RXC-4-Component Units  if medication: RXO-2-Requested Give Amount - Minimum & RXO-4-Requested Give Units / RXO-3-Requested Give Amount - Maximum & RXO-4-Requested Give Units / RXO-11-Requested Dispense Amount & RXO-12-Requested Dispense Units / RXE-3-Give Amount - Minimum & RXE-5-Give Units / RXE-4-Give Amount - Maximum & RXE-5-Give Units / RXE-10-Dispense Amount & RXE-10-Dispense Units"
+          },
+          {
+            "identity": "rim",
+            "map": ".quantity"
+          },
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @STRENGTH 53.157-1"
+          }
+        ]
+      },
+      {
+        "id": "Medication.package",
+        "path": "Medication.package",
+        "short": "Details about packaged medications",
+        "definition": "Information that only applies to packages (not products).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Medication.package",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() | (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "script10.6",
+            "map": "no mapping"
+          },
+          {
+            "identity": "rim",
+            "map": ".player[classCode=CONT]"
+          }
+        ]
+      },
+      {
+        "id": "Medication.package.id",
+        "path": "Medication.package.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Medication.package.extension",
+        "path": "Medication.package.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Medication.package.modifierExtension",
+        "path": "Medication.package.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -1106,135 +1131,16 @@
         ]
       },
       {
-        "id": "MedicationRequest.requester.agent",
-        "path": "MedicationRequest.requester.agent",
-        "short": "Who ordered the initial medication(s)",
-        "definition": "The healthcare professional responsible for authorizing the initial prescription.",
-        "comment": "It is expected that the type of requester will be restricted for different stages of a MedicationRequest.  For example, Proposals can be created by a patient, relatedPerson, Practitioner or Device.  Plans can be created by Practitioners, Patients, RelatedPersons and Devices.  Original orders can be created by a Practitioner only.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.requester.agent",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Practitioner"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Patient"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Device"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "….agent"
-          },
-          {
-            "identity": "script10.6",
-            "map": "Message/Body/NewRx/Prescriber\r\r(need detail to link to specific prescriber … Prescriber.Identification in SCRIPT)"
-          },
-          {
-            "identity": "v2",
-            "map": "RXE-13-Ordering Provider's DEA Number / RXO-14-Ordering Provider's DEA Number / RXE-14-Pharmacist/Treatment Supplier's Verifier ID / RXO-15-Pharmacist/Treatment Supplier's Verifier ID / ORC-12-Ordering Provider / PRT-5-Participation Person: PRT-4-Participation='OP' (all but last deprecated)"
-          },
-          {
-            "identity": "rim",
-            "map": ".player"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.requester.onBehalfOf",
-        "path": "MedicationRequest.requester.onBehalfOf",
-        "short": "Organization agent is acting for",
-        "definition": "The organization the device or practitioner was acting on behalf of.",
-        "requirements": "Practitioners and Devices can be associated with multiple organizations. This element indicates which organization they were acting on behalf of when authoring the request.",
+        "id": "Medication.package.container",
+        "path": "Medication.package.container",
+        "short": "E.g. box, vial, blister-pack",
+        "definition": "The kind of container that this package comes as.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "MedicationRequest.requester.onBehalfOf",
+          "path": "Medication.package.container",
           "min": 0,
           "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
-          }
-        ],
-        "condition": [
-          "mps-1"
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "….onBehalfOf"
-          },
-          {
-            "identity": "rim",
-            "map": ".scoper"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.recorder",
-        "path": "MedicationRequest.recorder",
-        "short": "Person who entered the request",
-        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.recorder",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Practitioner"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".participation[typeCode=TRANS].role[classCode=ASSIGNED].code (HealthcareProviderType)"
-          },
-          {
-            "identity": "w5",
-            "map": "who"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.reasonCode",
-        "path": "MedicationRequest.reasonCode",
-        "short": "Reason or indication for writing the prescription",
-        "definition": "The reason or the indication for ordering the medication.",
-        "comment": "This could be a diagnosis code. If a full condition record exists or additional detail is needed, use reasonReference.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "MedicationRequest.reasonCode",
-          "min": 0,
-          "max": "*"
         },
         "type": [
           {
@@ -1245,152 +1151,37 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationRequestReason"
+              "valueString": "MedicationContainer"
             }
           ],
           "strength": "example",
-          "description": "A coded concept indicating why the medication was ordered.",
+          "description": "A coded concept defining the kind of container a medication package is packaged in",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/condition-code"
+            "reference": "http://hl7.org/fhir/ValueSet/medication-package-form"
           }
         },
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…reasonCode"
-          },
-          {
-            "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed/Diagnosis/Primary/Value"
-          },
-          {
-            "identity": "v2",
-            "map": "ORC-16-Order Control Code Reason /RXE-27-Give Indication/RXO-20-Indication / RXD-21-Indication / RXG-22-Indication / RXA-19-Indication"
-          },
-          {
-            "identity": "rim",
-            "map": "reason.observation.reasonCode"
-          },
-          {
-            "identity": "w5",
-            "map": "why"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.reasonReference",
-        "path": "MedicationRequest.reasonReference",
-        "short": "Condition or Observation that supports why the prescription is being written",
-        "definition": "Condition or observation that supports why the medication was ordered.",
-        "comment": "This is a reference to a condition or observation that is the reason for the medication order.  If only a code exists, use reasonCode.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "MedicationRequest.reasonReference",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Condition"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Observation"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…reasonReference"
-          },
           {
             "identity": "script10.6",
             "map": "no mapping"
           },
           {
             "identity": "rim",
-            "map": "reason.observation[code=ASSERTION].value"
-          },
-          {
-            "identity": "w5",
-            "map": "why"
+            "map": ".code"
           }
         ]
       },
       {
-        "id": "MedicationRequest.note",
-        "path": "MedicationRequest.note",
-        "short": "Information about the prescription",
-        "definition": "Extra information about the prescription that could not be conveyed by the other attributes.",
+        "id": "Medication.package.content",
+        "path": "Medication.package.content",
+        "short": "What is  in the package",
+        "definition": "A set of components that go to make up the described item.",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "MedicationRequest.note",
+          "path": "Medication.package.content",
           "min": 0,
           "max": "*"
-        },
-        "type": [
-          {
-            "code": "Annotation"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…note"
-          },
-          {
-            "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed/Note"
-          },
-          {
-            "identity": "rim",
-            "map": ".inboundRelationship[typeCode=SUBJ]/source[classCode=OBS,moodCode=EVN,code=\"annotation\"].value"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.dosageInstruction",
-        "path": "MedicationRequest.dosageInstruction",
-        "short": "How the medication should be taken",
-        "definition": "Indicates how the medication is to be used by the patient.",
-        "comment": "There are examples where a medication request may include the option of an oral dose or an Intravenous or Intramuscular dose.  For example, \"Ondansetron 8mg orally or IV twice a day as needed for nausea\" or \"Compazine® (prochlorperazine) 5-10mg PO or 25mg PR bid prn nausea or vomiting\".  In these cases, two medication requests would be created that could be grouped together.  The decision on which dose and route of administration to use is based on the patient's condition at the time the dose is needed.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "MedicationRequest.dosageInstruction",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Dosage"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…occurrence[x]"
-          },
-          {
-            "identity": "rim",
-            "map": "see dosageInstruction mapping"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.dispenseRequest",
-        "path": "MedicationRequest.dispenseRequest",
-        "short": "Medication supply authorization",
-        "definition": "Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.dispenseRequest",
-          "min": 0,
-          "max": "1"
         },
         "type": [
           {
@@ -1410,17 +1201,17 @@
         "mapping": [
           {
             "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed/ExpirationDate"
+            "map": "no mapping"
           },
           {
             "identity": "rim",
-            "map": "component.supplyEvent"
+            "map": ".scopesRole[typeCode=CONT]"
           }
         ]
       },
       {
-        "id": "MedicationRequest.dispenseRequest.id",
-        "path": "MedicationRequest.dispenseRequest.id",
+        "id": "Medication.package.content.id",
+        "path": "Medication.package.content.id",
         "representation": [
           "xmlAttr"
         ],
@@ -1446,8 +1237,8 @@
         ]
       },
       {
-        "id": "MedicationRequest.dispenseRequest.extension",
-        "path": "MedicationRequest.dispenseRequest.extension",
+        "id": "Medication.package.content.extension",
+        "path": "Medication.package.content.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -1475,8 +1266,8 @@
         ]
       },
       {
-        "id": "MedicationRequest.dispenseRequest.modifierExtension",
-        "path": "MedicationRequest.dispenseRequest.modifierExtension",
+        "id": "Medication.package.content.modifierExtension",
+        "path": "Medication.package.content.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -1507,77 +1298,46 @@
         ]
       },
       {
-        "id": "MedicationRequest.dispenseRequest.validityPeriod",
-        "path": "MedicationRequest.dispenseRequest.validityPeriod",
-        "short": "Time period supply is authorized for",
-        "definition": "This indicates the validity period of a prescription (stale dating the Prescription).",
-        "comment": "It reflects the prescribers' perspective for the validity of the prescription. Dispenses must not be made against the prescription outside of this period. The lower-bound of the Dispensing Window signifies the earliest date that the prescription can be filled for the first time. If an upper-bound is not specified then the Prescription is open-ended or will default to a stale-date based on regulations.",
-        "requirements": "Indicates when the Prescription becomes valid, and when it ceases to be a dispensable Prescription.",
-        "min": 0,
+        "id": "Medication.package.content.item[x]",
+        "path": "Medication.package.content.item[x]",
+        "short": "The item in the package",
+        "definition": "Identifies one of the items in the package.",
+        "min": 1,
         "max": "1",
         "base": {
-          "path": "MedicationRequest.dispenseRequest.validityPeriod",
-          "min": 0,
+          "path": "Medication.package.content.item[x]",
+          "min": 1,
           "max": "1"
         },
         "type": [
           {
-            "code": "Period"
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Medication"
           }
         ],
         "mapping": [
           {
             "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed/Refills"
+            "map": "no mapping"
           },
           {
             "identity": "rim",
-            "map": "effectiveTime"
+            "map": ".player"
           }
         ]
       },
       {
-        "id": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-        "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-        "short": "Number of refills authorized",
-        "definition": "An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus \"3 repeats\", then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
-        "comment": "If displaying \"number of authorized fills\", add 1 to this number.",
+        "id": "Medication.package.content.amount",
+        "path": "Medication.package.content.amount",
+        "short": "Quantity present in the package",
+        "definition": "The amount of the product that is in the package.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "positiveInt"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed/Quantity"
-          },
-          {
-            "identity": "v2",
-            "map": "RXE-12-Number of Refills"
-          },
-          {
-            "identity": "rim",
-            "map": "repeatNumber"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.dispenseRequest.quantity",
-        "path": "MedicationRequest.dispenseRequest.quantity",
-        "short": "Amount of medication to supply per dispense",
-        "definition": "The amount that is to be dispensed for one fill.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.dispenseRequest.quantity",
+          "path": "Medication.package.content.amount",
           "min": 0,
           "max": "1"
         },
@@ -1590,87 +1350,25 @@
         "mapping": [
           {
             "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed/DaysSupply"
-          },
-          {
-            "identity": "v2",
-            "map": "RXD-4-Actual Dispense Amount / RXD-5.1-Actual Dispense Units.code / RXD-5.3-Actual Dispense Units.name of coding system"
+            "map": "no mapping"
           },
           {
             "identity": "rim",
-            "map": "quantity"
+            "map": ".quantity"
           }
         ]
       },
       {
-        "id": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
-        "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
-        "short": "Number of days supply per dispense",
-        "definition": "Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last.",
-        "comment": "In some situations, this attribute may be used instead of quantity to identify the amount supplied by how long it is expected to last, rather than the physical quantity issued, e.g. 90 days supply of medication (based on an ordered dosage) When possible, it is always better to specify quantity, as this tends to be more precise. expectedSupplyDuration will always be an estimate that can be influenced by external factors.",
+        "id": "Medication.package.batch",
+        "path": "Medication.package.batch",
+        "short": "Identifies a single production run",
+        "definition": "Information about a group of medication produced or packaged from one production run.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
-          "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+          "path": "Medication.package.batch",
           "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Duration"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "script10.6",
-            "map": "Message/Body/NewRx/MedicationPrescribed/Substitutions"
-          },
-          {
-            "identity": "rim",
-            "map": "expectedUseTime"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.dispenseRequest.performer",
-        "path": "MedicationRequest.dispenseRequest.performer",
-        "short": "Intended dispenser",
-        "definition": "Indicates the intended dispensing Organization specified by the prescriber.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.dispenseRequest.performer",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".outboundRelationship[typeCode=COMP].target[classCode=SPLY, moodCode=RQO] .participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]"
-          },
-          {
-            "identity": "w5",
-            "map": "who"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.substitution",
-        "path": "MedicationRequest.substitution",
-        "short": "Any restrictions on medication substitution",
-        "definition": "Indicates whether or not substitution can or should be part of the dispense. In some cases substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.substitution",
-          "min": 0,
-          "max": "1"
+          "max": "*"
         },
         "type": [
           {
@@ -1690,17 +1388,17 @@
         "mapping": [
           {
             "identity": "script10.6",
-            "map": "specific values within Message/Body/NewRx/MedicationPrescribed/Substitutions"
+            "map": "no mapping"
           },
           {
             "identity": "rim",
-            "map": "subjectOf.substitutionPersmission"
+            "map": "participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].id"
           }
         ]
       },
       {
-        "id": "MedicationRequest.substitution.id",
-        "path": "MedicationRequest.substitution.id",
+        "id": "Medication.package.batch.id",
+        "path": "Medication.package.batch.id",
         "representation": [
           "xmlAttr"
         ],
@@ -1726,8 +1424,8 @@
         ]
       },
       {
-        "id": "MedicationRequest.substitution.extension",
-        "path": "MedicationRequest.substitution.extension",
+        "id": "Medication.package.batch.extension",
+        "path": "Medication.package.batch.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -1755,8 +1453,8 @@
         ]
       },
       {
-        "id": "MedicationRequest.substitution.modifierExtension",
-        "path": "MedicationRequest.substitution.modifierExtension",
+        "id": "Medication.package.batch.modifierExtension",
+        "path": "Medication.package.batch.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -1787,174 +1485,91 @@
         ]
       },
       {
-        "id": "MedicationRequest.substitution.allowed",
-        "path": "MedicationRequest.substitution.allowed",
-        "short": "Whether substitution is allowed or not",
-        "definition": "True if the prescriber allows a different drug to be dispensed from what was prescribed.",
-        "comment": "This element is labeled as a modifer because whether substitution is allow or not cannot be ignored.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "MedicationRequest.substitution.allowed",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "isModifier": true,
-        "mapping": [
-          {
-            "identity": "script10.6",
-            "map": "specific values within Message/Body/NewRx/MedicationPrescribed/Substitutions"
-          },
-          {
-            "identity": "v2",
-            "map": "RXO-9-Allow Substitutions / RXE-9-Substitution Status"
-          },
-          {
-            "identity": "rim",
-            "map": "code"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.substitution.reason",
-        "path": "MedicationRequest.substitution.reason",
-        "short": "Why should (not) substitution be made",
-        "definition": "Indicates the reason for the substitution, or why substitution must or must not be performed.",
+        "id": "Medication.package.batch.lotNumber",
+        "path": "Medication.package.batch.lotNumber",
+        "short": "Identifier assigned to batch",
+        "definition": "The assigned lot number of a batch of the specified product.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "MedicationRequest.substitution.reason",
+          "path": "Medication.package.batch.lotNumber",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "string"
           }
         ],
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationIntendedSubstitutionReason"
-            }
-          ],
-          "strength": "example",
-          "description": "A coded concept describing the reason that a different medication should (or should not) be substituted from what was prescribed.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/v3-SubstanceAdminSubstitutionReason"
-          }
-        },
         "mapping": [
           {
             "identity": "script10.6",
-            "map": "not mapped"
+            "map": "no mapping"
           },
           {
             "identity": "v2",
-            "map": "RXE-9 Substition status"
+            "map": "RXA-15 Substance Lot Number / RXG-19 Substance Lot Number"
           },
           {
             "identity": "rim",
-            "map": "reasonCode"
+            "map": ".id"
           }
         ]
       },
       {
-        "id": "MedicationRequest.priorPrescription",
-        "path": "MedicationRequest.priorPrescription",
-        "short": "An order/prescription that is being replaced",
-        "definition": "A link to a resource representing an earlier order related order or prescription.",
+        "id": "Medication.package.batch.expirationDate",
+        "path": "Medication.package.batch.expirationDate",
+        "short": "When batch will expire",
+        "definition": "When this specific batch of product will expire.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "MedicationRequest.priorPrescription",
+          "path": "Medication.package.batch.expirationDate",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+            "code": "dateTime"
           }
         ],
         "mapping": [
           {
-            "identity": "workflow",
-            "map": "…replaces"
+            "identity": "script10.6",
+            "map": "no mapping"
           },
           {
-            "identity": "script10.6",
-            "map": "not mapped"
+            "identity": "v2",
+            "map": "RXA-16 Substance Expiration Date / RXG-20 Substance Expiration Date"
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode=?RPLC or ?SUCC]/target[classCode=SBADM,moodCode=RQO]"
+            "map": "participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].expirationTime"
           }
         ]
       },
       {
-        "id": "MedicationRequest.detectedIssue",
-        "path": "MedicationRequest.detectedIssue",
-        "short": "Clinical Issue with action",
-        "definition": "Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, duplicate therapy, dosage alert etc.",
-        "alias": [
-          "Contraindication",
-          "Drug Utilization Review (DUR)",
-          "Alert"
-        ],
+        "id": "Medication.image",
+        "path": "Medication.image",
+        "short": "Picture of the medication",
+        "definition": "Photo(s) or graphic representation(s) of the medication.",
+        "requirements": "Note that \"image\" is only applicable when the medication.code represents a physical item (e.g. Amoxil 250 mg capsule) and not an abstract item (e.g. amoxicillin 250 mg).",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "MedicationRequest.detectedIssue",
+          "path": "Medication.image",
           "min": 0,
           "max": "*"
         },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/DetectedIssue"
+            "code": "Attachment"
           }
         ],
         "mapping": [
           {
             "identity": "rim",
-            "map": ".inboundRelationship[typeCode=SUBJ]/source[classCode=ALRT,moodCode=EVN].value"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.eventHistory",
-        "path": "MedicationRequest.eventHistory",
-        "short": "A list of events of interest in the lifecycle",
-        "definition": "Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource.",
-        "comment": "This may not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the Provenance associated with this current version of the resource. (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update. Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.).",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "MedicationRequest.eventHistory",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Provenance"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "…relevantHistory"
-          },
-          {
-            "identity": "rim",
-            "map": ".inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]"
+            "map": ".participation[typeCode=SUBJ].role[classCode=MANU],source[classCode=OBS,moodCode=EVN,code=\"type of image\"].value(ED.image)"
           }
         ]
       }
@@ -1963,15 +1578,42 @@
   "differential": {
     "element": [
       {
-        "id": "MedicationRequest",
-        "path": "MedicationRequest"
+        "id": "Medication",
+        "path": "Medication"
       },
       {
-        "id": "MedicationRequest.medicationReference",
-        "path": "MedicationRequest.medicationReference",
+        "id": "Medication.ingredient.itemCodeableConcept",
+        "path": "Medication.ingredient.itemCodeableConcept",
         "type": [
           {
-            "code": "Reference"
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.text",
+        "path": "Medication.ingredient.itemCodeableConcept.text",
+        "label": "ADDITIVE",
+        "definition": "The additive selected as part of the IV order.  This entry is a pointer  to the ADDITIVES file (52.6).",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @ADDITIVE 53.157-.01b"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.amount",
+        "path": "Medication.ingredient.amount",
+        "label": "STRENGTH",
+        "short": "strength",
+        "definition": "\"STRENGTH\" is the amount of an additive to be used in the manufacturing of the IV order. NOTE! You will be expected to use the strength units that were previously defined within the IV ADDITIVE file (52.6) for each\r\nadditive. For example, if the DRUG UNITS field of the IV ADDITIVES file specifies the units for ampicillin to be in grams, it would be incorrect to enter 500 for a half-gram dose. Enter 0.5 instead.",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "vista",
+            "map": "NON-VERIFIED ORDERS @STRENGTH 53.157-1"
           }
         ]
       }

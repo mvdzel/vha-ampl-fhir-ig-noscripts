@@ -85,15 +85,15 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Last Discharge date/time","Enter in this field the date/time of the movement (admission, transfer, discharge, treating specialty transfer, lodger check-in, or lodger check- out).  Time must be included.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","patient Movement  @lastest  transaction date/time for transaction type=3 405-.01b","n/a","N/A"
-"Patient.extension","emergencyResponseCohort","","Emergency Response Indicator",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/emergencyResponseCohort]]} {[]}
+"Patient.extension","patient-emergencyResponseCohort","","Emergency Response Indicator",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-emergencyResponseCohort]]} {[]}
 ","Emergency Response Indicator","Enter the appropriate ER Indicator to identify patients from impacted zip code areas designated by FEMA.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Patient File @Emergency Response Indicator  2-.181","n/a","N/A"
-"Patient.extension","defaultPrescriptionStatus","","PATIENT STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/defaultPrescriptionStatus]]} {[]}
+"Patient.extension","patient-defaultPrescriptionStatus","","PATIENT STATUS",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-defaultPrescriptionStatus]]} {[]}
 ","Rx Patient status","This field is used to indicate a default patient status.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Patient File @PATIENT STATUS 55-3","n/a","N/A"
-"Patient.extension","selfIdentifiedGender","","SELF IDENTIFIED GENDER",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/selfIdentifiedGender]]} {[]}
+"Patient.extension","patient-genderIdentity","","SELF IDENTIFIED GENDER",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-genderIdentity]]} {[]}
 ","Optional Extensions Element","This SELF IDENTIFIED GENDER value indicates the patient's view of their gender identity, if they choose to provide it.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PATIENT @SELF IDENTIFIED GENDER 2-.024","n/a","N/A"

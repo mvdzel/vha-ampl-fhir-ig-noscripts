@@ -97,8 +97,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "Provenance.agent.who[x]","","","",1,1,"","","Y","Reference {[]} {[]}
 ","Who participated","The individual, device or organization that participated in the event.","","","","","","","","","",,,,,"","type:$this}
 ","",,"closed","Provenance.agent.who[x]",1,1,"","",".id","who.actor"
-"Provenance.agent.who[x]","whoReference","","",1,1,"","","Y","Reference {[]} {[]}
-","Who participated","The individual, device or organization that participated in the event.","","","","","","","","","",,,,,"",,,,"Provenance.agent.who[x]",1,1,"","",".id","who.actor"
+"Provenance.agent.who[x]","whoReference","","NAME",1,1,"Y","","Y","Reference {[]} {[]}
+","Who participated","This is the facility at which this problem was originally observed and documented.","","","","","","","","","",,,,,"",,,,"Provenance.agent.who[x]",1,1,"","","INSTITUTION @NAME 9999999.06-.01:4-.01",".id","who.actor"
 "Provenance.agent.who[x].id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Provenance.agent.who[x].extension","","extensions

@@ -10,13 +10,13 @@
   fhir:Resource.id [ fhir:value "AppointmentStatus"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AppointmentStatus (http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus)</h2><p>Mapping from (not specified) to (not specified)</p><p>DRAFT. Published on May 2, 2021 8:44:32 AM by JPSys (). </p><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>N</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>noshow</td><td>NO-SHOW</td></tr><tr><td>C</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY CLINC</td></tr><tr><td>NA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>noshow</td><td>NO-SHOW &amp; AUTO RE-BOOK</td></tr><tr><td>CA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY CLINIC &amp; AUTO RE-BOOK</td></tr><tr><td>PC</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY PATIENT</td></tr><tr><td>PCA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY PATIENT &amp; AUTO-REBOOK</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AppointmentStatus (http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus)</h2><p>Mapping from (not specified) to (not specified)</p><p>DRAFT. Published on May 17, 2021, 3:52:07 PM by JPSys (). </p><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>N</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>noshow</td><td>NO-SHOW</td></tr><tr><td>C</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY CLINC</td></tr><tr><td>NA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>noshow</td><td>NO-SHOW &amp; AUTO RE-BOOK</td></tr><tr><td>CA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY CLINIC &amp; AUTO RE-BOOK</td></tr><tr><td>PC</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY PATIENT</td></tr><tr><td>PCA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#wider\">maps to wider concept</a></td><td>cancelled</td><td>CANCELLED BY PATIENT &amp; AUTO-REBOOK</td></tr></table></div>"
   ];
   fhir:ConceptMap.url [ fhir:value "http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/AppointmentStatus"];
-  fhir:ConceptMap.version [ fhir:value "0.0.70"];
+  fhir:ConceptMap.version [ fhir:value "0.0.74"];
   fhir:ConceptMap.name [ fhir:value "AppointmentStatus"];
   fhir:ConceptMap.status [ fhir:value "draft"];
-  fhir:ConceptMap.date [ fhir:value "2021-05-02T08:44:32.765Z"^^xsd:dateTime];
+  fhir:ConceptMap.date [ fhir:value "2021-05-17T15:52:07.695Z"^^xsd:dateTime];
   fhir:ConceptMap.publisher [ fhir:value "JPSys"];
   fhir:ConceptMap.contact [
      fhir:index 0;
@@ -36,8 +36,7 @@
   ];
   fhir:ConceptMap.group [
      fhir:index 0;
-     fhir:ConceptMap.group.source [ fhir:value "http://va.gov/Terminology/VistaDefinedTerms/2.98-3" ];
-     fhir:ConceptMap.group.target [ fhir:value "http://hl7.org/fhir/appointmentstatus" ];
+     fhir:ConceptMap.group.source [ fhir:value "http://hl7.org/fhir/appointmentstatus" ];
      fhir:ConceptMap.group.element [
        fhir:index 0;
        fhir:ConceptMap.group.element.code [ fhir:value "N" ];

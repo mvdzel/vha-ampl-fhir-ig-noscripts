@@ -6,11 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>vha-ampl-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
   },
   "url": "http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig",
-  "version": "0.0.70",
+  "version": "0.0.74",
   "name": "vha-ampl-ig",
   "status": "draft",
   "experimental": false,
-  "date": "2021-05-02T08:47:56+00:00",
+  "date": "2021-05-17T15:55:30+00:00",
   "publisher": "JPSys",
   "contact": [
     {
@@ -813,6 +813,19 @@
           "sourceReference": {
             "reference": "StructureDefinition/immunization-orderingFacility.identifier"
           }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAImmunizationReaction",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAImmunizationReaction"
+          }
         }
       ]
     },
@@ -855,10 +868,10 @@
             }
           ],
           "example": false,
-          "name": "selfIdentifiedGender",
+          "name": "patient-genderIdentity",
           "description": "This SELF IDENTIFIED GENDER value indicates the patient's view of their gender identity, if they choose to provide it.",
           "sourceReference": {
-            "reference": "StructureDefinition/selfIdentifiedGender"
+            "reference": "StructureDefinition/patient-genderIdentity"
           }
         },
         {
@@ -869,10 +882,10 @@
             }
           ],
           "example": false,
-          "name": "defaultPrescriptionStatus",
+          "name": "patient-defaultPrescriptionStatus",
           "description": "This field is used to indicate a default patient status.",
           "sourceReference": {
-            "reference": "StructureDefinition/defaultPrescriptionStatus"
+            "reference": "StructureDefinition/patient-defaultPrescriptionStatus"
           }
         },
         {
@@ -987,10 +1000,10 @@
             }
           ],
           "example": false,
-          "name": "emergencyResponseCohort",
+          "name": "patient-emergencyResponseCohort",
           "description": "Enter the appropriate ER Indicator to identify patients from impacted zip code areas designated by FEMA.",
           "sourceReference": {
-            "reference": "StructureDefinition/emergencyResponseCohort"
+            "reference": "StructureDefinition/patient-emergencyResponseCohort"
           }
         }
       ]
@@ -1174,9 +1187,9 @@
             }
           ],
           "example": false,
-          "name": "VAServiceEpisode1",
+          "name": "VAVNServiceEpisode",
           "sourceReference": {
-            "reference": "StructureDefinition/VAServiceEpisode1"
+            "reference": "StructureDefinition/VAVNServiceEpisode"
           }
         },
         {
@@ -1187,9 +1200,9 @@
             }
           ],
           "example": false,
-          "name": "VAServiceEpisode2",
+          "name": "VALebServiceEpisode",
           "sourceReference": {
-            "reference": "StructureDefinition/VAServiceEpisode2"
+            "reference": "StructureDefinition/VALebServiceEpisode"
           }
         },
         {
@@ -1200,9 +1213,9 @@
             }
           ],
           "example": false,
-          "name": "VAServiceEpisode3",
+          "name": "VAGreServiceEpisode",
           "sourceReference": {
-            "reference": "StructureDefinition/VAServiceEpisode3"
+            "reference": "StructureDefinition/VAGreServiceEpisode"
           }
         },
         {
@@ -1213,9 +1226,9 @@
             }
           ],
           "example": false,
-          "name": "VAServiceEpisode4",
+          "name": "VAPanServiceEpisode",
           "sourceReference": {
-            "reference": "StructureDefinition/VAServiceEpisode4"
+            "reference": "StructureDefinition/VAPanServiceEpisode"
           }
         },
         {
@@ -1226,9 +1239,9 @@
             }
           ],
           "example": false,
-          "name": "VAServiceEpisode5",
+          "name": "VAPGServiceEpisode",
           "sourceReference": {
-            "reference": "StructureDefinition/VAServiceEpisode5"
+            "reference": "StructureDefinition/VAPGServiceEpisode"
           }
         },
         {
@@ -1239,9 +1252,9 @@
             }
           ],
           "example": false,
-          "name": "VAServiceEpisode6",
+          "name": "VASomServiceEpisode",
           "sourceReference": {
-            "reference": "StructureDefinition/VAServiceEpisode6"
+            "reference": "StructureDefinition/VASomServiceEpisode"
           }
         },
         {
@@ -1252,9 +1265,9 @@
             }
           ],
           "example": false,
-          "name": "VAServiceEpisode7",
+          "name": "VAYugServiceEpisode",
           "sourceReference": {
-            "reference": "StructureDefinition/VAServiceEpisode7"
+            "reference": "StructureDefinition/VAYugServiceEpisode"
           }
         },
         {
@@ -1265,9 +1278,9 @@
             }
           ],
           "example": false,
-          "name": "VARiskEpisodeProfile1",
+          "name": "VAAgentOrangeRiskProfile",
           "sourceReference": {
-            "reference": "StructureDefinition/VARiskEpisodeProfile1"
+            "reference": "StructureDefinition/VAAgentOrangeRiskProfile"
           }
         },
         {
@@ -1278,9 +1291,9 @@
             }
           ],
           "example": false,
-          "name": "VARiskEpisodeProfile2",
+          "name": "VARadiationRiskProfile",
           "sourceReference": {
-            "reference": "StructureDefinition/VARiskEpisodeProfile2"
+            "reference": "StructureDefinition/VARadiationRiskProfile"
           }
         },
         {
@@ -1291,9 +1304,9 @@
             }
           ],
           "example": false,
-          "name": "VARiskEpisodeProfile3",
+          "name": "VASWARiskProfile",
           "sourceReference": {
-            "reference": "StructureDefinition/VARiskEpisodeProfile3"
+            "reference": "StructureDefinition/VASWARiskProfile"
           }
         },
         {
@@ -1304,9 +1317,9 @@
             }
           ],
           "example": false,
-          "name": "VARiskEpisodeProfile4",
+          "name": "VANTRRiskProfile",
           "sourceReference": {
-            "reference": "StructureDefinition/VARiskEpisodeProfile4"
+            "reference": "StructureDefinition/VANTRRiskProfile"
           }
         },
         {
@@ -1317,9 +1330,9 @@
             }
           ],
           "example": false,
-          "name": "VARiskEpisodeProfile5",
+          "name": "VAPOWRiskProfile",
           "sourceReference": {
-            "reference": "StructureDefinition/VARiskEpisodeProfile5"
+            "reference": "StructureDefinition/VAPOWRiskProfile"
           }
         },
         {
@@ -1330,9 +1343,9 @@
             }
           ],
           "example": false,
-          "name": "VARiskEpisodeProfile6",
+          "name": "VACombatRiskProfile",
           "sourceReference": {
-            "reference": "StructureDefinition/VARiskEpisodeProfile6"
+            "reference": "StructureDefinition/VACombatRiskProfile"
           }
         },
         {
@@ -1356,10 +1369,10 @@
             }
           ],
           "example": false,
-          "name": "event-statusReason",
+          "name": "event-processState",
           "description": "This field cannot be edited locally.  If Current Purple Heart Indicator is set to 'Yes' by the local site, a Current Purple Heart Status of 'Pending' will be stuffed into the field.  Other editing or updating is done by the HEC.",
           "sourceReference": {
-            "reference": "StructureDefinition/event-statusReason"
+            "reference": "StructureDefinition/event-processState"
           }
         },
         {
@@ -1370,9 +1383,9 @@
             }
           ],
           "example": false,
-          "name": "VAEligibilityObservation1",
+          "name": "VACombatEligibilityObservation",
           "sourceReference": {
-            "reference": "StructureDefinition/VAEligibilityObservation1"
+            "reference": "StructureDefinition/VACombatEligibilityObservation"
           }
         },
         {
@@ -1383,9 +1396,9 @@
             }
           ],
           "example": false,
-          "name": "VAEligibilityObservation2",
+          "name": "VAMeansEligibilityObservation",
           "sourceReference": {
-            "reference": "StructureDefinition/VAEligibilityObservation2"
+            "reference": "StructureDefinition/VAMeansEligibilityObservation"
           }
         },
         {
@@ -1396,9 +1409,9 @@
             }
           ],
           "example": false,
-          "name": "VAEligibilityObservation3",
+          "name": "VACopayEligibilityObservation",
           "sourceReference": {
-            "reference": "StructureDefinition/VAEligibilityObservation3"
+            "reference": "StructureDefinition/VACopayEligibilityObservation"
           }
         },
         {
@@ -1409,9 +1422,9 @@
             }
           ],
           "example": false,
-          "name": "VAEligibilityObservation4",
+          "name": "VABaseEligibilityObservation",
           "sourceReference": {
-            "reference": "StructureDefinition/VAEligibilityObservation4"
+            "reference": "StructureDefinition/VABaseEligibilityObservation"
           }
         },
         {
@@ -1768,387 +1781,23 @@
       ]
     },
     {
-      "id": "group-29",
-      "name": "Coversheet Area: Problem List",
-      "resource": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAProblem",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAProblem"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-priority",
-          "description": "This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display.",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-priority"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-relationshipToAgentOrangeExposure",
-          "description": "If this problem is related to a patient's exposure to Agent Orange, it may be flagged here.",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-relationshipToAgentOrangeExposure"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-relationshipToRadiation",
-          "description": "If this problem is related to a patient's exposure to ionizing radiation, it may be flagged here.",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-relationshipToRadiation"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-relationshipToPersianGulfService",
-          "description": "If this problem is related to a patient's service in the Persian Gulf, it may be flagged here.",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-relationshipToPersianGulfService"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-relationshipToRadiumTreatment",
-          "description": "If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here.",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-relationshipToRadiumTreatment"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-relationshipToMilitarySexualTrauma",
-          "description": "If this problem is related to the treatment of military sexual trauma, it may be flagged here.",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-relationshipToMilitarySexualTrauma"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-relationshipToCombatExperience",
-          "description": "<blank>",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-relationshipToCombatExperience"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-responsibleProvider",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-responsibleProvider"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-treatingService",
-          "description": "This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting.",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-treatingService"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-treatingClinic",
-          "description": "This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one's view of the list.",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-treatingClinic"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAProblemAuthorship",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAProblemAuthorship"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-relationshipToShipboardHazardAndDefense",
-          "description": "<blank>",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-relationshipToShipboardHazardAndDefense"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "condition-lastModified",
-          "description": "This is the last date/time this problem was changed.",
-          "sourceReference": {
-            "reference": "StructureDefinition/condition-lastModified"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "richAnnotation.author",
-          "description": "This is the provider who authored the text of this note.",
-          "sourceReference": {
-            "reference": "StructureDefinition/richAnnotation.author"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "richAnnotation.text",
-          "description": "Additional comments may be entered here to further describe this problem.",
-          "sourceReference": {
-            "reference": "StructureDefinition/richAnnotation.text"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "richAnnotation.commentNumber",
-          "description": "This is the unique note identifier.",
-          "sourceReference": {
-            "reference": "StructureDefinition/richAnnotation.commentNumber"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "ProblemListChange",
-          "sourceReference": {
-            "reference": "StructureDefinition/ProblemListChange"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "reference-targetElement.extension.change.extension.newValue",
-          "description": "This is the new value now stored in the Problem file global (internal format).",
-          "sourceReference": {
-            "reference": "StructureDefinition/reference-targetElement.extension.change.extension.newValue"
-          }
-        }
-      ]
-    },
-    {
-      "id": "group-28",
-      "name": "Coversheet Area: Primary Care Management ",
-      "resource": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAPrimaryCareTeam",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAPrimaryCareTeam"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "participant-primaryCareRole",
-          "description": "This is used to indicate if patient - team position assigment is a  special one (e.g. primary care practitioner or primary care attending).",
-          "sourceReference": {
-            "reference": "StructureDefinition/participant-primaryCareRole"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "participant-roleStatus",
-          "description": "This indicates whether the practitioner's position assignment is active or inactive.",
-          "sourceReference": {
-            "reference": "StructureDefinition/participant-roleStatus"
-          }
-        }
-      ]
-    },
-    {
-      "id": "group-7",
-      "name": "Coversheet Area: Appointment Button",
-      "description": "This use case addresses upcoming appointments with locations and prior appointments with associated documents.",
-      "resource": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAAppointment",
-          "description": "An Appointment profiled to support VA requirements.",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAAppointment"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAAppointmentLocation",
-          "description": "A location associated with an appointment, providing service information.",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAAppointmentLocation"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAAppointmentPracitioner",
-          "description": "A practitioner associated with a location.",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAAppointmentPracitioner"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAAppointment-ext",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAAppointment-ext"
-          }
-        }
-      ]
-    },
-    {
       "id": "group-17",
       "name": "Coversheet Area: Inpatient Orders Unit Dose/Clinic Medications",
       "description": "Verified inpatient or clinic unit dose orders",
       "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAInpatientUDMedicationRequestRenewal",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAInpatientUDMedicationRequestRenewal"
+          }
+        },
         {
           "extension": [
             {
@@ -2292,6 +1941,19 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAInpatientUDMedicationRequestEncounter",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAInpatientUDMedicationRequestEncounter"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
               "valueString": "StructureDefinition:extension"
             }
           ],
@@ -2313,19 +1975,6 @@
           "name": "VAInpatientUDMedicationRequestChange",
           "sourceReference": {
             "reference": "StructureDefinition/VAInpatientUDMedicationRequestChange"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAInpatientUDMedicationRequestRenewal",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAInpatientUDMedicationRequestRenewal"
           }
         }
       ]
@@ -2411,20 +2060,6 @@
             }
           ],
           "example": false,
-          "name": "valueReference",
-          "description": "This field contains the pointer value for the person entered the IV order.",
-          "sourceReference": {
-            "reference": "StructureDefinition/valueReference"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
           "name": "medicationrequest-lastFillDate",
           "description": "Last time the prescription was filled.",
           "sourceReference": {
@@ -2498,6 +2133,61 @@
             }
           ],
           "example": false,
+          "name": "VAFinishedOutpatientMedicationPartial",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAFinishedOutpatientMedicationPartial"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationdispense-dispenseChannel",
+          "description": "This field tells whether the medication was picked up  or mailed to the patient.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationdispense-dispenseChannel"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAMedication",
+          "description": "Medication with support for VA requirements",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAMedication"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationdispense-fillRequestDate",
+          "description": "This is the date that the prescription was entered.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationdispense-fillRequestDate"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
           "name": "VAFinishedOutpatientMedicationRequest",
           "sourceReference": {
             "reference": "StructureDefinition/VAFinishedOutpatientMedicationRequest"
@@ -2553,20 +2243,6 @@
             }
           ],
           "example": false,
-          "name": "medicationdispense-dispenseChannel",
-          "description": "Indicates if the medication will be picked up or mailed  to the patient.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationdispense-dispenseChannel"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
           "name": "medicationrequest-orderIssueDate",
           "description": "Date when doctor wrote prescription.",
           "sourceReference": {
@@ -2585,20 +2261,6 @@
           "description": "The date the prescription was filled.",
           "sourceReference": {
             "reference": "StructureDefinition/medicationdispense-fillDate"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAMedication",
-          "description": "Medication with support for VA requirements",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAMedication"
           }
         },
         {
@@ -2940,33 +2602,6 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationdispense-fillRequestDate",
-          "description": "This is the date the refill request was entered.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationdispense-fillRequestDate"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAFinishedOutpatientMedicationPartial",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAFinishedOutpatientMedicationPartial"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
               "valueString": "StructureDefinition:resource"
             }
           ],
@@ -2989,6 +2624,411 @@
           "description": "Any additional comments.",
           "sourceReference": {
             "reference": "StructureDefinition/comment"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-29",
+      "name": "Coversheet Area: Problem List",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAProblem",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAProblem"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-priority",
+          "description": "This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-priority"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-relationshipToService",
+          "description": "If the patient has service connection on file in the DHCP Patient file #2, this problem specifically may be flagged as being service connected.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-relationshipToService"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-relationshipToAgentOrangeExposure",
+          "description": "If this problem is related to a patient's exposure to Agent Orange, it may be flagged here.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-relationshipToAgentOrangeExposure"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-relationshipToRadiation",
+          "description": "If this problem is related to a patient's exposure to ionizing radiation, it may be flagged here.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-relationshipToRadiation"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-relationshipToPersianGulfService",
+          "description": "If this problem is related to a patient's service in the Persian Gulf, it may be flagged here.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-relationshipToPersianGulfService"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-relationshipToRadiumTreatment",
+          "description": "If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-relationshipToRadiumTreatment"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-relationshipToMilitarySexualTrauma",
+          "description": "If this problem is related to the treatment of military sexual trauma, it may be flagged here.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-relationshipToMilitarySexualTrauma"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-relationshipToCombatExperience",
+          "description": "<blank>",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-relationshipToCombatExperience"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-responsibleProvider",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-responsibleProvider"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-treatingService",
+          "description": "This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-treatingService"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-treatingClinic",
+          "description": "This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one's view of the list.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-treatingClinic"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAProblemAuthorship",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAProblemAuthorship"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-relationshipToShipboardHazardAndDefense",
+          "description": "<blank>",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-relationshipToShipboardHazardAndDefense"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "condition-lastModified",
+          "description": "This is the last date/time this problem was changed.",
+          "sourceReference": {
+            "reference": "StructureDefinition/condition-lastModified"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "richAnnotation.author",
+          "description": "This is the provider who authored the text of this note.",
+          "sourceReference": {
+            "reference": "StructureDefinition/richAnnotation.author"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "richAnnotation.text",
+          "description": "Additional comments may be entered here to further describe this problem.",
+          "sourceReference": {
+            "reference": "StructureDefinition/richAnnotation.text"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "richAnnotation.commentNumber",
+          "description": "This is the unique note identifier.",
+          "sourceReference": {
+            "reference": "StructureDefinition/richAnnotation.commentNumber"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "ProblemListChange",
+          "sourceReference": {
+            "reference": "StructureDefinition/ProblemListChange"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "reference-targetElement.extension.change.extension.newValue",
+          "description": "This is the new value now stored in the Problem file global (internal format).",
+          "sourceReference": {
+            "reference": "StructureDefinition/reference-targetElement.extension.change.extension.newValue"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-28",
+      "name": "Coversheet Area: Primary Care Management ",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAPrimaryCareTeam",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAPrimaryCareTeam"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "valueReference",
+          "description": "This is the phone number associated with the team.",
+          "sourceReference": {
+            "reference": "StructureDefinition/valueReference"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "participant-primaryCareRole",
+          "description": "This is used to indicate if patient - team position assigment is a  special one (e.g. primary care practitioner or primary care attending).",
+          "sourceReference": {
+            "reference": "StructureDefinition/participant-primaryCareRole"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "participant-roleStatus",
+          "description": "This indicates whether the practitioner's position assignment is active or inactive.",
+          "sourceReference": {
+            "reference": "StructureDefinition/participant-roleStatus"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-7",
+      "name": "Coversheet Area: Appointment Button",
+      "description": "This use case addresses upcoming appointments with locations and prior appointments with associated documents.",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAAppointment",
+          "description": "An Appointment profiled to support VA requirements.",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAAppointment"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAAppointmentLocation",
+          "description": "A location associated with an appointment, providing service information.",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAAppointmentLocation"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAAppointmentPracitioner",
+          "description": "A practitioner associated with a location.",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAAppointmentPracitioner"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAAppointment-ext",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAAppointment-ext"
           }
         }
       ]
@@ -3386,6 +3426,32 @@
           "sourceReference": {
             "reference": "StructureDefinition/VAChemLabReportResult"
           }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "note.text",
+          "sourceReference": {
+            "reference": "StructureDefinition/note.text"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "note.authorString",
+          "sourceReference": {
+            "reference": "StructureDefinition/note.authorString"
+          }
         }
       ]
     },
@@ -3496,6 +3562,19 @@
           "name": "VASurgicalPathologyReport",
           "sourceReference": {
             "reference": "StructureDefinition/VASurgicalPathologyReport"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VASurgicalPathologyProcedureRequest",
+          "sourceReference": {
+            "reference": "StructureDefinition/VASurgicalPathologyProcedureRequest"
           }
         }
       ]

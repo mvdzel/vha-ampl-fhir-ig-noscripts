@@ -13,11 +13,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>vha-ampl-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig"];
-  fhir:ImplementationGuide.version [ fhir:value "0.0.70"];
+  fhir:ImplementationGuide.version [ fhir:value "0.0.74"];
   fhir:ImplementationGuide.name [ fhir:value "vha-ampl-ig"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:ImplementationGuide.date [ fhir:value "2021-05-02T08:47:56+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-05-17T15:55:30+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "JPSys"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -812,6 +812,19 @@
          fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/immunization-orderingFacility.identifier>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/immunization-orderingFacility.identifier" ]
        ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAImmunizationReaction" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAImmunizationReaction>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAImmunizationReaction" ]
+       ]
      ]
   ], [
      fhir:index 5;
@@ -852,11 +865,11 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "selfIdentifiedGender" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "patient-genderIdentity" ];
        fhir:ImplementationGuide.package.resource.description [ fhir:value "This SELF IDENTIFIED GENDER value indicates the patient's view of their gender identity, if they choose to provide it." ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/selfIdentifiedGender>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/selfIdentifiedGender" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-genderIdentity>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/patient-genderIdentity" ]
        ]
      ], [
        fhir:index 3;
@@ -866,11 +879,11 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "defaultPrescriptionStatus" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "patient-defaultPrescriptionStatus" ];
        fhir:ImplementationGuide.package.resource.description [ fhir:value "This field is used to indicate a default patient status." ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/defaultPrescriptionStatus>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/defaultPrescriptionStatus" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-defaultPrescriptionStatus>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/patient-defaultPrescriptionStatus" ]
        ]
      ], [
        fhir:index 4;
@@ -983,11 +996,11 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "emergencyResponseCohort" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "patient-emergencyResponseCohort" ];
        fhir:ImplementationGuide.package.resource.description [ fhir:value "Enter the appropriate ER Indicator to identify patients from impacted zip code areas designated by FEMA." ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/emergencyResponseCohort>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/emergencyResponseCohort" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-emergencyResponseCohort>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/patient-emergencyResponseCohort" ]
        ]
      ]
   ], [
@@ -1168,10 +1181,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAServiceEpisode1" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAVNServiceEpisode" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode1>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAServiceEpisode1" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAVNServiceEpisode>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAVNServiceEpisode" ]
        ]
      ], [
        fhir:index 5;
@@ -1181,10 +1194,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAServiceEpisode2" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VALebServiceEpisode" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode2>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAServiceEpisode2" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VALebServiceEpisode>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VALebServiceEpisode" ]
        ]
      ], [
        fhir:index 6;
@@ -1194,10 +1207,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAServiceEpisode3" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAGreServiceEpisode" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode3>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAServiceEpisode3" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAGreServiceEpisode>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAGreServiceEpisode" ]
        ]
      ], [
        fhir:index 7;
@@ -1207,10 +1220,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAServiceEpisode4" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAPanServiceEpisode" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode4>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAServiceEpisode4" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPanServiceEpisode>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAPanServiceEpisode" ]
        ]
      ], [
        fhir:index 8;
@@ -1220,10 +1233,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAServiceEpisode5" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAPGServiceEpisode" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode5>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAServiceEpisode5" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPGServiceEpisode>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAPGServiceEpisode" ]
        ]
      ], [
        fhir:index 9;
@@ -1233,10 +1246,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAServiceEpisode6" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VASomServiceEpisode" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode6>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAServiceEpisode6" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASomServiceEpisode>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VASomServiceEpisode" ]
        ]
      ], [
        fhir:index 10;
@@ -1246,10 +1259,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAServiceEpisode7" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAYugServiceEpisode" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAServiceEpisode7>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAServiceEpisode7" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAYugServiceEpisode>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAYugServiceEpisode" ]
        ]
      ], [
        fhir:index 11;
@@ -1259,10 +1272,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VARiskEpisodeProfile1" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAAgentOrangeRiskProfile" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile1>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VARiskEpisodeProfile1" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAgentOrangeRiskProfile>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAAgentOrangeRiskProfile" ]
        ]
      ], [
        fhir:index 12;
@@ -1272,10 +1285,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VARiskEpisodeProfile2" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VARadiationRiskProfile" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile2>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VARiskEpisodeProfile2" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARadiationRiskProfile>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VARadiationRiskProfile" ]
        ]
      ], [
        fhir:index 13;
@@ -1285,10 +1298,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VARiskEpisodeProfile3" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VASWARiskProfile" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile3>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VARiskEpisodeProfile3" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASWARiskProfile>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VASWARiskProfile" ]
        ]
      ], [
        fhir:index 14;
@@ -1298,10 +1311,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VARiskEpisodeProfile4" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VANTRRiskProfile" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile4>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VARiskEpisodeProfile4" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VANTRRiskProfile>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VANTRRiskProfile" ]
        ]
      ], [
        fhir:index 15;
@@ -1311,10 +1324,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VARiskEpisodeProfile5" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAPOWRiskProfile" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile5>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VARiskEpisodeProfile5" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPOWRiskProfile>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAPOWRiskProfile" ]
        ]
      ], [
        fhir:index 16;
@@ -1324,10 +1337,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VARiskEpisodeProfile6" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VACombatRiskProfile" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VARiskEpisodeProfile6>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VARiskEpisodeProfile6" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACombatRiskProfile>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VACombatRiskProfile" ]
        ]
      ], [
        fhir:index 17;
@@ -1350,11 +1363,11 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "event-statusReason" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "event-processState" ];
        fhir:ImplementationGuide.package.resource.description [ fhir:value "This field cannot be edited locally.  If Current Purple Heart Indicator is set to 'Yes' by the local site, a Current Purple Heart Status of 'Pending' will be stuffed into the field.  Other editing or updating is done by the HEC." ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/event-statusReason>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/event-statusReason" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/event-processState>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/event-processState" ]
        ]
      ], [
        fhir:index 19;
@@ -1364,10 +1377,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAEligibilityObservation1" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VACombatEligibilityObservation" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation1>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAEligibilityObservation1" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACombatEligibilityObservation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VACombatEligibilityObservation" ]
        ]
      ], [
        fhir:index 20;
@@ -1377,10 +1390,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAEligibilityObservation2" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAMeansEligibilityObservation" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation2>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAEligibilityObservation2" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMeansEligibilityObservation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAMeansEligibilityObservation" ]
        ]
      ], [
        fhir:index 21;
@@ -1390,10 +1403,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAEligibilityObservation3" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VACopayEligibilityObservation" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation3>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAEligibilityObservation3" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACopayEligibilityObservation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VACopayEligibilityObservation" ]
        ]
      ], [
        fhir:index 22;
@@ -1403,10 +1416,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAEligibilityObservation4" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VABaseEligibilityObservation" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEligibilityObservation4>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAEligibilityObservation4" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VABaseEligibilityObservation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VABaseEligibilityObservation" ]
        ]
      ], [
        fhir:index 23;
@@ -1761,385 +1774,24 @@
      ]
   ], [
      fhir:index 10;
-     fhir:Element.id [ fhir:value "group-29" ];
-     fhir:ImplementationGuide.package.name [ fhir:value "Coversheet Area: Problem List" ];
-     fhir:ImplementationGuide.package.resource [
-       fhir:index 0;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAProblem" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblem>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAProblem" ]
-       ]
-     ], [
-       fhir:index 1;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-priority" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-priority" ]
-       ]
-     ], [
-       fhir:index 2;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToAgentOrangeExposure" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to a patient's exposure to Agent Orange, it may be flagged here." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToAgentOrangeExposure" ]
-       ]
-     ], [
-       fhir:index 3;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToRadiation" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to a patient's exposure to ionizing radiation, it may be flagged here." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToRadiation" ]
-       ]
-     ], [
-       fhir:index 4;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToPersianGulfService" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to a patient's service in the Persian Gulf, it may be flagged here." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToPersianGulfService" ]
-       ]
-     ], [
-       fhir:index 5;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToRadiumTreatment" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToRadiumTreatment" ]
-       ]
-     ], [
-       fhir:index 6;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToMilitarySexualTrauma" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to the treatment of military sexual trauma, it may be flagged here." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToMilitarySexualTrauma" ]
-       ]
-     ], [
-       fhir:index 7;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToCombatExperience" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "<blank>" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToCombatExperience" ]
-       ]
-     ], [
-       fhir:index 8;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-responsibleProvider" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-responsibleProvider" ]
-       ]
-     ], [
-       fhir:index 9;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-treatingService" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-treatingService" ]
-       ]
-     ], [
-       fhir:index 10;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-treatingClinic" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one's view of the list." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-treatingClinic" ]
-       ]
-     ], [
-       fhir:index 11;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAProblemAuthorship" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblemAuthorship>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAProblemAuthorship" ]
-       ]
-     ], [
-       fhir:index 12;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToShipboardHazardAndDefense" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "<blank>" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToShipboardHazardAndDefense" ]
-       ]
-     ], [
-       fhir:index 13;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-lastModified" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the last date/time this problem was changed." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-lastModified" ]
-       ]
-     ], [
-       fhir:index 14;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "richAnnotation.author" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the provider who authored the text of this note." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/richAnnotation.author" ]
-       ]
-     ], [
-       fhir:index 15;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "richAnnotation.text" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "Additional comments may be entered here to further describe this problem." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/richAnnotation.text" ]
-       ]
-     ], [
-       fhir:index 16;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "richAnnotation.commentNumber" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the unique note identifier." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/richAnnotation.commentNumber" ]
-       ]
-     ], [
-       fhir:index 17;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "ProblemListChange" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/ProblemListChange>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/ProblemListChange" ]
-       ]
-     ], [
-       fhir:index 18;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "reference-targetElement.extension.change.extension.newValue" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the new value now stored in the Problem file global (internal format)." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.newValue>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/reference-targetElement.extension.change.extension.newValue" ]
-       ]
-     ]
-  ], [
-     fhir:index 11;
-     fhir:Element.id [ fhir:value "group-28" ];
-     fhir:ImplementationGuide.package.name [ fhir:value "Coversheet Area: Primary Care Management " ];
-     fhir:ImplementationGuide.package.resource [
-       fhir:index 0;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAPrimaryCareTeam" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPrimaryCareTeam>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAPrimaryCareTeam" ]
-       ]
-     ], [
-       fhir:index 1;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "participant-primaryCareRole" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is used to indicate if patient - team position assigment is a  special one (e.g. primary care practitioner or primary care attending)." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/participant-primaryCareRole>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/participant-primaryCareRole" ]
-       ]
-     ], [
-       fhir:index 2;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "participant-roleStatus" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This indicates whether the practitioner's position assignment is active or inactive." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/participant-roleStatus>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/participant-roleStatus" ]
-       ]
-     ]
-  ], [
-     fhir:index 12;
-     fhir:Element.id [ fhir:value "group-7" ];
-     fhir:ImplementationGuide.package.name [ fhir:value "Coversheet Area: Appointment Button" ];
-     fhir:ImplementationGuide.package.description [ fhir:value "This use case addresses upcoming appointments with locations and prior appointments with associated documents." ];
-     fhir:ImplementationGuide.package.resource [
-       fhir:index 0;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAAppointment" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "An Appointment profiled to support VA requirements." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAAppointment" ]
-       ]
-     ], [
-       fhir:index 1;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAAppointmentLocation" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "A location associated with an appointment, providing service information." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentLocation>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAAppointmentLocation" ]
-       ]
-     ], [
-       fhir:index 2;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAAppointmentPracitioner" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "A practitioner associated with a location." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentPracitioner>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAAppointmentPracitioner" ]
-       ]
-     ], [
-       fhir:index 3;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAAppointment-ext" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment-ext>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAAppointment-ext" ]
-       ]
-     ]
-  ], [
-     fhir:index 13;
      fhir:Element.id [ fhir:value "group-17" ];
      fhir:ImplementationGuide.package.name [ fhir:value "Coversheet Area: Inpatient Orders Unit Dose/Clinic Medications" ];
      fhir:ImplementationGuide.package.description [ fhir:value "Verified inpatient or clinic unit dose orders" ];
      fhir:ImplementationGuide.package.resource [
        fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAInpatientUDMedicationRequestRenewal" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestRenewal>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAInpatientUDMedicationRequestRenewal" ]
+       ]
+     ], [
+       fhir:index 1;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2152,7 +1804,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/VAInpatientUDMedicationRequest" ]
        ]
      ], [
-       fhir:index 1;
+       fhir:index 2;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2166,7 +1818,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-medicationrequestType.coding.code" ]
        ]
      ], [
-       fhir:index 2;
+       fhir:index 3;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2180,7 +1832,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/VAInpatientUDMedicationOrderVerification" ]
        ]
      ], [
-       fhir:index 3;
+       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2194,7 +1846,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-lastLocationOfPatient" ]
        ]
      ], [
-       fhir:index 4;
+       fhir:index 5;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2208,7 +1860,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension-MedicationRequest.statusReason" ]
        ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2222,7 +1874,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-extendedPriority" ]
        ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2236,7 +1888,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-flaggedForClarification" ]
        ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2250,7 +1902,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension.valueAnnotation.comment.text" ]
        ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2264,7 +1916,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-pharmacistVerified" ]
        ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2278,7 +1930,20 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-nurseVerified" ]
        ]
      ], [
-       fhir:index 10;
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAInpatientUDMedicationRequestEncounter" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestEncounter>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAInpatientUDMedicationRequestEncounter" ]
+       ]
+     ], [
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2292,7 +1957,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension.valueAnnotation.text" ]
        ]
      ], [
-       fhir:index 11;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2304,22 +1969,9 @@
          fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestChange>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/VAInpatientUDMedicationRequestChange" ]
        ]
-     ], [
-       fhir:index 12;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAInpatientUDMedicationRequestRenewal" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestRenewal>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAInpatientUDMedicationRequestRenewal" ]
-       ]
      ]
   ], [
-     fhir:index 14;
+     fhir:index 11;
      fhir:Element.id [ fhir:value "group-16" ];
      fhir:ImplementationGuide.package.name [ fhir:value "Coversheet Area: Inpatient Orders IV/Clinic Infusions" ];
      fhir:ImplementationGuide.package.description [ fhir:value "Verified inpatient or clinic IV orders" ];
@@ -2399,20 +2051,6 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "valueReference" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This field contains the pointer value for the person entered the IV order." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueReference>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/valueReference" ]
-       ]
-     ], [
-       fhir:index 6;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationrequest-lastFillDate" ];
        fhir:ImplementationGuide.package.resource.description [ fhir:value "Last time the prescription was filled." ];
        fhir:ImplementationGuide.package.resource.sourceReference [
@@ -2420,7 +2058,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-lastFillDate" ]
        ]
      ], [
-       fhir:index 7;
+       fhir:index 6;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2434,7 +2072,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-lastFillQuantity" ]
        ]
      ], [
-       fhir:index 8;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2447,7 +2085,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/VAInpatientIVMedication" ]
        ]
      ], [
-       fhir:index 9;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2460,7 +2098,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/VAInpatientMedicationRequestRenewal" ]
        ]
      ], [
-       fhir:index 10;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2474,7 +2112,7 @@
        ]
      ]
   ], [
-     fhir:index 15;
+     fhir:index 12;
      fhir:Element.id [ fhir:value "group-23" ];
      fhir:ImplementationGuide.package.name [ fhir:value "Coversheet Area: Outpatient Orders" ];
      fhir:ImplementationGuide.package.resource [
@@ -2485,55 +2123,13 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAFinishedOutpatientMedicationRequest" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAFinishedOutpatientMedicationPartial" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationRequest>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAFinishedOutpatientMedicationRequest" ]
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationPartial>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAFinishedOutpatientMedicationPartial" ]
        ]
      ], [
        fhir:index 1;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAFinishedOutpatientMedicationDispense" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "Dispensation of VA finished outpatient medication order" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationDispense>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAFinishedOutpatientMedicationDispense" ]
-       ]
-     ], [
-       fhir:index 2;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationdispense-authorization" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This field is used to show the status of the patient at the time the  medication was filled." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-authorization>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-authorization" ]
-       ]
-     ], [
-       fhir:index 3;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationdispense-labelCopies" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "The number of copies made of the label for the prescription." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-labelCopies>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-labelCopies" ]
-       ]
-     ], [
-       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2541,41 +2137,13 @@
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationdispense-dispenseChannel" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "Indicates if the medication will be picked up or mailed  to the patient." ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This field tells whether the medication was picked up  or mailed to the patient." ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispenseChannel>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-dispenseChannel" ]
        ]
      ], [
-       fhir:index 5;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationrequest-orderIssueDate" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "Date when doctor wrote prescription." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderIssueDate>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-orderIssueDate" ]
-       ]
-     ], [
-       fhir:index 6;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationdispense-fillDate" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "The date the prescription was filled." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-fillDate" ]
-       ]
-     ], [
-       fhir:index 7;
+       fhir:index 2;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2589,7 +2157,104 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/VAMedication" ]
        ]
      ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationdispense-fillRequestDate" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the date that the prescription was entered." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillRequestDate>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-fillRequestDate" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAFinishedOutpatientMedicationRequest" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationRequest>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAFinishedOutpatientMedicationRequest" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAFinishedOutpatientMedicationDispense" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Dispensation of VA finished outpatient medication order" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationDispense>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAFinishedOutpatientMedicationDispense" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationdispense-authorization" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This field is used to show the status of the patient at the time the  medication was filled." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-authorization>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-authorization" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationdispense-labelCopies" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "The number of copies made of the label for the prescription." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-labelCopies>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-labelCopies" ]
+       ]
+     ], [
        fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationrequest-orderIssueDate" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Date when doctor wrote prescription." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderIssueDate>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-orderIssueDate" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationdispense-fillDate" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "The date the prescription was filled." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-fillDate" ]
+       ]
+     ], [
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2603,7 +2268,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-patientCounseled" ]
        ]
      ], [
-       fhir:index 9;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2617,7 +2282,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-patientCounselingUnderstood" ]
        ]
      ], [
-       fhir:index 10;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2631,7 +2296,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-medicationReturnedToStock" ]
        ]
      ], [
-       fhir:index 11;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2645,7 +2310,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-cosigningProvider" ]
        ]
      ], [
-       fhir:index 12;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2659,7 +2324,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-lastDispensedDate" ]
        ]
      ], [
-       fhir:index 13;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2673,7 +2338,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-pickupInstructions" ]
        ]
      ], [
-       fhir:index 14;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2687,7 +2352,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-forServiceConnectedCondition" ]
        ]
      ], [
-       fhir:index 15;
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2701,7 +2366,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/conjunction" ]
        ]
      ], [
-       fhir:index 16;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2715,7 +2380,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/pharmacy-sigVerb" ]
        ]
      ], [
-       fhir:index 17;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2729,7 +2394,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-copayTransactionType" ]
        ]
      ], [
-       fhir:index 18;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2743,7 +2408,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-associatedMaintenancePrescription" ]
        ]
      ], [
-       fhir:index 19;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2757,7 +2422,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-associatedTitrationPrescription" ]
        ]
      ], [
-       fhir:index 20;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2771,7 +2436,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/VAFinishedOutpatientMedicationOrderCancellation" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2785,7 +2450,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-dateEnded" ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 24;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2799,7 +2464,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-dispensedAsWritten" ]
        ]
      ], [
-       fhir:index 23;
+       fhir:index 25;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2813,7 +2478,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-forMilitarySexualTrauma" ]
        ]
      ], [
-       fhir:index 24;
+       fhir:index 26;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2827,7 +2492,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-forAgentOrangeExposure" ]
        ]
      ], [
-       fhir:index 25;
+       fhir:index 27;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2841,7 +2506,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-forExposureToIonizingRadiation" ]
        ]
      ], [
-       fhir:index 26;
+       fhir:index 28;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2855,7 +2520,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-forSouthwestAsiaConditions" ]
        ]
      ], [
-       fhir:index 27;
+       fhir:index 29;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2869,7 +2534,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-forHeadOrNeckCancer" ]
        ]
      ], [
-       fhir:index 28;
+       fhir:index 30;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2883,7 +2548,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-forCombatService" ]
        ]
      ], [
-       fhir:index 29;
+       fhir:index 31;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2897,7 +2562,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationrequest-forShipboardHazard" ]
        ]
      ], [
-       fhir:index 30;
+       fhir:index 32;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2911,7 +2576,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/whenPerformed" ]
        ]
      ], [
-       fhir:index 31;
+       fhir:index 33;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -2922,33 +2587,6 @@
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationDispenseEncounter>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/VAFinishedOutpatientMedicationDispenseEncounter" ]
-       ]
-     ], [
-       fhir:index 32;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "medicationdispense-fillRequestDate" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the date the refill request was entered." ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillRequestDate>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/medicationdispense-fillRequestDate" ]
-       ]
-     ], [
-       fhir:index 33;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAFinishedOutpatientMedicationPartial" ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationPartial>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/VAFinishedOutpatientMedicationPartial" ]
        ]
      ], [
        fhir:index 34;
@@ -2977,6 +2615,408 @@
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/comment" ]
+       ]
+     ]
+  ], [
+     fhir:index 13;
+     fhir:Element.id [ fhir:value "group-29" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Coversheet Area: Problem List" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAProblem" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblem>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAProblem" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-priority" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is a flag to indicate how critical this problem is for this patient; problems marked as Acute will be flagged on the Problem List display." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-priority>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-priority" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToService" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "If the patient has service connection on file in the DHCP Patient file #2, this problem specifically may be flagged as being service connected." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToService>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToService" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToAgentOrangeExposure" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to a patient's exposure to Agent Orange, it may be flagged here." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToAgentOrangeExposure>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToAgentOrangeExposure" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToRadiation" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to a patient's exposure to ionizing radiation, it may be flagged here." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToRadiation" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToPersianGulfService" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to a patient's service in the Persian Gulf, it may be flagged here." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToPersianGulfService>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToPersianGulfService" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToRadiumTreatment" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to the treatment of head and/or neck cancer  associated with nose or throat radium treatments, it may be flagged here." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToRadiumTreatment>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToRadiumTreatment" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToMilitarySexualTrauma" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "If this problem is related to the treatment of military sexual trauma, it may be flagged here." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToMilitarySexualTrauma>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToMilitarySexualTrauma" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToCombatExperience" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "<blank>" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToCombatExperience>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToCombatExperience" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-responsibleProvider" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-responsibleProvider>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-responsibleProvider" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-treatingService" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the service primarily involved in the treatment of this problem; the DHCP Problem List defaults this field to the service defined in File #200 for the Recording Provider of this problem, upon entry of the problem.  It may later be used to categorize problems for screening and sorting." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingService>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-treatingService" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-treatingClinic" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one's view of the list." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-treatingClinic" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAProblemAuthorship" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblemAuthorship>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAProblemAuthorship" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-relationshipToShipboardHazardAndDefense" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "<blank>" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToShipboardHazardAndDefense>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-relationshipToShipboardHazardAndDefense" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "condition-lastModified" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the last date/time this problem was changed." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/condition-lastModified" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "richAnnotation.author" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the provider who authored the text of this note." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.author>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/richAnnotation.author" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "richAnnotation.text" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Additional comments may be entered here to further describe this problem." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.text>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/richAnnotation.text" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "richAnnotation.commentNumber" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the unique note identifier." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.commentNumber>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/richAnnotation.commentNumber" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "ProblemListChange" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/ProblemListChange>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/ProblemListChange" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "reference-targetElement.extension.change.extension.newValue" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the new value now stored in the Problem file global (internal format)." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.newValue>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/reference-targetElement.extension.change.extension.newValue" ]
+       ]
+     ]
+  ], [
+     fhir:index 14;
+     fhir:Element.id [ fhir:value "group-28" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Coversheet Area: Primary Care Management " ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAPrimaryCareTeam" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPrimaryCareTeam>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAPrimaryCareTeam" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "valueReference" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is the phone number associated with the team." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueReference>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/valueReference" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "participant-primaryCareRole" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This is used to indicate if patient - team position assigment is a  special one (e.g. primary care practitioner or primary care attending)." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/participant-primaryCareRole>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/participant-primaryCareRole" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "participant-roleStatus" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "This indicates whether the practitioner's position assignment is active or inactive." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/participant-roleStatus>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/participant-roleStatus" ]
+       ]
+     ]
+  ], [
+     fhir:index 15;
+     fhir:Element.id [ fhir:value "group-7" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Coversheet Area: Appointment Button" ];
+     fhir:ImplementationGuide.package.description [ fhir:value "This use case addresses upcoming appointments with locations and prior appointments with associated documents." ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAAppointment" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "An Appointment profiled to support VA requirements." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAAppointment" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAAppointmentLocation" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "A location associated with an appointment, providing service information." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentLocation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAAppointmentLocation" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAAppointmentPracitioner" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "A practitioner associated with a location." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentPracitioner>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAAppointmentPracitioner" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VAAppointment-ext" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment-ext>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VAAppointment-ext" ]
        ]
      ]
   ], [
@@ -3369,6 +3409,32 @@
          fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReportResult>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/VAChemLabReportResult" ]
        ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "note.text" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/note.text>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/note.text" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "note.authorString" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/note.authorString>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/note.authorString" ]
+       ]
      ]
   ], [
      fhir:index 21;
@@ -3476,6 +3542,19 @@
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASurgicalPathologyReport>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/VASurgicalPathologyReport" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "VASurgicalPathologyProcedureRequest" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASurgicalPathologyProcedureRequest>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/VASurgicalPathologyProcedureRequest" ]
        ]
      ]
   ], [
