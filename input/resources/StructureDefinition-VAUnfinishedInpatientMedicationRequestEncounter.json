@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAUnfinishedInpatientMedicationRequestEncounter",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequestEncounter",
 	"name": "VAUnfinishedInpatientMedicationRequestEncounter",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -41,27 +41,6 @@
 					{
 						"identity": "vista",
 						"map": "NON-VERIFIED ORDERS @LABELS PER DAY 53.1-131"
-					}
-				]
-			},
-			{
-				"id": "MedicationRequest.dosageInstruction.extension:dosageInstruction-ivBottleNumber",
-				"path": "MedicationRequest.dosageInstruction.extension",
-				"sliceName": "dosageInstruction-ivBottleNumber",
-				"label": "BOTTLE",
-				"short": "bottle",
-				"definition": "This is the bottle number (or numbers, separated by commas) in which  this additive will be included for this IV order. If this field is blank,  it means that the additive will be included in all bottles.",
-				"type": [
-					{
-						"code": "Extension",
-						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/dosageInstruction-ivBottleNumber"
-					}
-				],
-				"mustSupport": true,
-				"mapping": [
-					{
-						"identity": "vista",
-						"map": "NON-VERIFIED ORDERS @BOTTLE 53.157-2"
 					}
 				]
 			}

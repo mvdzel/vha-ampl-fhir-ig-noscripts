@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/documentreference-statusDetail.coding.code",
 	"name": "documentreference-statusDetail.coding.code",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This field is intended to accommodate the status of a given report.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

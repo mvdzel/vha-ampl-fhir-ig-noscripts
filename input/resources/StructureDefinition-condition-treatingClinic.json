@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-treatingClinic",
 	"name": "condition-treatingClinic",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This is the clinic in which this patient is being seen for this problem. The problem list may be screened based on this value, to change one's view of the list.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

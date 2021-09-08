@@ -1,0 +1,120 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAAgentOrangeRiskProfile",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAgentOrangeRiskProfile",
+	"name": "VAAgentOrangeRiskProfile",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.system",
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.code",
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.32102",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.display",
+				"path": "Observation.code.coding.display",
+				"fixedString": "Agent Orange Expos. Indicated",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.context.display",
+				"path": "Observation.context.display",
+				"label": "Agent Orange Exam Date",
+				"short": "Environment Factors information",
+				"definition": "For this veteran applicant who was exposed to agent orange (EXPOSED TO AGENT ORANGE prompt must be answered YES) enter the date s/he was examined for this exposure, if any.  Once the service record is verified only users who hold the designated security key may enter/edit this field.  As long as agent orange exposure is indicated this field may not be deleted.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Agent Orange Exam Date  2-.32109"
+					}
+				]
+			},
+			{
+				"id": "Observation.issued",
+				"path": "Observation.issued",
+				"label": "Agent Orange Registration Date",
+				"short": "Environment Factors information",
+				"definition": "For this veteran applicant who was exposed to agent orange (EXPOSED TO AGENT ORANGE prompt must be answered YES) enter the date registered. Once the service record is verified only users who hold the designated security key may enter/edit this field.  As long as agent orange exposure is indicated this field may not be deleted.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Agent Orange Registration Date  2-.32107"
+					}
+				]
+			},
+			{
+				"id": "Observation.valueCodeableConcept",
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.system",
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "Agent Orange Expos. Indicated?",
+				"short": "Environment Factors information",
+				"definition": "For this veteran applicant enter 'Y' if s/he was exposed to the chemical agent orange, 'N' if not, or 'U' if unknown.  Exposure cannot be claimed unless the Period of Service (field .323) is answered VIETNAM ERA, which entails those serving in the Korean DMZ between January 1, 1968 and December 31, 1969 or Vietnam.   Once the service record has been verified only users who hold the designated security key may enter/edit this field.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Agent Orange Expos. Indicated?  2-.32102"
+					}
+				]
+			}
+		]
+	}
+}

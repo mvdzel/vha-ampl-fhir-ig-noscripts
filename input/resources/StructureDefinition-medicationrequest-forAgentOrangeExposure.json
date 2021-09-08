@@ -4,8 +4,8 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure",
 	"name": "medicationrequest-forAgentOrangeExposure",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
-	"description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to Agent Orange during Vietnam service, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "During CPRS order entry, if a veteran has been identified as having been exposed to Agent Orange during Vietnam service, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -31,17 +31,17 @@
 				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure"
 			},
 			{
-				"id": "Extension.valueCodeableConcept",
-				"path": "Extension.valueCodeableConcept",
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
 				"type": [
 					{
-						"code": "CodeableConcept"
+						"code": "string"
 					}
 				],
 				"mapping": [
 					{
 						"identity": "vista",
-						"map": "PRESCRIPTION @AGENT ORANGE EXPOSURE 52-118"
+						"map": "PENDING OUTPATIENT ORDERS @AGENT ORANGE EXPOSURE 52.41-107"
 					}
 				]
 			}

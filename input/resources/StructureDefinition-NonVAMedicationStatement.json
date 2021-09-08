@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "NonVAMedicationStatement",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/NonVAMedicationStatement",
 	"name": "NonVAMedicationStatement",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -124,15 +124,36 @@
 				"label": "DISPENSE DRUG",
 				"short": "DISPENSE DRUG",
 				"definition": "This is the dispense drug that represents the Non-VA Med being taken by  the patient.",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @DISPENSE DRUG 55.05-1"
+					}
+				]
+			},
+			{
+				"id": "MedicationStatement.medicationCodeableConcept.coding.system",
+				"path": "MedicationStatement.medicationCodeableConcept.coding.system",
+				"fixedUri": "http://va.gov/terminology/vistaDefinedTerms/55.05-.01",
+				"mustSupport": true
+			},
+			{
+				"id": "MedicationStatement.medicationCodeableConcept.coding.code",
+				"path": "MedicationStatement.medicationCodeableConcept.coding.code",
+				"label": "ORDERABLE ITEM",
+				"short": "ORDERABLE ITEM",
+				"definition": "This is the orderable item that represents the Non-VA Med being taken by  the patient.",
 				"mustSupport": true,
 				"mapping": [
 					{
 						"identity": "vista",
 						"map": "PHARMACY PATIENT FILE @ORDERABLE ITEM 55.05-.01"
-					},
-					{
-						"identity": "vista",
-						"map": "PHARMACY PATIENT FILE @DISPENSE DRUG 55.05-1"
 					}
 				]
 			},

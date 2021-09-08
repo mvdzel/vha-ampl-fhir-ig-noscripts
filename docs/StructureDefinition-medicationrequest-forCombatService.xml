@@ -9,10 +9,10 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forCombatService"/>
-  <version value="0.0.74"/>
+  <version value="0.0.77"/>
   <name value="medicationrequest-forCombatService"/>
   <status value="draft"/>
-  <date value="2021-05-17T15:52:07.695Z"/>
+  <date value="2021-09-08T16:14:20.068Z"/>
   <publisher value="JPSys"/>
   <contact>
     <telecom>
@@ -20,7 +20,7 @@
       <value value="https://jpsys.com"/>
     </telecom>
   </contact>
-  <description value="During Outpatient Pharmacy order entry, a pharmacist may be asked if the  medication being prescribed is for a condition related to Combat Services  while in the military. This field will store the pharmacist&#39;s response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription."/>
+  <description value="During CPRS order entry, if a veteran has been identified as having been  treated for a condition related to Combat Services, the clinician will be  asked to identify whether or not the outpatient medication order being prescribed is being used to treat a condition related to Combat Services. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -195,7 +195,7 @@
       </mapping>
       <mapping>
         <identity value="vista"/>
-        <map value="PRESCRIPTION @COMBAT VETERAN 52-122"/>
+        <map value="PENDING OUTPATIENT ORDERS @COMBAT VETERAN 52.41-110.1"/>
       </mapping>
     </element>
   </snapshot>
@@ -214,7 +214,7 @@
       </type>
       <mapping>
         <identity value="vista"/>
-        <map value="PRESCRIPTION @COMBAT VETERAN 52-122"/>
+        <map value="PENDING OUTPATIENT ORDERS @COMBAT VETERAN 52.41-110.1"/>
       </mapping>
     </element>
   </differential>

@@ -1,0 +1,50 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "patient-emergencyResponseCohort",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-emergencyResponseCohort",
+	"name": "patient-emergencyResponseCohort",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "Enter the appropriate ER Indicator to identify patients from impacted zip code areas designated by FEMA.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Patient"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-emergencyResponseCohort"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @Emergency Response Indicator  2-.181"
+					}
+				]
+			}
+		]
+	}
+}

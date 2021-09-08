@@ -13,10 +13,10 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://va.gov/Terminology/VistaDefinedTerms/</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>DC</td><td>DISCONTINUED</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>DE</td><td>DISCONTINUED (EDIT)</td></tr><tr><td>HD</td><td>HOLD</td></tr><tr><td>NW</td><td>NEW ORDER</td></tr><tr><td>RF</td><td>REFILL REQUEST</td></tr><tr><td>RNW</td><td>RENEW</td></tr></table></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://va.gov/fhir/us/vha-ampl-ig/ValueSet/pharmacy-pending-outpatient-order-status"];
-  fhir:ValueSet.version [ fhir:value "0.0.74"];
+  fhir:ValueSet.version [ fhir:value "0.0.77"];
   fhir:ValueSet.name [ fhir:value "pharmacy-pending-outpatient-order-status"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2021-05-17T15:52:07.695Z"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2021-09-08T16:14:20.068Z"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "JPSys"];
   fhir:ValueSet.contact [
      fhir:index 0;

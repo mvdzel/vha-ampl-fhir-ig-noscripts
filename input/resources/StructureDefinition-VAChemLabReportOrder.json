@@ -1,0 +1,53 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAChemLabReportOrder",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReportOrder",
+	"name": "VAChemLabReportOrder",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "ProcedureRequest",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/ProcedureRequest",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "ProcedureRequest.status",
+				"path": "ProcedureRequest.status",
+				"fixedCode": "completed",
+				"mustSupport": true
+			},
+			{
+				"id": "ProcedureRequest.intent",
+				"path": "ProcedureRequest.intent",
+				"fixedCode": "order",
+				"mustSupport": true
+			},
+			{
+				"id": "ProcedureRequest.requester.agent.display",
+				"path": "ProcedureRequest.requester.agent.display",
+				"label": "REQUESTING PERSON",
+				"definition": "This is the person requesting the test.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "LAB DATA @REQUESTING PERSON 63.04-.1b"
+					}
+				]
+			}
+		]
+	}
+}

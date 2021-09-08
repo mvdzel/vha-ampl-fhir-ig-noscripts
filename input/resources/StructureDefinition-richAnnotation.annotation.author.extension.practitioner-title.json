@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.author.extension.practitioner-title",
 	"name": "richAnnotation.annotation.author.extension.practitioner-title",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This field tracks the user who entered this comment. The field is automatically stuffed when that user enters a comment.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAPatientServiceConnectionObservation",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientServiceConnectionObservation",
 	"name": "VAPatientServiceConnectionObservation",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -42,41 +42,6 @@
 				"mustSupport": true
 			},
 			{
-				"id": "Observation.valueQuantity",
-				"path": "Observation.valueQuantity",
-				"type": [
-					{
-						"code": "Quantity"
-					}
-				]
-			},
-			{
-				"id": "Observation.valueQuantity.value",
-				"path": "Observation.valueQuantity.value",
-				"label": "SERVICE CONNECTED PERCENTAGE",
-				"short": "Primary Eligibility",
-				"definition": "If this applicant is service connected (SERVICE CONNECTED prompt must be answered YES) enter the service connected percentage [a number between 0-100].  Once eligibility has been verified only users who hold the designated security key may enter/edit this field.  Field may not be deleted as long as service connection is indicated.",
-				"mustSupport": true,
-				"mapping": [
-					{
-						"identity": "vista",
-						"map": "Patient File @SERVICE CONNECTED PERCENTAGE 2-.302"
-					}
-				]
-			},
-			{
-				"id": "Observation.valueQuantity.unit",
-				"path": "Observation.valueQuantity.unit",
-				"fixedString": "%",
-				"mustSupport": true
-			},
-			{
-				"id": "Observation.valueQuantity.code",
-				"path": "Observation.valueQuantity.code",
-				"fixedCode": "%",
-				"mustSupport": true
-			},
-			{
 				"id": "Observation.valueCodeableConcept",
 				"path": "Observation.valueCodeableConcept",
 				"type": [
@@ -104,6 +69,53 @@
 						"map": "Patient File @SERVICE CONNECTED?  2-.301"
 					}
 				]
+			},
+			{
+				"id": "Observation.component.code.coding.system",
+				"path": "Observation.component.code.coding.system",
+				"fixedUri": "http://va.gov/terminology/vistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.component.code.coding.code",
+				"path": "Observation.component.code.coding.code",
+				"fixedCode": "2-.302",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.component.valueQuantity",
+				"path": "Observation.component.valueQuantity",
+				"type": [
+					{
+						"code": "Quantity"
+					}
+				]
+			},
+			{
+				"id": "Observation.component.valueQuantity.value",
+				"path": "Observation.component.valueQuantity.value",
+				"label": "SERVICE CONNECTED PERCENTAGE",
+				"short": "Primary Eligibility",
+				"definition": "If this applicant is service connected (SERVICE CONNECTED prompt must be answered YES) enter the service connected percentage [a number between 0-100].  Once eligibility has been verified only users who hold the designated security key may enter/edit this field.  Field may not be deleted as long as service connection is indicated.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @SERVICE CONNECTED PERCENTAGE 2-.302"
+					}
+				]
+			},
+			{
+				"id": "Observation.component.valueQuantity.unit",
+				"path": "Observation.component.valueQuantity.unit",
+				"fixedString": "%",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.component.valueQuantity.code",
+				"path": "Observation.component.valueQuantity.code",
+				"fixedCode": "%",
+				"mustSupport": true
 			}
 		]
 	}

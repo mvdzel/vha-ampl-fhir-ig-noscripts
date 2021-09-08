@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="VAUnfinishedOutpatientMedicationOrder"/>
   <meta>
-    <lastUpdated value="2021-05-17T15:52:07.695Z"/>
+    <lastUpdated value="2021-09-08T16:14:20.068Z"/>
   </meta>
   <text>
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest">MedicationRequest</a><a name="MedicationRequest"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/medicationrequest.html">MedicationRequest</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Ordering of medication for patient or group</span></td></tr>
@@ -14,8 +14,8 @@
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-forCombatService" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forCombatService">medicationrequest-forCombatService</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-forCombatService.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forCombatService</a></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-forHeadOrNeckCancer" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer">medicationrequest-forHeadOrNeckCancer</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-forHeadOrNeckCancer.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forHeadOrNeckCancer</a></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-forSouthwestAsiaConditions" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forSouthwestAsiaConditions">medicationrequest-forSouthwestAsiaConditions</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-forSouthwestAsiaConditions.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forSouthwestAsiaConditions</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-forExposureToIonizingRadiation" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation">medicationrequest-forExposureToIonizingRadiation</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-forExposureToIonizingRadiation.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation</a></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-forAgentOrangeExposure" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure">medicationrequest-forAgentOrangeExposure</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-forAgentOrangeExposure.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-forExposureToIonizingRadiation" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation">medicationrequest-forExposureToIonizingRadiation</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-forExposureToIonizingRadiation.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-forAgentOrangeExposure" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure">medicationrequest-forAgentOrangeExposure</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-forAgentOrangeExposure.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure</a></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-forMilitarySexualTrauma" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forMilitarySexualTrauma">medicationrequest-forMilitarySexualTrauma</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-forMilitarySexualTrauma.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forMilitarySexualTrauma</a></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-forServiceConnectedCondition" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forServiceConnectedCondition">medicationrequest-forServiceConnectedCondition</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-forServiceConnectedCondition.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forServiceConnectedCondition</a></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-VAUnfinishedOutpatientMedicationOrder-definitions.html#MedicationRequest.extension:medicationrequest-permittedFillDate" title="Extension URL = http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-permittedFillDate">medicationrequest-permittedFillDate</a><a name="MedicationRequest.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">URL: </span><a href="http://hl7.org/fhir/STU3/StructureDefinition-medicationrequest-permittedFillDate.html">http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-permittedFillDate</a></td></tr>
@@ -59,10 +59,10 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrder"/>
-  <version value="0.0.74"/>
+  <version value="0.0.77"/>
   <name value="VAUnfinishedOutpatientMedicationOrder"/>
   <status value="draft"/>
-  <date value="2021-05-17T15:52:07.695Z"/>
+  <date value="2021-09-08T16:14:20.068Z"/>
   <publisher value="JPSys"/>
   <contact>
     <telecom>
@@ -467,7 +467,7 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="medicationrequest-forShipboardHazard"/>
       <label value="PROJ 112/SHAD"/>
-      <short value="Extension"/>
+      <short value="Optional Extensions Element"/>
       <definition value="During CPRS order entry, if a veteran has been identified as having been treated for a condition related to PROJ 112/SHAD, the clinician will be  asked to identify whether or not the outpatient medication order being  prescribed is being used to treat a condition related to PROJ 112/SHAD.  This field will store the response that was entered for this question.   This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."/>
       <min value="0"/>
       <max value="*"/>
@@ -495,9 +495,17 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @PROJ 112/SHAD 52.41-110.2"/>
@@ -507,7 +515,7 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="medicationrequest-forCombatService"/>
       <label value="COMBAT VETERAN"/>
-      <short value="Extension"/>
+      <short value="Optional Extensions Element"/>
       <definition value="During CPRS order entry, if a veteran has been identified as having been  treated for a condition related to Combat Services, the clinician will be  asked to identify whether or not the outpatient medication order being prescribed is being used to treat a condition related to Combat Services. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."/>
       <min value="0"/>
       <max value="*"/>
@@ -535,9 +543,17 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @COMBAT VETERAN 52.41-110.1"/>
@@ -547,7 +563,7 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="medicationrequest-forHeadOrNeckCancer"/>
       <label value="HEAD AND/OR NECK CANCER"/>
-      <short value="Extension"/>
+      <short value="Optional Extensions Element"/>
       <definition value="During CPRS order entry, if a veteran has been identified as having been treated for Head and/or Neck Cancer due to nose or throat radium treatments while in the military, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat this condition. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."/>
       <min value="0"/>
       <max value="*"/>
@@ -575,9 +591,17 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @HEAD AND/OR NECK CANCER 52.41-110"/>
@@ -587,7 +611,7 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="medicationrequest-forSouthwestAsiaConditions"/>
       <label value="SOUTHWEST ASIA CONDITIONS"/>
-      <short value="Extension"/>
+      <short value="Optional Extensions Element"/>
       <definition value="During CPRS order entry, if a veteran has been identified as having been exposed to Southwest Asia Conditions during the Persian Gulf War, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."/>
       <min value="0"/>
       <max value="*"/>
@@ -615,9 +639,17 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @SOUTHWEST ASIA CONDITIONS 52.41-109"/>
@@ -627,7 +659,7 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="medicationrequest-forExposureToIonizingRadiation"/>
       <label value="IONIZING RADIATION EXPOSURE"/>
-      <short value="Extension"/>
+      <short value="Optional Extensions Element"/>
       <definition value="During CPRS order entry, if a veteran has been identified as having been exposed to ionizing radiation during military service, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."/>
       <min value="0"/>
       <max value="*"/>
@@ -655,9 +687,17 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @IONIZING RADIATION EXPOSURE 52.41-108"/>
@@ -667,7 +707,7 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="medicationrequest-forAgentOrangeExposure"/>
       <label value="AGENT ORANGE EXPOSURE"/>
-      <short value="Extension"/>
+      <short value="Optional Extensions Element"/>
       <definition value="During CPRS order entry, if a veteran has been identified as having been exposed to Agent Orange during Vietnam service, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."/>
       <min value="0"/>
       <max value="*"/>
@@ -695,9 +735,17 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @AGENT ORANGE EXPOSURE 52.41-107"/>
@@ -707,7 +755,7 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="medicationrequest-forMilitarySexualTrauma"/>
       <label value="MILITARY SEXUAL TRAUMA"/>
-      <short value="Extension"/>
+      <short value="Optional Extensions Element"/>
       <definition value="During CPRS order entry, if a veteran has been identified as having been treated for Military Sexual Trauma, the clinician will be asked to identify whether or not the outpatient medication order being prescribed is being used to treat a condition related to Military Sexual Trauma. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS."/>
       <min value="0"/>
       <max value="*"/>
@@ -735,9 +783,17 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @MILITARY SEXUAL TRAUMA 52.41-106"/>
@@ -747,7 +803,7 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="medicationrequest-forServiceConnectedCondition"/>
       <label value="SERVICE CONNECTED"/>
-      <short value="Extension"/>
+      <short value="Optional Extensions Element"/>
       <definition value="This indicates whether the order is for a service connected or non-service connected condition."/>
       <min value="0"/>
       <max value="*"/>
@@ -775,9 +831,17 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @SERVICE CONNECTED 52.41-17"/>
@@ -971,7 +1035,7 @@
       <path value="MedicationRequest.extension"/>
       <sliceName value="medicationrequest-orderIssueDate"/>
       <label value="EFFECTIVE DATE"/>
-      <short value="Extension"/>
+      <short value="Optional Extensions Element"/>
       <definition value="This is the date the order goes into effect."/>
       <min value="0"/>
       <max value="*"/>
@@ -999,9 +1063,17 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @EFFECTIVE DATE 52.41-6"/>
@@ -2582,6 +2654,14 @@
       </type>
       <mustSupport value="true"/>
       <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @VERB 52.413-13"/>
       </mapping>
@@ -2604,6 +2684,14 @@
         <profile value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/conjunction"/>
       </type>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
       <mapping>
         <identity value="vista"/>
         <map value="PENDING OUTPATIENT ORDERS @CONJUNCTION 52.413-6"/>

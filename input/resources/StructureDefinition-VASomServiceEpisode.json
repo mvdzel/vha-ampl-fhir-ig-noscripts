@@ -1,0 +1,118 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VASomServiceEpisode",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASomServiceEpisode",
+	"name": "VASomServiceEpisode",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.system",
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.code",
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.322016",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.display",
+				"path": "Observation.code.coding.display",
+				"fixedString": "Somalia Service",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.effectivePeriod",
+				"path": "Observation.effectivePeriod",
+				"type": [
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "Observation.effectivePeriod.start",
+				"path": "Observation.effectivePeriod.start",
+				"label": "Somalia From Date",
+				"short": "Conflict Location information",
+				"definition": "If this patient served in Somalia (SOMALIA SERVICE INDICATED? is  answered YES), enter the date this patient's service in Somalia began.  This date must be on or after September 28, 1992.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Somalia From Date 2-.322017"
+					}
+				]
+			},
+			{
+				"id": "Observation.effectivePeriod.end",
+				"path": "Observation.effectivePeriod.end",
+				"label": "Somalia To Date",
+				"short": "Conflict Location information",
+				"definition": "This is the last date of service in Somalia.  This date must be on or  after September 28, 1992.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Somalia To Date 2-.322018"
+					}
+				]
+			},
+			{
+				"id": "Observation.valueCodeableConcept",
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.system",
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "Somalia Service Indicated?",
+				"short": "Conflict Location information",
+				"definition": "If this patient served in the Somalia, enter yes here.  If the patient  did not serve in Somalia, enter no. Enter unknown if this information  could not be obtained from the patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Somalia Service Indicated? 2-.322016"
+					}
+				]
+			}
+		]
+	}
+}

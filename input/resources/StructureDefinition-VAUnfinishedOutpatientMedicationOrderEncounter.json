@@ -1,0 +1,41 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAUnfinishedOutpatientMedicationOrderEncounter",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrderEncounter",
+	"name": "VAUnfinishedOutpatientMedicationOrderEncounter",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Encounter",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Encounter.location",
+				"path": "Encounter.location",
+				"label": "PATIENT LOCATION",
+				"definition": "This is the pointer to the Hospital Location file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PENDING OUTPATIENT ORDERS @PATIENT LOCATION 52.41-1.1b"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "condition-relationshipToService",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToService",
+	"name": "condition-relationshipToService",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "If the patient has service connection on file in the DHCP Patient file #2, this problem specifically may be flagged as being service connected.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Condition"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToService"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @SERVICE CONNECTED 9000011-1.1"
+					}
+				]
+			}
+		]
+	}
+}

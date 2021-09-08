@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAChemLabReportResult",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReportResult",
 	"name": "VAChemLabReportResult",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -32,7 +32,7 @@
 				"type": [
 					{
 						"code": "Extension",
-						"profile": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Observation.note.authorString"
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/note.authorString"
 					}
 				],
 				"mustSupport": true,
@@ -52,7 +52,7 @@
 				"type": [
 					{
 						"code": "Extension",
-						"profile": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Observation.note.text"
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/note.text"
 					}
 				],
 				"mustSupport": true,

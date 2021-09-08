@@ -1,0 +1,67 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAChemLabReportSpecimen",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAChemLabReportSpecimen",
+	"name": "VAChemLabReportSpecimen",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Specimen",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Specimen.accessionIdentifier",
+				"path": "Specimen.accessionIdentifier",
+				"label": "ACCESSION",
+				"definition": "This is the accession for this specimen.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "LAB DATA @ACCESSION 63.04-.06b"
+					}
+				]
+			},
+			{
+				"id": "Specimen.type.coding.code",
+				"path": "Specimen.type.coding.code",
+				"label": "SPECIMEN TYPE",
+				"definition": "This is the specimen type.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "LAB DATA @SPECIMEN TYPE 63.04-.05b"
+					}
+				]
+			},
+			{
+				"id": "Specimen.collection.collectedDateTime",
+				"path": "Specimen.collection.collectedDateTime",
+				"label": "DATE SPECIMEN TAKEN",
+				"definition": "This is the date/time the specimen was taken.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "LAB DATA @DATE SPECIMEN TAKEN 63.04-.01b"
+					}
+				]
+			}
+		]
+	}
+}

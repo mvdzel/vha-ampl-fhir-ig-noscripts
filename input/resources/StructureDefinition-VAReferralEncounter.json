@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAReferralEncounter",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralEncounter",
 	"name": "VAReferralEncounter",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -18,14 +18,14 @@
 	],
 	"kind": "resource",
 	"abstract": false,
-	"type": "ReferralRequest",
-	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/ReferralRequest",
+	"type": "Encounter",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
 	"derivation": "constraint",
 	"differential": {
 		"element": [
 			{
-				"id": "ReferralRequest.extension:referralrequest-locationType",
-				"path": "ReferralRequest.extension",
+				"id": "Encounter.extension:referralrequest-locationType",
+				"path": "Encounter.extension",
 				"sliceName": "referralrequest-locationType",
 				"label": "PLACE OF CONSULTATION",
 				"short": "Place of Consultation",
@@ -41,6 +41,19 @@
 					{
 						"identity": "vista",
 						"map": "REQUEST/CONSULTATION @PLACE OF CONSULTATION 123-6"
+					}
+				]
+			},
+			{
+				"id": "Encounter.location.location.display",
+				"path": "Encounter.location.location.display",
+				"label": "PATIENT LOCATION",
+				"definition": "This is the location of the patient when the consult/request order was placed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "REQUEST/CONSULTATION @PATIENT LOCATION 123-.04b"
 					}
 				]
 			}

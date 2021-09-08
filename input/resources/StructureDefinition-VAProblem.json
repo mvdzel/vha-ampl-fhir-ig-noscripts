@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAProblem",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblem",
 	"name": "VAProblem",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -311,6 +311,27 @@
 					{
 						"identity": "vista",
 						"map": "PROBLEM  @AGENT ORANGE EXPOSURE 9000011-1.11"
+					}
+				]
+			},
+			{
+				"id": "Condition.extension:condition-relationshipToService",
+				"path": "Condition.extension",
+				"sliceName": "condition-relationshipToService",
+				"label": "SERVICE CONNECTED",
+				"short": "Service Connected Condition",
+				"definition": "If the patient has service connection on file in the DHCP Patient file #2, this problem specifically may be flagged as being service connected.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-relationshipToService"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM  @SERVICE CONNECTED 9000011-1.1"
 					}
 				]
 			},

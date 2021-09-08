@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VACurrentEncounter",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACurrentEncounter",
 	"name": "VACurrentEncounter",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -23,6 +23,31 @@
 	"derivation": "constraint",
 	"differential": {
 		"element": [
+			{
+				"id": "Encounter.identifier",
+				"path": "Encounter.identifier",
+				"label": "CURRENT ADMISSION",
+				"short": "Current Admission",
+				"definition": "This field contains the internal entry number of the PATIENT MOVEMENT file denoting the current admission for an inpatient.  This field is only stored for current inpatients.  It must NOT be edited as this could affect the integrity of many options within MAS and other DHCP packages.  When displaying this field, the date/time of the current admission will be displayed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient  @CURRENT ADMISSION 2-.105"
+					}
+				]
+			},
+			{
+				"id": "Encounter.subject",
+				"path": "Encounter.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient"
+					}
+				],
+				"mustSupport": true
+			},
 			{
 				"id": "Encounter.participant.type.coding.system",
 				"path": "Encounter.participant.type.coding.system",
@@ -54,20 +79,6 @@
 				]
 			},
 			{
-				"id": "Encounter.period.start",
-				"path": "Encounter.period.start",
-				"label": "CURRENT ADMISSION",
-				"short": "Current Admission",
-				"definition": "This field contains the internal entry number of the PATIENT MOVEMENT file denoting the current admission for an inpatient.  This field is only stored for current inpatients.  It must NOT be edited as this could affect the integrity of many options within MAS and other DHCP packages.  When displaying this field, the date/time of the current admission will be displayed.",
-				"mustSupport": true,
-				"mapping": [
-					{
-						"identity": "vista",
-						"map": "Patient  @CURRENT ADMISSION 2-.105"
-					}
-				]
-			},
-			{
 				"id": "Encounter.reason.coding.code",
 				"path": "Encounter.reason.coding.code",
 				"label": "DIAGNOSIS",
@@ -82,8 +93,8 @@
 				]
 			},
 			{
-				"id": "Encounter.location.location.identifier",
-				"path": "Encounter.location.location.identifier",
+				"id": "Encounter.location.location.display",
+				"path": "Encounter.location.location.display",
 				"label": "ROOM-BED",
 				"short": "ROOM-BED",
 				"definition": "If desired, for this inpatient, enter the room and bed indicator to which s/he is assigned in 'ROOM-BED' format.",

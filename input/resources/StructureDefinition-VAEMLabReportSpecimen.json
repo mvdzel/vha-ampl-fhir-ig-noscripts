@@ -1,0 +1,80 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAEMLabReportSpecimen",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEMLabReportSpecimen",
+	"name": "VAEMLabReportSpecimen",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Specimen",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Specimen.type.coding.code",
+				"path": "Specimen.type.coding.code",
+				"label": "COLLECTION SAMPLE",
+				"definition": "This field contains the collection sample for this test.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "SPECIMEN @COLLECTION SAMPLE 63.202-.07"
+					}
+				]
+			},
+			{
+				"id": "Specimen.type.text",
+				"path": "Specimen.type.text",
+				"label": "SPECIMEN",
+				"definition": "This is the specimen submitted for testing.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "SPECIMEN @SPECIMEN 63.202-.01b"
+					}
+				]
+			},
+			{
+				"id": "Specimen.collection.collectedDateTime",
+				"path": "Specimen.collection.collectedDateTime",
+				"label": "DATE/TIME SPECIMEN TAKEN",
+				"definition": "This is the date/time of collection of the EM specimen.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "EM @DATE/TIME SPECIMEN TAKEN 63.02-.01b"
+					}
+				]
+			},
+			{
+				"id": "Specimen.collection.bodySite.coding.code",
+				"path": "Specimen.collection.bodySite.coding.code",
+				"label": "SPECIMEN TOPOGRAPHY",
+				"definition": "This field contains the topography location for this test.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "SPECIMEN @SPECIMEN TOPOGRAPHY 63.202-.06b"
+					}
+				]
+			}
+		]
+	}
+}

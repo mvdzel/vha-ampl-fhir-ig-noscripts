@@ -1,0 +1,77 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAInpatientIVMedicationRequestEncounter",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequestEncounter",
+	"name": "VAInpatientIVMedicationRequestEncounter",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Encounter",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Encounter.status",
+				"path": "Encounter.status",
+				"fixedCode": "unknown",
+				"mustSupport": true
+			},
+			{
+				"id": "Encounter.period.start",
+				"path": "Encounter.period.start",
+				"label": "APPOINTMENT DATE/TIME",
+				"definition": "Date and time of the appointment for this clinic location.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @APPOINTMENT DATE/TIME 55.01-139b"
+					}
+				]
+			},
+			{
+				"id": "Encounter.location.location.identifier",
+				"path": "Encounter.location.location.identifier",
+				"label": "WARD",
+				"definition": "If the IV is not a outpatient IV, this field will be a pointer to the ward file 42. If the IV is a outpatient IV, this field will contain a .5",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @WARD 55.01-104"
+					}
+				]
+			},
+			{
+				"id": "Encounter.location.location.display",
+				"path": "Encounter.location.location.display",
+				"label": "CLINIC",
+				"definition": "<blank>",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @ORIGINAL WARD 55.01-9b"
+					},
+					{
+						"identity": "vista",
+						"map": "Pharmacy Patient @CLINIC 55.01-136b"
+					}
+				]
+			}
+		]
+	}
+}

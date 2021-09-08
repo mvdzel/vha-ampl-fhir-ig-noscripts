@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-supplyType",
 	"name": "medication-supplyType",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This field is used to indicate whether or not the Orderable Item is a supply, 1 indicating a supply.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

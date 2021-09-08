@@ -1,0 +1,46 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAAppointmentDocumentEncounter",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointmentDocumentEncounter",
+	"name": "VAAppointmentDocumentEncounter",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Encounter",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Encounter.status",
+				"path": "Encounter.status",
+				"fixedCode": "unknown",
+				"mustSupport": true
+			},
+			{
+				"id": "Encounter.period.start",
+				"path": "Encounter.period.start",
+				"label": "VISIT",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @VISIT    8925-03b"
+					}
+				]
+			}
+		]
+	}
+}

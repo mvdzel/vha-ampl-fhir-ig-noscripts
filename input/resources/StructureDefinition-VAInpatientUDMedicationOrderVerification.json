@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAInpatientUDMedicationOrderVerification",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationOrderVerification",
 	"name": "VAInpatientUDMedicationOrderVerification",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "Verification of VA unit dose orders",
 	"fhirVersion": "3.0.2",
 	"mapping": [
@@ -51,13 +51,18 @@
 			{
 				"id": "Provenance.agent.whoReference",
 				"path": "Provenance.agent.whoReference",
-				"label": "VERIFYING NURSE",
-				"definition": "This is the nurse who verified the order, or the latest action taken on the order.",
+				"label": "VERIFYING PHARMACIST",
+				"short": "verifying RPH",
+				"definition": "This is the pharmacist who verified the order.",
 				"mustSupport": true,
 				"mapping": [
 					{
 						"identity": "vista",
 						"map": "PHARMACY PATIENT FILE @VERIFYING NURSE 55.06-16"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @VERIFYING PHARMACIST 55.06-18"
 					}
 				]
 			}

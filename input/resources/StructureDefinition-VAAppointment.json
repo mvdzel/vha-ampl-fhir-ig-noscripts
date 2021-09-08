@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAAppointment",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAppointment",
 	"name": "VAAppointment",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "An Appointment profiled to support VA requirements.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
@@ -47,6 +47,23 @@
 					{
 						"identity": "vista",
 						"map": "APPOINTMENT @APPOINTMENT DATE/TIME 2.98-.001"
+					}
+				]
+			},
+			{
+				"id": "Appointment.participant.actor",
+				"path": "Appointment.participant.actor",
+				"label": "TREATING SPECIALTY",
+				"short": "specialty",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "APPOINTMENT @CLINIC 2.98-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "HOSPITAL LOCATION @TREATING SPECIALTY 2.98-21:409.68-.04:44-9.5"
 					}
 				]
 			},

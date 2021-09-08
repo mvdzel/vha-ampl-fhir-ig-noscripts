@@ -10,13 +10,13 @@
   fhir:Resource.id [ fhir:value "ClinicalDangerLevel"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ClinicalDangerLevel (http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/ClinicalDangerLevel)</h2><p>Mapping from (not specified) to (not specified)</p><p>DRAFT. Published on May 17, 2021, 3:52:07 PM by JPSys (). </p><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>1</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>high</td><td>HIGH</td></tr><tr><td>2</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>moderate</td><td>MODERATE</td></tr><tr><td>3</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>low</td><td>LOW</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ClinicalDangerLevel (http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/ClinicalDangerLevel)</h2><p>Mapping from (not specified) to (not specified)</p><p>DRAFT. Published on Sep 8, 2021, 4:14:20 PM by JPSys (). </p><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>1</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>high</td><td>HIGH</td></tr><tr><td>2</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>moderate</td><td>MODERATE</td></tr><tr><td>3</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>low</td><td>LOW</td></tr></table></div>"
   ];
   fhir:ConceptMap.url [ fhir:value "http://va.gov/fhir/us/vha-ampl-ig/ConceptMap/ClinicalDangerLevel"];
-  fhir:ConceptMap.version [ fhir:value "0.0.74"];
+  fhir:ConceptMap.version [ fhir:value "0.0.77"];
   fhir:ConceptMap.name [ fhir:value "ClinicalDangerLevel"];
   fhir:ConceptMap.status [ fhir:value "draft"];
-  fhir:ConceptMap.date [ fhir:value "2021-05-17T15:52:07.695Z"^^xsd:dateTime];
+  fhir:ConceptMap.date [ fhir:value "2021-09-08T16:14:20.068Z"^^xsd:dateTime];
   fhir:ConceptMap.publisher [ fhir:value "JPSys"];
   fhir:ConceptMap.contact [
      fhir:index 0;

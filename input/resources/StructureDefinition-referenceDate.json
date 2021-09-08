@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referenceDate",
 	"name": "referenceDate",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This is the Date (and time) by which the clinician will reference the  document.  For Progress Notes, this will likely be the date of the  provider's encounter with the patient.  For Discharge Summaries, it will  correspond to the Discharge Date of the Admission referenced in the  document.  (If there is no Discharge Date when dictated, it will  correspond to the dictation date of the record instead.) In all cases, this is the date by which the document will be referenced and sorted.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
@@ -31,11 +31,11 @@
 				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referenceDate"
 			},
 			{
-				"id": "Extension.valueString",
-				"path": "Extension.valueString",
+				"id": "Extension.valueDateTime",
+				"path": "Extension.valueDateTime",
 				"type": [
 					{
-						"code": "string"
+						"code": "dateTime"
 					}
 				],
 				"mapping": [

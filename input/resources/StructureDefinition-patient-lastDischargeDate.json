@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-lastDischargeDate",
 	"name": "patient-lastDischargeDate",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "Enter in this field the date/time of the movement (admission, transfer, discharge, treating specialty transfer, lodger check-in, or lodger check- out).  Time must be included.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

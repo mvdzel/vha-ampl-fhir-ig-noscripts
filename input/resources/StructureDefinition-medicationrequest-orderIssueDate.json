@@ -4,8 +4,8 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-orderIssueDate",
 	"name": "medicationrequest-orderIssueDate",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
-	"description": "Date when doctor wrote prescription.",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "This is the date the order goes into effect.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -41,7 +41,7 @@
 				"mapping": [
 					{
 						"identity": "vista",
-						"map": "PRESCRIPTION @ISSUE DATE 52-1"
+						"map": "PENDING OUTPATIENT ORDERS @EFFECTIVE DATE 52.41-6"
 					}
 				]
 			}

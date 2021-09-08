@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAAllergyIntoleranceOriginationSite",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceOriginationSite",
 	"name": "VAAllergyIntoleranceOriginationSite",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -18,14 +18,14 @@
 	],
 	"kind": "resource",
 	"abstract": false,
-	"type": "Location",
-	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+	"type": "Organization",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
 	"derivation": "constraint",
 	"differential": {
 		"element": [
 			{
-				"id": "Location.identifier",
-				"path": "Location.identifier",
+				"id": "Organization.identifier",
+				"path": "Organization.identifier",
 				"label": "STATION NUMBER",
 				"mustSupport": true,
 				"mapping": [
@@ -36,8 +36,8 @@
 				]
 			},
 			{
-				"id": "Location.name",
-				"path": "Location.name",
+				"id": "Organization.name",
+				"path": "Organization.name",
 				"label": "NAME",
 				"mustSupport": true,
 				"mapping": [

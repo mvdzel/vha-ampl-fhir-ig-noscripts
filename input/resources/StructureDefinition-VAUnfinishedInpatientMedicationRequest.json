@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAUnfinishedInpatientMedicationRequest",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedicationRequest",
 	"name": "VAUnfinishedInpatientMedicationRequest",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -453,6 +453,26 @@
 				]
 			},
 			{
+				"id": "MedicationRequest.medicationReference",
+				"path": "MedicationRequest.medicationReference",
+				"label": "ADDITIVE",
+				"short": "additive",
+				"definition": "The additive selected as part of the IV order.  This entry is a pointer  to the ADDITIVES file (52.6).",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedication"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @ADDITIVE 53.157-.01"
+					}
+				]
+			},
+			{
 				"id": "MedicationRequest.subject",
 				"path": "MedicationRequest.subject",
 				"label": "PATIENT NAME",
@@ -491,6 +511,27 @@
 					{
 						"identity": "vista",
 						"map": "NON-VERIFIED ORDERS @PROVIDER 53.1-1"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dosageInstruction.extension:dosageInstruction-ivBottleNumber",
+				"path": "MedicationRequest.dosageInstruction.extension",
+				"sliceName": "dosageInstruction-ivBottleNumber",
+				"label": "BOTTLE",
+				"short": "bottle",
+				"definition": "This is the bottle number (or numbers, separated by commas) in which  this additive will be included for this IV order. If this field is blank,  it means that the additive will be included in all bottles.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/dosageInstruction-ivBottleNumber"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @BOTTLE 53.157-2"
 					}
 				]
 			},
@@ -700,6 +741,20 @@
 					{
 						"identity": "vista",
 						"map": "NON-VERIFIED ORDERS @INFUSION RATE 53.1-59"
+					}
+				]
+			},
+			{
+				"id": "MedicationRequest.dispenseRequest.performer",
+				"path": "MedicationRequest.dispenseRequest.performer",
+				"label": "CLINIC",
+				"short": "clinic",
+				"definition": "Entry must be a clinic.  Depending on the condition, INACTIVATE and REACTIVATE dates may exist.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @CLINIC 53.1-113"
 					}
 				]
 			}

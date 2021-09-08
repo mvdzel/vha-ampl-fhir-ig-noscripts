@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/recorded",
 	"name": "recorded",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "The date/time the preferred language information was given by the patient and recorded in the Patient File.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

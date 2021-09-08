@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/cosignatureNeed",
 	"name": "cosignatureNeed",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This boolean flag indicates to the system whether or not a cosignature is needed.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
@@ -31,11 +31,11 @@
 				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/cosignatureNeed"
 			},
 			{
-				"id": "Extension.valueString",
-				"path": "Extension.valueString",
+				"id": "Extension.valueCodeableConcept",
+				"path": "Extension.valueCodeableConcept",
 				"type": [
 					{
-						"code": "string"
+						"code": "CodeableConcept"
 					}
 				],
 				"mapping": [

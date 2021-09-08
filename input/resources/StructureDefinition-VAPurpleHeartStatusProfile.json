@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAPurpleHeartStatusProfile",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPurpleHeartStatusProfile",
 	"name": "VAPurpleHeartStatusProfile",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -24,9 +24,9 @@
 	"differential": {
 		"element": [
 			{
-				"id": "Observation.extension:event-statusReason",
+				"id": "Observation.extension:event-processState",
 				"path": "Observation.extension",
-				"sliceName": "event-statusReason",
+				"sliceName": "event-processState",
 				"label": "Current Purple Heart Status",
 				"short": "Purple Heart",
 				"definition": "This field cannot be edited locally.  If Current Purple Heart Indicator is set to 'Yes' by the local site, a Current Purple Heart Status of 'Pending' will be stuffed into the field.  Other editing or updating is done by the HEC.",
@@ -66,6 +66,17 @@
 				"id": "Observation.code.coding.display",
 				"path": "Observation.code.coding.display",
 				"fixedString": "Current PH Indicator",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient"
+					}
+				],
 				"mustSupport": true
 			},
 			{

@@ -6,11 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>vha-ampl-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
   },
   "url": "http://va.gov/fhir/us/vha-ampl-ig/ImplementationGuide/vha-ampl-ig",
-  "version": "0.0.74",
+  "version": "0.0.77",
   "name": "vha-ampl-ig",
   "status": "draft",
   "experimental": false,
-  "date": "2021-05-17T15:55:30+00:00",
+  "date": "2021-09-08T16:18:04+00:00",
   "publisher": "JPSys",
   "contact": [
     {
@@ -258,10 +258,9 @@
             }
           ],
           "example": false,
-          "name": "VAAllergyIntoleranceAssessment",
-          "description": "Provenance of the confirmation of a reaction.",
+          "name": "VAAllergyIntoleranceAssessmentAct",
           "sourceReference": {
-            "reference": "StructureDefinition/VAAllergyIntoleranceAssessment"
+            "reference": "StructureDefinition/VAAllergyIntoleranceAssessmentAct"
           }
         },
         {
@@ -2118,6 +2117,19 @@
           "sourceReference": {
             "reference": "StructureDefinition/VAInpatientIVMedicationRequestChange"
           }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAInpatientIVMedicationRequestEncounter",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAInpatientIVMedicationRequestEncounter"
+          }
         }
       ]
     },
@@ -2125,6 +2137,33 @@
       "id": "group-23",
       "name": "Coversheet Area: Outpatient Orders",
       "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAFinishedOutpatientMedicationRequest",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAFinishedOutpatientMedicationRequest"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "comment.text",
+          "description": "<blank>",
+          "sourceReference": {
+            "reference": "StructureDefinition/comment.text"
+          }
+        },
         {
           "extension": [
             {
@@ -2146,24 +2185,24 @@
             }
           ],
           "example": false,
-          "name": "medicationdispense-dispenseChannel",
-          "description": "This field tells whether the medication was picked up  or mailed to the patient.",
+          "name": "medicationdispense-fillDate",
+          "description": "This is the date the partial was made.",
           "sourceReference": {
-            "reference": "StructureDefinition/medicationdispense-dispenseChannel"
+            "reference": "StructureDefinition/medicationdispense-fillDate"
           }
         },
         {
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
+              "valueString": "StructureDefinition:extension"
             }
           ],
           "example": false,
-          "name": "VAMedication",
-          "description": "Medication with support for VA requirements",
+          "name": "medicationdispense-dispenseChannel",
+          "description": "This field tells whether the medication was picked up  or mailed to the patient.",
           "sourceReference": {
-            "reference": "StructureDefinition/VAMedication"
+            "reference": "StructureDefinition/medicationdispense-dispenseChannel"
           }
         },
         {
@@ -2178,19 +2217,6 @@
           "description": "This is the date that the prescription was entered.",
           "sourceReference": {
             "reference": "StructureDefinition/medicationdispense-fillRequestDate"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VAFinishedOutpatientMedicationRequest",
-          "sourceReference": {
-            "reference": "StructureDefinition/VAFinishedOutpatientMedicationRequest"
           }
         },
         {
@@ -2239,28 +2265,14 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
+              "valueString": "StructureDefinition:resource"
             }
           ],
           "example": false,
-          "name": "medicationrequest-orderIssueDate",
-          "description": "Date when doctor wrote prescription.",
+          "name": "VAMedication",
+          "description": "Medication with support for VA requirements",
           "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-orderIssueDate"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationdispense-fillDate",
-          "description": "The date the prescription was filled.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationdispense-fillDate"
+            "reference": "StructureDefinition/VAMedication"
           }
         },
         {
@@ -2313,34 +2325,6 @@
             }
           ],
           "example": false,
-          "name": "medicationrequest-cosigningProvider",
-          "description": "This field identifies the cosigning physician for prescriptions written by a provider for whom a counter signature is required, for example a nurse practitioner.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-cosigningProvider"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-lastDispensedDate",
-          "description": "This field contains the last fill date.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-lastDispensedDate"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
           "name": "medicationdispense-pickupInstructions",
           "description": "Enter any special instructions that should appear on mailing address portion of the label, specifing where, or when the RX(s) should be  picked up.",
           "sourceReference": {
@@ -2355,38 +2339,10 @@
             }
           ],
           "example": false,
-          "name": "medicationrequest-forServiceConnectedCondition",
-          "description": "During Outpatient Pharmacy order entry, a pharmacist may be asked if the medication being prescribed is for a service connected condition. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
+          "name": "whenPerformed",
+          "description": "Date/time prescription is finished.",
           "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-forServiceConnectedCondition"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "conjunction",
-          "description": "This code is used to help build a Possible Sig for a complex medication dose.  This code usually expands to an \"and\", a \"then\", or an \"except\".",
-          "sourceReference": {
-            "reference": "StructureDefinition/conjunction"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "pharmacy-sigVerb",
-          "description": "This verb will be used to describe how the medication will be taken/used.",
-          "sourceReference": {
-            "reference": "StructureDefinition/pharmacy-sigVerb"
+            "reference": "StructureDefinition/whenPerformed"
           }
         },
         {
@@ -2401,34 +2357,6 @@
           "description": "This field contains the internal entry number of the pointer to the IB Action Type file (#350.1).",
           "sourceReference": {
             "reference": "StructureDefinition/medicationdispense-copayTransactionType"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-associatedMaintenancePrescription",
-          "description": "This is the Maintenance Dose Rx that was created from the corresponding  Titration Dose Rx.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-associatedMaintenancePrescription"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-associatedTitrationPrescription",
-          "description": "This flag indicates whether the prescription is being dispensed as a  Titration Dose. It is intended to identify a Titration Dose Rx without  a corresponding Maintenance Dose Rx.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-associatedTitrationPrescription"
           }
         },
         {
@@ -2477,118 +2405,6 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-forMilitarySexualTrauma",
-          "description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been treated for Military Sexual Trauma, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition related to Military Sexual Trauma. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-forMilitarySexualTrauma"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-forAgentOrangeExposure",
-          "description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to Agent Orange during Vietnam service, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-forAgentOrangeExposure"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-forExposureToIonizingRadiation",
-          "description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to ionizing radiation during military service, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-forExposureToIonizingRadiation"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-forSouthwestAsiaConditions",
-          "description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been exposed to Southwest Asia Conditions (formerly referred to as Environmental Contaminants), the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat a condition due to this exposure. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-forSouthwestAsiaConditions"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-forHeadOrNeckCancer",
-          "description": "During Outpatient Pharmacy order entry, if a veteran has been identified as having been treated for Head and/or Neck Cancer due to nose or throat radium treatments while in the military, the pharmacist may be asked to identify whether or not the medication prescribed is being used to treat this condition. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription when a prescription fill is being released, or as the default for the question upon renewal of the prescription through CPRS or Outpatient Pharmacy.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-forHeadOrNeckCancer"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-forCombatService",
-          "description": "During Outpatient Pharmacy order entry, a pharmacist may be asked if the  medication being prescribed is for a condition related to Combat Services  while in the military. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-forCombatService"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "medicationrequest-forShipboardHazard",
-          "description": "During Outpatient Pharmacy order entry, a pharmacist may be asked if the medication being prescribed is for a condition related to PROJ 112/SHAD while in the military. This field will store the pharmacist's response to this question. The value in this field will be used to evaluate whether or not a copay should be applied to the prescription. This value will also be used as a default should this question be raised again during the life of the prescription.",
-          "sourceReference": {
-            "reference": "StructureDefinition/medicationrequest-forShipboardHazard"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:extension"
-            }
-          ],
-          "example": false,
-          "name": "whenPerformed",
-          "description": "This is the date the prescription is refilled.",
-          "sourceReference": {
-            "reference": "StructureDefinition/whenPerformed"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
               "valueString": "StructureDefinition:resource"
             }
           ],
@@ -2624,6 +2440,33 @@
           "description": "Any additional comments.",
           "sourceReference": {
             "reference": "StructureDefinition/comment"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAFinishedOutpatientMedicationOrderEncounter",
+          "description": "Encounter during which VA finished outpatient medication order is placed",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAFinishedOutpatientMedicationOrderEncounter"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAFinishedOutpatientMedicationOrganization",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAFinishedOutpatientMedicationOrganization"
           }
         }
       ]
@@ -2889,9 +2732,9 @@
             }
           ],
           "example": false,
-          "name": "ProblemListChange",
+          "name": "VAProblemListChange",
           "sourceReference": {
-            "reference": "StructureDefinition/ProblemListChange"
+            "reference": "StructureDefinition/VAProblemListChange"
           }
         },
         {
@@ -3030,6 +2873,19 @@
           "sourceReference": {
             "reference": "StructureDefinition/VAAppointment-ext"
           }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAAppointmentDocumentEncounter",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAAppointmentDocumentEncounter"
+          }
         }
       ]
     },
@@ -3131,6 +2987,20 @@
             }
           ],
           "example": false,
+          "name": "medicationrequest-orderIssueDate",
+          "description": "This is the date the order goes into effect.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-orderIssueDate"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
           "name": "pharmacy-dispenseProduct",
           "description": "This is the pointer to the Drug file entry that is associated with the Pharmacy Orderable Item. Not all orders will have a Drug when received from CPRS, but upon finishing the order, a Drug must be entered.",
           "sourceReference": {
@@ -3169,6 +3039,146 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationrequest-forServiceConnectedCondition",
+          "description": "This indicates whether the order is for a service connected or non-service connected condition.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-forServiceConnectedCondition"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationrequest-forMilitarySexualTrauma",
+          "description": "During CPRS order entry, if a veteran has been identified as having been treated for Military Sexual Trauma, the clinician will be asked to identify whether or not the outpatient medication order being prescribed is being used to treat a condition related to Military Sexual Trauma. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-forMilitarySexualTrauma"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationrequest-forAgentOrangeExposure",
+          "description": "During CPRS order entry, if a veteran has been identified as having been exposed to Agent Orange during Vietnam service, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-forAgentOrangeExposure"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationrequest-forExposureToIonizingRadiation",
+          "description": "During CPRS order entry, if a veteran has been identified as having been exposed to ionizing radiation during military service, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-forExposureToIonizingRadiation"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationrequest-forSouthwestAsiaConditions",
+          "description": "During CPRS order entry, if a veteran has been identified as having been exposed to Southwest Asia Conditions during the Persian Gulf War, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat a condition due to this exposure. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-forSouthwestAsiaConditions"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationrequest-forHeadOrNeckCancer",
+          "description": "During CPRS order entry, if a veteran has been identified as having been treated for Head and/or Neck Cancer due to nose or throat radium treatments while in the military, the clinician will be asked to identify whether or not the outpatient medication order prescribed is being used to treat this condition. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-forHeadOrNeckCancer"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationrequest-forCombatService",
+          "description": "During CPRS order entry, if a veteran has been identified as having been  treated for a condition related to Combat Services, the clinician will be  asked to identify whether or not the outpatient medication order being prescribed is being used to treat a condition related to Combat Services. This field will store the response that was entered for this question. This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-forCombatService"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "medicationrequest-forShipboardHazard",
+          "description": "During CPRS order entry, if a veteran has been identified as having been treated for a condition related to PROJ 112/SHAD, the clinician will be  asked to identify whether or not the outpatient medication order being  prescribed is being used to treat a condition related to PROJ 112/SHAD.  This field will store the response that was entered for this question.   This value will be used as the default value for the same prompt presented to the pharmacist when finishing the medication order that was entered through CPRS.",
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-forShipboardHazard"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "conjunction",
+          "description": "This is a code passed to Pharmacy from CPRS to help build a Possible Sig for a complex medication dose. This code usually expands to an \"and\",  a \"then\", or an \"except\".",
+          "sourceReference": {
+            "reference": "StructureDefinition/conjunction"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:extension"
+            }
+          ],
+          "example": false,
+          "name": "pharmacy-sigVerb",
+          "description": "This verb will be used to describe how the medication is taken/used.",
+          "sourceReference": {
+            "reference": "StructureDefinition/pharmacy-sigVerb"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
               "valueString": "StructureDefinition:resource"
             }
           ],
@@ -3176,6 +3186,19 @@
           "name": "VAUnfinishedOutpatientMedicationOrderIssue",
           "sourceReference": {
             "reference": "StructureDefinition/VAUnfinishedOutpatientMedicationOrderIssue"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAUnfinishedOutpatientMedicationOrderEncounter",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAUnfinishedOutpatientMedicationOrderEncounter"
           }
         }
       ]
@@ -3452,6 +3475,32 @@
           "sourceReference": {
             "reference": "StructureDefinition/note.authorString"
           }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAChemLabReportSpecimen",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAChemLabReportSpecimen"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAChemLabReportOrder",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAChemLabReportOrder"
+          }
         }
       ]
     },
@@ -3484,6 +3533,32 @@
           "sourceReference": {
             "reference": "StructureDefinition/VAMicroLabReportOrder"
           }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAMicroLabReportSpecimen",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAMicroLabReportSpecimen"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAMicroLabReportOrderSpecimen",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAMicroLabReportOrderSpecimen"
+          }
         }
       ]
     },
@@ -3502,19 +3577,6 @@
           "name": "VACytopathologyLabReport",
           "sourceReference": {
             "reference": "StructureDefinition/VACytopathologyLabReport"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "valueString": "StructureDefinition:resource"
-            }
-          ],
-          "example": false,
-          "name": "VACytopathologyLabOrder",
-          "sourceReference": {
-            "reference": "StructureDefinition/VACytopathologyLabOrder"
           }
         },
         {
@@ -3575,6 +3637,19 @@
           "name": "VASurgicalPathologyProcedureRequest",
           "sourceReference": {
             "reference": "StructureDefinition/VASurgicalPathologyProcedureRequest"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VASurgicalPathologyReportRequest",
+          "sourceReference": {
+            "reference": "StructureDefinition/VASurgicalPathologyReportRequest"
           }
         }
       ]
@@ -3762,6 +3837,45 @@
           "name": "request-extendedPriority",
           "sourceReference": {
             "reference": "StructureDefinition/request-extendedPriority"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAEMLabReportSpecimen",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAEMLabReportSpecimen"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAEMLabReportOrderSpecimen",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAEMLabReportOrderSpecimen"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            }
+          ],
+          "example": false,
+          "name": "VAEMLabReportEncounter",
+          "sourceReference": {
+            "reference": "StructureDefinition/VAEMLabReportEncounter"
           }
         }
       ]

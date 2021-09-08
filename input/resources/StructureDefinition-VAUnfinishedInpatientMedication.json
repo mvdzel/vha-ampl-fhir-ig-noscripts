@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAUnfinishedInpatientMedication",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedInpatientMedication",
 	"name": "VAUnfinishedInpatientMedication",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -18,17 +18,44 @@
 	],
 	"kind": "resource",
 	"abstract": false,
-	"type": "MedicationRequest",
-	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+	"type": "Medication",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
 	"derivation": "constraint",
 	"differential": {
 		"element": [
 			{
-				"id": "MedicationRequest.medicationReference",
-				"path": "MedicationRequest.medicationReference",
+				"id": "Medication.ingredient.itemCodeableConcept",
+				"path": "Medication.ingredient.itemCodeableConcept",
 				"type": [
 					{
-						"code": "Reference"
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Medication.ingredient.itemCodeableConcept.text",
+				"path": "Medication.ingredient.itemCodeableConcept.text",
+				"label": "ADDITIVE",
+				"definition": "The additive selected as part of the IV order.  This entry is a pointer  to the ADDITIVES file (52.6).",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @ADDITIVE 53.157-.01b"
+					}
+				]
+			},
+			{
+				"id": "Medication.ingredient.amount",
+				"path": "Medication.ingredient.amount",
+				"label": "STRENGTH",
+				"short": "strength",
+				"definition": "\"STRENGTH\" is the amount of an additive to be used in the manufacturing of the IV order. NOTE! You will be expected to use the strength units that were previously defined within the IV ADDITIVE file (52.6) for each\r\nadditive. For example, if the DRUG UNITS field of the IV ADDITIVES file specifies the units for ampicillin to be in grams, it would be incorrect to enter 500 for a half-gram dose. Enter 0.5 instead.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NON-VERIFIED ORDERS @STRENGTH 53.157-1"
 					}
 				]
 			}

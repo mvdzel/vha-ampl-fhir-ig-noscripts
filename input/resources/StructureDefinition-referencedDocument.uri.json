@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referencedDocument.uri",
 	"name": "referencedDocument.uri",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This field is a pointer to the TIU DOCUMENT (#8925) file.  It stores the pointer for a cytopathology SF515 that has been electronically signed and stored in TIU.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

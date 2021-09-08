@@ -1,0 +1,139 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAProblemListChange",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblemListChange",
+	"name": "VAProblemListChange",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Provenance.extension:reference-targetElement.extension.change.extension.newValue",
+				"path": "Provenance.extension",
+				"sliceName": "reference-targetElement-extension-change-extension-newValue",
+				"label": "NEW VALUE",
+				"short": "<New Value>",
+				"definition": "This is the new value now stored in the Problem file global (internal format).",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.newValue"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM LIST AUDIT FILE @NEW VALUE 125.8-5"
+					}
+				]
+			},
+			{
+				"id": "Provenance.extension:reference-targetElement.extension.change.extension.oldValue",
+				"path": "Provenance.extension",
+				"sliceName": "reference-targetElement-extension-change-extension-oldValue",
+				"label": "OLD VALUE",
+				"short": "<Old Value>   to",
+				"definition": "This is the original value as stored in the Problem file global (internal format).",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.change.extension.oldValue"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM LIST AUDIT FILE @OLD VALUE 125.8-4"
+					}
+				]
+			},
+			{
+				"id": "Provenance.extension:reference-targetElement.extension.elementUri",
+				"path": "Provenance.extension",
+				"sliceName": "reference-targetElement-extension-elementUri",
+				"label": "FIELD NUMBER",
+				"short": "Data change          <Field Name> changed from",
+				"definition": "This is the number of the field for which a change is being recorded.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/reference-targetElement.extension.elementUri"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM LIST AUDIT FILE @FIELD NUMBER  125.8-1"
+					}
+				]
+			},
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "DATE/TIME MODIFIED",
+				"short": "Date/Time modified",
+				"definition": "This is the date and time that this data was changed.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PROBLEM LIST AUDIT FILE @DATE/TIME MODIFIED 125.8-2"
+					}
+				]
+			},
+			{
+				"id": "Provenance.activity.system",
+				"path": "Provenance.activity.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.activity.code",
+				"path": "Provenance.activity.code",
+				"fixedCode": "UPDATE",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"type": [
+					{
+						"code": "Reference"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference.display",
+				"path": "Provenance.agent.whoReference.display",
+				"label": "NAME",
+				"short": "change author name",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "undefined @NAME 125.8-3:200-.01"
+					}
+				]
+			}
+		]
+	}
+}

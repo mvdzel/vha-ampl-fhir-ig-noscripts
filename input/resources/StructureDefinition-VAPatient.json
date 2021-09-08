@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAPatient",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient",
 	"name": "VAPatient",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -214,16 +214,16 @@
 				]
 			},
 			{
-				"id": "Patient.extension:emergencyResponseCohort",
+				"id": "Patient.extension:patient-emergencyResponseCohort",
 				"path": "Patient.extension",
-				"sliceName": "emergencyResponseCohort",
+				"sliceName": "patient-emergencyResponseCohort",
 				"label": "Emergency Response Indicator",
 				"short": "Emergency Response Indicator",
 				"definition": "Enter the appropriate ER Indicator to identify patients from impacted zip code areas designated by FEMA.",
 				"type": [
 					{
 						"code": "Extension",
-						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/emergencyResponseCohort"
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-emergencyResponseCohort"
 					}
 				],
 				"mustSupport": true,
@@ -235,16 +235,16 @@
 				]
 			},
 			{
-				"id": "Patient.extension:defaultPrescriptionStatus",
+				"id": "Patient.extension:patient-defaultPrescriptionStatus",
 				"path": "Patient.extension",
-				"sliceName": "defaultPrescriptionStatus",
+				"sliceName": "patient-defaultPrescriptionStatus",
 				"label": "PATIENT STATUS",
 				"short": "Rx Patient status",
 				"definition": "This field is used to indicate a default patient status.",
 				"type": [
 					{
 						"code": "Extension",
-						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/defaultPrescriptionStatus"
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-defaultPrescriptionStatus"
 					}
 				],
 				"mustSupport": true,
@@ -256,15 +256,15 @@
 				]
 			},
 			{
-				"id": "Patient.extension:selfIdentifiedGender",
+				"id": "Patient.extension:patient-genderIdentity",
 				"path": "Patient.extension",
-				"sliceName": "selfIdentifiedGender",
+				"sliceName": "patient-genderIdentity",
 				"label": "SELF IDENTIFIED GENDER",
 				"definition": "This SELF IDENTIFIED GENDER value indicates the patient's view of their gender identity, if they choose to provide it.",
 				"type": [
 					{
 						"code": "Extension",
-						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/selfIdentifiedGender"
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-genderIdentity"
 					}
 				],
 				"mustSupport": true,
@@ -618,6 +618,12 @@
 						"map": "Patient File @Temporary Address End Date  2-.1218"
 					}
 				]
+			},
+			{
+				"id": "Patient.maritalStatus.coding.system",
+				"path": "Patient.maritalStatus.coding.system",
+				"fixedUri": "http://hl7.org/fhir/v3/MaritalStatus",
+				"mustSupport": true
 			},
 			{
 				"id": "Patient.maritalStatus.coding.code",

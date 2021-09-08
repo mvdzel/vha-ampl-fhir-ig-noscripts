@@ -1,0 +1,50 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "patient-defaultPrescriptionStatus",
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-defaultPrescriptionStatus",
+	"name": "patient-defaultPrescriptionStatus",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "This field is used to indicate a default patient status.",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Patient"
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/patient-defaultPrescriptionStatus"
+			},
+			{
+				"id": "Extension.valueString",
+				"path": "Extension.valueString",
+				"type": [
+					{
+						"code": "string"
+					}
+				],
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient File @PATIENT STATUS 55-3"
+					}
+				]
+			}
+		]
+	}
+}

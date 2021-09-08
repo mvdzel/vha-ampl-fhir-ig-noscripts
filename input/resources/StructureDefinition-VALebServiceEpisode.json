@@ -1,0 +1,118 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VALebServiceEpisode",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VALebServiceEpisode",
+	"name": "VALebServiceEpisode",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.system",
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.code",
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.3221",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.display",
+				"path": "Observation.code.coding.display",
+				"fixedString": "Lebanon Service",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.effectivePeriod",
+				"path": "Observation.effectivePeriod",
+				"type": [
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "Observation.effectivePeriod.start",
+				"path": "Observation.effectivePeriod.start",
+				"label": "Lebanon From Date",
+				"short": "Conflict Location information",
+				"definition": "For this veteran applicant who served in Lebanon, enter the date which the applicant's service in Lebanon began.  The date must be on or after October 1, 1983. .",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Lebanon From Date  2-.3222"
+					}
+				]
+			},
+			{
+				"id": "Observation.effectivePeriod.end",
+				"path": "Observation.effectivePeriod.end",
+				"label": "Lebanon To Date",
+				"short": "Conflict Location information",
+				"definition": "For this patient, enter the date the patient's service in Lebanon ended. The 'LEBANON SERVICE INDICATED?' field must be answered yes and the date in this field must be after October 1, 1983.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Lebanon To Date  2-.3223"
+					}
+				]
+			},
+			{
+				"id": "Observation.valueCodeableConcept",
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.system",
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "Lebanon Service Indicated?",
+				"short": "Conflict Location information",
+				"definition": "Did this patient serve in Lebanon between the dates of August 23, 1982 and February 26, 1984?",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Lebanon Service Indicated?  2-.3221"
+					}
+				]
+			}
+		]
+	}
+}

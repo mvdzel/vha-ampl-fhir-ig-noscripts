@@ -1,0 +1,67 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAMicroLabReportSpecimen",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMicroLabReportSpecimen",
+	"name": "VAMicroLabReportSpecimen",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Specimen",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Specimen.accessionIdentifier",
+				"path": "Specimen.accessionIdentifier",
+				"label": "MICROBIOLOGY ACCESSION",
+				"definition": "This is the microbiology accession.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "MICROBIOLOGY @MICROBIOLOGY ACCESSION 63.05-.06b"
+					}
+				]
+			},
+			{
+				"id": "Specimen.type.coding.code",
+				"path": "Specimen.type.coding.code",
+				"label": "COLLECTION SAMPLE",
+				"definition": "This is the collection sample of the specimen.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "MICROBIOLOGY @COLLECTION SAMPLE 63.05-.055b"
+					}
+				]
+			},
+			{
+				"id": "Specimen.collection.collectedDateTime",
+				"path": "Specimen.collection.collectedDateTime",
+				"label": "DATE/TIME SPECIMEN TAKEN",
+				"definition": "This is the date/time of collection of the microbiology specimen.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "MICROBIOLOGY @DATE/TIME SPECIMEN TAKEN 63.05-.01b"
+					}
+				]
+			}
+		]
+	}
+}

@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-nationalFormularyStatus",
 	"name": "medication-nationalFormularyStatus",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This field will designate the formulary status of the orderable item. The non-formulary status will be displayed to the provider next to the selectable list of orderable item(s) during CPRS order entry (List Manager and GUI). This field is not editable. It is controlled by the software. An Orderable Item will only be marked as non-formulary if there are no active Dispense Drugs matched to the item that are formulary drugs.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

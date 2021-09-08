@@ -1,0 +1,77 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VACombatEligibilityObservation",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACombatEligibilityObservation",
+	"name": "VACombatEligibilityObservation",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.system",
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements/",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.code",
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.5295",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.display",
+				"path": "Observation.code.coding.display",
+				"fixedString": "Combat Veteran End Date",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueDateTime",
+				"path": "Observation.valueDateTime",
+				"label": "Combat Veteran End Date",
+				"short": "Eligibility",
+				"definition": "This field represents the last day for combat vet eligibility. This field  will only be populated by cross-reference when the veteran's combat vet  eligibility has been determined. This value will remain after the combat  vet eligibility period has expired.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Combat Veteran End Date  2-.5295"
+					}
+				]
+			}
+		]
+	}
+}

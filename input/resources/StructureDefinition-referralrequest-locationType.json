@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-locationType",
 	"name": "referralrequest-locationType",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This is the place where the consultation will take place.  Choose from:     B - Bedside     C - Consultant's Choice     E - Emergency Room     O - On Call     EKG - EKG Lab",
 	"fhirVersion": "3.0.2",
 	"mapping": [
@@ -18,7 +18,7 @@
 	"abstract": false,
 	"contextType": "resource",
 	"context": [
-		"ReferralRequest"
+		"Encounter"
 	],
 	"type": "Extension",
 	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
@@ -31,11 +31,11 @@
 				"fixedUri": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/referralrequest-locationType"
 			},
 			{
-				"id": "Extension.valueString",
-				"path": "Extension.valueString",
+				"id": "Extension.valueCodeableConcept",
+				"path": "Extension.valueCodeableConcept",
 				"type": [
 					{
-						"code": "string"
+						"code": "CodeableConcept"
 					}
 				],
 				"mapping": [

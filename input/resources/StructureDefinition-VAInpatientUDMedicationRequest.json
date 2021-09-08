@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAInpatientUDMedicationRequest",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequest",
 	"name": "VAInpatientUDMedicationRequest",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -104,31 +104,6 @@
 					{
 						"identity": "vista",
 						"map": "PHARMACY PATIENT FILE @PV FLAG 55.06-50"
-					}
-				]
-			},
-			{
-				"id": "MedicationRequest.extension:richAnnotation.comment.text",
-				"path": "MedicationRequest.extension",
-				"sliceName": "richAnnotation-comment-text",
-				"label": "SPECIAL INSTRUCTIONS (LONG)",
-				"short": "Comments",
-				"definition": "<blank>",
-				"type": [
-					{
-						"code": "Extension",
-						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
-					}
-				],
-				"mustSupport": true,
-				"mapping": [
-					{
-						"identity": "vista",
-						"map": "PHARMACY PATIENT FILE @COMMENTS 55.06-15"
-					},
-					{
-						"identity": "vista",
-						"map": "undefined @SPECIAL INSTRUCTIONS (LONG) 55.06-135"
 					}
 				]
 			},
@@ -407,6 +382,31 @@
 				]
 			},
 			{
+				"id": "MedicationRequest.extension:richAnnotation.comment.text",
+				"path": "MedicationRequest.extension",
+				"sliceName": "richAnnotation-comment-text",
+				"label": "COMMENTS",
+				"short": "Comments",
+				"definition": "This is any remarks or explanations needed for this order.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.comment.text"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "undefined @SPECIAL INSTRUCTIONS (LONG) 55.06-135"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @COMMENTS 55.06-15"
+					}
+				]
+			},
+			{
 				"id": "MedicationRequest.identifier.system",
 				"path": "MedicationRequest.identifier.system",
 				"fixedUri": "va.gov/identifiers/orders/55.06",
@@ -491,14 +491,18 @@
 			{
 				"id": "MedicationRequest.subject",
 				"path": "MedicationRequest.subject",
-				"label": "PATIENT",
-				"short": "PATIENT",
-				"definition": "This is the name of a patient that has some type of pharmacy order.",
+				"label": "PATIENT NAME",
+				"short": "Patient name",
+				"definition": "This is the patient for which the medication has been ordered.",
 				"mustSupport": true,
 				"mapping": [
 					{
 						"identity": "vista",
 						"map": "PHARMACY PATIENT FILE @PATIENT 55-.01ud"
+					},
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @PATIENT NAME 55.06-.5"
 					}
 				]
 			},

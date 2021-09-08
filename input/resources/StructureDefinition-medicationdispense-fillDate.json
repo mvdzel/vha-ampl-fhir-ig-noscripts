@@ -4,8 +4,8 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate",
 	"name": "medicationdispense-fillDate",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
-	"description": "The date the prescription was filled.",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "This is the date the partial was made.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -41,7 +41,7 @@
 				"mapping": [
 					{
 						"identity": "vista",
-						"map": "PRESCRIPTION @FILL DATE 52-22"
+						"map": "PRESCRIPTION @PARTIAL DATE 52.2-.01"
 					}
 				]
 			}

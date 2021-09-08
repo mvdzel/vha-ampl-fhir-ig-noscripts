@@ -9,10 +9,10 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/extension-MedicationRequest.statusReason"/>
-  <version value="0.0.74"/>
+  <version value="0.0.77"/>
   <name value="extension-MedicationRequest.statusReason"/>
   <status value="draft"/>
-  <date value="2021-05-17T15:52:07.695Z"/>
+  <date value="2021-09-08T16:14:20.068Z"/>
   <publisher value="JPSys"/>
   <contact>
     <telecom>

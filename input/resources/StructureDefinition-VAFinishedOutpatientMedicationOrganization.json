@@ -1,0 +1,41 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAFinishedOutpatientMedicationOrganization",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationOrganization",
+	"name": "VAFinishedOutpatientMedicationOrganization",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Organization",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Organization.name",
+				"path": "Organization.name",
+				"label": "REMOTE FILL SITE",
+				"definition": "This is the institution number of the facility that performed the physical refill.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @REMOTE FILL SITE 52.1-91b"
+					}
+				]
+			}
+		]
+	}
+}

@@ -4,8 +4,8 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/pharmacy-sigVerb",
 	"name": "pharmacy-sigVerb",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
-	"description": "This verb will be used to describe how the medication will be taken/used.",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "This verb will be used to describe how the medication is taken/used.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -41,7 +41,7 @@
 				"mapping": [
 					{
 						"identity": "vista",
-						"map": "PRESCRIPTION @VERB 52.0113-8"
+						"map": "PENDING OUTPATIENT ORDERS @VERB 52.413-13"
 					}
 				]
 			}

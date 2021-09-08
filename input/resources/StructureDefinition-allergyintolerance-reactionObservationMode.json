@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-reactionObservationMode",
 	"name": "allergyintolerance-reactionObservationMode",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "Indicates whether this allergy/adverse reaction has been observed by some personnel, or if it is historical data gathered about the patient.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

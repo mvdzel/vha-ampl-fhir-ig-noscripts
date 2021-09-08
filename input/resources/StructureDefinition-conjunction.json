@@ -4,8 +4,8 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/conjunction",
 	"name": "conjunction",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
-	"description": "This code is used to help build a Possible Sig for a complex medication dose.  This code usually expands to an \"and\", a \"then\", or an \"except\".",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "This is a code passed to Pharmacy from CPRS to help build a Possible Sig for a complex medication dose. This code usually expands to an \"and\",  a \"then\", or an \"except\".",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -41,7 +41,7 @@
 				"mapping": [
 					{
 						"identity": "vista",
-						"map": "PRESCRIPTION @CONJUNCTION 52.0113-5"
+						"map": "PENDING OUTPATIENT ORDERS @CONJUNCTION 52.413-6"
 					}
 				]
 			}

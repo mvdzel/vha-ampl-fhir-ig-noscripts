@@ -4,8 +4,8 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillRequestDate",
 	"name": "medicationdispense-fillRequestDate",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
-	"description": "This is the date the refill request was entered.",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "This is the date that the prescription was entered.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -41,7 +41,7 @@
 				"mapping": [
 					{
 						"identity": "vista",
-						"map": "PRESCRIPTION @LOGIN DATE 52.1-7"
+						"map": "PRESCRIPTION @LOGIN DATE 52.2-.08"
 					}
 				]
 			}

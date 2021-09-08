@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/richAnnotation.annotation.date",
 	"name": "richAnnotation.annotation.date",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This field is the date/time this comment was entered.  This field is automatically filled by the system when a user enters a comment.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

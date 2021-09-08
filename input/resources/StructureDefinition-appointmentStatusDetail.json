@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/appointmentStatusDetail",
 	"name": "appointmentStatusDetail",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This field contains the current status of the patient's appointment. If the field is blank, it means the appointment has not been no-showed or cancelled and the patient was not an inpatient at the time of the\r\nappointment. This field is set automatically by the scheduling module and must NOT be edited.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

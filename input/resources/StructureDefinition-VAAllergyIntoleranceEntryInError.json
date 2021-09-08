@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAAllergyIntoleranceEntryInError",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceEntryInError",
 	"name": "VAAllergyIntoleranceEntryInError",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "Provenance of the determination that the record is in error.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
@@ -39,9 +39,15 @@
 				]
 			},
 			{
+				"id": "Provenance.activity.system",
+				"path": "Provenance.activity.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+				"mustSupport": true
+			},
+			{
 				"id": "Provenance.activity.code",
 				"path": "Provenance.activity.code",
-				"fixedCode": "nullified",
+				"fixedCode": "NULLIFY",
 				"mustSupport": true
 			},
 			{

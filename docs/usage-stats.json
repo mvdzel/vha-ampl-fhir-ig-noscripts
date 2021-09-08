@@ -1,6 +1,6 @@
 {
   "package": "vha-ampl-ig",
-  "version": "0.0.74",
+  "version": "0.0.77",
   "fhirVersion": "3.0.2",
   "jurisdiction": "840",
   "extensions": [
@@ -87,6 +87,14 @@
     {
       "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment",
       "title": "comment",
+      "types": [
+        "string",
+        "string"
+      ]
+    },
+    {
+      "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment.text",
+      "title": "comment.text",
       "types": [
         "string",
         "string"
@@ -589,30 +597,6 @@
       ]
     },
     {
-      "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription",
-      "title": "medicationrequest-associatedMaintenancePrescription",
-      "types": [
-        "string",
-        "string"
-      ]
-    },
-    {
-      "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedTitrationPrescription",
-      "title": "medicationrequest-associatedTitrationPrescription",
-      "types": [
-        "string",
-        "string"
-      ]
-    },
-    {
-      "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-cosigningProvider",
-      "title": "medicationrequest-cosigningProvider",
-      "types": [
-        "string",
-        "string"
-      ]
-    },
-    {
       "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-dateEnded",
       "title": "medicationrequest-dateEnded",
       "types": [
@@ -640,8 +624,8 @@
       "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forAgentOrangeExposure",
       "title": "medicationrequest-forAgentOrangeExposure",
       "types": [
-        "CodeableConcept",
-        "CodeableConcept"
+        "string",
+        "string"
       ]
     },
     {
@@ -656,8 +640,8 @@
       "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-forExposureToIonizingRadiation",
       "title": "medicationrequest-forExposureToIonizingRadiation",
       "types": [
-        "CodeableConcept",
-        "CodeableConcept"
+        "string",
+        "string"
       ]
     },
     {
@@ -706,14 +690,6 @@
       "types": [
         "CodeableConcept",
         "CodeableConcept"
-      ]
-    },
-    {
-      "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastDispensedDate",
-      "title": "medicationrequest-lastDispensedDate",
-      "types": [
-        "string",
-        "string"
       ]
     },
     {
@@ -1314,12 +1290,6 @@
         "title": "NonVAMedicationStatement"
       }
     ],
-    "Provenance": [
-      {
-        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAVitalsEntry",
-        "title": "VAVitalsEntry"
-      }
-    ],
     "Observation": [
       {
         "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAYugServiceEpisode",
@@ -1330,6 +1300,12 @@
       {
         "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntolerance",
         "title": "VAAllergyIntolerance"
+      }
+    ],
+    "Provenance": [
+      {
+        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAVitalsEntry",
+        "title": "VAVitalsEntry"
       }
     ],
     "Organization": [
@@ -1348,6 +1324,12 @@
         "title": "VAPatientAppointment"
       }
     ],
+    "Encounter": [
+      {
+        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAUnfinishedOutpatientMedicationOrderEncounter",
+        "title": "VAUnfinishedOutpatientMedicationOrderEncounter"
+      }
+    ],
     "CareTeam": [
       {
         "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPrimaryCareTeam",
@@ -1360,16 +1342,26 @@
         "title": "VASurgicalPathologyReport"
       }
     ],
+    "ProcedureRequest": [
+      {
+        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASurgicalPathologyReportRequest",
+        "title": "VASurgicalPathologyReportRequest"
+      }
+    ],
+    "Specimen": [
+      {
+        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMicroLabReportOrderSpecimen",
+        "title": "VAMicroLabReportOrderSpecimen"
+      },
+      {
+        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMicroLabReportSpecimen",
+        "title": "VAMicroLabReportSpecimen"
+      }
+    ],
     "Coverage": [
       {
         "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACoverage",
         "title": "VACoverage"
-      }
-    ],
-    "Encounter": [
-      {
-        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferralEncounter",
-        "title": "VAReferralEncounter"
       }
     ],
     "Medication": [
@@ -1435,12 +1427,6 @@
         "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAReferral",
         "title": "VAReferral"
       }
-    ],
-    "ProcedureRequest": [
-      {
-        "url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASurgicalPathologyProcedureRequest",
-        "title": "VASurgicalPathologyProcedureRequest"
-      }
     ]
   },
   "usage": {
@@ -1461,9 +1447,6 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
       "StructureDefinition.snapshot.element"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/translation": [
-      "MedicationRequest.dosageInstruction"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.package.resource"
@@ -1500,6 +1483,9 @@
     ],
     "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment": [
       "Provenance"
+    ],
+    "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/comment.text": [
+      "MedicationDispense"
     ],
     "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/condition-lastModified": [
       "Condition"
@@ -1687,15 +1673,6 @@
     "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-pickupInstructions": [
       "MedicationDispense"
     ],
-    "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedMaintenancePrescription": [
-      "MedicationRequest"
-    ],
-    "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-associatedTitrationPrescription": [
-      "MedicationRequest"
-    ],
-    "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-cosigningProvider": [
-      "MedicationRequest"
-    ],
     "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-dateEnded": [
       "MedicationRequest"
     ],
@@ -1730,9 +1707,6 @@
       "MedicationRequest"
     ],
     "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-ivType": [
-      "MedicationRequest"
-    ],
-    "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastDispensedDate": [
       "MedicationRequest"
     ],
     "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-lastFillDate": [

@@ -1,55 +1,62 @@
 ﻿vha-ampl-ig : Validation Results
 =========================================
 
-err = 11, warn = 178, info = 4
-IG Publisher Version: 1.1.72
-Generated Mon May 17 15:58:52 UTC 2021. FHIR version 3.0.2 for vha-ampl-ig#0.0.74 (canonical = http://va.gov/fhir/us/vha-ampl-ig)
+err = 11, warn = 190, info = 5
+IG Publisher Version: 1.1.72 Out of date - current version is 1.1.79
+Generated Wed Sep 08 16:22:05 UTC 2021. FHIR version 3.0.2 for vha-ampl-ig#0.0.77 (canonical = http://va.gov/fhir/us/vha-ampl-ig)
 
- Build Errors : 16 / 107 / 0
+ Build Errors : 22 / 119 / 0
  /home/node/vha-ampl-fhir-ig/input/myig : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/ConceptMap-AppointmentStatus : 0 / 0 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/ConceptMap-ClinicalDangerLevel : 0 / 0 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-NonVAMedicationIssue : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-NonVAMedicationStatement : 0 / 1 / 1
- /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-ProblemListChange : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAgentOrangeRiskProfile : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntolerance : 0 / 1 / 1
- /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceAssessment : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceAssessmentAct : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceEntryInError : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceOrigination : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceOriginationSite : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceVerification : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointment : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointment-ext : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointmentDocumentEncounter : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointmentLocation : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointmentPracitioner : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VABaseEligibilityObservation : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACareTeam : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAChemLabReport : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAChemLabReportOrder : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAChemLabReportResult : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAChemLabReportSpecimen : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACombatEligibilityObservation : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACombatRiskProfile : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACopayEligibilityObservation : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACoverage : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACurrentEncounter : 0 / 1 / 1
- /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACytopathologyLabOrder : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACytopathologyLabReport : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VADrug : 2 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VADrugIngredient : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReport : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReportEncounter : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReportOrder : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReportOrderSpecimen : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReportSpecimen : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationDispense : 0 / 1 / 2
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationDispenseEncounter : 0 / 1 / 2
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationOrderCancellation : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationOrderChange : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationOrderEncounter : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationOrganization : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationPartial : 0 / 1 / 2
- /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationRequest : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationRequest : 0 / 1 / 2
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAGreServiceEpisode : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAImmunization : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAImmunizationReaction : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientIVMedication : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientIVMedicationRequest : 2 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientIVMedicationRequestChange : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientIVMedicationRequestEncounter : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientIVMedicationRequestVerification : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientMedicationRequestRenewal : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientUDMedicationOrderVerification : 0 / 1 / 1
@@ -64,6 +71,8 @@ Generated Mon May 17 15:58:52 UTC 2021. FHIR version 3.0.2 for vha-ampl-ig#0.0.7
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMedicationAdministrationEvent : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMicroLabReport : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMicroLabReportOrder : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMicroLabReportOrderSpecimen : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMicroLabReportSpecimen : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VANTRRiskProfile : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAOrderCheck : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAPGServiceEpisode : 0 / 1 / 1
@@ -79,6 +88,7 @@ Generated Mon May 17 15:58:52 UTC 2021. FHIR version 3.0.2 for vha-ampl-ig#0.0.7
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAPrimaryCareTeam : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProblem : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProblemAuthorship : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProblemListChange : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProgressNote : 0 / 2 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProgressNoteCosignature : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProgressNoteDictation : 0 / 1 / 1
@@ -98,11 +108,13 @@ Generated Mon May 17 15:58:52 UTC 2021. FHIR version 3.0.2 for vha-ampl-ig#0.0.7
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VASomServiceEpisode : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VASurgicalPathologyProcedureRequest : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VASurgicalPathologyReport : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VASurgicalPathologyReportRequest : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedInpatientMedication : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedInpatientMedicationRequest : 2 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedInpatientMedicationRequestActivity : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedInpatientMedicationRequestEncounter : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedOutpatientMedicationOrder : 2 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedOutpatientMedicationOrderEncounter : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedOutpatientMedicationOrderIssue : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAVNServiceEpisode : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAVitals : 0 / 1 / 1
@@ -118,6 +130,7 @@ Generated Mon May 17 15:58:52 UTC 2021. FHIR version 3.0.2 for vha-ampl-ig#0.0.7
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-appointmentStatusDetail : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-assignedDate : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-comment : 0 / 1 / 1
+ /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-comment.text : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-condition-lastModified : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-condition-priority : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-condition-relationshipToAgentOrangeExposure : 0 / 1 / 1
@@ -181,9 +194,6 @@ Generated Mon May 17 15:58:52 UTC 2021. FHIR version 3.0.2 for vha-ampl-ig#0.0.7
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationdispense-patientCounseled : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationdispense-patientCounselingUnderstood : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationdispense-pickupInstructions : 0 / 1 / 1
- /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-associatedMaintenancePrescription : 0 / 1 / 1
- /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-associatedTitrationPrescription : 0 / 1 / 1
- /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-cosigningProvider : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-dateEnded : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-extendedPriority : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-flaggedForClarification : 0 / 1 / 1
@@ -196,7 +206,6 @@ Generated Mon May 17 15:58:52 UTC 2021. FHIR version 3.0.2 for vha-ampl-ig#0.0.7
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-forShipboardHazard : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-forSouthwestAsiaConditions : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-ivType : 0 / 1 / 1
- /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-lastDispensedDate : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-lastFillDate : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-lastFillQuantity : 0 / 1 / 1
  /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-lastLocationOfPatient : 0 / 1 / 1
@@ -291,6 +300,7 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/pharmacy-pending-inpatient-order-status.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/pharmacy-pending-outpatient-order-status.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/pharmacy-unit-dose-order-status.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAAllergyIntoleranceAssessmentAct.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAVitals.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAVitalsEntry.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAProgressNote.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -343,11 +353,12 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAInpatientUDMedicationRequestRenewal.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAInpatientUDMedicationRequest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAInpatientIVMedicationRequest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAFinishedOutpatientMedicationRequest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAFinishedOutpatientMedicationPartial.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAProblem.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/condition-responsibleProvider.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAProblemAuthorship.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/ProblemListChange.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAProblemListChange.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAPrimaryCareTeam.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAInpatientUDMedicationRequestEncounter.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAInpatientUDMedicationRequestChange.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -355,7 +366,6 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAInpatientIVMedication.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAInpatientMedicationRequestRenewal.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAInpatientIVMedicationRequestChange.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAFinishedOutpatientMedicationRequest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAFinishedOutpatientMedicationDispenseEncounter.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/NonVAMedicationStatement.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/medicationstatement-orderLocation.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -373,7 +383,6 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAMicroLabReport.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAMicroLabReportOrder.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VACytopathologyLabReport.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VACytopathologyLabOrder.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VASurgicalPathologyReport.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VASurgicalPathologyProcedureRequest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAPatientRecordFlag.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -387,23 +396,41 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/request-extendedPriority.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAAllergyIntoleranceOriginationSite.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAImmunizationReaction.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAInpatientIVMedicationRequestEncounter.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VASurgicalPathologyReportRequest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAEMLabReportSpecimen.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAEMLabReportOrderSpecimen.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAChemLabReportSpecimen.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAMicroLabReportSpecimen.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAMicroLabReportOrderSpecimen.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAEMLabReportEncounter.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAAppointmentDocumentEncounter.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAFinishedOutpatientMedicationOrganization.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAUnfinishedOutpatientMedicationOrderEncounter.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/VAChemLabReportOrder.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ConceptMap/ClinicalDangerLevel.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ConceptMap/AppointmentStatus.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAAllergyIntoleranceVerification.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 295, column 803: The link 'StructureDefinition-VAAllergyIntoleranceVerification-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 76 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAAllergyIntoleranceVerification.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 495, column 803: The link 'StructureDefinition-VAAllergyIntoleranceVerification-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 76 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteCosignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 295, column 805: The link 'StructureDefinition-VAProgressNoteCosignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 77 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteCosignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 296, column 803: The link 'StructureDefinition-VAProgressNoteCosignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockName' for "signatureBlockName" cannot be resolved (valid targets: 77 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteCosignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 501, column 805: The link 'StructureDefinition-VAProgressNoteCosignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 77 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteCosignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 502, column 803: The link 'StructureDefinition-VAProgressNoteCosignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockName' for "signatureBlockName" cannot be resolved (valid targets: 77 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 296, column 805: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureMode-coding-code' for "signatureMode.coding.code" cannot be resolved (valid targets: 78 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 297, column 799: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 78 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 298, column 809: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockName' for "signatureBlockName" cannot be resolved (valid targets: 78 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 506, column 805: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureMode-coding-code' for "signatureMode.coding.code" cannot be resolved (valid targets: 78 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 507, column 799: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 78 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 508, column 809: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockName' for "signatureBlockName" cannot be resolved (valid targets: 78 targets)
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VASurgicalPathologyProcedureRequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 377, column 233: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VASurgicalPathologyProcedureRequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 313, column 2408: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
-ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VASurgicalPathologyProcedureRequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 501, column 2408: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAAllergyIntoleranceVerification.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 289, column 809: The link 'StructureDefinition-VAAllergyIntoleranceVerification-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 76 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAAllergyIntoleranceVerification.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 491, column 809: The link 'StructureDefinition-VAAllergyIntoleranceVerification-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 76 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAChemLabReportOrder-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 370, column 233: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAChemLabReportOrder.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 306, column 2393: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAChemLabReportOrder.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 494, column 2393: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteCosignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 288, column 805: The link 'StructureDefinition-VAProgressNoteCosignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 77 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteCosignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 289, column 803: The link 'StructureDefinition-VAProgressNoteCosignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockName' for "signatureBlockName" cannot be resolved (valid targets: 77 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteCosignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 494, column 805: The link 'StructureDefinition-VAProgressNoteCosignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 77 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteCosignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 495, column 803: The link 'StructureDefinition-VAProgressNoteCosignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockName' for "signatureBlockName" cannot be resolved (valid targets: 77 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 289, column 805: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureMode-coding-code' for "signatureMode.coding.code" cannot be resolved (valid targets: 78 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 290, column 799: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 78 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 291, column 809: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockName' for "signatureBlockName" cannot be resolved (valid targets: 78 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 499, column 805: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureMode-coding-code' for "signatureMode.coding.code" cannot be resolved (valid targets: 78 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 500, column 799: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockTitle' for "signatureBlockTitle" cannot be resolved (valid targets: 78 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VAProgressNoteSignature.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 501, column 809: The link 'StructureDefinition-VAProgressNoteSignature-definitions.html#Provenance.agent.whoReference.extension:signatureBlockName' for "signatureBlockName" cannot be resolved (valid targets: 78 targets)
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VASurgicalPathologyProcedureRequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 370, column 233: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VASurgicalPathologyProcedureRequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 306, column 2408: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VASurgicalPathologyProcedureRequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 494, column 2408: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VASurgicalPathologyReportRequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 371, column 233: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VASurgicalPathologyReportRequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 310, column 2441: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /home/node/vha-ampl-fhir-ig/output/StructureDefinition-VASurgicalPathologyReportRequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 530, column 2441: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
 == /home/node/vha-ampl-fhir-ig/input/myig.xml ==
 INFORMATION: ImplementationGuide/vha-ampl-ig: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 WARNING: ImplementationGuide/vha-ampl-ig: ImplementationGuide.package[14].name: value should not start or finish with whitespace
@@ -411,44 +438,51 @@ WARNING: ImplementationGuide/vha-ampl-ig: ImplementationGuide.package[14].name: 
 == /home/node/vha-ampl-fhir-ig/input/resources/ConceptMap-ClinicalDangerLevel.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-NonVAMedicationIssue.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-NonVAMedicationStatement.json ==
-== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-ProblemListChange.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAgentOrangeRiskProfile.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntolerance.json ==
-== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceAssessment.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceAssessmentAct.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceEntryInError.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceOrigination.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceOriginationSite.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAllergyIntoleranceVerification.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointment.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointment-ext.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointmentDocumentEncounter.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointmentLocation.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAAppointmentPracitioner.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VABaseEligibilityObservation.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACareTeam.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAChemLabReport.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAChemLabReportOrder.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAChemLabReportResult.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAChemLabReportSpecimen.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACombatEligibilityObservation.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACombatRiskProfile.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACopayEligibilityObservation.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACoverage.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACurrentEncounter.json ==
-== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACytopathologyLabOrder.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VACytopathologyLabReport.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VADrug.json ==
 ERROR: StructureDefinition/VADrug: StructureDefinition.snapshot.element[23].fixed.ofType(uri): URL value 'http://hl7.org/fhir/ndfrt' does not resolve
 ERROR: StructureDefinition/VADrug: StructureDefinition.differential.element[9].fixed.ofType(uri): URL value 'http://hl7.org/fhir/ndfrt' does not resolve
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VADrugIngredient.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReport.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReportEncounter.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReportOrder.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReportOrderSpecimen.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAEMLabReportSpecimen.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationDispense.json ==
 INFORMATION: StructureDefinition/VAFinishedOutpatientMedicationDispense: StructureDefinition.snapshot.element[51].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML withour appropraite post-processing, it may be a security risk
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationDispenseEncounter.json ==
 INFORMATION: StructureDefinition/VAFinishedOutpatientMedicationDispenseEncounter: StructureDefinition.snapshot.element[26].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML withour appropraite post-processing, it may be a security risk
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationOrderCancellation.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationOrderChange.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationOrderEncounter.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationOrganization.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationPartial.json ==
 INFORMATION: StructureDefinition/VAFinishedOutpatientMedicationPartial: StructureDefinition.snapshot.element[30].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML withour appropraite post-processing, it may be a security risk
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAFinishedOutpatientMedicationRequest.json ==
+INFORMATION: StructureDefinition/VAFinishedOutpatientMedicationRequest: StructureDefinition.snapshot.element[28].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML withour appropraite post-processing, it may be a security risk
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAGreServiceEpisode.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAImmunization.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAImmunizationReaction.json ==
@@ -457,6 +491,7 @@ INFORMATION: StructureDefinition/VAFinishedOutpatientMedicationPartial: Structur
 ERROR: VAInpatientIVMedicationRequest.MedicationRequest.status: illegal attempt to change the binding on MedicationRequest.status from required to preferred
 ERROR: StructureDefinition/VAInpatientIVMedicationRequest: StructureDefinition: illegal attempt to change the binding on MedicationRequest.status from required to preferred
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientIVMedicationRequestChange.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientIVMedicationRequestEncounter.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientIVMedicationRequestVerification.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientMedicationRequestRenewal.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAInpatientUDMedicationOrderVerification.json ==
@@ -472,6 +507,8 @@ INFORMATION: StructureDefinition/VAMedication: StructureDefinition.snapshot.elem
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMedicationAdministrationEvent.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMicroLabReport.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMicroLabReportOrder.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMicroLabReportOrderSpecimen.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAMicroLabReportSpecimen.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VANTRRiskProfile.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAOrderCheck.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAPGServiceEpisode.json ==
@@ -487,6 +524,7 @@ INFORMATION: StructureDefinition/VAMedication: StructureDefinition.snapshot.elem
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAPrimaryCareTeam.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProblem.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProblemAuthorship.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProblemListChange.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProgressNote.json ==
 WARNING: StructureDefinition/VAProgressNote: StructureDefinition.snapshot.element[61].binding: The valueSet reference http://www.rfc-editor.org/bcp/bcp13.txt on element DocumentReference.content.attachment.contentType could not be resolved
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAProgressNoteCosignature.json ==
@@ -508,6 +546,7 @@ WARNING: StructureDefinition/VAReferralEncounterReport: StructureDefinition.snap
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VASomServiceEpisode.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VASurgicalPathologyProcedureRequest.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VASurgicalPathologyReport.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VASurgicalPathologyReportRequest.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedInpatientMedication.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedInpatientMedicationRequest.json ==
 ERROR: VAUnfinishedInpatientMedicationRequest.MedicationRequest.status: illegal attempt to change the binding on MedicationRequest.status from required to preferred
@@ -517,6 +556,7 @@ ERROR: StructureDefinition/VAUnfinishedInpatientMedicationRequest: StructureDefi
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedOutpatientMedicationOrder.json ==
 ERROR: VAUnfinishedOutpatientMedicationOrder.MedicationRequest.status: illegal attempt to change the binding on MedicationRequest.status from required to preferred
 ERROR: StructureDefinition/VAUnfinishedOutpatientMedicationOrder: StructureDefinition: illegal attempt to change the binding on MedicationRequest.status from required to preferred
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedOutpatientMedicationOrderEncounter.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAUnfinishedOutpatientMedicationOrderIssue.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAVNServiceEpisode.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-VAVitals.json ==
@@ -532,6 +572,7 @@ ERROR: StructureDefinition/VAUnfinishedOutpatientMedicationOrder: StructureDefin
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-appointmentStatusDetail.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-assignedDate.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-comment.json ==
+== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-comment.text.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-condition-lastModified.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-condition-priority.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-condition-relationshipToAgentOrangeExposure.json ==
@@ -597,9 +638,6 @@ ERROR: /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-event-pro
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationdispense-patientCounseled.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationdispense-patientCounselingUnderstood.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationdispense-pickupInstructions.json ==
-== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-associatedMaintenancePrescription.json ==
-== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-associatedTitrationPrescription.json ==
-== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-cosigningProvider.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-dateEnded.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-extendedPriority.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-flaggedForClarification.json ==
@@ -612,7 +650,6 @@ ERROR: /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-event-pro
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-forShipboardHazard.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-forSouthwestAsiaConditions.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-ivType.json ==
-== /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-lastDispensedDate.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-lastFillDate.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-lastFillQuantity.json ==
 == /home/node/vha-ampl-fhir-ig/input/resources/StructureDefinition-medicationrequest-lastLocationOfPatient.json ==

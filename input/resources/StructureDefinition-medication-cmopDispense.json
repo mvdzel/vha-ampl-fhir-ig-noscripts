@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medication-cmopDispense",
 	"name": "medication-cmopDispense",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "Indicates if this drug may be dispensed from the Consolidated Mail Outpatient Pharmacy System.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

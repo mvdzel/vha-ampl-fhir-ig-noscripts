@@ -1,0 +1,62 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAInpatientUDMedicationRequestEncounter",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientUDMedicationRequestEncounter",
+	"name": "VAInpatientUDMedicationRequestEncounter",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Encounter",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Encounter.status",
+				"path": "Encounter.status",
+				"fixedCode": "unknown",
+				"mustSupport": true
+			},
+			{
+				"id": "Encounter.period.start",
+				"path": "Encounter.period.start",
+				"label": "APPOINTMENT DATE/TIME",
+				"short": "Appointment Date",
+				"definition": "Date and time of the appointment for this clinic location.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @APPOINTMENT DATE/TIME 55.06-131"
+					}
+				]
+			},
+			{
+				"id": "Encounter.location",
+				"path": "Encounter.location",
+				"label": "CLINIC",
+				"short": "Clinic",
+				"definition": "This is the clinic location if this order is for an Outpatient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PHARMACY PATIENT FILE @CLINIC 55.06-130"
+					}
+				]
+			}
+		]
+	}
+}

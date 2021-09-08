@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAPrimaryCareTeam",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPrimaryCareTeam",
 	"name": "VAPrimaryCareTeam",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -23,6 +23,26 @@
 	"derivation": "constraint",
 	"differential": {
 		"element": [
+			{
+				"id": "CareTeam.extension:valueReference",
+				"path": "CareTeam.extension",
+				"sliceName": "valueReference",
+				"label": "TEAM PHONE NUMBER",
+				"definition": "This is the phone number associated with the team.",
+				"type": [
+					{
+						"code": "Extension",
+						"profile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/valueReference"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TEAM FILE @TEAM PHONE NUMBER 404.51-.02"
+					}
+				]
+			},
 			{
 				"id": "CareTeam.name",
 				"path": "CareTeam.name",
@@ -100,6 +120,19 @@
 					{
 						"identity": "vista",
 						"map": "POSITION ASSIGNMENT HISTORY @PRACTITIONER 404.52-.03"
+					}
+				]
+			},
+			{
+				"id": "CareTeam.managingOrganization",
+				"path": "CareTeam.managingOrganization",
+				"label": "INSTITUTION",
+				"definition": "This is the entry for the site in the INSTITUTION File.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TEAM FILE @INSTITUTION  404.51-.07"
 					}
 				]
 			}

@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VACoverage",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VACoverage",
 	"name": "VACoverage",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -36,6 +36,17 @@
 						"map": "INSURANCE TYPE @Subscriber ID  2.312-1"
 					}
 				]
+			},
+			{
+				"id": "Coverage.beneficiary",
+				"path": "Coverage.beneficiary",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient"
+					}
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Coverage.relationship.coding.system",

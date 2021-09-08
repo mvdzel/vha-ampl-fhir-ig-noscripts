@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/signatureMode.coding.code",
 	"name": "signatureMode.coding.code",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This is the mode by which the signature was obtained (i.e., either electronic or chart).",
 	"fhirVersion": "3.0.2",
 	"mapping": [

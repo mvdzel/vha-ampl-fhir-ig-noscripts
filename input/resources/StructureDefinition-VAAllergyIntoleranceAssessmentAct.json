@@ -1,0 +1,78 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAAllergyIntoleranceAssessmentAct",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAAllergyIntoleranceAssessmentAct",
+	"name": "VAAllergyIntoleranceAssessmentAct",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Provenance",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Provenance.recorded",
+				"path": "Provenance.recorded",
+				"label": "ASSESSMENT DATE/TIME",
+				"short": "Date/Time",
+				"definition": "This field contains the date/time of the last reaction assessment for this patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ADVERSE REACTION ASSESSMENT  @ASSESSMENT DATE/TIME 120.86-3"
+					}
+				]
+			},
+			{
+				"id": "Provenance.activity.system",
+				"path": "Provenance.activity.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.activity.code",
+				"path": "Provenance.activity.code",
+				"fixedCode": "UPDATE",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.agent.role.text",
+				"path": "Provenance.agent.role.text",
+				"fixedString": "informant",
+				"mustSupport": true
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "ACESSING USER",
+				"short": "Who entered assessment",
+				"definition": "This field contains the name of the user who made the last reaction assessment for this patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ADVERSE REACTION ASSESSMENT  @NAME 120.86-.01"
+					},
+					{
+						"identity": "vista",
+						"map": "ADVERSE REACTION ASSESSMENT  @ACESSING USER 120.86-2"
+					}
+				]
+			}
+		]
+	}
+}

@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAInpatientIVMedicationRequest",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAInpatientIVMedicationRequest",
 	"name": "VAInpatientIVMedicationRequest",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -371,9 +371,9 @@
 				"id": "MedicationRequest.extension:medicationrequest-ivType",
 				"path": "MedicationRequest.extension",
 				"sliceName": "medicationrequest-ivType",
-				"label": "CHEMOTHERAPY TYPE",
-				"short": "chemotherapy type",
-				"definition": "A chemotherapy IV order may be one of three types: admixture, piggyback, or syringe.  The type of chemotherapy IV must be identified as one of these types, so the system will know what kinds of questions to ask in order to properly complete this order.",
+				"label": "TYPE",
+				"short": "type",
+				"definition": "Type of IV - 'A' for Admixture, 'C' for chemotherapy, 'H' for Hyperal, 'P' for Piggyback, and 'S' for Syringe.",
 				"type": [
 					{
 						"code": "Extension",
@@ -385,10 +385,6 @@
 					{
 						"identity": "vista",
 						"map": "Pharmacy Patient @TYPE 55.01-.04"
-					},
-					{
-						"identity": "vista",
-						"map": "Pharmacy Patient @CHEMOTHERAPY TYPE 55.01-106"
 					}
 				]
 			},

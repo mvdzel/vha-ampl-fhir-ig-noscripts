@@ -1,0 +1,47 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAEMLabReportEncounter",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAEMLabReportEncounter",
+	"name": "VAEMLabReportEncounter",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Encounter",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Encounter.status",
+				"path": "Encounter.status",
+				"fixedCode": "unknown",
+				"mustSupport": true
+			},
+			{
+				"id": "Encounter.location.location.display",
+				"path": "Encounter.location.location.display",
+				"label": "PATIENT LOCATION",
+				"definition": "This is the requesting location.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "EM @PATIENT LOCATION 63.02-.08b"
+					}
+				]
+			}
+		]
+	}
+}

@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/allergyintolerance-vaSubstanceCategory",
 	"name": "allergyintolerance-vaSubstanceCategory",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This field contains the type(s) for this causative agent.  The user can enter the type(s) separated by commas, or the following codes:  D=Drug, F=Food, O=Other.  If codes are used, do not use commas to separate multiple codes.  Examples of valid entries are:  DRUG or DRUG, FOOD or D or DF or OTHER.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

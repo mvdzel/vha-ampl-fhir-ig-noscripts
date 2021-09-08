@@ -1,0 +1,54 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAMicroLabReportOrderSpecimen",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAMicroLabReportOrderSpecimen",
+	"name": "VAMicroLabReportOrderSpecimen",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Specimen",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Specimen.type.coding.code",
+				"path": "Specimen.type.coding.code",
+				"label": "COLLECTION SAMPLE",
+				"definition": "This field contains the collection sample for this test.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ORDERED TEST @COLLECTION SAMPLE 63.5-9b"
+					}
+				]
+			},
+			{
+				"id": "Specimen.collection.bodySite.coding.code",
+				"path": "Specimen.collection.bodySite.coding.code",
+				"label": "SPECIMEN TOPOGRAPHY",
+				"definition": "This field contains the topography location for this test.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "ORDERED TEST @SPECIMEN TOPOGRAPHY 63.5-8b"
+					}
+				]
+			}
+		]
+	}
+}

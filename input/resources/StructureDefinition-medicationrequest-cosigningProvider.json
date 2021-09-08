@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationrequest-cosigningProvider",
 	"name": "medicationrequest-cosigningProvider",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-05-17T15:52:07.695Z",
 	"description": "This field identifies the cosigning physician for prescriptions written by a provider for whom a counter signature is required, for example a nurse practitioner.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

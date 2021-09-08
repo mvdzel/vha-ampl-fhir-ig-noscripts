@@ -1,0 +1,48 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VAFinishedOutpatientMedicationOrderEncounter",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAFinishedOutpatientMedicationOrderEncounter",
+	"name": "VAFinishedOutpatientMedicationOrderEncounter",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "Encounter during which VA finished outpatient medication order is placed",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Encounter",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Encounter.status",
+				"path": "Encounter.status",
+				"fixedCode": "unknown",
+				"mustSupport": true
+			},
+			{
+				"id": "Encounter.location.location.display",
+				"path": "Encounter.location.location.display",
+				"label": "CLINIC",
+				"definition": "Clinic where treatment was given and prescription was written.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "PRESCRIPTION @CLINIC 52-5b"
+					}
+				]
+			}
+		]
+	}
+}

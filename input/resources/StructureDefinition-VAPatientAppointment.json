@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAPatientAppointment",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatientAppointment",
 	"name": "VAPatientAppointment",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -78,6 +78,12 @@
 				"label": "CLINIC",
 				"short": "apointment info",
 				"definition": "<blank>",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient"
+					}
+				],
 				"mustSupport": true,
 				"mapping": [
 					{
@@ -85,6 +91,12 @@
 						"map": "Patient File @CLINIC 2.98-.01p"
 					}
 				]
+			},
+			{
+				"id": "Appointment.participant.status",
+				"path": "Appointment.participant.status",
+				"fixedCode": "accepted",
+				"mustSupport": true
 			}
 		]
 	}

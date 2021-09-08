@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAImmunization",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAImmunization",
 	"name": "VAImmunization",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -382,6 +382,26 @@
 					{
 						"identity": "vista",
 						"map": "V IMMUNIZATION FILE @COMMENTS 9000010.11-81101"
+					}
+				]
+			},
+			{
+				"id": "Immunization.reaction.detail",
+				"path": "Immunization.reaction.detail",
+				"label": "REACTION",
+				"short": "Reactions",
+				"definition": "This is the reaction that may have been observed by the provider as a result of the immunization given.",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAImmunizationReaction"
+					}
+				],
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "V IMMUNIZATION FILE @REACTION 9000010.11-.06"
 					}
 				]
 			},

@@ -56,7 +56,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "MedicationDispense.extension","medicationdispense-fillDate","","FILL DATE",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-fillDate]]} {[]}
 ","Original Fill Date","The date the prescription was filled.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @FILL DATE 52-22","n/a","N/A"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","PRESCRIPTION @FILL DATE 52-22"
 "MedicationDispense.extension","medicationdispense-dispenseChannel","","MAIL/WINDOW",0,*,"Y","","","Extension {[CanonicalType[http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/medicationdispense-dispenseChannel]]} {[]}
 ","Refill mail/Window","This field contains 'M' if the refill is to be mailed to the patient and 'W' if the refill is to be picked up at the pharmacy window.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}

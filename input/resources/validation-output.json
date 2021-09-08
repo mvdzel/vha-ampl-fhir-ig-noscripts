@@ -1,0 +1,18 @@
+{
+  "resourceType" : "OperationOutcome",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td></tr><tr><td>INFORMATION</td><td/><td>Informational Note</td><td>All OK</td><td/></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+    "valueString" : "StructureDefinition-NonVAMedicationStatement.json"
+  }],
+  "issue" : [{
+    "severity" : "information",
+    "code" : "informational",
+    "details" : {
+      "text" : "All OK"
+    }
+  }]
+}

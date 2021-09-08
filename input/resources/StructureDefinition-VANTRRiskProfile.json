@@ -1,0 +1,139 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VANTRRiskProfile",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VANTRRiskProfile",
+	"name": "VANTRRiskProfile",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.system",
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.code",
+				"path": "Observation.code.coding.code",
+				"fixedCode": "28.11-.02",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.display",
+				"path": "Observation.code.coding.display",
+				"fixedString": "NTR Indicator",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept",
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.system",
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "NTR Indicator",
+				"short": "Environment Factors 'N/T Radium'",
+				"definition": "This field contains the indicator for Nose/Throat Radium Treatment exposure.  A YES indicates that the exposure documentation has been verified and that the veteran has a diagnosis of cancer of the head and/or neck.  A NO indicates that the veteran claims no exposure, no supporting documentation is available or there is no diagnosis of cancer of the head and/or neck.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NOSE AND THROAT RADIUM HISTORY  @NTR Indicator 28.11-.02"
+					}
+				]
+			},
+			{
+				"id": "Observation.component.code.coding.system",
+				"path": "Observation.component.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.component.code.coding.code",
+				"path": "Observation.component.code.coding.code",
+				"fixedCode": "28.11-.03",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.component.code.coding.display",
+				"path": "Observation.component.code.coding.display",
+				"fixedString": "NTR Screening Status",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.component.valueCodeableConcept",
+				"path": "Observation.component.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Observation.component.valueCodeableConcept.coding.system",
+				"path": "Observation.component.valueCodeableConcept.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedTerms/28.11-.03",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.component.valueCodeableConcept.coding.code",
+				"path": "Observation.component.valueCodeableConcept.coding.code",
+				"label": "Screening Status",
+				"short": "Environment Factors 'N/T Radium'",
+				"definition": "This field indicates the status of the screening process for Nose/Throat Radium Treatment exposure.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "NOSE AND THROAT RADIUM HISTORY  @Screening Status 28.11-.03"
+					}
+				]
+			}
+		]
+	}
+}

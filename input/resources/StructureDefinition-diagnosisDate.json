@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/diagnosisDate",
 	"name": "diagnosisDate",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "This is the date of the provisional diagnosis and will contain a value if the request is filed with a coded diagnosis.  This field is used internally to help identify if a given code is active.",
 	"fhirVersion": "3.0.2",
 	"mapping": [

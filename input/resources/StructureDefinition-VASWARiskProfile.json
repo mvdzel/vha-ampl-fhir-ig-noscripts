@@ -1,0 +1,120 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "VASWARiskProfile",
+	"meta": {
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
+	},
+	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VASWARiskProfile",
+	"name": "VASWARiskProfile",
+	"status": "draft",
+	"date": "2021-09-08T16:14:20.068Z",
+	"fhirVersion": "3.0.2",
+	"mapping": [
+		{
+			"identity": "vista",
+			"uri": "http://va.gov/vista/",
+			"name": "VistA"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"fixedCode": "final",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.system",
+				"path": "Observation.code.coding.system",
+				"fixedUri": "http://va.gov/Terminology/VistaDefinedElements",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.code",
+				"path": "Observation.code.coding.code",
+				"fixedCode": "2-.322013",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code.coding.display",
+				"path": "Observation.code.coding.display",
+				"fixedString": "Southwest Asia Conditions",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAPatient"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.context.display",
+				"path": "Observation.context.display",
+				"label": "SW Asia Cond Exam Date",
+				"short": "Environment Factors information",
+				"definition": "This is the date on which an examination for exposure to Conditions  related to service in SW Asia was performed on the patient.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @SW Asia Cond Exam Date  2-.322015"
+					}
+				]
+			},
+			{
+				"id": "Observation.issued",
+				"path": "Observation.issued",
+				"label": "SW Asia Cond Registration Date",
+				"short": "Environment Factors information",
+				"definition": "This is the date on which the patient registered for being exposed to Conditions related to service in SW Asia. This date must be after 8/1/1990.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @SW Asia Cond Registration Date  2-.322014"
+					}
+				]
+			},
+			{
+				"id": "Observation.valueCodeableConcept",
+				"path": "Observation.valueCodeableConcept",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.system",
+				"path": "Observation.valueCodeableConcept.coding.system",
+				"fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.valueCodeableConcept.coding.code",
+				"path": "Observation.valueCodeableConcept.coding.code",
+				"label": "Southwest Asia Conditions?",
+				"short": "Environment Factors information",
+				"definition": "Enter \"Y\" if veteran claims need for care of conditions related to service in SW Asia. Enter \"N\" if veteran did not serve in SW Asia or does not claim need for care of conditions related to service in SW Asia. Enter \"U\" when veteran served in SW Asia, but is unsure of whether conditions may be related to that service. SW Asia Theater of operations is defined as: Iraq, Kuwait, Saudi Arabia, the neutral zone between Iraq and Saudi Arabia, Bahrain, Qatar, the United Arab Emirates, Oman, the Gulf of Aden, the Gulf of Oman, the Persian Gulf, the Arabian Sea, the Red Sea, and the airspace above these locations.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "Patient @Southwest Asia Conditions?  2-.322013"
+					}
+				]
+			}
+		]
+	}
+}

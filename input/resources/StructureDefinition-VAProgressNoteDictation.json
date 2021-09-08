@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAProgressNoteDictation",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProgressNoteDictation",
 	"name": "VAProgressNoteDictation",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -37,10 +37,29 @@
 				]
 			},
 			{
+				"id": "Provenance.activity.system",
+				"path": "Provenance.activity.system",
+				"fixedUri": "http://hl7.org/fhir/v3/DocumentCompletion",
+				"mustSupport": true
+			},
+			{
 				"id": "Provenance.activity.code",
 				"path": "Provenance.activity.code",
 				"fixedCode": "DI",
 				"mustSupport": true
+			},
+			{
+				"id": "Provenance.agent.whoReference",
+				"path": "Provenance.agent.whoReference",
+				"label": "AUTHOR/DICTATOR",
+				"definition": "This is the person who composed or dictated the document.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "TIU DOCUMENT @AUTHOR/DICTATOR 8925-1202"
+					}
+				]
 			}
 		]
 	}

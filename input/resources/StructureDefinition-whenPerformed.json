@@ -4,8 +4,8 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/whenPerformed",
 	"name": "whenPerformed",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
-	"description": "This is the date the prescription is refilled.",
+	"date": "2021-09-08T16:14:20.068Z",
+	"description": "Date/time prescription is finished.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -41,7 +41,7 @@
 				"mapping": [
 					{
 						"identity": "vista",
-						"map": "PRESCRIPTION @REFILL DATE 52.1-.01"
+						"map": "PRESCRIPTION @FINISH DATE/TIME 52-38.3"
 					}
 				]
 			}

@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "VAProblemAuthorship",
 	"meta": {
-		"lastUpdated": "2021-05-02T09:09:12.802Z"
+		"lastUpdated": "2021-09-08T16:14:20.068Z"
 	},
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/VAProblemAuthorship",
 	"name": "VAProblemAuthorship",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"fhirVersion": "3.0.2",
 	"mapping": [
 		{
@@ -64,9 +64,13 @@
 			{
 				"id": "Provenance.agent.whoReference",
 				"path": "Provenance.agent.whoReference",
-				"type": [
+				"label": "NAME",
+				"definition": "This is the facility at which this problem was originally observed and documented.",
+				"mustSupport": true,
+				"mapping": [
 					{
-						"code": "Reference"
+						"identity": "vista",
+						"map": "INSTITUTION @NAME 9999999.06-.01:4-.01"
 					}
 				]
 			},
@@ -80,6 +84,20 @@
 					{
 						"identity": "vista",
 						"map": "undefined @STATION NUMBER 9999999.06-.01:4-99"
+					}
+				]
+			},
+			{
+				"id": "Provenance.agent.whoReference.display",
+				"path": "Provenance.agent.whoReference.display",
+				"label": "ENTERED BY",
+				"short": "entered by name",
+				"definition": "This is the user who actually entered this problem into this file.",
+				"mustSupport": true,
+				"mapping": [
+					{
+						"identity": "vista",
+						"map": "undefined @ENTERED BY 9000011-1.03"
 					}
 				]
 			}

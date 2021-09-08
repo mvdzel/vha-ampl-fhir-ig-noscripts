@@ -4,7 +4,7 @@
 	"url": "http://va.gov/fhir/us/vha-ampl-ig/StructureDefinition/address-validity",
 	"name": "address-validity",
 	"status": "draft",
-	"date": "2021-05-02T09:09:12.802Z",
+	"date": "2021-09-08T16:14:20.068Z",
 	"description": "The Bad Address Indicator field applies to the address at which the patient resides.  This field should be set as follows (if applicable):       \"UNDELIVERABLE\" - Bad Address based on returned mail.     \"HOMELESS\" - Patient is known to be homeless.     \"OTHER\" - Other Bad Address Reason   Setting this field will prevent a Bad Address from being shared with HEC and other VAMC facilities. It will also be used to block Means Test  Renewal Letters from being sent.   Once the Bad Address Indicator is set, incoming \"newer\" addresses will automatically remove the Bad Address Indicator, and allow the \"updated\" address to be transmitted to HEC and other VAMC facilities.",
 	"fhirVersion": "3.0.2",
 	"mapping": [
